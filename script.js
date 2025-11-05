@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. CONFIGURATION, STATE & TRANSLATIONS ---
 
     const LECTURE_SOURCES = [
-        { id: 'lecture-1', title: 'Sistem Analizi - Bölüm 1', file: '../data/lecture_one.json' },
-        { id: 'lecture-2', title: 'Örüntü Tanıma - Kavramlar', file: '../data/lecture_two.json' },
-        { id: 'lecture-3', title: 'Sistem Analizi - Bölüm 1 (Ek Test)', file: '../data/lecture_three.json' }
+        { id: 'lecture-1', title: 'Sistem Analizi - Bölüm 1', file: 'data/lecture_one.json' },
+        { id: 'lecture-2', title: 'Örüntü Tanıma - Kavramlar', file: 'data/lecture_two.json' },
+        { id: 'lecture-3', title: 'Sistem Analizi - Bölüm 1 (Ek Test)', file: 'data/lecture_three.json' }
     ];
 
     const STREAK_MESSAGES = [
