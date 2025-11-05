@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Dil 'tr' olarak başlıyor, JS bunu değiştirebilir -->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- data-key="appTitle" ile başlığı da değiştirebiliriz -->
+    <title data-key="appTitle">LecturePod - E-Learning Platform</title>
+    
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Simgeleri (İkonlar) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- CSS Dosyamız -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- 
+  JS, sayfa yüklendiğinde buraya 'data-theme="dark"' 
+  ekleyerek karanlık modu etkinleştirecek
+-->
+<body>
+
+    <!-- Ana Uygulama Konteyneri -->
+    <div class="container">
+        
+        <header>
+            <h1>LecturePod</h1>
+            <!-- YENİ: Başlık Kontrolleri -->
+            <div class="header-controls">
+                <button id="lang-toggle-btn" class="btn-icon" aria-label="Dili Değiştir">
+                    TR
+                </button>
+                <button id="theme-toggle-btn" class="btn-icon" aria-label="Temayı Değiştir">
+                    <!-- JS bu ikonu 'dark_mode' olarak değiştirecek -->
+                    <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Ana İçerik Alanı -->
+        <main id="app-container">
+
+            <!-- VIEW 1: LECTURE SELECTION -->
+            <div id="lecture-selection-view" class="view active">
+                <h2 data-key="selectLectureTitle">Bir Ders Seçin</h2>
+                <div id="lecture-list-container" class="space-y-4">
+                    <p class="loading-text" data-key="loadingLectures">Dersler yükleniyor...</p>
+                </div>
+            </div>
+
+            <!-- VIEW 2: MODE SELECTION -->
+            <div id="mode-selection-view" class="view">
+                <button class="btn-back back-to-lectures">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span data-key="backToLectures">Derslere Geri Dön</span>
+                </button>
+                <h2 id="selected-course-title"></h2>
+                <h3 id="selected-lecture-title"></h3>
+                <p class="section-title" data-key="studyModeTitle">Nasıl çalışmak istersiniz?</p>
+                
+                <div class="mode-selection-grid">
+                    <button id="start-quiz-mode" class="mode-btn">
+                        <span class="mode-title">
+                            <span class="material-symbols-outlined">quiz</span>
+                            <span data-key="quizMode">Quiz Modu</span>
+                        </span>
+                        <span class="mode-description" data-key="quizModeDesc">Puan alın. Rastgele seçilmiş sorular.</span>
+                    </button>
+                    <button id="start-practice-mode" class="mode-btn">
+                        <span class="mode-title">
+                            <span class="material-symbols-outlined">psychology</span>
+                            <span data-key="practiceMode">Pratik Modu</span>
+                        </span>
+                        <span class="mode-description" data-key="practiceModeDesc">Tüm soruları çözün. Otomatik-ileri.</span>
+                    </button>
+                    <button id="start-learn-mode" class="mode-btn">
+                        <span class="mode-title">
+                            <span class="material-symbols-outlined">style</span>
+                            <span data-key="learnMode">Öğrenme Modu</span>
+                        </span>
+                        <span class="mode-description" data-key="learnModeDesc">Bilgi kartları. Cevabı hazır olunca gör.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- VIEW 3: QUIZ SETUP -->
+            <div id="quiz-setup-view" class="view">
+                <button class="btn-back back-to-modes">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span data-key="backToModes">Modlara Geri Dön</span>
+                </button>
+                <h2 data-key="quizSetupTitle">Quiz Modu Kurulumu</h2>
+                <label for="quiz-question-count" data-key="howManyQuestions">Kaç soru istersiniz?</label>
+                <p id="quiz-max-questions" class="help-text">(Maks: 10)</p>
+                <input type="number" id="quiz-question-count" min="1" value="5">
+                <button id="start-quiz-btn" class="btn btn-primary" data-key="startQuiz">Quiz'i Başlat</button>
+            </div>
+
+            <!-- VIEW 4: QUESTION VIEW (Quiz & Practice) -->
+            <div id="question-view" class="view">
+                <button class="btn-back back-to-modes">
+                    <span class="material-symbols-outlined">close</span>
+                    <span data-key="quitSession">Oturumu Kapat</span>
+                </button>
+                <div class="question-header">
+                    <h2 id="question-mode-title">Quiz Modu</h2>
+                    <span id="question-counter">1 / 10</span>
+                </div>
+                <div class="question-content">
+                    <p id="question-text">...</p>
+                    <div id="question-options-container" class="options-container">
+                        <!-- JS burayı dolduracak -->
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="prev-question-btn" class="btn hidden">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <span data-key="prevButton">Önceki</span>
+                    </button>
+                    <button id="next-question-btn" class="btn btn-primary hidden">
+                        <span data-key="nextButton">Sonraki</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button id="finish-btn" class="btn btn-finish hidden">
+                        <span data-key="finishButton">Oturumu Bitir</span>
+                        <span class="material-symbols-outlined">check_circle</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- VIEW 5: LEARN MODE (Flashcards) -->
+            <div id="learn-view" class="view">
+                <button class="btn-back back-to-modes">
+                    <span class="material-symbols-outlined">close</span>
+                    <span data-key="quitSession">Oturumu Kapat</span>
+                </button>
+                <div class="question-header">
+                    <h2 data-key="learnMode">Öğrenme Modu</h2>
+                    <span id="learn-counter">1 / 5</span>
+                </div>
+                <div class="flashcard">
+                    <p id="learn-question">...</p>
+                    <p id="learn-answer" class="hidden">...</p>
+                </div>
+                <button id="show-answer-btn" class="btn btn-primary" data-key="showAnswer">Cevabı Göster</button>
+                <div id="learn-feedback-btns" class="hidden learn-feedback-grid">
+                    <button id="learn-didnt-know" class="btn btn-feedback-bad" data-key="didntKnow">Bilemedim</button>
+                    <button id="learn-knew" class="btn btn-feedback-good" data-key="knewIt">Bildim</button>
+                </div>
+            </div>
+
+            <!-- VIEW 6: RESULTS VIEW -->
+            <div id="results-view" class="view">
+                <h2 data-key="sessionComplete">Oturum Tamamlandı!</h2>
+                <p id="result-score">8 / 10</p>
+                <p id="result-percentage">80%</p>
+                <div class="results-review">
+                    <h3 data-key="reviewAnswers">Cevapları Gözden Geçir</h3>
+                    <div id="result-details-container">
+                        <!-- JS burayı dolduracak -->
+                    </div>
+                </div>
+                <button id="back-to-modes-from-results" class="btn btn-primary">
+                    <span class="material-symbols-outlined">refresh</span>
+                    <span data-key="backToModes">Modlara Geri Dön</span>
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Streak (Seri) Bildirimi -->
+    <div id="streak-popup" class="streak-popup">
+        <span class="streak-emoji">🤩</span>
+        <p id="streak-message">...</p>
+    </div>
+
+    <!-- JavaScript Dosyamız -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+

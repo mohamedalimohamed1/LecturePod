@@ -1,0 +1,101 @@
+{
+  "courseTitle": "Örüntü Tanıma",
+  "lectureTitle": "Temel Kavramlar ve Uygulamalar",
+  "questions": [
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma nedir?",
+      "correctAnswer": "Verilerdeki örüntülerin ve düzenliliklerin otomatik olarak tanınmasıdır. Daha modern bir tanımıyla, bilgisayar algoritmalarını kullanarak verilerdeki düzenliliklerin otomatik olarak keşfedilmesi ve bu düzenliliklerin, verilerin farklı kategorilere sınıflandırılması gibi eylemler için kullanılması ile ilgili bir alandır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma hangi alanlarla yakından ilişkilidir?",
+      "correctAnswer": "Örüntü tanıma yapay zeka ve makine öğrenimi ile yakından ilişkilidir. Ayrıca veri madenciliği ve veri tabanlarında bilgi keşfi (KDD) gibi uygulamalarla birlikte kullanılır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma sistemleri nasıl eğitilir?",
+      "correctAnswer": "Çoğunlukla etiketli \"eğitim\" verilerinden faydalanır (denetimli öğrenme), ancak etiketli veri olmadığında, daha önce bilinmeyen modelleri keşfetmek için başka algoritmalar da (denetimsiz öğrenme) kullanmaktadır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Denetimli öğrenme (supervised learning) nedir?",
+      "correctAnswer": "Bir girdiyi örnek girdi-çıktı çiftlerine dayalı olarak çıktıyla eşleyen bir makine öğrenme yöntemidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Denetimsiz öğrenme (unsupervised learning) nedir?",
+      "correctAnswer": "Önceden belirlenmiş etiketler olmadan veri kümesinde önceden bilinmeyen kalıpları bulmaya yardımcı olan kendi kendine organize edilen bir öğrenim türüdür. Bu yöntem kendi kendini örgütleme olarak da bilinir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma uygulamalarına genel örnekler nelerdir?",
+      "correctAnswer": "Yüz tanıma, karakter tanıma, parmak izi tanıma, harita tanımlama ve canlı türleri tanıma gibi uygulamalar örnek gösterilebilir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma başka hangi isimlerle anılmaktadır?",
+      "correctAnswer": "Örüntü tanıma uygulamaları, makine öğrenmesi, örüntü sınıflandırma, ayrım analizi ve nitelik tahmini gibi isimlerle de anılmaktadır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanımanın temel aşamaları nelerdir?",
+      "correctAnswer": "Temel olarak üç aşamadan oluşur: 1. Algılayıcılar ve Ön İşlemler, 2. Özellik Çıkarma, 3. Sınıflandırma."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanımanın 'Özellik Çıkarma' aşamasını açıklayın.",
+      "correctAnswer": "İşaret ve görüntünün veri boyutunun indirgendiği, tanımlayıcı anahtar özelliklerinin tespit edildiği ve normalizasyona tabi tutulduğu aşamadır. Bu aşama, sistemin başarımında en etkili rolü oynar."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanımanın 'Sınıflandırma' aşamasını açıklayın.",
+      "correctAnswer": "Çıkarılan özellik kümesinin indirgendiği ve formüle edildiği tanımlayıcı karar aşamasıdır. Sınıflandırıcının rolü, örüntüyü özelliklerine göre kategorize ederek uygun sınıflara kaydetmektir."
+    },
+    {
+      "type": "short-answer",
+      "question": "İstatistiksel örüntü tanıma yaklaşımının temel prensibi nedir?",
+      "correctAnswer": "Bu yaklaşım Bayes Karar Teorisi üzerine kurulmuştur. Her örüntü bir özellik vektörü ile tanımlanır ve sınıflama, giriş veri uzayının olasılık yoğunluk fonksiyonlarının tahmini üzerine kurulu bir istatistiksel yapıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Yapısal örüntü tanıma nasıl çalışır?",
+      "correctAnswer": "Verilen bir örüntü, şekilsel yapıdan temel karakteristik tanımlanmaya indirgenir. Özelliklerin birbirine bağlanması veya aralarındaki karşılıklı ilişki (örn: köşe sayısı, kenar açıları) tanımlamayı ve sınıflandırmayı kolaylaştırır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Akıllı örüntü tanıma sisteminin özellikleri nelerdir?",
+      "correctAnswer": "Öğrendiklerini tutabilecek bir hafızaya sahipse, çıkarım, genelleme ve belirli bir hata toleransı ile karar verebilme yeteneklerini içeriyorsa, bu sistem akıllı örüntü tanıma sistemi olarak değerlendirilir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Tıp ve Biyomedikal alanlarda nasıl kullanılır?",
+      "correctAnswer": "Hastalık belirtilerini veri üzerinden tanımak için kullanılır. Örnekler: Kanser hücrelerinin görüntü analizi, EEG/ECG sinyali örüntü tanıma, genetik örüntü analizi, tıbbi görüntü segmentasyonu."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Finans ve Bankacılık alanlarında nasıl kullanılır?",
+      "correctAnswer": "Anormal işlemleri tespit etmek ve müşteri davranışlarını analiz etmek için kullanılır. Örnekler: Dolandırıcılık tespiti (fraud detection), kredi skorlama, piyasa örüntü analizi."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Savunma ve Güvenlik alanlarında nasıl kullanılır?",
+      "correctAnswer": "Hedef tanıma, tehdit analizi ve istihbarat desteği için kullanılır. Örnekler: Radar/sensör verisinden hedef tanıma, askerî uydu görüntü analizi, siber tehdit örüntüsü tespiti."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Görüntü İşleme ve Bilgisayarla Görme alanında nasıl kullanılır?",
+      "correctAnswer": "Görsellerden anlamlı örüntüler çıkarmak için kullanılır. Örnekler: Yüz tanıma sistemleri (Face ID), nesne tanıma, plaka tanıma, tıbbi görüntü analizi."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Otonom Sistemler ve Robotik alanında nasıl kullanılır?",
+      "correctAnswer": "Çevreyi algılamak ve uygun tepki üretmek için kullanılır. Örnekler: Otonom araçlarda nesne tanıma (yaya, tabela), endüstriyel robotlarda nesne algılama."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma, Doğal Dil İşleme (NLP) alanında nasıl kullanılır?",
+      "correctAnswer": "Metin veya konuşmadaki dil örüntülerini analiz etmek için kullanılır. Örnekler: Duygu analizi (yorum, tweet), otomatik metin sınıflandırma, spam e-posta tespiti."
+    }
+  ]
+}

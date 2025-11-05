@@ -1,0 +1,306 @@
+{
+  "courseTitle": "Sistem Analizi Dersi",
+  "lectureTitle": "Bölüm 1 Test Soruları (Ek)",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "1. Aşağıdakilerden hangisi, bir olguyu \"sistem\" olarak tanımlayabilmek için gereken üç temel koşulu (öğeler, ilişkiler, amaç) doğru bir şekilde bir arada ifade eder?",
+      "options": [
+        "A) Statik olması, kapalı olması ve bir amacının bulunması",
+        "B) Birden çok parçadan oluşması, bu parçalar arasında bir etkileşim olması ve bütünün bir amaca hizmet etmesi",
+        "C) Fiziksel olması, insan yapısı olması ve bir geri beslemeye sahip olması",
+        "D) Girdilerinin olması, çıktılarının olması ve çevresinden soyutlanmış olması",
+        "E) Kavramsal olması, dinamik olması ve hiyerarşik bir yapıda bulunması"
+      ],
+      "correctAnswer": "B) Birden çok parçadan oluşması, bu parçalar arasında bir etkileşim olması ve bütünün bir amaca hizmet etmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "2. 1940'lı yıllarda \"sistem yaklaşımı\"nın doğuşunu tetikleyen temel bilimsel ve teknolojik gelişmelerin yarattığı sorun aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Bilimin felsefeden henüz tam olarak bağımsızlaşmaması",
+        "B) Teknolojinin bilimsel gelişmelere ayak uyduramaması",
+        "C) Endüstri Devrimi'nin beklenen verimliliği sağlayamaması",
+        "D) Uzmanlaşma ve otomasyonun, sorunların bütüncül anlaşılmasını ve ortak ilkelerin görülmesini zorlaştırması",
+        "E) Bilimsel yöntemin aşamalarının henüz net olarak tanımlanmamış olması"
+      ],
+      "correctAnswer": "D) Uzmanlaşma ve otomasyonun, sorunların bütüncül anlaşılmasını ve ortak ilkelerin görülmesini zorlaştırması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "3. Sistem yaklaşımının ortaya çıkış gerekçelerinden biri olan \"bilimde savurganlık\" kavramı neyi ifade etmektedir?",
+      "options": [
+        "A) Bilimsel deneylerde gereğinden fazla kaynak ve materyal kullanılması",
+        "B) Bilimsel çalışmaların teknolojiye dönüştürülmeyip sadece teoride kalması",
+        "C) Farklı bilim dallarının, aynı konuyu kendi içlerinde ayrı ayrı inceleyerek benzer sonuçlara ulaşması",
+        "D) Bilimsel hipotezlerin test edilmeden doğrudan kabul edilmesi",
+        "E) Çözülemeyen sorunlar için sürekli yeni disiplinler yaratılması"
+      ],
+      "correctAnswer": "C) Farklı bilim dallarının, aynı konuyu kendi içlerinde ayrı ayrı inceleyerek benzer sonuçlara ulaşması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "4. \"İncelenen sistemi bir bütün olarak görmenin ön koşulu ve aynı zamanda gerekli sonucu, o sisteme farklı görüş açılarıyla yaklaşabilmektir.\" Bu ifade, sistem yaklaşımının hangi iki temel ilkesinin birbirini tamamlayıcı doğasını vurgulamaktadır?",
+      "options": [
+        "A) Bütünsel Yaklaşım ve Disiplinler Arası Yaklaşım",
+        "B) Bilimsel Yaklaşım ve Analitik Yaklaşım",
+        "C) Disiplinler Arası Yaklaşım ve Uzmanlaşma",
+        "D) Bütünsel Yaklaşım ve Bilimsel Yaklaşım",
+        "E) Pragmatist Yaklaşım ve Yararcı Yaklaşım"
+      ],
+      "correctAnswer": "A) Bütünsel Yaklaşım ve Disiplinler Arası Yaklaşım"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "5. Sistem yaklaşımının \"Disiplinler Arası Yaklaşım\" ilkesinin, sorunların çözümünde teşvik ettiği çalışma yöntemi aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Bireysel uzmanlaşma",
+        "B) Deney ve gözlem",
+        "C) Analiz ve sentez",
+        "D) Grup çalışması",
+        "E) Otomasyon"
+      ],
+      "correctAnswer": "D) Grup çalışması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "6. Temel bilimlerde uygulanan bilimsel yöntemde, \"Hipotezin geliştirilmesi\" aşamasından hemen sonra gelmesi gereken mantıksal adım nedir?",
+      "options": [
+        "A) Olayın gözlenmesi ve problemin tanımlanması",
+        "B) Genelleme yardımıyla olayın kontrol altına alınması",
+        "C) Veri ve bilgilerin toplanması",
+        "D) Hipotez hakkında sonuçlara varılması",
+        "E) Deneyler yoluyla hipotezin test edilmesi"
+      ],
+      "correctAnswer": "C) Veri ve bilgilerin toplanması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "7. Bir sistemin \"belli bir zaman noktasındaki öğe, nitelik ve faaliyetlerinin tanımı\" olarak ifade edilen kavram aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Durum",
+        "B) Faaliyet",
+        "C) Özellik",
+        "D) Öğe",
+        "E) Süreç"
+      ],
+      "correctAnswer": "A) Durum"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "8. Bir \"Ulaşım\" sistemi düşünüldüğünde; \"taşıtlar\", \"hızlı\" ve \"taşıma\" kavramları, sistemin temel bileşenlerinden sırasıyla hangilerine karşılık gelir?",
+      "options": [
+        "A) Öğe / Faaliyet / Özellik",
+        "B) Özellik / Öğe / Faaliyet",
+        "C) Öğe / Özellik / Faaliyet",
+        "D) Faaliyet / Özellik / Durum",
+        "E) Durum / Öğe / Faaliyet"
+      ],
+      "correctAnswer": "C) Öğe / Özellik / Faaliyet"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "9. Bir otomobil sistemindeki \"motor\", ana sistemin taşıma yapma amacına katkı sağlayan ve kendi içinde de bir sistem özelliği gösteren bir bileşendir. Bu tür bileşenlere ne ad verilir?",
+      "options": [
+        "A) Alt Sistem",
+        "B) Çevre",
+        "C) Girdi",
+        "D) Geri Besleme",
+        "E) Sistem Sınırı"
+      ],
+      "correctAnswer": "A) Alt Sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "10. Bir imalat hattında, bir ürünün boya işlemine girebilmesi için mutlaka kurutma işleminden çıkmış olması gerekliliği, sistem öğeleri arasındaki hangi ilişki türüne örnektir?",
+      "options": [
+        "A) Mekansal İlişki",
+        "B) Zamansal İlişki",
+        "C) Neden Sonuç İlişkisi",
+        "D) Mantıksal İlişki",
+        "E) Enerjinin Korunumu İlişkisi"
+      ],
+      "correctAnswer": "B) Zamansal İlişki"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "11. Bir bilgisayar programındaki \"EĞER (IF) sıcaklık > 100 İSE (THEN) alarmı çalıştır\" şeklindeki bir kod satırı, sistem öğeleri arasındaki hangi ilişki türünün tipik bir örneğidir?",
+      "options": [
+        "A) Mekansal İlişki",
+        "B) Zamansal İlişki",
+        "C) Mantıksal İlişki",
+        "D) Enerjinin Korunumu İlişkisi",
+        "E) Neden Sonuç İlişkisi"
+      ],
+      "correctAnswer": "C) Mantıksal İlişki"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "12. İnsan yapısı sistemlerin (örn: otomobil) amacını belirlemek kolayken, Güneş sistemi gibi doğal sistemlerin amacını belirlemenin zor ve tartışmalı olmasının temel nedeni nedir?",
+      "options": [
+        "A) Bu sistemlerin bir amacının olmaması",
+        "B) Bu sistemlerin insanlar tarafından belirli bir amaç için tasarlanmamış olması",
+        "C) Bu sistemlerin öğelerinin sürekli değişiyor olması",
+        "D) Bu sistemlerin kapalı sistemler olması",
+        "E) Bu sistemlerin her zaman statik olması"
+      ],
+      "correctAnswer": "B) Bu sistemlerin insanlar tarafından belirli bir amaç için tasarlanmamış olması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "13. Sistem şemalarında gösterilen \"Geri Besleme (Feedback)\" mekanizması, sisteme hangi temel özelliği kazandırır ve bu tür sistemler genellikle nasıl adlandırılır?",
+      "options": [
+        "A) Çevreden tamamen bağımsız olma / Kapalı Sistem",
+        "B) Zaman içinde değişmeme / Statik Sistem",
+        "C) Çevresel değişimlere uyum sağlama ve kendini ayarlama / Dinamik Sistem",
+        "D) Biyolojik üreme yeteneği / Canlı Sistem",
+        "E) Fiziksel öğelere sahip olmama / Soyut Sistem"
+      ],
+      "correctAnswer": "C) Çevresel değişimlere uyum sağlama ve kendini ayarlama / Dinamik Sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "14. Bir sistemin işleyişini ve sınırlarını gösteren detaylı bir şemada (Şekil 1.4), sistemin dışında kalan ancak sistemin girdilerini, kaynaklarını ve hedeflerini etkileyebilen bütüne ne ad verilir?",
+      "options": [
+        "A) Çevre",
+        "B) Alt Sistem",
+        "C) Süreç",
+        "D) Sistem Kontrol",
+        "E) Geri Besleme"
+      ],
+      "correctAnswer": "A) Çevre"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "15. Sistem hiyerarşisi (Şekil 1.5) açısından bakıldığında, \"İşletme (Müessese Sistemi)\" hangi daha genel sistemin bir alt bileşeni olarak konumlandırılmıştır?",
+      "options": [
+        "A) Üretim Sistemi",
+        "B) Ekonomik Sistem",
+        "C) İnsan Merkezli Sistem",
+        "D) Yerküre (Dünya)",
+        "E) Güneş Sistemi"
+      ],
+      "correctAnswer": "B) Ekonomik Sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "16. Çevresiyle hiçbir şekilde bilgi, malzeme veya enerji alışverişinde bulunmayan, tamamen yalıtılmış sistemler teorik olarak nasıl sınıflandırılır?",
+      "options": [
+        "A) Açık Sistem",
+        "B) Kapalı Sistem",
+        "C: Dinamik Sistem",
+        "D) Doğal Sistem",
+        "E) Canlı Sistem"
+      ],
+      "correctAnswer": "B) Kapalı Sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "17. Bir işletme sistemi, \"canlı sistemler\" kategorisi yerine \"cansız sistemler\" kategorisinde sınıflandırılır. Bu sınıflandırmanın temel gerekçesi nedir?",
+      "options": [
+        "A) İnsanlar tarafından yapay olarak oluşturulması",
+        "B) Doğum, ölüm, çoğalma gibi biyolojik yaşam belirtileri göstermemesi",
+        "C) Çevresiyle hiçbir etkileşiminin olmaması",
+        "D) Zaman içinde hiçbir değişikliğe uğramaması",
+        "E) Fiziksel öğeler yerine sadece kavramlardan oluşması"
+      ],
+      "correctAnswer": "B) Doğum, ölüm, çoğalma gibi biyolojik yaşam belirtileri göstermemesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "18. Bir işletmenin, piyasadaki talep artışına (çevresel değişim) yanıt olarak üretim kapasitesini artırması (kendini ayarlaması), onun hangi sistem sınıfına ait olduğunu gösterir?",
+      "options": [
+        "A) Statik Sistem",
+        "B) Kapalı Sistem",
+        "C) Doğal Sistem",
+        "D) Dinamik Sistem",
+        "E) Basit Sistem"
+      ],
+      "correctAnswer": "D) Dinamik Sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "19. Güneş sisteminin, insan zaman ölçeği içerisinde \"statik\" bir sistem olarak kabul edilmesinin temel nedeni aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Gözlemlenebilir bir zaman diliminde durumunun belirgin bir değişikliğe uğramaması",
+        "B) Çevresiyle hiçbir enerji alışverişi yapmaması",
+        "C) Öğelerinin cansız varlıklardan oluşması",
+        "D) İnsan yapısı bir sistem olmaması",
+        "E) Herhangi bir amacının bulunmaması"
+      ],
+      "correctAnswer": "A) Gözlemlenebilir bir zaman diliminde durumunun belirgin bir değişikliğe uğramaması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "20. Bir felsefe sistemi veya bir bilgisayar programı, fiziksel nesneler yerine tamamen kavramsal bileşenlerden oluştukları için hangi sistem sınıfına girer?",
+      "options": [
+        "A) Somut Sistemler",
+        "B) Soyut Sistemler",
+        "C) Doğal Sistemler",
+        "D) Canlı Sistemler",
+        "E) Kapalı Sistemler"
+      ],
+      "correctAnswer": "B) Soyut Sistemler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "21. Bir sistemi \"basit\" veya \"karmaşık\" olarak sınıflandırırken kullanılan temel ölçüt aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Sistemin canlı veya cansız olması",
+        "B) Sistemin doğal veya insan yapısı olması",
+        "C) Sistemin statik veya dinamik olması",
+        "D) Sistemin içerdiği öğe ve bu öğeler arasındaki ilişkilerin sayısı",
+        "E) Sistemin açık veya kapalı olması"
+      ],
+      "correctAnswer": "D) Sistemin içerdiği öğe ve bu öğeler arasındaki ilişkilerin sayısı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "22. Endüstri Mühendisliğinin, sistem teorisi ile yakından ilişkili olmasının temel nedeni nedir?",
+      "options": [
+        "A) Sadece doğal sistemlerin tasarımı ve iyileştirilmesi ile ilgilenmesi",
+        "B) Görev yaptığı kurumları (insan, makine, malzeme bileşenli) bir sistem olarak kabul etmesi ve sistem yaklaşımını kullanması",
+        "C) Felsefi sistemler üzerine uzmanlaşmış olması",
+        "D) Sadece kapalı ve statik sistemlerin analizini yapması",
+        "E) Bilimsel yöntemi redderek sadece pragmatist yaklaşımı benimsemesi"
+      ],
+      "correctAnswer": "B) Görev yaptığı kurumları (insan, makine, malzeme bileşenli) bir sistem olarak kabul etmesi ve sistem yaklaşımını kullanması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "23. Sistem yaklaşımının ortaya çıkış nedenlerinden biri olan \"bilimsel yöntemin yetersizliği\" ile ifade edilmek istenen asıl düşünce nedir?",
+      "options": [
+        "A) Bilimsel yöntemin hipotez geliştirme konusunda başarısız olması",
+        "B) Deney yapmanın 20. yüzyılda çok maliyetli hale gelmesi",
+        "C) Analiz ve senteze dayalı klasik yöntemin, artan karmaşıklıktaki sorunları çözmede tek başına yeterli olmaması",
+        "D) Bilimsel yöntemin sadece temel bilimlerde kullanılıp sosyal bilimlerde kullanılamaması",
+        "E) Olayın gözlenmesinin teknik olarak imkansız hale gelmesi"
+      ],
+      "correctAnswer": "C) Analiz ve senteze dayalı klasik yöntemin, artan karmaşıklıktaki sorunları çözmede tek başına yeterli olmaması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "24. Sistem yaklaşımının \"Bilimsel Yaklaşım\" ilkesi, diğer iki ilke (Bütünsel ve Disiplinler Arası) açısından nasıl bir rol oynar?",
+      "options": [
+        "A) Diğer iki ilkeyi gereksiz kılan, onlardan daha üstün bir yöntemdir",
+        "B) Sadece teorik bir temel olup, pratik uygulaması olmayan bir felsefedir",
+        "C) Sorunlara bütünsel ve disiplinler arası bakış açısıyla yaklaşmanın somut uygulama yöntemidir",
+        "D) Sadece temel bilimlerde geçerlidir, sosyal sistemlere uygulanamaz",
+        "E) Disiplinler arası yaklaşımın tam tersi olan uzmanlaşmayı savunur"
+      ],
+      "correctAnswer": "C) Sorunlara bütünsel ve disiplinler arası bakış açısıyla yaklaşmanın somut uygulama yöntemidir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "25. Bilimsel evrim şeması (Şekil 1.1) incelendiğinde, 1910'da \"İnsan bilimlerinin ortaya çıkışı\" ile hangi yaklaşımın ve hangi kavramın eş zamanlı geliştiği görülmektedir?",
+      "options": [
+        "A) Mekanik Yaklaşım / Bilim",
+        "B) Yararcı Yaklaşım / Teknoloji",
+        "C) Pragmatist Yaklaşım / Otomasyon",
+        "D) Analitik Yaklaşım / Uzmanlaşma",
+        "E) Deneysel Yaklaşım / Felsefe"
+      ],
+      "correctAnswer": "C) Pragmatist Yaklaşım / Otomasyon"
+    }
+  ]
+}
