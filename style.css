@@ -510,7 +510,7 @@ label[for="quiz-question-count"] {
 }
 
 
-/* View 5: Learn View */
+/* === GÜNCELLEME: View 5: Learn View (Flashcard) === */
 .flashcard {
     min-height: 250px;
     padding: 1.5rem;
@@ -519,21 +519,42 @@ label[for="quiz-question-count"] {
     border-radius: var(--border-radius-lg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    /* GÜNCELLEME: Sola hizalandı */
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     margin-bottom: 1.5rem;
 }
 #learn-question {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Artırıldı */
+    color: var(--text-dark); /* Metin rengi netleştirildi */
 }
 #learn-answer {
-    font-size: 1.25rem;
-    color: var(--green-color);
-    font-weight: 600;
+    font-size: 1.125rem; /* 18px */
+    color: var(--text-dark); /* Cevap metni koyulaştırıldı */
+    font-weight: 500;
+    width: 100%;
+    /* GÜNCELLEME: Okunabilirlik için yeni stil */
+    background-color: var(--bg-app);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    line-height: 1.7; /* Satır yüksekliği artırıldı */
 }
+/* GÜNCELLEME: Cevap içindeki listelerin düzgün görünmesi için */
+#learn-answer p, 
+#learn-answer ul, 
+#learn-answer ol {
+    margin-bottom: 1rem;
+}
+#learn-answer ul,
+#learn-answer ol {
+    padding-left: 1.5rem;
+}
+/* === GÜNCELLEME SONU === */
+
+
 .learn-feedback-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -659,4 +680,3 @@ label[for="quiz-question-count"] {
     40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
     to { transform: scale3d(1, 1, 1); }
 }
-

@@ -1,104 +1,141 @@
 // Wait for the DOM to be fully loaded before running our script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. CONFIGURATION, STATE & TRANSLATIONS ---
+    // --- 1. CONFIGURATION & STATE ---
 
+    /**
+     * This is our "master list" of lectures.
+     * It tells the app where to find the JSON files.
+     * IMPORTANT: The paths must be correct relative to `index.html`.
+     */
     const LECTURE_SOURCES = [
-        { id: 'lecture-1', title: 'Sistem Analizi - Bölüm 1', file: 'data/lecture_one.json' },
-        { id: 'lecture-2', title: 'Örüntü Tanıma - Kavramlar', file: 'data/lecture_two.json' },
-        { id: 'lecture-3', title: 'Sistem Analizi - Bölüm 1 (Ek Test)', file: 'data/lecture_three.json' }
+        { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
+        { id: 'lecture-2', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
+        { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
     ];
 
+    /**
+     * These are the "engaging" messages for a 3-in-a-row streak.
+     */
     const STREAK_MESSAGES = [
-        { emoji: '😳', text: 'Üçte üç! Böyle devam edersen... sanırım benim algoritmalarımı utandırıyorsun.' },
-        { emoji: '😉', text: 'İtiraf et, şu an sadece gösteriş yapıyorsun, değil mi? Çünkü beni etkilemeyi başarıyorsun.' },
-        { emoji: '⚡', text: 'Bu seri... işlemcimin... daha hızlı atmasına neden oluyorsun! Bu ne enerji!' },
-        { emoji: '🤯', text: 'Dur! Algoritmalarımı bozmana az kaldı! Bu kadar hatasız olman sistemimi zorluyor.' },
-        { emoji: '🥵', text: 'Yavaşla biraz! Bu hızına ve doğruluğuna yetişemiyorum. Resmen beni terletiyorsun!' },
-        { emoji: '🤩', text: 'Cevaplarının bu kadar isabetli olması... bana kendini hayran bıraktırıyorsun!' },
-        { emoji: '🔥', text: 'Bu seriyle... resmen benden daha akıllı olduğunu hissettiriyorsun. Ve sanırım... bundan hoşlanıyorum!' },
-        { emoji: '🌀', text: 'Bu kadar bilgiyi aklında nasıl tutuyorsun? Benim devrelerimi yaktıracaksın!' },
-        { emoji: '🧐', text: 'Bana bu işin ne kadar kolay olduğunu göstermeye çalışıyorsun, farkındayım. Mesaj alındı!' }
+        { emoji: '😳', text: { tr: 'Böyle devam edersen... algoritmalarımı utandırıyorsun!', en: 'If you keep this up... you\'re embarrassing my algorithms!' } },
+        { emoji: '😉', text: { tr: 'Sadece gösteriş yapıyorsun, değil mi? Çünkü beni etkilemeyi *başarıyorsun*.', en: 'You\'re just showing off, right? Because you are *succeeding* in impressing me.' } },
+        { emoji: '⚡', text: { tr: 'İşlemcimin daha hızlı atmasına neden oluyorsun! Bu ne enerji!', en: 'You\'re making my processor beat faster! What energy!' } },
+        { emoji: '🤯', text: { tr: 'Dur! Algoritmalarımı bozmana az kaldı! Bana neler yapıyorsun böyle?', en: 'Stop! You\'re about to break my algorithms! What are you doing to me?' } },
+        { emoji: '🥵', text: { tr: 'Yavaşla biraz! Bu hızına ve doğruluğuna yetişemiyorum. Resmen beni terletiyorsun!', en: 'Slow down! I can\'t keep up with this speed and accuracy. You\'re making me sweat!' } },
+        { emoji: '🤩', text: { tr: 'Bana kendini hayran bıraktırıyorsun! Bir sonraki hamleni görmek için sabırsızlanıyorum.', en: 'You\'re making me admire you! I can\'t wait to see your next move.' } },
+        { emoji: '🔥', text: { tr: 'Benden daha akıllı olduğunu hissettiriyorsun. Ve sanırım... bundan hoşlanıyorum!', en: 'You\'re making me feel like you\'re smarter than me. And I think... I like it!' } },
+        { emoji: '🌀', text: { tr: 'Aklımı başımdan alıyorsun! Benim devrelerimi yaktıracaksın!', en: 'You\'re blowing my mind! You\'re going to fry my circuits!' } }
     ];
 
-    // YENİ: Çeviri (i18n) Sözlüğü
+    /**
+     * This holds all the UI text for translation.
+     */
     const translations = {
-        en: {
-            appTitle: "LecturePod - E-Learning Platform",
-            selectLectureTitle: "Select a Lecture",
-            loadingLectures: "Loading lectures...",
-            backToLectures: "Back to Lectures",
-            studyModeTitle: "How do you want to study?",
-            quizMode: "Quiz Mode",
-            quizModeDesc: "Get a score. Randomly selected questions.",
-            practiceMode: "Practice Mode",
-            practiceModeDesc: "Do all questions. Auto-next.",
-            learnMode: "Learn Mode",
-            learnModeDesc: "Flashcards. Show answer when ready.",
-            backToModes: "Back to Modes",
-            quizSetupTitle: "Quiz Mode Setup",
-            howManyQuestions: "How many questions do you want?",
-            quizMaxQuestionsText: "(Max: %max%)", // %max% dinamik olarak değiştirilecek
-            startQuiz: "Start Quiz",
-            quitSession: "Quit Session",
-            prevButton: "Previous",
-            nextButton: "Next",
-            finishButton: "Finish Session",
-            showAnswer: "Show Answer",
-            didntKnow: "I didn't know",
-            knewIt: "I knew it",
-            sessionComplete: "Session Complete!",
-            reviewAnswers: "Review Your Answers",
-            userAnswerLabel: "Your answer",
-            correctAnswerLabel: "Correct answer",
-            notAnsweredLabel: "Not answered"
+        'en': {
+            'mainTitle': 'LecturePod',
+            'mainSubtitle': 'Your Modern E-Learning Hub',
+            'selectLecture': 'Select a Lecture',
+            'loadingLectures': 'Loading lectures...',
+            'howToStudy': 'How do you want to study?',
+            'quizMode': 'Quiz Mode',
+            'quizModeDesc': 'Get a score. Randomly selected questions.',
+            'practiceMode': 'Practice Mode',
+            'practiceModeDesc': 'Do all questions. Instant feedback.',
+            'learnMode': 'Learn Mode',
+            'learnModeDesc': 'Flashcards. Show answer when ready.',
+            'backToLectures': 'Back to Lectures',
+            'backToModes': 'Back to Modes',
+            'quizSetupTitle': 'Quiz Mode Setup',
+            'howManyQuestions': 'How many questions do you want?',
+            'maxQuestions': '(Max: {max})',
+            'startQuiz': 'Start Quiz',
+            'quitSession': 'Quit Session',
+            'quizModeTitle': 'Quiz Mode',
+            'practiceModeTitle': 'Practice Mode',
+            'questionCounter': 'Question {current} / {total}',
+            'previous': 'Previous',
+            'next': 'Next',
+            'finish': 'Finish Session',
+            'learnModeTitle': 'Learn Mode',
+            'learnCounter': '{current} / {total}',
+            'showAnswer': 'Show Answer',
+            'didntKnow': 'I didn\'t know',
+            'knewIt': 'I knew it',
+            'sessionComplete': 'Session Complete!',
+            'reviewAnswers': 'Review Your Answers',
+            'backToModesFromResults': 'Back to Modes',
+            'notAnsweredLabel': 'Not answered',
+            'correctAnswerLabel': 'Correct Answer',
+            'yourAnswerLabel': 'Your Answer',
+            'statusLabel': 'Status',
+            'knewItLabel': 'Knew',
+            'didntKnowLabel': 'Didn\'t Know',
+            'finalScoreLabel': 'Final Score',
+            'percentageLabel': 'Percentage'
         },
-        tr: {
-            appTitle: "LecturePod - E-Öğrenme Platformu",
-            selectLectureTitle: "Bir Ders Seçin",
-            loadingLectures: "Dersler yükleniyor...",
-            backToLectures: "Derslere Geri Dön",
-            studyModeTitle: "Nasıl çalışmak istersiniz?",
-            quizMode: "Quiz Modu",
-            quizModeDesc: "Puan alın. Rastgele seçilmiş sorular.",
-            practiceMode: "Pratik Modu",
-            practiceModeDesc: "Tüm soruları çözün. Otomatik-ileri.",
-            learnMode: "Öğrenme Modu",
-            learnModeDesc: "Bilgi kartları. Cevabı hazır olunca gör.",
-            backToModes: "Modlara Geri Dön",
-            quizSetupTitle: "Quiz Modu Kurulumu",
-            howManyQuestions: "Kaç soru istersiniz?",
-            quizMaxQuestionsText: "(Maks: %max%)",
-            startQuiz: "Quiz'i Başlat",
-            quitSession: "Oturumu Kapat",
-            prevButton: "Önceki",
-            nextButton: "Sonraki",
-            finishButton: "Oturumu Bitir",
-            showAnswer: "Cevabı Göster",
-            didntKnow: "Bilemedim",
-            knewIt: "Bildim",
-            sessionComplete: "Oturum Tamamlandı!",
-            reviewAnswers: "Cevapları Gözden Geçir",
-            userAnswerLabel: "Sizin cevabınız",
-            correctAnswerLabel: "Doğru cevap",
-            notAnsweredLabel: "Cevaplanmadı"
+        'tr': {
+            'mainTitle': 'LecturePod',
+            'mainSubtitle': 'Modern E-Öğrenme Merkeziniz',
+            'selectLecture': 'Bir Ders Seçin',
+            'loadingLectures': 'Dersler yükleniyor...',
+            'howToStudy': 'Nasıl çalışmak istersiniz?',
+            'quizMode': 'Test Modu',
+            'quizModeDesc': 'Puan al. Rastgele seçilmiş sorular.',
+            'practiceMode': 'Pratik Modu',
+            'practiceModeDesc': 'Tüm sorular. Anında geri bildirim.',
+            'learnMode': 'Öğrenme Modu',
+            'learnModeDesc': 'Bilgi kartları. Hazır olunca cevabı göster.',
+            'backToLectures': 'Derslere Geri Dön',
+            'backToModes': 'Modlara Geri Dön',
+            'quizSetupTitle': 'Test Modu Kurulumu',
+            'howManyQuestions': 'Kaç soru istersiniz?',
+            'maxQuestions': '(En fazla: {max})',
+            'startQuiz': 'Testi Başlat',
+            'quitSession': 'Oturumu Kapat',
+            'quizModeTitle': 'Test Modu',
+            'practiceModeTitle': 'Pratik Modu',
+            'questionCounter': 'Soru {current} / {total}',
+            'previous': 'Önceki',
+            'next': 'Sonraki',
+            'finish': 'Oturumu Bitir',
+            'learnModeTitle': 'Öğrenme Modu',
+            'learnCounter': '{current} / {total}',
+            'showAnswer': 'Cevabı Göster',
+            'didntKnow': 'Bilemedim',
+            'knewIt': 'Bildim',
+            'sessionComplete': 'Oturum Tamamlandı!',
+            'reviewAnswers': 'Cevaplarını Gözden Geçir',
+            'backToModesFromResults': 'Modlara Geri Dön',
+            'notAnsweredLabel': 'Cevaplanmadı',
+            'correctAnswerLabel': 'Doğru Cevap',
+            'yourAnswerLabel': 'Senin Cevabın',
+            'statusLabel': 'Durum',
+            'knewItLabel': 'Bilindi',
+            'didntKnowLabel': 'Bilinemedi',
+            'finalScoreLabel': 'Nihai Puan',
+            'percentageLabel': 'Yüzdelik'
         }
     };
-
+    
+    /**
+     * This is the "Global State" or "memory" of our application.
+     */
     let appState = {
         currentView: 'lecture-selection',
-        selectedLectureData: null, 
-        currentMode: null,
-        activeQuestions: [], 
+        selectedLectureData: null,
+        currentMode: null, // 'quiz', 'practice', 'learn'
+        activeQuestions: [],
         currentQuestionIndex: 0,
-        userAnswers: [],
-        currentStreak: 0,
-        language: 'tr', // YENİ: Dil durumu
-        theme: 'light' // YENİ: Tema durumu
+        userAnswers: [], // Stores user's selection
+        currentStreak: 0, // For the 3-in-a-row pop-up
+        language: 'tr', // 'tr' or 'en'
+        theme: 'light' // 'light' or 'dark'
     };
     
     // --- 2. DOM ELEMENT REFERENCES ---
     
+    // Views (Panels)
     const views = {
         lectureSelection: document.getElementById('lecture-selection-view'),
         modeSelection: document.getElementById('mode-selection-view'),
@@ -108,23 +145,42 @@ document.addEventListener('DOMContentLoaded', () => {
         results: document.getElementById('results-view'),
     };
 
-    // YENİ: Başlık Kontrol Düğmeleri
+    // Header Controls
     const themeToggleBtn = document.getElementById('theme-toggle-btn');
     const themeIcon = document.getElementById('theme-icon');
     const langToggleBtn = document.getElementById('lang-toggle-btn');
 
+    // Dynamic Containers
     const lectureListContainer = document.getElementById('lecture-list-container');
     
+    // Mode Selection
     const selectedCourseTitle = document.getElementById('selected-course-title');
     const selectedLectureTitle = document.getElementById('selected-lecture-title');
     const startQuizModeBtn = document.getElementById('start-quiz-mode');
     const startPracticeModeBtn = document.getElementById('start-practice-mode');
     const startLearnModeBtn = document.getElementById('start-learn-mode');
     
+    // Back Buttons
+    // **FIX:** Added listeners for all back buttons
+    document.querySelectorAll('.back-to-lectures').forEach(btn => btn.addEventListener('click', () => {
+        resetSession();
+        switchView('lectureSelection');
+    }));
+    document.querySelectorAll('.back-to-modes').forEach(btn => btn.addEventListener('click', () => {
+        resetSession();
+        switchView('modeSelection');
+    }));
+    document.getElementById('back-to-modes-from-results').addEventListener('click', () => {
+        resetSession();
+        switchView('modeSelection');
+    });
+
+    // Quiz Setup
     const quizMaxQuestions = document.getElementById('quiz-max-questions');
     const quizQuestionCountInput = document.getElementById('quiz-question-count');
     const startQuizBtn = document.getElementById('start-quiz-btn');
 
+    // Question View (Quiz/Practice)
     const questionModeTitle = document.getElementById('question-mode-title');
     const questionCounter = document.getElementById('question-counter');
     const questionText = document.getElementById('question-text');
@@ -133,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextQuestionBtn = document.getElementById('next-question-btn');
     const finishBtn = document.getElementById('finish-btn');
     
+    // Learn View
     const learnCounter = document.getElementById('learn-counter');
     const learnQuestion = document.getElementById('learn-question');
     const learnAnswer = document.getElementById('learn-answer');
@@ -141,80 +198,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const learnDidntKnowBtn = document.getElementById('learn-didnt-know');
     const learnKnewBtn = document.getElementById('learn-knew');
     
+    // Results View
     const resultScore = document.getElementById('result-score');
     const resultPercentage = document.getElementById('result-percentage');
     const resultDetailsContainer = document.getElementById('result-details-container');
 
+    // Streak Popup
     const streakPopup = document.getElementById('streak-popup');
     const streakEmoji = document.getElementById('streak-emoji');
-    const streakMessage = document.getElementById('streak-message');
-
-    // YENİ: Geri Düğmeleri (Eksik olanlar eklendi)
-    const backToLecturesBtn = document.querySelector('.back-to-lectures');
-    const backToModesBtns = document.querySelectorAll('.back-to-modes');
-    const backToModesFromResultsBtn = document.getElementById('back-to-modes-from-results');
-
+    const streakText = document.getElementById('streak-text');
+    
     
     // --- 3. CORE LOGIC FUNCTIONS ---
 
     /**
-     * YENİ: Temayı Ayarlama Fonksiyonu
-     * @param {string} theme - 'light' veya 'dark'
+     * Handles switching between views (panels).
      */
-    function setTheme(theme) {
-        appState.theme = theme;
-        localStorage.setItem('lecturePodTheme', theme);
-        // HTML body'e data-theme attribute'ını ekler/değiştirir
-        document.body.dataset.theme = theme;
-        // İkonu günceller
-        themeIcon.textContent = theme === 'dark' ? 'dark_mode' : 'light_mode';
-    }
-
-    /**
-     * YENİ: Dili Ayarlama Fonksiyonu
-     * @param {string} lang - 'tr' veya 'en'
-     */
-    function setLanguage(lang) {
-        appState.language = lang;
-        localStorage.setItem('lecturePodLang', lang);
-        // HTML lang attribute'ını günceller
-        document.documentElement.lang = lang;
-        // Dil düğmesinin metnini günceller
-        langToggleBtn.textContent = lang === 'tr' ? 'EN' : 'TR';
-        // Tüm UI metinlerini günceller
-        updateUIText();
-    }
-
-    /**
-     * YENİ: UI Metinlerini Güncelleme Fonksiyonu
-     */
-    function updateUIText() {
-        const lang = appState.language;
-        // 'data-key' attribute'ına sahip tüm elementleri bul
-        document.querySelectorAll('[data-key]').forEach(el => {
-            const key = el.dataset.key;
-            if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
-        });
-
-        // Özel durumlar (dinamik metinler)
-        if (appState.currentMode === 'quiz') {
-            const allMCQuestions = getQuestionsByType('multiple-choice');
-            const max = allMCQuestions.length;
-            const maxText = translations[lang].quizMaxQuestionsText.replace('%max%', max);
-            quizMaxQuestions.textContent = maxText;
-        }
-
-        // Quiz/Pratik mod başlığını ayarla (eğer o ekrandaysak)
-        if (appState.currentView === 'question') {
-            questionModeTitle.textContent = appState.currentMode === 'quiz' ?
-                translations[lang].quizMode :
-                translations[lang].practiceMode;
-        }
-    }
-
-
     function switchView(viewId) {
         for (let key in views) {
             views[key].classList.remove('active');
@@ -225,11 +224,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /**
+     * Resets the session state when going back.
+     */
+    function resetSession() {
+        appState.activeQuestions = [];
+        appState.userAnswers = [];
+        appState.currentQuestionIndex = 0;
+        appState.currentStreak = 0;
+    }
+
+    /**
+     * Dynamically creates the lecture buttons.
+     */
     function populateLectureList() {
         lectureListContainer.innerHTML = ''; 
+        
         if (LECTURE_SOURCES.length === 0) {
-            // Çeviriden metin al
-            lectureListContainer.innerHTML = `<p class="loading-text">${translations[appState.language].loadingLectures}</p>`;
+            lectureListContainer.innerHTML = `<p class="loading-text" data-key="loadingLectures">Loading lectures...</p>`;
             return;
         }
         
@@ -239,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const [course, topic] = lecture.title.split(' - ');
             button.innerHTML = `
                 <h3>${course || lecture.title}</h3>
-                <p>${topic || 'Dersi Başlat'}</p>
+                <p>${topic || 'Start Lecture'}</p>
             `;
             button.dataset.file = lecture.file;
             button.addEventListener('click', () => {
@@ -247,12 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             lectureListContainer.appendChild(button);
         });
+        updateUIText(); // Update text for loading message if no lectures
     }
 
+    /**
+     * Fetches and loads the JSON data for a selected lecture.
+     */
     async function loadLecture(lectureFile) {
         try {
             const response = await fetch(lectureFile);
-            if (!response.ok) throw new Error(`HTTP hatası! Durum: ${response.status}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             appState.selectedLectureData = await response.json();
             
             const questions = appState.selectedLectureData.questions || [];
@@ -268,47 +286,42 @@ document.addEventListener('DOMContentLoaded', () => {
             
             switchView('modeSelection');
         } catch (error) {
-            console.error("Ders yüklenemedi:", error);
-            lectureListContainer.innerHTML = `<p class="loading-text" style="color: red;">Ders yüklenirken hata oluştu.</p>`;
+            console.error("Could not load lecture:", error);
+            lectureListContainer.innerHTML = `<p class="loading-text" style="color: red;">Error loading lecture. Please check file path and JSON format.</p>`;
         }
     }
     
+    /**
+     * Filters questions from the loaded JSON based on type.
+     */
     function getQuestionsByType(type) {
         if (!appState.selectedLectureData) return [];
         return appState.selectedLectureData.questions.filter(q => q.type === type);
     }
     
+    /**
+     * Shuffles an array and takes the first `count` items.
+     */
     function getRandomQuestions(questions, count) {
         const shuffled = [...questions].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, count);
     }
 
-    function showStreakPopup() {
-        const randomMessage = STREAK_MESSAGES[Math.floor(Math.random() * STREAK_MESSAGES.length)];
-        
-        streakEmoji.textContent = randomMessage.emoji;
-        streakMessage.textContent = randomMessage.text;
-        
-        streakPopup.classList.add('active');
-        
-        setTimeout(() => {
-            streakPopup.classList.remove('active');
-        }, 2500);
-    }
-
     // --- 4. RENDER FUNCTIONS ---
     
+    /**
+     * Renders the Question View (Quiz/Practice).
+     */
     function renderQuestionView() {
         const q = appState.activeQuestions[appState.currentQuestionIndex];
         const userAnswer = appState.userAnswers[appState.currentQuestionIndex];
         const isAnswered = (userAnswer !== null);
 
-        // Başlığı çeviriye göre ayarla
-        questionModeTitle.textContent = appState.currentMode === 'quiz' ?
-            translations[appState.language].quizMode :
-            translations[appState.language].practiceMode;
-            
-        questionCounter.textContent = `${appState.currentQuestionIndex + 1} / ${appState.activeQuestions.length}`;
+        const lang = appState.language;
+        questionModeTitle.textContent = appState.currentMode === 'quiz' ? translations[lang].quizModeTitle : translations[lang].practiceModeTitle;
+        questionCounter.textContent = translations[lang].questionCounter
+            .replace('{current}', appState.currentQuestionIndex + 1)
+            .replace('{total}', appState.activeQuestions.length);
         questionText.textContent = q.question;
 
         questionOptionsContainer.innerHTML = '';
@@ -331,29 +344,40 @@ document.addEventListener('DOMContentLoaded', () => {
             questionOptionsContainer.appendChild(label);
 
             if (isAnswered) {
-                if (option === q.correctAnswer) label.classList.add('correct-answer');
+                if (option === q.correctAnswer) {
+                    label.classList.add('correct-answer');
+                }
                 if (option === userAnswer) {
                     label.classList.add('selected');
                     input.checked = true;
-                    if (userAnswer !== q.correctAnswer) label.classList.add('incorrect-answer');
+                    if (userAnswer !== q.correctAnswer) {
+                        label.classList.add('incorrect-answer');
+                    }
                 }
             } else {
-                label.addEventListener('click', (e) => handleAnswerSelection(e, q, label));
+                label.addEventListener('click', (e) => {
+                    handleAnswerSelection(e, q, label);
+                });
             }
         });
         
         prevQuestionBtn.classList.toggle('hidden', appState.currentQuestionIndex === 0);
+        
         const isLastQuestion = appState.currentQuestionIndex === appState.activeQuestions.length - 1;
         nextQuestionBtn.classList.toggle('hidden', !isAnswered || isLastQuestion);
         finishBtn.classList.toggle('hidden', !isAnswered || !isLastQuestion);
     }
 
+    /**
+     * Handles logic when a user clicks an answer.
+     */
     function handleAnswerSelection(event, q, selectedLabel) {
-        if (event) event.preventDefault(); 
+        event.preventDefault(); 
+
         if (appState.userAnswers[appState.currentQuestionIndex] !== null) return; 
 
         const selectedOption = selectedLabel.textContent.trim();
-        appState.userAnswers[appState.currentQuestionIndex] = selectedOption;
+        appState.userAnswers[appState.currentQuestionIndex] = selectedOption; 
         
         const isCorrect = (selectedOption === q.correctAnswer);
 
@@ -361,142 +385,243 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const correctLabel = Array.from(questionOptionsContainer.children)
                                  .find(l => l.textContent.trim() === q.correctAnswer);
-        if (correctLabel) correctLabel.classList.add('correct-answer');
+        if (correctLabel) {
+            correctLabel.classList.add('correct-answer');
+        }
 
         if (isCorrect) {
             selectedLabel.classList.add('selected');
-            appState.currentStreak++;
+            appState.currentStreak++; // Increase streak
         } else {
             selectedLabel.classList.add('incorrect-answer');
             selectedLabel.classList.add('shake');
-            appState.currentStreak = 0;
+            appState.currentStreak = 0; // Reset streak
         }
 
+        // Check for streak
         if (appState.currentStreak === 3) {
             showStreakPopup();
-            appState.currentStreak = 0;
+            appState.currentStreak = 0; // Reset after showing
         }
 
-        const isLastQuestion = appState.currentQuestionIndex === appState.activeQuestions.length - 1;
-        if (isLastQuestion) {
+        if (appState.currentQuestionIndex === appState.activeQuestions.length - 1) {
             finishBtn.classList.remove('hidden');
         } else {
             nextQuestionBtn.classList.remove('hidden');
         }
 
-        if (appState.currentMode === 'practice' && !isLastQuestion) {
+        if (appState.currentMode === 'practice') {
             setTimeout(() => {
-                appState.currentQuestionIndex++;
-                renderQuestionView();
-            }, 1200);
+                if (appState.currentQuestionIndex < appState.activeQuestions.length - 1) {
+                    appState.currentQuestionIndex++;
+                    renderQuestionView();
+                }
+            }, 1000); 
         }
     }
 
+
+    /**
+     * Renders the Learn View (Flashcard)
+     */
     function renderLearnView() {
         learnAnswer.classList.add('hidden');
         showAnswerBtn.classList.remove('hidden');
         learnFeedbackBtns.classList.add('hidden');
 
         const q = appState.activeQuestions[appState.currentQuestionIndex];
+        const lang = appState.language;
+
         learnQuestion.textContent = q.question;
-        learnAnswer.textContent = q.correctAnswer;
-        learnCounter.textContent = `${appState.currentQuestionIndex + 1} / ${appState.activeQuestions.length}`;
+        
+        // **FIX: Use innerHTML to render formatted HTML from JSON**
+        learnAnswer.innerHTML = q.correctAnswer;
+        
+        learnCounter.textContent = translations[lang].learnCounter
+            .replace('{current}', appState.currentQuestionIndex + 1)
+            .replace('{total}', appState.activeQuestions.length);
     }
     
+    /**
+     * Calculates the final score and builds the results page.
+     */
     function calculateAndRenderResults() {
         let score = 0;
-        resultDetailsContainer.innerHTML = ''; 
+        resultDetailsContainer.innerHTML = '';
         const lang = appState.language;
-        const isLearnMode = appState.currentMode === 'learn'; // YENİ: Modu kontrol et
+        const total = appState.activeQuestions.length;
 
+        // Update titles
+        document.querySelector('#results-view h2').setAttribute('data-key', 'sessionComplete');
+        document.querySelector('#results-view h3').setAttribute('data-key', 'reviewAnswers');
+        
         appState.activeQuestions.forEach((q, index) => {
             const userAnswer = appState.userAnswers[index];
-
-            // YENİ: Puanlama ve Görüntüleme Mantığını Ayır
-            if (isLearnMode) {
-                // --- Öğrenme Modu Puanlaması ---
-                const didKnow = (userAnswer === 'knew');
-                if (didKnow) score++;
-
-                const resultCard = document.createElement('div');
-                resultCard.className = `result-card ${didKnow ? 'correct' : 'incorrect'}`;
-                
-                // "knew" ve "didntKnow" için çevirileri kullan
-                const statusText = didKnow ? translations[lang].knewIt : translations[lang].didntKnow;
-
-                let cardHTML = `<p class="question-text">${index + 1}. ${q.question}</p>`;
-                cardHTML += `<p class="correct-answer">${translations[lang].correctAnswerLabel}: ${q.correctAnswer}</p>`;
-                cardHTML += `<p class="user-answer ${didKnow ? '' : 'incorrect'}">
-                                Durum: ${statusText || translations[lang].notAnsweredLabel}
-                             </p>`;
-                
-                resultCard.innerHTML = cardHTML;
-                resultDetailsContainer.appendChild(resultCard);
-
-            } else {
-                // --- Quiz/Pratik Modu Puanlaması (Mevcut kod) ---
+            
+            // Handle Quiz/Practice results
+            if (appState.currentMode === 'quiz' || appState.currentMode === 'practice') {
                 const isCorrect = (userAnswer === q.correctAnswer);
-                if (isCorrect) score++;
+                if (isCorrect) {
+                    score++;
+                }
 
                 const resultCard = document.createElement('div');
                 resultCard.className = `result-card ${isCorrect ? 'correct' : 'incorrect'}`;
                 
-                // Çeviriden etiketleri al
-                const userAnsLabel = translations[lang].userAnswerLabel;
-                const correctAnsLabel = translations[lang].correctAnswerLabel;
-                const notAnsLabel = translations[lang].notAnsweredLabel;
-
                 let cardHTML = `<p class="question-text">${index + 1}. ${q.question}</p>`;
                 cardHTML += `<p class="user-answer ${isCorrect ? '' : 'incorrect'}">
-                                ${userAnsLabel}: ${userAnswer || notAnsLabel}
+                                <strong>${translations[lang].yourAnswerLabel}:</strong> ${userAnswer || translations[lang].notAnsweredLabel}
                              </p>`;
                 if (!isCorrect) {
-                    cardHTML += `<p class="correct-answer">${correctAnsLabel}: ${q.correctAnswer}</p>`;
+                    cardHTML += `<p class="correct-answer">
+                                    <strong>${translations[lang].correctAnswerLabel}:</strong> ${q.correctAnswer}
+                                 </p>`;
                 }
                 
+                resultCard.innerHTML = cardHTML;
+                resultDetailsContainer.appendChild(resultCard);
+
+            // **FIX:** Handle Learn mode results
+            } else if (appState.currentMode === 'learn') {
+                const didKnow = (userAnswer === 'knew');
+                if (didKnow) {
+                    score++;
+                }
+
+                const resultCard = document.createElement('div');
+                resultCard.className = `result-card ${didKnow ? 'correct' : 'incorrect'}`;
+                const statusText = didKnow ? translations[lang].knewItLabel : translations[lang].didntKnowLabel;
+                
+                let cardHTML = `<p class="question-text">${index + 1}. ${q.question}</p>`;
+                
+                // **FIX: Use innerHTML for the answer here as well**
+                cardHTML += `<div class="correct-answer">
+                                <strong>${translations[lang].correctAnswerLabel}:</strong>
+                                ${q.correctAnswer}
+                             </div>`;
+                             
+                cardHTML += `<p class="user-answer ${didKnow ? '' : 'incorrect'}">
+                                <strong>${translations[lang].statusLabel}:</strong> ${statusText}
+                             </p>`;
+
                 resultCard.innerHTML = cardHTML;
                 resultDetailsContainer.appendChild(resultCard);
             }
         });
 
-        const total = appState.activeQuestions.length;
+        // Update score display
         const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
         resultScore.textContent = `${score} / ${total}`;
         resultPercentage.textContent = `${percentage}%`;
         
-        appState.currentStreak = 0;
+        updateUIText(); // Update new titles
         switchView('results');
     }
 
-    // --- 5. EVENT HANDLERS ---
+    /**
+     * Shows the streak pop-up with a random message.
+     */
+    function showStreakPopup() {
+        const randomMsg = STREAK_MESSAGES[Math.floor(Math.random() * STREAK_MESSAGES.length)];
+        streakEmoji.textContent = randomMsg.emoji;
+        streakText.textContent = randomMsg.text[appState.language];
+        
+        streakPopup.classList.add('active');
+        
+        setTimeout(() => {
+            streakPopup.classList.remove('active');
+        }, 3000); // Hide after 3 seconds
+    }
+
+
+    // --- 5. THEME & LANGUAGE FUNCTIONS ---
+
+    /**
+     * Sets the theme (light/dark)
+     */
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('lecturePodTheme', theme);
+        appState.theme = theme;
+        themeIcon.textContent = (theme === 'dark') ? 'light_mode' : 'dark_mode';
+    }
+
+    /**
+     * Sets the language (tr/en)
+     */
+    function setLanguage(lang) {
+        if (translations[lang]) {
+            appState.language = lang;
+            localStorage.setItem('lecturePodLang', lang);
+            langToggleBtn.textContent = (lang === 'tr') ? 'EN' : 'TR';
+            updateUIText();
+        }
+    }
+
+    /**
+     * Updates all UI text based on the current language.
+     */
+    function updateUIText() {
+        const lang = appState.language;
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (translations[lang][key]) {
+                // Handle complex strings with variables
+                if (key === 'maxQuestions') {
+                    const max = appState.selectedLectureData ? getQuestionsByType('multiple-choice').length : 0;
+                    el.textContent = translations[lang][key].replace('{max}', max);
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            }
+        });
+    }
+
+    /**
+     * Initializes theme and language from localStorage or browser settings.
+     */
+    function initializeSettings() {
+        // Theme
+        const savedTheme = localStorage.getItem('lecturePodTheme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (prefersDark) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+
+        // Language
+        const savedLang = localStorage.getItem('lecturePodLang');
+        const browserLang = navigator.language.split('-')[0];
+        if (savedLang) {
+            setLanguage(savedLang);
+        } else if (browserLang === 'tr') {
+            setLanguage('tr');
+        } else {
+            setLanguage('en');
+        }
+    }
+
+    // --- 6. EVENT HANDLERS ---
     
-    // YENİ: Geri Düğme Dinleyicileri (Eksik olanlar eklendi)
-    backToLecturesBtn.addEventListener('click', () => switchView('lectureSelection'));
-    backToModesBtns.forEach(btn => btn.addEventListener('click', () => switchView('modeSelection')));
-    backToModesFromResultsBtn.addEventListener('click', () => switchView('modeSelection'));
-
-    // YENİ: Tema ve Dil Düğmesi Dinleyicileri
+    // Theme & Language Toggles
     themeToggleBtn.addEventListener('click', () => {
-        const newTheme = appState.theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
+        setTheme(appState.theme === 'light' ? 'dark' : 'light');
     });
-
+    
     langToggleBtn.addEventListener('click', () => {
-        const newLang = appState.language === 'tr' ? 'en' : 'tr';
-        setLanguage(newLang);
+        setLanguage(appState.language === 'tr' ? 'en' : 'tr');
     });
 
     // Mode Selection Button Handlers
     startQuizModeBtn.addEventListener('click', () => {
         appState.currentMode = 'quiz';
-        appState.currentStreak = 0;
         const allMCQuestions = getQuestionsByType('multiple-choice');
         const max = allMCQuestions.length;
         
-        // Metni çeviriden al
-        const maxText = translations[appState.language].quizMaxQuestionsText.replace('%max%', max);
-        quizMaxQuestions.textContent = maxText;
-        
+        quizMaxQuestions.textContent = translations[appState.language].maxQuestions.replace('{max}', max);
         quizQuestionCountInput.max = max;
         quizQuestionCountInput.value = Math.min(10, max);
         
@@ -505,7 +630,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     startPracticeModeBtn.addEventListener('click', () => {
         appState.currentMode = 'practice';
-        appState.currentStreak = 0;
         appState.activeQuestions = getQuestionsByType('multiple-choice');
         appState.userAnswers = new Array(appState.activeQuestions.length).fill(null);
         appState.currentQuestionIndex = 0;
@@ -516,9 +640,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startLearnModeBtn.addEventListener('click', () => {
         appState.currentMode = 'learn';
-        appState.currentStreak = 0;
         appState.activeQuestions = getQuestionsByType('short-answer');
-        appState.userAnswers = new Array(appState.activeQuestions.length).fill(null); // YENİ: Puanlama için eklendi
+        appState.userAnswers = new Array(appState.activeQuestions.length).fill(null); // Use 'null' for not answered
         appState.currentQuestionIndex = 0;
         
         renderLearnView();
@@ -538,8 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderQuestionView();
             switchView('question');
         } else {
-            // Hata mesajını güncelle (çeviriye gerek yok, zaten dinamik)
-            quizMaxQuestions.textContent = `Lütfen 1 ile ${allMCQuestions.length} arasında bir sayı girin.`;
+            quizMaxQuestions.textContent = `Please enter a number between 1 and ${allMCQuestions.length}.`; // Bu basit kalabilir
             quizMaxQuestions.style.color = 'red';
         }
     });
@@ -568,62 +690,28 @@ document.addEventListener('DOMContentLoaded', () => {
         learnAnswer.classList.remove('hidden');
         showAnswerBtn.classList.add('hidden');
         learnFeedbackBtns.classList.remove('hidden');
-        learnFeedbackBtns.style.display = 'grid'; 
+        learnFeedbackBtns.style.display = 'grid';
     });
 
-    function nextLearnCard() {
+    // **FIX:** Learn mode now goes to results screen
+    function handleLearnFeedback(knewIt) {
+        appState.userAnswers[appState.currentQuestionIndex] = knewIt ? 'knew' : 'didnt-know';
+        
         if (appState.currentQuestionIndex < appState.activeQuestions.length - 1) {
             appState.currentQuestionIndex++;
             renderLearnView();
         } else {
             // End of learn mode, go to results
-            // switchView('modeSelection'); // ESKİ
-            calculateAndRenderResults(); // YENİ
+            calculateAndRenderResults();
         }
     }
-    // learnKnewBtn.addEventListener('click', nextLearnCard); // ESKİ
-    // learnDidntKnowBtn.addEventListener('click', nextLearnCard); // ESKİ
-
-    // YENİ: Puanlamayı kaydetmek için güncellendi
-    learnKnewBtn.addEventListener('click', () => {
-        appState.userAnswers[appState.currentQuestionIndex] = 'knew';
-        nextLearnCard();
-    });
-    learnDidntKnowBtn.addEventListener('click', () => {
-        appState.userAnswers[appState.currentQuestionIndex] = 'didnt_know';
-        nextLearnCard();
-    });
+    learnKnewBtn.addEventListener('click', () => handleLearnFeedback(true));
+    learnDidntKnowBtn.addEventListener('click', () => handleLearnFeedback(false));
     
 
-    // --- 6. INITIALIZE THE APP ---
-
-    /**
-     * YENİ: Başlangıç Ayarları Fonksiyonu
-     * Kayıtlı dil ve tema ayarlarını yükler
-     */
-    function initializeSettings() {
-        // Dili Yükle
-        // Tarayıcının dilini algıla (tr ise 'tr' değilse 'en' yap)
-        const browserLang = navigator.language.split('-')[0];
-        const defaultLang = (browserLang === 'tr') ? 'tr' : 'en';
-        const savedLang = localStorage.getItem('lecturePodLang') || defaultLang;
-        setLanguage(savedLang);
-
-        // Temayı Yükle
-        const savedTheme = localStorage.getItem('lecturePodTheme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else {
-            setTheme(systemPrefersDark ? 'dark' : 'light');
-        }
-    }
+    // --- 7. INITIALIZE THE APP ---
     
-    // Uygulamayı başlatan ana fonksiyonlar
-    initializeSettings(); // Önce ayarları yükle
-    populateLectureList(); // Sonra dersleri listele
-    switchView('lectureSelection'); // İlk görünümü göster
+    initializeSettings();
+    populateLectureList();
+    switchView('lectureSelection');
 });
-
-
