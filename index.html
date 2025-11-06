@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- data-key="appTitle" ile başlığı da değiştirebiliriz -->
-    <title data-key="appTitle">LecturePod - E-Learning Platform</title>
+    <!-- data-key="appTitle" yerine "mainTitle" olarak güncellendi -->
+    <title data-key="mainTitle">LecturePod - E-Learning Platform</title>
     
     <!-- Google Font (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,9 @@
     <!-- Google Material Simgeleri (İkonlar) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- CSS Dosyamız -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS Dosyamız (Cache-bust eklendi) -->
+    <!-- SÜRÜM v1.0.2 OLARAK GÜNCELLENDİ -->
+    <link rel="stylesheet" href="style.css?v=1.0.2">
 </head>
 <!-- 
   JS, sayfa yüklendiğinde buraya 'data-theme="dark"' 
@@ -46,7 +47,8 @@
 
             <!-- VIEW 1: LECTURE SELECTION -->
             <div id="lecture-selection-view" class="view active">
-                <h2 data-key="selectLectureTitle">Bir Ders Seçin</h2>
+                <!-- "selectLectureTitle" yerine "selectLecture" olarak güncellendi -->
+                <h2 data-key="selectLecture">Bir Ders Seçin</h2>
                 <div id="lecture-list-container" class="space-y-4">
                     <p class="loading-text" data-key="loadingLectures">Dersler yükleniyor...</p>
                 </div>
@@ -60,7 +62,8 @@
                 </button>
                 <h2 id="selected-course-title"></h2>
                 <h3 id="selected-lecture-title"></h3>
-                <p class="section-title" data-key="studyModeTitle">Nasıl çalışmak istersiniz?</p>
+                <!-- "studyModeTitle" yerine "howToStudy" olarak güncellendi -->
+                <p class="section-title" data-key="howToStudy">Nasıl çalışmak istersiniz?</p>
                 
                 <div class="mode-selection-grid">
                     <button id="start-quiz-mode" class="mode-btn">
@@ -120,14 +123,17 @@
                 <div class="navigation-buttons">
                     <button id="prev-question-btn" class="btn hidden">
                         <span class="material-symbols-outlined">arrow_back</span>
-                        <span data-key="prevButton">Önceki</span>
+                        <!-- "prevButton" yerine "previous" olarak güncellendi -->
+                        <span data-key="previous">Önceki</span>
                     </button>
                     <button id="next-question-btn" class="btn btn-primary hidden">
-                        <span data-key="nextButton">Sonraki</span>
+                        <!-- "nextButton" yerine "next" olarak güncellendi -->
+                        <span data-key="next">Sonraki</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
                     <button id="finish-btn" class="btn btn-finish hidden">
-                        <span data-key="finishButton">Oturumu Bitir</span>
+                        <!-- "finishButton" yerine "finish" olarak güncellendi -->
+                        <span data-key="finish">Oturumu Bitir</span>
                         <span class="material-symbols-outlined">check_circle</span>
                     </button>
                 </div>
@@ -140,12 +146,14 @@
                     <span data-key="quitSession">Oturumu Kapat</span>
                 </button>
                 <div class="question-header">
-                    <h2 data-key="learnMode">Öğrenme Modu</h2>
+                    <!-- "learnMode" yerine "learnModeTitle" olarak güncellendi -->
+                    <h2 data-key="learnModeTitle">Öğrenme Modu</h2>
                     <span id="learn-counter">1 / 5</span>
                 </div>
                 <div class="flashcard">
                     <p id="learn-question">...</p>
-                    <p id="learn-answer" class="hidden">...</p>
+                    <!-- innerHTML ile doldurulacağı için 'pre-wrap' stilini CSS'den alacak -->
+                    <div id="learn-answer" class="hidden"></div>
                 </div>
                 <button id="show-answer-btn" class="btn btn-primary" data-key="showAnswer">Cevabı Göster</button>
                 <div id="learn-feedback-btns" class="hidden learn-feedback-grid">
@@ -167,7 +175,8 @@
                 </div>
                 <button id="back-to-modes-from-results" class="btn btn-primary">
                     <span class="material-symbols-outlined">refresh</span>
-                    <span data-key="backToModes">Modlara Geri Dön</span>
+                    <!-- "backToModes" "backToModesFromResults" idi, JS ile eşleşmesi için düzeltildi -->
+                    <span data-key="backToModesFromResults">Modlara Geri Dön</span>
                 </button>
             </div>
 
@@ -176,12 +185,13 @@
 
     <!-- Streak (Seri) Bildirimi -->
     <div id="streak-popup" class="streak-popup">
-        <span class="streak-emoji">🤩</span>
+        <span id="streak-emoji" class="streak-emoji">🤩</span>
+        <!-- HATA DÜZELTMESİ: ID 'streak-text' yerine 'streak-message' olarak düzeltildi -->
         <p id="streak-message">...</p>
     </div>
 
-    <!-- JavaScript Dosyamız -->
-    <script src="script.js" defer></script>
+    <!-- JavaScript Dosyamız (Cache-bust eklendi) -->
+    <!-- SÜRÜM v1.0.2 OLARAK GÜNCELLENDİ -->
+    <script src="script.js?v=1.0.2" defer></script>
 </body>
 </html>
-

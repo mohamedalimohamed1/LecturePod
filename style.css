@@ -225,6 +225,15 @@ h3 {
     background-color: #d1d5db; /* Bu da */
     box-shadow: var(--shadow);
 }
+/* Karanlık mod için düz (flat) düğme stili */
+[data-theme="dark"] .btn {
+    background-color: var(--border-color);
+    color: var(--text-dark);
+}
+[data-theme="dark"] .btn:hover {
+    background-color: #4b5563; /* gray-600 */
+}
+
 
 .btn-primary {
     background: var(--primary-gradient);
@@ -250,6 +259,11 @@ h3 {
     box-shadow: var(--shadow-lg);
     transform: translateY(-1px);
 }
+/* Karanlık mod için 'finish' düğmesi */
+[data-theme="dark"] .btn-finish {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+}
+
 
 .btn-back {
     display: inline-flex; 
@@ -349,7 +363,7 @@ h3 {
     box-shadow: var(--shadow-lg);
 }
 .mode-btn:disabled {
-    background: #9ca3af; /* gray-400 */
+    background: #9ca3af !important; /* gray-400 */
     cursor: not-allowed;
     opacity: 0.6;
     box-shadow: none;
@@ -358,6 +372,12 @@ h3 {
 #start-quiz-mode { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); } 
 #start-practice-mode { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
 #start-learn-mode { background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%); }
+
+/* Karanlık mod için mod düğmeleri */
+[data-theme="dark"] #start-quiz-mode { background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); } 
+[data-theme="dark"] #start-practice-mode { background: linear-gradient(135deg, #16a34a 0%, #4ade80 100%); }
+[data-theme="dark"] #start-learn-mode { background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%); }
+
 
 .mode-title {
     font-size: 1.25rem;
@@ -391,7 +411,7 @@ input[type="number"] {
 input[type="number"]:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(13, 148, 235, 0.2);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.2);
 }
 label[for="quiz-question-count"] {
     font-weight: 600;
@@ -408,7 +428,8 @@ label[for="quiz-question-count"] {
     border-bottom: 1px solid var(--border-color); /* Değişken kullanıldı */
     padding-bottom: 1rem;
 }
-#question-counter {
+#question-counter,
+#learn-counter {
     font-family: monospace;
     font-size: 1.125rem;
     padding: 0.25rem 0.75rem;
@@ -455,17 +476,21 @@ label[for="quiz-question-count"] {
     border-color: var(--primary-color);
     background-color: rgba(13, 148, 235, 0.1); /* Mavi arka plan */
 }
+[data-theme="dark"] .option-label.selected {
+    background-color: rgba(56, 189, 248, 0.1); /* Koyu mod mavi */
+}
+
 .option-label.correct-answer {
     border-color: var(--green-color) !important;
     background-color: var(--green-bg) !important;
     font-weight: 600;
-    color: var(--green-color);
+    color: var(--green-color) !important;
 }
 .option-label.incorrect-answer {
     border-color: var(--red-color) !important;
     background-color: var(--red-bg) !important;
     font-weight: 600;
-    color: var(--red-color);
+    color: var(--red-color) !important;
 }
 
 @keyframes shake {
@@ -510,7 +535,7 @@ label[for="quiz-question-count"] {
 }
 
 
-/* === GÜNCELLEME: View 5: Learn View (Flashcard) === */
+/* === View 5: Learn View (Flashcard) === */
 .flashcard {
     min-height: 250px;
     padding: 1.5rem;
@@ -519,7 +544,7 @@ label[for="quiz-question-count"] {
     border-radius: var(--border-radius-lg);
     display: flex;
     flex-direction: column;
-    /* GÜNCELLEME: Sola hizalandı */
+    /* Sola hizalandı */
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
@@ -528,21 +553,21 @@ label[for="quiz-question-count"] {
 #learn-question {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1.5rem; /* Artırıldı */
-    color: var(--text-dark); /* Metin rengi netleştirildi */
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
 }
 #learn-answer {
-    font-size: 1.125rem; /* 18px */
-    color: var(--text-dark); /* Cevap metni koyulaştırıldı */
+    font-size: 1.125rem;
+    color: var(--text-dark);
     font-weight: 500;
     width: 100%;
-    /* GÜNCELLEME: Okunabilirlik için yeni stil */
-    background-color: var(--bg-app);
+    /* Okunabilirlik için yeni stil */
+    background-color: var(--bg-container); /* Konteyner rengiyle aynı */
     border-left: 4px solid var(--primary-color);
     padding: 1rem;
-    line-height: 1.7; /* Satır yüksekliği artırıldı */
+    line-height: 1.7;
+    white-space: pre-wrap; /* JSON'daki satır atlamalarını koru */
 }
-/* GÜNCELLEME: Cevap içindeki listelerin düzgün görünmesi için */
 #learn-answer p, 
 #learn-answer ul, 
 #learn-answer ol {
@@ -552,7 +577,10 @@ label[for="quiz-question-count"] {
 #learn-answer ol {
     padding-left: 1.5rem;
 }
-/* === GÜNCELLEME SONU === */
+/* Cevaptaki son elemanın alt boşluğunu kaldır */
+#learn-answer > *:last-child {
+    margin-bottom: 0;
+}
 
 
 .learn-feedback-grid {
@@ -627,21 +655,53 @@ label[for="quiz-question-count"] {
     margin-bottom: 0.75rem;
     color: var(--text-dark);
 }
-.result-card .user-answer.incorrect {
-    color: var(--red-color);
+.result-card .user-answer {
     font-weight: 500;
+    color: var(--text-dark); /* Yanlış olsa bile ana metin rengi */
 }
-.result-card .correct-answer {
+.result-card .user-answer.incorrect > strong {
+    color: var(--red-color); /* Sadece "Your Answer:" kısmı kırmızı */
+}
+
+/* Sonuç ekranındaki cevap için de HTML formatlama stilleri */
+.correct-answer-review {
+    font-weight: 500;
+    margin-top: 0.75rem;
+    font-size: 1rem; /* Flashcard ile aynı boyutta */
+    background-color: var(--bg-container);
+    border-left: 4px solid var(--green-color);
+    padding: 1rem;
+    line-height: 1.7;
+    white-space: pre-wrap; /* JSON'daki satır atlamalarını koru */
+}
+.correct-answer-review strong {
     color: var(--green-color);
-    font-weight: 500;
-    margin-top: 0.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.correct-answer-review .answer-content {
+    color: var(--text-dark);
+}
+
+.correct-answer-review p, 
+.correct-answer-review ul, 
+.correct-answer-review ol {
+    margin-bottom: 1rem;
+}
+.correct-answer-review ul,
+.correct-answer-review ol {
+    padding-left: 1.5rem;
+}
+.correct-answer-review > *:last-child {
+    margin-bottom: 0;
 }
 
 
-/* --- Streak (Seri) Bildirim Stilleri --- */
+/* --- GÜNCELLEME: Streak (Seri) Bildirim Stilleri --- */
 .streak-popup {
     position: fixed;
-    bottom: -150px; /* Başlangıçta ekranın tamamen dışında */
+    /* GÜNCELLEME: Alttan üste taşındı */
+    top: -150px; /* Başlangıçta ekranın tamamen dışında */
     left: 50%;
     transform: translateX(-50%);
     
@@ -655,12 +715,15 @@ label[for="quiz-question-count"] {
     align-items: center;
     gap: 1rem;
     
+    max-width: 90%; /* Mobilde taşmasın */
     z-index: 1000;
-    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* GÜNCELLEME: 'bottom' yerine 'top' geçişi */
+    transition: top 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .streak-popup.active {
-    bottom: 20px;
+    /* GÜNCELLEME: Alttan üste taşındı */
+    top: 20px;
 }
 .streak-popup .streak-emoji {
     font-size: 2.5rem;

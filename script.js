@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * This is our "master list" of lectures.
-     * It tells the app where to find the JSON files.
-     * IMPORTANT: The paths must be correct relative to `index.html`.
+     * (Using your updated list)
      */
     const LECTURE_SOURCES = [
         { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
-        { id: 'lecture-2', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
         { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
+        { id: 'lecture-3', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
+        { id: 'lecture-4', title: 'Uzaktan Algılama - Kavramlar', file: 'data/lecture_four.json' },
+        { id: 'lecture-5', title: 'Sistem Analizi - Sistem Modelleri', file: 'data/lecture_five.json' },
+        { id: 'lecture-6', title: 'Sistem Analizi - Bilgi Sistemleri', file: 'data/lecture_six.json' }
     ];
 
     /**
@@ -161,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const startLearnModeBtn = document.getElementById('start-learn-mode');
     
     // Back Buttons
-    // **FIX:** Added listeners for all back buttons
     document.querySelectorAll('.back-to-lectures').forEach(btn => btn.addEventListener('click', () => {
         resetSession();
         switchView('lectureSelection');
@@ -206,7 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Streak Popup
     const streakPopup = document.getElementById('streak-popup');
     const streakEmoji = document.getElementById('streak-emoji');
-    const streakText = document.getElementById('streak-text');
+    // *** HATA DÜZELTMESİ (FIX) ***
+    // HTML'deki 'streak-message' ID'si ile eşleşmesi için 'streak-text' 'streak-message' olarak değiştirildi.
+    const streakText = document.getElementById('streak-message'); 
     
     
     // --- 3. CORE LOGIC FUNCTIONS ---
@@ -242,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (LECTURE_SOURCES.length === 0) {
             lectureListContainer.innerHTML = `<p class="loading-text" data-key="loadingLectures">Loading lectures...</p>`;
-            return;
         }
         
         LECTURE_SOURCES.forEach(lecture => {
@@ -267,7 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function loadLecture(lectureFile) {
         try {
-            const response = await fetch(lectureFile);
+            // DİKKAT: GitHub Pages'da önbelleğe alma (caching) sorunlarını önlemek için
+            // URL'ye benzersiz bir sorgu parametresi ekliyoruz.
+            const response = await fetch(`${lectureFile}?v=${new Date().getTime()}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -370,6 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Handles logic when a user clicks an answer.
+     * **FIXED:** Added a delay for auto-next on streak.
      */
     function handleAnswerSelection(event, q, selectedLabel) {
         event.preventDefault(); 
@@ -380,6 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         appState.userAnswers[appState.currentQuestionIndex] = selectedOption; 
         
         const isCorrect = (selectedOption === q.correctAnswer);
+        let isStreakAchieved = false; // Flag to track if streak was hit *this time*
 
         questionOptionsContainer.classList.add('answered');
         
@@ -402,21 +408,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (appState.currentStreak === 3) {
             showStreakPopup();
             appState.currentStreak = 0; // Reset after showing
+            isStreakAchieved = true; // Mark that we need to delay
         }
 
+        // Show Next/Finish buttons
         if (appState.currentQuestionIndex === appState.activeQuestions.length - 1) {
             finishBtn.classList.remove('hidden');
         } else {
             nextQuestionBtn.classList.remove('hidden');
         }
 
+        // Auto-next for practice mode
         if (appState.currentMode === 'practice') {
+            // **THE FIX:** Wait 2.5s if a streak just happened, otherwise wait 1s
+            const delay = isStreakAchieved ? 2500 : 1000;
+            
             setTimeout(() => {
                 if (appState.currentQuestionIndex < appState.activeQuestions.length - 1) {
                     appState.currentQuestionIndex++;
                     renderQuestionView();
                 }
-            }, 1000); 
+            }, delay); 
         }
     }
 
@@ -434,8 +446,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         learnQuestion.textContent = q.question;
         
-        // **FIX: Use innerHTML to render formatted HTML from JSON**
-        learnAnswer.innerHTML = q.correctAnswer;
+        // Use innerHTML to render formatted HTML from JSON
+        learnAnswer.innerHTML = q.correctAnswer; 
         
         learnCounter.textContent = translations[lang].learnCounter
             .replace('{current}', appState.currentQuestionIndex + 1)
@@ -444,6 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /**
      * Calculates the final score and builds the results page.
+     * (Now supports all 3 modes)
      */
     function calculateAndRenderResults() {
         let score = 0;
@@ -481,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultCard.innerHTML = cardHTML;
                 resultDetailsContainer.appendChild(resultCard);
 
-            // **FIX:** Handle Learn mode results
+            // Handle Learn mode results
             } else if (appState.currentMode === 'learn') {
                 const didKnow = (userAnswer === 'knew');
                 if (didKnow) {
@@ -494,10 +507,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 let cardHTML = `<p class="question-text">${index + 1}. ${q.question}</p>`;
                 
-                // **FIX: Use innerHTML for the answer here as well**
-                cardHTML += `<div class="correct-answer">
+                // Use innerHTML for the answer here as well
+                cardHTML += `<div class="correct-answer-review">
                                 <strong>${translations[lang].correctAnswerLabel}:</strong>
-                                ${q.correctAnswer}
+                                <div class="answer-content">${q.correctAnswer}</div>
                              </div>`;
                              
                 cardHTML += `<p class="user-answer ${didKnow ? '' : 'incorrect'}">
@@ -522,15 +535,27 @@ document.addEventListener('DOMContentLoaded', () => {
      * Shows the streak pop-up with a random message.
      */
     function showStreakPopup() {
+        // Prevent popup from showing if another one is already active
+        if (streakPopup.classList.contains('active')) {
+            return;
+        }
+
         const randomMsg = STREAK_MESSAGES[Math.floor(Math.random() * STREAK_MESSAGES.length)];
-        streakEmoji.textContent = randomMsg.emoji;
-        streakText.textContent = randomMsg.text[appState.language];
         
-        streakPopup.classList.add('active');
+        // ** NULL KONTROLÜ (Güvenlik için eklendi) **
+        if (streakEmoji && streakText) {
+            streakEmoji.textContent = randomMsg.emoji;
+            streakText.textContent = randomMsg.text[appState.language];
+            streakPopup.classList.add('active');
+        } else {
+            console.error("Streak popup elements not found!");
+            return; // Elemanlar bulunamazsa fonksiyonu durdur
+        }
         
+        // Hide after 20 seconds (as requested)
         setTimeout(() => {
             streakPopup.classList.remove('active');
-        }, 3000); // Hide after 3 seconds
+        }, 20000); 
     }
 
 
@@ -543,7 +568,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('lecturePodTheme', theme);
         appState.theme = theme;
-        themeIcon.textContent = (theme === 'dark') ? 'light_mode' : 'dark_mode';
+        if(themeIcon) { // Null kontrolü
+            themeIcon.textContent = (theme === 'dark') ? 'light_mode' : 'dark_mode';
+        }
     }
 
     /**
@@ -553,7 +580,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (translations[lang]) {
             appState.language = lang;
             localStorage.setItem('lecturePodLang', lang);
-            langToggleBtn.textContent = (lang === 'tr') ? 'EN' : 'TR';
+            if(langToggleBtn) { // Null kontrolü
+                langToggleBtn.textContent = (lang === 'tr') ? 'EN' : 'TR';
+            }
+            document.documentElement.lang = lang; // HTML lang özelliğini güncelle
             updateUIText();
         }
     }
@@ -568,6 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (translations[lang][key]) {
                 // Handle complex strings with variables
                 if (key === 'maxQuestions') {
+                    // Yalnızca selectedLectureData varsa max'ı almayı deneyin
                     const max = appState.selectedLectureData ? getQuestionsByType('multiple-choice').length : 0;
                     el.textContent = translations[lang][key].replace('{max}', max);
                 } else {
@@ -607,13 +638,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. EVENT HANDLERS ---
     
     // Theme & Language Toggles
-    themeToggleBtn.addEventListener('click', () => {
-        setTheme(appState.theme === 'light' ? 'dark' : 'light');
-    });
+    if(themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            setTheme(appState.theme === 'light' ? 'dark' : 'light');
+        });
+    }
     
-    langToggleBtn.addEventListener('click', () => {
-        setLanguage(appState.language === 'tr' ? 'en' : 'tr');
-    });
+    if(langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            setLanguage(appState.language === 'tr' ? 'en' : 'tr');
+        });
+    }
 
     // Mode Selection Button Handlers
     startQuizModeBtn.addEventListener('click', () => {
@@ -661,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderQuestionView();
             switchView('question');
         } else {
-            quizMaxQuestions.textContent = `Please enter a number between 1 and ${allMCQuestions.length}.`; // Bu basit kalabilir
+            quizMaxQuestions.textContent = `Please enter a number between 1 and ${allMCQuestions.length}.`; // This can stay simple
             quizMaxQuestions.style.color = 'red';
         }
     });
@@ -693,17 +728,40 @@ document.addEventListener('DOMContentLoaded', () => {
         learnFeedbackBtns.style.display = 'grid';
     });
 
-    // **FIX:** Learn mode now goes to results screen
+    /**
+     * Handles Learn Mode feedback
+     * **FIXED:** Added a delay for advancing on streak.
+     */
     function handleLearnFeedback(knewIt) {
         appState.userAnswers[appState.currentQuestionIndex] = knewIt ? 'knew' : 'didnt-know';
         
-        if (appState.currentQuestionIndex < appState.activeQuestions.length - 1) {
-            appState.currentQuestionIndex++;
-            renderLearnView();
+        let isStreakAchieved = false;
+        if (knewIt) {
+            appState.currentStreak++;
         } else {
-            // End of learn mode, go to results
-            calculateAndRenderResults();
+            appState.currentStreak = 0; // "Bilemedim" seçilirse seri sıfırlanır
         }
+
+        if (appState.currentStreak === 3) {
+            showStreakPopup();
+            appState.currentStreak = 0; // Gösterdikten sonra sıfırla
+            isStreakAchieved = true;
+        }
+
+        // Function to move to next card or finish
+        const advance = () => {
+            if (appState.currentQuestionIndex < appState.activeQuestions.length - 1) {
+                appState.currentQuestionIndex++;
+                renderLearnView();
+            } else {
+                // End of learn mode, go to results
+                calculateAndRenderResults();
+            }
+        };
+
+        // **THE FIX:** Wait 2.5s if a streak just happened, otherwise wait 0.3s
+        const delay = isStreakAchieved ? 2500 : 300;
+        setTimeout(advance, delay);
     }
     learnKnewBtn.addEventListener('click', () => handleLearnFeedback(true));
     learnDidntKnowBtn.addEventListener('click', () => handleLearnFeedback(false));
