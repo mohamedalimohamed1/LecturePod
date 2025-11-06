@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const LECTURE_SOURCES = [
         { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
         { id: 'lecture-3', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
+        { id: 'lecture-2', title: 'Görüntü İşleme - Vize Sınavı', file: 'data/lecture_four.json' },
         { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
     ];
 

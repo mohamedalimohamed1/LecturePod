@@ -1,0 +1,196 @@
+{
+  "courseTitle": "Görüntü İşleme",
+  "lectureTitle": "Vize Notları - Temel Kavramlar",
+  "questions": [
+    {
+      "type": "short-answer",
+      "question": "1. Görüntü İşleme kavramını açıklayınız, temel amacı nedir ve görüntü işleme aşamaları nelerdir?",
+      "correctAnswer": "<p><strong>Görüntü İşleme:</strong> Ölçülmüş veya kaydedilmiş olan elektronik (dijital) görüntü verilerini, elektronik ortamda (bilgisayar ve yazılımlar yardımı ile) amaca uygun şekilde değiştirmeye yönelik yapılan bilgisayar çalışmasıdır. Görüntülerin işlenmesi, analiz edilmesi ve anlamlı bilgilere dönüştürülmesi sürecini ifade eder.</p><p><strong>Temel amaç:</strong> Bir görüntüyü dijital forma dönüştürmek, görüntülerden anlamlı bilgi çıkarmak ve görüntülerin kalitesini iyileştirmektir.</p><p><strong>Görüntü İşleme Aşamaları:</strong></p><ul><li><strong>1. Düşük Seviye İşleme:</strong> Hem girdisi hem de çıktısı görüntüdür. (Örnek: Gürültü gidermek ve keskinleştirmek.)</li><li><strong>2. Orta Seviye İşleme:</strong> Girdisi görüntü, çıktısı özelliklerdir. (Örnek: Nesne tanımlama ve segmentasyon.)</li><li><strong>3. Yüksek Seviye İşleme:</strong> Girdisi özellikler, çıktısı anlamadır. (Örnek: Sahne anlama, otomatik navigasyon.)</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "2. (⭐) Görüntü işlemenin önemini açıklayınız. Eskiden hangi amaçla kullanılırken günümüzde hangi amaçlar için kullanılmaktadır?",
+      "correctAnswer": "<p><strong>Görüntü İşlemenin Önemi:</strong> Görüntü işleme, bilgisayarlara \"görme yeteneği\" kazandırır ve otonom sistemlerin \"gözü\" olarak çalışır. Asıl önemi, sadece görüntüyü iyileştirmek değil, görüntüden bilgi çıkarıp, bu bilgiyle karar vermek ve bir eylem (otomasyon) başlatmaktır.</p><p><strong>Geçmiş ve Günümüzdeki Amaçları:</strong></p><ul><li><strong>Eskiden:</strong> Görüntü işleme daha çok resmi netleştirme, kontrast artırma gibi iyileştirmelere odaklanıyordu.</li><li><strong>Günümüzde:</strong> İyileştirmenin yanı sıra asıl olarak Bilgi Çıkarımı, Karar Verme ve Otomasyon için kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "3. Görüntü işlemenin günümüzdeki kullanımına 'Karar Verme', 'Otomasyon' ve 'Otonom Sistem' için birer örnek veriniz.",
+      "correctAnswer": "<ul><li><strong>Karar Verme Örneği:</strong> Tıbbi bir görüntüdeki bilginin yorumlanıp \"Bu tümör mü değil mi?\" kararına varılması.</li><li><strong>Otomasyon Örneği:</strong> Bir fabrika kamerasının hatalı bir ürünü görüp, robot kolun onu ayırmasına karar vermesi.</li><li><strong>Otonom Sistem Örneği:</strong> Bir sürücüsüz aracın, kameradan aldığı görüntüyle yol şeritlerini, trafik ışıklarını ve yayaları algılayıp buna göre hareket etmesi.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "4. Görüntü İşleme hangi alanlarda kullanılmaktadır ve günümüzde bu teknolojinin önemini artıran temel faktör nedir?",
+      "correctAnswer": "<p><strong>Kullanım Alanları:</strong> Askeri, endüstri, robotik, tıp, coğrafya (uzaktan algılama), trafik, güvenlik (yüz tanıma, plaka okuma), tarım ve astronomi gibi pek çok alanda kullanılır.</p><p><strong>Önemini Artıran Faktör:</strong> Günümüzde görüntü işlemenin önemini bir kat daha artıran temel faktör, artık her işlemin insan yerine <strong>otonom sistemlere</strong> yaptırılmasıdır. Görüntü işleme, bu sistemlerin çevreyi algılayabilmesi için vazgeçilmezdir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "5. (⭐) Görüntü işlemenin Temel Kavramları nelerdir? Görüntü nedir? Analog ve Dijital Görüntüyü tanımlayınız.",
+      "correctAnswer": "<p><strong>Temel Kavramlar:</strong> Piksel, Gri seviye, Renkli görüntü ve Matris temsili'dir.</p><p><strong>Görüntü:</strong> 3 Boyutlu nesnelerin 2 Boyutlu yüzey üzerine düşürülmüş haritasıdır. Piksellerden oluşur ve konum bilgisi ile renk bilgisi içerir.</p><p><strong>Analog Görüntü:</strong> Sürekli bir sinyal formundadır. Görüntüdeki her noktanin parlaklık ve renk bilgisi zaman ve mekânda kesintisiz bir şekilde değişir.</p><p><strong>Dijital Görüntü:</strong> Sayısal olarak örneklenmiş ve nicelenmiş (quantize edilmiş) veridir. Görüntü pikseller halinde ayrılmıştır ve her piksel sayısal değerlerle ifade edilir.</p><ul><li><strong>Gri Seviyeli (Görüntü):</strong> 0–255 arası parlaklık değerleridir.</li><li><strong>Renkli Görüntü:</strong> RGB bantlarının birleşimidir (24 bit, ~16.7 milyon renk).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "6. (⭐) Görüntü işleme 'İşlem Türleri' nelerdir? Kısaca açıklayınız.",
+      "correctAnswer": "<ol><li><strong>Nokta İşlemleri:</strong> Sadece o tek pikselin değeri kullanılır, komşular dikkate alınmaz. (Örnek: Parlaklığı artırmak, kontrast ayarlamak).</li><li><strong>Yerel (Bölgesel) İşlemler:</strong> Piksel ve onun çevresindeki komşu piksellerin değerleri birlikte işlenir. Maske (kernel) kullanılır. (Örnek: Bulanıklaştırma, keskinleştirme, kenar tespiti).</li><li><strong>Bütünsel İşlemler:</strong> Görüntünün tamamı üzerinde işlem yapılır. (Örnek: Histogram eşitleme, Fourier analizi).</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "7. Görüntü İyileştirme nedir, temel amacı nedir ve hangi iki temel alanda (domain) yapılır?",
+      "correctAnswer": "<p><strong>Görüntü İyileştirme:</strong> Görüntüyü insan gözüyle daha kolay algılanabilir veya daha uygun biçimde analiz edilebilir hale getirme sürecidir. Bu aşama, görüntü analizinden önce yapılan ön işleme (preprocessing) aşamasının bir parçasıdır.</p><p><strong>Temel Amaç:</strong> Temel amaç, görüntüdeki bilgi miktarını artırmak değil, algılanan kaliteyi yükseltmektir. (Örnek: Karanlık bir fotoğrafın aydınlatılması).</p><p><strong>Yapıldığı Alanlar:</strong></p><ol><li><strong>Uzamsal Alan (Spatial Domain):</strong> Görüntü pikselleri üzerinde doğrudan (piksel düzeyinde) işlemler yapılır.</li><li><strong>Frekans Alanı (Frequency Domain):</strong> Görüntü, Fourier dönüşümü ile frekans bileşenlerine ayrılarak bu alanda işlemler yapılır.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "8. Görüntü iyileştirmede kullanılan temel fonksiyon tipleri nelerdir?",
+      "correctAnswer": "<ol><li><strong>Linear (Doğrusal):</strong> Negatif (Negative) ve Kimlik (Identity) dönüşümlerini içerir.</li><li><strong>Logarithmic (Log / Inverse-log):</strong> Düşük değerleri genişletir, yüksek değerleri sıkıştırır.</li><li><strong>Power-law:</strong> Esnek kontrast manipülasyonu sağlar.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "9. Fourier Spektrumu nedir ve hangi iki bileşenden oluşur?",
+      "correctAnswer": "<p><strong>Fourier Spektrumu:</strong> Bir görüntüyü temel frekans bileşenlerine ayırarak analiz etme işlemidir. Görüntü işleme, sinyal işleme ve iletişim gibi birçok alanda kullanılır.</p><p><strong>Bileşenleri:</strong> Genellikle genlik (magnitude) ve faz (phase) bileşenlerinden oluşur.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "10. Gama Dönüşümü nedir? Başlıca uygulama alanlarını ve bu alanlarda hangi amaçlarla kullanıldığını açıklayınız.",
+      "correctAnswer": "<p><strong>Gama Dönüşümü:</strong> Görüntüdeki gri seviyelerini \"güç gama dönüşümü\" ile dönüştüren bir tekniktir.</p><p><strong>Uygulama Alanları ve Amaçları:</strong></p><ol><li><strong>Tıbbi Görüntüler (MR, X-ray):</strong> Karanlık bölgelerdeki detayları açmak ve lezyon/dokuları daha görünür hâle getirmek için kullanılır.</li><li><strong>Uydu Görüntüleri:</strong> Parlak alanlarda (örn: açık alanlar, bulutlar) kontrastı sıkıştırmak ve detayları kontrol etmek için kullanılır.</li><li><strong>Gamma Correction (Ekranlar):</strong> Görüntülerin CRT, LCD gibi cihazlarda doğru parlaklıkta görüntülenmesi için gama düzeltmesi yapılır.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "11. (⭐) Histogramın önemini ve temel uygulamalarını belirtiniz.",
+      "correctAnswer": "Histogram, görüntü istatistiklerini verir ve görüntü iyileştirme için temel bir araçtır. Hesaplaması kolay olduğu ve donanımda ekonomik olarak uygulanabildiği için gerçek zamanlı işleme için uygundur. Temel uygulamaları <strong>görüntü sıkıştırma</strong> ve <strong>görüntü segmentasyonu</strong>'dur."
+    },
+    {
+      "type": "short-answer",
+      "question": "12. (⭐) Histogram Eşitleme yönteminin tanımını ve nasıl çalıştığını açıklayınız?",
+      "correctAnswer": "<p><strong>Histogram Eşitleme (HE):</strong> Görüntü işlemede görüntünün histogramını kullanarak kontrast ayarlama yöntemidir. Bir görüntünün global kontrastını artırmak için kullanılan temel bir tekniktir.</p><p><strong>Temel amacı,</strong> görüntüdeki gri seviyelerini artırmak, düşük kontrastlı görüntüleri iyileştirmek ve gri ton değerlerini görüntüde daha dengeli dağıtmaktır.</p><p>Bu yöntemde, görüntüdeki tüm piksel değerlerinin histogramı çıkarılır ve histogramda sık bulunan piksel değerleri daha geniş bir aralığa yayılır. Sonuç olarak, düşük kontrastlı bölgeler daha belirgin hale gelir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "13. Histogram Eşleştirme uygulama alanları nelerdir?",
+      "correctAnswer": "<ul><li>Bir fotoğrafın kontrastını belirli bir stile göre ayarlamak.</li><li>Uydu görüntülerinde belli bir ton aralığına uydurmak.</li><li>Fotoğrafların kontrastını düzeltmek.</li><li>Medikal Görüntüleme (X-ray ve CT): Kontrastı artırarak detayları daha net görmek.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "14. Histogram Eşitlemenin etkileri nelerdir?",
+      "correctAnswer": "<ul><li>Görsel olarak ve genel anlamda kontrast artışı gözlenir.</li><li>Karanlık bölgeler daha açık görünür, parlak bölgeler ise daha dengelenir.</li><li>Bu değişimler sonucunda görüntüde daha fazla detay ortaya çıkar.</li><li>Gri ton sırası (monoton artan bir fonksiyon olduğu için) korunur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "15. Histogram Eşitleme Adımları nelerdir?",
+      "correctAnswer": "<ol><li><strong>Giriş histogramını çıkarmak:</strong> Görüntüdeki her gri seviyenin kaç piksel içerdiğini belirlemek.</li><li><strong>Kümülatif dağılım fonksiyonunu (CDF) oluşturmak.</strong></li><li><strong>Hedef histogramın kümülatif dağılım fonksiyonunu oluşturmak:</strong> (Bu, istenilen dağılımdır).</li><li><strong>Eşleştirme yapmak:</strong> Girişin CDF'sindeki her değeri, hedefin CDF'sindeki en yakın değere eşleştirmek.</li><li><strong>Yeni görüntüyü oluşturmak:</strong> Tüm piksellerin değerini eşleştirilmiş tonla değiştirmek.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "16. (⭐) CLAHE nedir? Temel özelliklerini (Adaptive ve Contrast Limited) ve avantajlarını açıklayınız.",
+      "correctAnswer": "<p><strong>CLAHE (Contrast Limited Adaptive Histogram Equalization)</strong>, klasik histogram eşitlemenin (HE) geliştirilmiş bir versiyonudur. Geliştirilme Nedeni: Basit HE, gürültüyü artırabilir ve lokal (bölgesel) kontrastı iyileştiremez. CLAHE bu sorunları çözmek için geliştirilmiştir.</p><p><strong>Temel Özellikleri ve Avantajları:</strong></p><ol><li><strong>Adaptive (Uyarlamalı):</strong> Görüntüyü küçük bloklara böler ve her blok için ayrı ayrı histogram eşitleme yapılır. Sonuç: Farklı bölgelerdeki kontrastlar lokal olarak artırılır.</li><li><strong>Contrast Limited (Kontrast Sınırlı):</strong> CLAHE, <code>clipLimit</code> parametresi ile aşırı kontrast artışını (ve gürültü patlamasını) sınırlar.</li></ol><p><strong>Avantajları:</strong> Bu özellikler sayesinde CLAHE, küçük detayları öne çıkarır, gürültüyü aşırı büyütmez ve daha dengeli bir kontrast sağlar.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "17. CLAHE’nin Aşamaları nelerdir?",
+      "correctAnswer": "<ol><li>Görüntüyü küçük bloklara böl.</li><li>Her blok için histogramı hesapla.</li><li>ClipLimit ile aşırı değerleri sınırlayıp normalize et.</li><li>Her bloğu eşitle.</li><li>Blokları birleştir (bu sırada geçiş bölgeleri yumuşatılır).</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "18. (⭐) Görüntü iyileştirme için kullanılan \"Uzaysal Alan\" ve \"Frekans Alanı\" yaklaşımlarını karşılaştırınız.",
+      "correctAnswer": "<p><strong>Uzamsal Alan:</strong></p><ul><li><strong>Tanım:</strong> Görüntü üzerinde doğrudan (piksel düzeyinde) işlem yapılır.</li><li><strong>İşlem:</strong> Konvolüsyon (evrişim) işlemiyle filtreleme yapılır.</li><li><strong>Avantajlar:</strong> Uygulaması basittir ve doğrudan görsel sonuçlar elde edilir.</li><li><strong>Dezavantajlar:</strong> Büyük filtreler kullanıldığında hesaplama maliyeti artar.</li></ul><p><strong>Frekans Alanı:</strong></p><ul><li><strong>Tanım:</strong> Görüntü, Fourier dönüşümü ile frekans bileşenlerine ayrılır (Yüksek frekans=detay, Düşük frekans=genel yapı).</li><li><strong>İşlem:</strong> Frekans bileşenleri üzerinde işlem yapılır ve ardından ters Fourier dönüşümü ile uzaysal alana geri dönülür.</li><li><strong>Avantajlar:</strong> Büyük filtrelerin hesaplama maliyeti azalır ve belirli frekans bileşenlerini hedefleyerek işlem yapılabilir.</li><li><strong>Dezavantajlar:</strong> İşlem süreci daha karmaşıktır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "19. (⭐) \"Uzaysal Filtreleme\" işlemini tanımlayınız. \"Uzaysal Maske (Kernel)\" ve \"Pencere (Window)\" kavramlarını açıklayınız.",
+      "correctAnswer": "<ul><li><strong>Uzaysal Filtreleme:</strong> Görüntü üzerinde bir pikselin değerini, komşu pikselleriyle birlikte değerlendirerek değiştirme işlemidir.</li><li><strong>Uzaysal Maske / Kernel:</strong> Filtre katsayılarını içeren matristir. Her pikselin yeni değeri, bu matris ile komşuluk değerlerinin çarpılıp toplanmasıyla bulunur. \"Kernel\" ve \"Maske\" aynı şeyi ifade eder.</li><li><strong>Pencere (Window):</strong> İşlem yapılacak alan (komşuluk penceresi) demektir. Piksel değerini değiştirmek için bu pencere görüntü üzerinde kaydırılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "20. Uzaysal Korelasyon ve Konvolüsyon işlemlerini tanımlayarak aralarındaki temel farkı belirtiniz.",
+      "correctAnswer": "<ul><li><strong>Korelasyon:</strong> Bir çekirdek (kernel) penceresini görüntü üzerinde kaydırmak ve her konumda piksel değerleri ile çekirdek değerlerinin çarpımını toplamak işlemidir.</li><li><strong>Konvolüsyon:</strong> Korelasyon işlemine çok benzerdir.</li><li><strong>Temel Fark:</strong> Konvolüsyon işleminde, korelasyondan farklı olarak, kernel (çekirdek) <strong>180° döndürülür</strong>.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "21. Gürültü nedir? Görüntüde gürültü oluşumunun başlıca iki kaynağını (edinme ve iletim) örneklerle açıklayınız.",
+      "correctAnswer": "<p><strong>Gürültü Tanımı:</strong> Çeşitli nedenlerle (örn: sensör hataları, düşük ışık koşulları, elektronik parazitler) görüntüye karışan istenmeyen rastgele sinyaller veya bozulmalardır.</p><p><strong>Kaynakları:</strong></p><ol><li><strong>Görüntü Edinimi (Alımı) Sırasında:</strong> Görüntü sensörlerinin performansı, çevresel faktörlerden (düşük ışık, sensör sıcaklığı) etkilenir.</li><li><strong>Görüntü İletimi Sırasında:</strong> Görüntü iletilirken (örn: ağ üzerinden gönderilirken), iletişim kanalındaki parazit (şimşek, atmosferik bozulma) nedeniyle oluşur.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "22. \"Beyaz Gürültü (White Noise)\" kavramını tanımlayınız ve bu ismin kökenini açıklayınız.",
+      "correctAnswer": "<ul><li><strong>Tanım:</strong> Bir gürültünün Fourier spektrumu tüm frekanslarda sabitse, bu gürültüye \"beyaz gürültü\" denir.</li><li><strong>İsim Kökeni:</strong> Bu terim, beyaz ışığın tüm görünür ışık frekanslarını eşit oranda içermesi benzetmesinden gelir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "23. Gauss gürültü modelinin pratikte neden sıkça kullanıldığını ve olası bir dezavantajını açıklayınız.",
+      "correctAnswer": "<ul><li><strong>Kullanım Nedeni:</strong> Matematiksel olarak hem uzamsal hem de frekans alanında kolayca işlenebilmesi nedeniyle, Gauss gürültü modelleri pratikte sıkça kullanılır.</li><li><strong>Azaltma Teknikleri:</strong> Medyan filtresi ve Gauss yumuşatma gibi uzaysal filtreleme teknikleri kullanılır.</li><li><strong>Dezavantajı:</strong> Bu işlem (gürültü azaltma) sırasında yüksek frekans bileşenleri de bastırıldığından, ince ölçekli kenarlar ve ayrıntılar bulanıklaşabilir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "24. (⭐) Tuz-Biber (Salt-and-Pepper) gürültüsünü tanımlayınız. Diğer gürültü modellerinden temel farkı nedir ve hangi filtreleme yöntemi önerilir?",
+      "correctAnswer": "<ul><li><strong>Tanım:</strong> Görüntüye rastgele siyah (pepper) veya beyaz (salt) değerler atayan bir gürültü tipidir.</li><li><strong>Temel Fark:</strong> Normal gürültü modellerinde gürültü tüm piksellere eklenirken, Tuz-Biber gürültüsü tüm piksellere değil, sadece seçilen piksellere rastgele siyah veya beyaz değer atar.</li><li><strong>Filtreleme:</strong> Özellikle çok yüksek varyans durumunda <strong>\"median filter\" (medyan filtre)</strong> uygulanması önerilir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "25. PSNR (Peak Signal-to-Noise Ratio) metriğinin amacını ve 8 bit görüntüler için tipik değer aralığını belirtiniz.",
+      "correctAnswer": "<ul><li><strong>Amaç:</strong> PSNR, orijinal görüntü ile bozulmuş/gürültülü görüntü arasındaki farkı ölçmek için kullanılan bir metriktir. MSE (Mean Squared Error - Ortalama Karesel Hata) değeri kullanılarak hesaplanır.</li><li><strong>Tipik Değer Aralığı:</strong> 8 bit görüntüler için PSNR değerleri tipik olarak 30-50 dB arasında çıkar.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "26. (⭐) Uzamsal filtreleme nedir, hangi amaçlarla yapılır ve bu işlem hangi temel araçla (matris) ve hangi matematiksel operasyonla gerçekleştirilir?",
+      "correctAnswer": "<p><strong>Uzamsal filtreleme,</strong> bir görüntüdeki her pikseli yalnızca kendi değeriyle değil, komşu piksellerin değerleriyle birlikte değerlendirerek yeni bir görüntü oluşturma işlemidir.</p><p><strong>Amaçları:</strong> Gürültüyü azaltma, kenarları ortaya çıkarma, detayları keskinleştirme ve bulanıklaştırma.</p><p>Bu işlem, <strong>\"çekirdek\" (kernel veya maske)</strong> adı verilen küçük bir matrisle yapılır. Çekirdeğin görüntü üzerinde kaydırılarak uygulanması işlemine matematiksel olarak <strong>\"konvülasyon\" (convolution)</strong> denir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "27. Uzamsal filtrelemeye neden ihtiyaç duyarız? Görüntülerde bozulmaya yol açan etkenler ve sonuçları nelerdir?",
+      "correctAnswer": "<p>Filtrelemeye ihtiyaç duyarız çünkü gerçek dünyadan elde edilen dijital görüntüler her zaman ideal değildir.</p><ul><li><strong>Etkenler:</strong> Kamera sensörleri, ortam ışığı, iletim hataları veya sıkıştırma gibi etkenler bozulmalara neden olabilir.</li><li><strong>Sonuçları:</strong> Bu etkenler nedeniyle görüntülerde gürültü (noise) oluşabilir, kenarlar belirsizleşebilir veya detaylar kaybolabilir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "28. (⭐) \"Alçak Geçirgen Filtreler\" (Smoothing) nedir ve başlıca kullanım amaçları nelerdir?",
+      "correctAnswer": "<p>\"Smoothing\" (yumuşatma), bazen \"averaging\" (ortalama alma) olarak da adlandırılır ve görüntüdeki yoğunluktaki ani değişimleri azaltmak için kullanılır.</p><p><strong>Başlıca kullanım amaçları:</strong></p><ul><li><strong>Gürültü Azaltma:</strong> Rastgele gürültü, görüntüde keskin değişimlerle ortaya çıktığından, smoothing filtrelerinin en bariz uygulaması gürültü azaltmadır.</li><li><strong>Aliasing'i Azaltma:</strong> Görüntü yeniden örneklenmeden önce uygulanarak \"aliasing\"i azaltmak için kullanılır.</li><li><strong>Detayları Bastırma/Yumuşatma:</strong> Görüntüde önemsiz küçük detayları bastırmak veya yetersiz sayıda yoğunluk seviyesinden kaynaklanan sahte konturları yumuşatmak için kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "29. Ortalama Filtreyi (Box Filtre) tanımlayınız. Avantajlarını ve sınırlamalarını (dezavantajlarını) açıklayınız.",
+      "correctAnswer": "<p>Ortalama filtre, uzamsal filtrelemede kullanılan en basit düşük geçiren (low-pass) filtre çekirdeğidir. Özelliği, tüm katsayılarının aynı değere (genellikle 1) sahip olmasıdır. \"Box kernel\" adını, çekirdeği üç boyutlu olarak düşündüğümüzde düz bir kutu (box) gibi görünmesinden alır.</p><p><strong>Avantajları:</strong></p><ul><li><strong>Basitlik:</strong> Tüm katsayıları eşit olduğundan uygulanması son derece kolaydır.</li><li><strong>Yeterli Sonuçlar:</strong> Küçük çekirdek boyutlarında elde edilen yumuşatma (smoothing) etkisi çoğu zaman görsel olarak yeterince tatmin edici olur.</li></ul><p><strong>Sınırlamaları:</strong></p><ul><li><strong>Doğal Olmayan Bulanıklık:</strong> Gerçek hayattaki odak dışı bir kamera merceğinin (defocused lens) oluşturduğu doğal bulanıklığı doğru biçimde modelleyemez.</li><li><strong>Yönsel Artefaktlar:</strong> Yatay ve dikey yönlerde daha fazla bulanıklaştırma eğilimindedir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "30. (⭐) Gauss Filtresi nedir? Temel amacı, çalışma mantığı ve Ortalama Filtreden (Box Filtre) farkı nedir?",
+      "correctAnswer": "<p>Gauss filtresi, görüntü işleme ve bilgisayarla görmede en yaygın kullanılan düşük geçiren (low-pass) filtrelerden biridir.</p><ul><li><strong>Temel Amaç:</strong> Görüntüdeki yüksek frekanslı gürültü ve detayları yumuşatmak ve doğal bir bulanıklık yaratmaktır.</li><li><strong>Çalışma Mantığı ve Farkı:</strong> Ortalama filtreden farklı olarak, Gauss filtresi merkezden uzaklaştıkça etkisi azalan ağırlıklar kullanır. Yani, bir pikselin yeni değeri hesaplanırken merkeze yakın komşular daha fazla, uzak komşular ise daha az etki eder. Bu sayede kenarlar, ortalama filtreye kıyasla daha az bozulur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "31. (⭐) Medyan Filtre nedir ve hangi filtre sınıfına aittir? Çalışma prensibini, avantajlarını ve hangi gürültü tipinde özellikle etkili olduğunu açıklayınız.",
+      "correctAnswer": "<p>Medyan Filtre, <strong>\"Nonlineer (Doğrusal Olmayan)\"</strong> bir filtredir.</p><ul><li><strong>Çalışma Prensibi:</strong> Bir pikselin komşuluk bölgesindeki tüm piksel değerleri alınır. Bu değerler küçükten büyüğe sıralanır. Ortadaki değer (medyan) seçilir ve merkez pikselin değeri bu medyan değeri ile değiştirilir.</li><li><strong>Etkili Olduğu Gürültü:</strong> Özellikle <strong>Tuz-biber gürültüsü (Salt-and-Pepper)</strong> gibi beyaz-siyah noktalarla ortaya çıkan gürültülerde ve impuls (ani parazitli) gürültülerde çok etkilidir.</li><li><strong>Avantajları:</strong> Gürültüyü azaltırken kenarları korur. Lineer filtreler (Gaussian veya Box) gibi görüntüyü bulanıklaştırmaz.</li><li><strong>Sınırlamaları:</strong> Büyük çekirdek boyutlarında detay kaybı olabilir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "32. Sobel Filtresi nedir ve hangi amaçla kullanılır? Nasıl çalıştığını ve çıktı olarak hangi bilgileri ürettiğini açıklayınız.",
+      "correctAnswer": "<p>Sobel filtre, <strong>kenar tespiti</strong> amacıyla kullanılan bir filtreleme yöntemidir.</p><ul><li><strong>Çalışma Prensibi:</strong> Her bir noktada, hem yatay hem de dikey yöndeki yoğunluk değişimlerini gösteren iki ayrı filtre çekirdeği ile konvolüsyon uygulanır.</li><li><strong>Çıktıları:</strong> Bu türev değerleri alındıktan sonra, iki temel bilgi üretilir:<br>1. <strong>Kenar Yoğunluğu (G):</strong> Büyük değerler, görüntüde yoğunluk geçişlerinin olduğu yerleri (kenarları) gösterir.<br>2. <strong>Kenar Yönü (Θ):</strong> Kenarın eğim açısını verir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "33. (⭐) \"Uzaysal Frekans\" kavramını tanımlayınız. Düşük ve yüksek frekanslı görüntülerin görsel özelliklerini açıklayınız.",
+      "correctAnswer": "<p><strong>Uzaysal Frekans:</strong> Görüntüde parlaklık değişiminin bir ölçüsüdür. Yani, komşu pikseller arasındaki parlaklık farkıdır.</p><ul><li><strong>Düşük Frekanslı Görüntü:</strong> Bir görüntüdeki parlaklık ya da yansıma değerleri birbirine yakın ve yumuşak geçişliyse, bu tür görüntüler düşük frekanslı olarak tanımlanır. (Örn: Düz, tek renkli bir alan).</li><li><strong>Yüksek Frekanslı Görüntü:</strong> Çok kısa mesafelerde gri tonlar hızla değişiyorsa (parlaklık farkı ani artış gösteriyorsa) bu tür görüntüler yüksek frekanslı olarak adlandırılır. Bu durumda görüntü keskin, detaylı ve kontrastlı görünür. (Örn: Keskin kenarlar, dokular).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "34. Uzamsal alanda \"Alçak Geçirgen\" (Low-pass) ve \"Yüksek Geçirgen\" (High-pass) filtrelerin temel amaçlarını ve etkilerini karşılaştırınız.",
+      "correctAnswer": "<ul><li><strong>Alçak Geçirgen Filtreler:</strong><br>§ <strong>Amaç:</strong> Gürültü azaltma ve yumuşatma.<br>§ <strong>Etkisi:</strong> Süzgeç penceresindeki piksellerin gri değerlerini ortalayarak görüntüyü daha homojen ve pürüzsüz hâle getirir. Bu işlem sonucu görüntü biraz bulanıklaşır.</li><li><strong>Yüksek Geçirgen Filtreler:</strong><br>§ <strong>Amaç:</strong> Kenarları belirginleştirme.<br>§ <strong>Etkisi:</strong> Görüntüdeki kenarları öne çıkararak kontrastı artırır. Yüksek geçiren filtreler, pikselin değeri ile komşularının değeri arasındaki farkı artırır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "35. Fourier Dönüşümünün görüntü işlemedeki önemini açıklayınız. Frekans alanındaki düşük ve yüksek frekanslar, görüntüde neyi temsil eder?",
+      "correctAnswer": "<p>Fourier dönüşümü, görüntüyü uzay alanından (pikseller) frekans alanına taşır. Frekans alanında filtreleme yapmak, bazı durumlarda (özellikle büyük çekirdekli filtrelemede) uzay alanı filtrelemeden daha hızlı ve etkilidir.</p><ul><li><strong>Düşük Frekanslar:</strong> Görüntünün genel yapısını, genel parlaklığı ve yavaş değişen yumuşak bölgeleri temsil eder.</li><li><strong>Yüksek Frekanslar:</strong> Kenarları, ince detayları ve gürültüyü temsil eder.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "36. (⭐) Konvolüsyon Teoremi nedir ve frekans alanında filtrelemenin temelini nasıl oluşturur?",
+      "correctAnswer": "<p><strong>Konvolüsyon Teoremi,</strong> uzay alanında (pikseller üzerinde) yapılan <strong>konvolüsyon</strong> işleminin, frekans alanında bu iki fonksiyonun Fourier dönüşümlerinin basitçe <strong>çarpımına</strong> eşit olduğunu ifade eder.</p><p>Bu teorem, frekans alanında filtreleme işlemlerinin temelidir. Çünkü pikseller üzerinde (uzayda) yavaş ve maliyetli bir konvolüsyon (evrişim) işlemi yapmak yerine, görüntüyü frekans alanına taşıyıp, filtreyle basitçe çarparak ve sonucu (Ters Fourier Dönüşümü ile) tekrar uzay alanına döndürerek aynı sonucu daha kolay ve hızlı elde edebiliriz.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "37. (⭐) Örnekleme (Sampling) sürecinde \"Aliasing\" (Örtüşme) sorunu nedir? Nyquist kriterini, aliasing'in nedenini ve \"Anti-Aliasing\" yöntemini açıklayınız.",
+      "correctAnswer": "<ul><li><strong>Nyquist Kriteri:</strong> Sürekli bir sinyalin, bilgi kaybı (aliasing) olmadan örneklerinden tamamen yeniden oluşturulabilmesi için, örnekleme frekansının, sinyaldeki en yüksek frekansın <strong>en az iki katı</strong> olması gerektiği koşuludur.</li><li><strong>Aliasing (Örtüşme):</strong> Örnekleme oranının çok düşük seçilmesi, yani sinyalin \"yetersiz örneklenmesi\" (under-sampled) veya Nyquist kriterinin sağlanamaması durumunda oluşur. Bu olgu, farklı sinyallerin örneklendikten sonra birbirinden ayırt edilemez hale gelmesine yol açar. Görüntüdeki sonucu ise dalgalı desenler (moiré pattern), yanlış detaylar ve pikselli kenarlar görülmesidir.</li><li><strong>Anti-Aliasing:</strong> Aliasing'in etkisini azaltma işlemidir. Yöntem, örnekleme yapılmadan önce, girdi sinyalindeki yüksek frekans bileşenlerini bir alçak geçiren filtre (low-pass filter) ile zayıflatarak yumuşatmaktır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "38. Hızlı Fourier Dönüşümü (FFT) nedir ve neden önemlidir? DFT sonucunu \"Merkeze Kaydırma\" (Centering) işleminin amacı nedir?",
+      "correctAnswer": "<ul><li><strong>FFT (Hızlı Fourier Dönüşümü):</strong> Ayrık Fourier Dönüşümü (DFT), büyük görüntülerde yavaş bir işlemdir. FFT, bu dönüşümü çok daha hızlı yapan bir algoritmadır. 1960'larda FFT algoritmasının keşfi, frekans alanı filtrelemeyi pratik ve uygulanabilir kılmıştır.</li><li><strong>Merkeze Kaydırma (Centering):</strong> DFT sonucu, normalde (0,0) koordinatını (yani düşük frekansları) spektrumun köşesinde gösterir. Merkeze kaydırma işlemi, DFT sonucunun merkezine düşük frekans bileşenlerini taşımak için yapılır. Bu, spektrumun görsel analizini ve yorumlanmasını kolaylaştırır.</li></ul>"
+    }
+  ]
+}
