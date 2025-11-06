@@ -9,11 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const LECTURE_SOURCES = [
         { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
-        { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
         { id: 'lecture-3', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
-        { id: 'lecture-4', title: 'Uzaktan Algılama - Kavramlar', file: 'data/lecture_four.json' },
-        { id: 'lecture-5', title: 'Sistem Analizi - Sistem Modelleri', file: 'data/lecture_five.json' },
-        { id: 'lecture-6', title: 'Sistem Analizi - Bilgi Sistemleri', file: 'data/lecture_six.json' }
+        { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
     ];
 
     /**
