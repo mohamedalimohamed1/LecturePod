@@ -4,42 +4,42 @@
   "questions": [
     {
       "type": "short-answer",
-      "question": "1. Görüntü İşleme kavramını açıklayınız, temel amacı nedir ve görüntü işleme aşamaları nelerdir?",
+      "question": "1. (⭐) Görüntü İşleme kavramını açıklayınız, temel amacı nedir ve görüntü işleme aşamaları nelerdir?",
       "correctAnswer": "<p><strong>Görüntü İşleme:</strong> Ölçülmüş veya kaydedilmiş olan elektronik (dijital) görüntü verilerini, elektronik ortamda (bilgisayar ve yazılımlar yardımı ile) amaca uygun şekilde değiştirmeye yönelik yapılan bilgisayar çalışmasıdır. Görüntülerin işlenmesi, analiz edilmesi ve anlamlı bilgilere dönüştürülmesi sürecini ifade eder.</p><p><strong>Temel amaç:</strong> Bir görüntüyü dijital forma dönüştürmek, görüntülerden anlamlı bilgi çıkarmak ve görüntülerin kalitesini iyileştirmektir.</p><p><strong>Görüntü İşleme Aşamaları:</strong></p><ul><li><strong>1. Düşük Seviye İşleme:</strong> Hem girdisi hem de çıktısı görüntüdür. (Örnek: Gürültü gidermek ve keskinleştirmek.)</li><li><strong>2. Orta Seviye İşleme:</strong> Girdisi görüntü, çıktısı özelliklerdir. (Örnek: Nesne tanımlama ve segmentasyon.)</li><li><strong>3. Yüksek Seviye İşleme:</strong> Girdisi özellikler, çıktısı anlamadır. (Örnek: Sahne anlama, otomatik navigasyon.)</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "2. (⭐) Görüntü işlemenin önemini açıklayınız. Eskiden hangi amaçla kullanılırken günümüzde hangi amaçlar için kullanılmaktadır?",
+      "question": "2. Görüntü işlemenin önemini açıklayınız. Eskiden hangi amaçla kullanılırken günümüzde hangi amaçlar için kullanılmaktadır?",
       "correctAnswer": "<p><strong>Görüntü İşlemenin Önemi:</strong> Görüntü işleme, bilgisayarlara \"görme yeteneği\" kazandırır ve otonom sistemlerin \"gözü\" olarak çalışır. Asıl önemi, sadece görüntüyü iyileştirmek değil, görüntüden bilgi çıkarıp, bu bilgiyle karar vermek ve bir eylem (otomasyon) başlatmaktır.</p><p><strong>Geçmiş ve Günümüzdeki Amaçları:</strong></p><ul><li><strong>Eskiden:</strong> Görüntü işleme daha çok resmi netleştirme, kontrast artırma gibi iyileştirmelere odaklanıyordu.</li><li><strong>Günümüzde:</strong> İyileştirmenin yanı sıra asıl olarak Bilgi Çıkarımı, Karar Verme ve Otomasyon için kullanılır.</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "3. Görüntü işlemenin günümüzdeki kullanımına 'Karar Verme', 'Otomasyon' ve 'Otonom Sistem' için birer örnek veriniz.",
+      "question": "3.(⭐) Görüntü işlemenin günümüzdeki kullanımına 'Karar Verme', 'Otomasyon' ve 'Otonom Sistem' için birer örnek veriniz.",
       "correctAnswer": "<ul><li><strong>Karar Verme Örneği:</strong> Tıbbi bir görüntüdeki bilginin yorumlanıp \"Bu tümör mü değil mi?\" kararına varılması.</li><li><strong>Otomasyon Örneği:</strong> Bir fabrika kamerasının hatalı bir ürünü görüp, robot kolun onu ayırmasına karar vermesi.</li><li><strong>Otonom Sistem Örneği:</strong> Bir sürücüsüz aracın, kameradan aldığı görüntüyle yol şeritlerini, trafik ışıklarını ve yayaları algılayıp buna göre hareket etmesi.</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "4. Görüntü İşleme hangi alanlarda kullanılmaktadır ve günümüzde bu teknolojinin önemini artıran temel faktör nedir?",
+      "question": "4.(⭐) Görüntü İşleme hangi alanlarda kullanılmaktadır ve günümüzde bu teknolojinin önemini artıran temel faktör nedir?",
       "correctAnswer": "<p><strong>Kullanım Alanları:</strong> Askeri, endüstri, robotik, tıp, coğrafya (uzaktan algılama), trafik, güvenlik (yüz tanıma, plaka okuma), tarım ve astronomi gibi pek çok alanda kullanılır.</p><p><strong>Önemini Artıran Faktör:</strong> Günümüzde görüntü işlemenin önemini bir kat daha artıran temel faktör, artık her işlemin insan yerine <strong>otonom sistemlere</strong> yaptırılmasıdır. Görüntü işleme, bu sistemlerin çevreyi algılayabilmesi için vazgeçilmezdir.</p>"
     },
     {
       "type": "short-answer",
-      "question": "5. (⭐) Görüntü işlemenin Temel Kavramları nelerdir? Görüntü nedir? Analog ve Dijital Görüntüyü tanımlayınız.",
+      "question": "5. Görüntü işlemenin Temel Kavramları nelerdir? Görüntü nedir? Analog ve Dijital Görüntüyü tanımlayınız.",
       "correctAnswer": "<p><strong>Temel Kavramlar:</strong> Piksel, Gri seviye, Renkli görüntü ve Matris temsili'dir.</p><p><strong>Görüntü:</strong> 3 Boyutlu nesnelerin 2 Boyutlu yüzey üzerine düşürülmüş haritasıdır. Piksellerden oluşur ve konum bilgisi ile renk bilgisi içerir.</p><p><strong>Analog Görüntü:</strong> Sürekli bir sinyal formundadır. Görüntüdeki her noktanin parlaklık ve renk bilgisi zaman ve mekânda kesintisiz bir şekilde değişir.</p><p><strong>Dijital Görüntü:</strong> Sayısal olarak örneklenmiş ve nicelenmiş (quantize edilmiş) veridir. Görüntü pikseller halinde ayrılmıştır ve her piksel sayısal değerlerle ifade edilir.</p><ul><li><strong>Gri Seviyeli (Görüntü):</strong> 0–255 arası parlaklık değerleridir.</li><li><strong>Renkli Görüntü:</strong> RGB bantlarının birleşimidir (24 bit, ~16.7 milyon renk).</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "6. (⭐) Görüntü işleme 'İşlem Türleri' nelerdir? Kısaca açıklayınız.",
+      "question": "6. Görüntü işleme 'İşlem Türleri' nelerdir? Kısaca açıklayınız.",
       "correctAnswer": "<ol><li><strong>Nokta İşlemleri:</strong> Sadece o tek pikselin değeri kullanılır, komşular dikkate alınmaz. (Örnek: Parlaklığı artırmak, kontrast ayarlamak).</li><li><strong>Yerel (Bölgesel) İşlemler:</strong> Piksel ve onun çevresindeki komşu piksellerin değerleri birlikte işlenir. Maske (kernel) kullanılır. (Örnek: Bulanıklaştırma, keskinleştirme, kenar tespiti).</li><li><strong>Bütünsel İşlemler:</strong> Görüntünün tamamı üzerinde işlem yapılır. (Örnek: Histogram eşitleme, Fourier analizi).</li></ol>"
     },
     {
       "type": "short-answer",
-      "question": "7. Görüntü İyileştirme nedir, temel amacı nedir ve hangi iki temel alanda (domain) yapılır?",
+      "question": "7. (⭐) Görüntü İyileştirme nedir, temel amacı nedir ve hangi iki temel alanda (domain) yapılır?",
       "correctAnswer": "<p><strong>Görüntü İyileştirme:</strong> Görüntüyü insan gözüyle daha kolay algılanabilir veya daha uygun biçimde analiz edilebilir hale getirme sürecidir. Bu aşama, görüntü analizinden önce yapılan ön işleme (preprocessing) aşamasının bir parçasıdır.</p><p><strong>Temel Amaç:</strong> Temel amaç, görüntüdeki bilgi miktarını artırmak değil, algılanan kaliteyi yükseltmektir. (Örnek: Karanlık bir fotoğrafın aydınlatılması).</p><p><strong>Yapıldığı Alanlar:</strong></p><ol><li><strong>Uzamsal Alan (Spatial Domain):</strong> Görüntü pikselleri üzerinde doğrudan (piksel düzeyinde) işlemler yapılır.</li><li><strong>Frekans Alanı (Frequency Domain):</strong> Görüntü, Fourier dönüşümü ile frekans bileşenlerine ayrılarak bu alanda işlemler yapılır.</li></ol>"
     },
     {
       "type": "short-answer",
-      "question": "8. Görüntü iyileştirmede kullanılan temel fonksiyon tipleri nelerdir?",
+      "question": "8. (⭐) Görüntü iyileştirmede kullanılan temel fonksiyon tipleri nelerdir?",
       "correctAnswer": "<ol><li><strong>Linear (Doğrusal):</strong> Negatif (Negative) ve Kimlik (Identity) dönüşümlerini içerir.</li><li><strong>Logarithmic (Log / Inverse-log):</strong> Düşük değerleri genişletir, yüksek değerleri sıkıştırır.</li><li><strong>Power-law:</strong> Esnek kontrast manipülasyonu sağlar.</li></ol>"
     },
     {
@@ -59,12 +59,12 @@
     },
     {
       "type": "short-answer",
-      "question": "12. (⭐) Histogram Eşitleme yönteminin tanımını ve nasıl çalıştığını açıklayınız?",
+      "question": "12. Histogram Eşitleme yönteminin tanımını ve nasıl çalıştığını açıklayınız?",
       "correctAnswer": "<p><strong>Histogram Eşitleme (HE):</strong> Görüntü işlemede görüntünün histogramını kullanarak kontrast ayarlama yöntemidir. Bir görüntünün global kontrastını artırmak için kullanılan temel bir tekniktir.</p><p><strong>Temel amacı,</strong> görüntüdeki gri seviyelerini artırmak, düşük kontrastlı görüntüleri iyileştirmek ve gri ton değerlerini görüntüde daha dengeli dağıtmaktır.</p><p>Bu yöntemde, görüntüdeki tüm piksel değerlerinin histogramı çıkarılır ve histogramda sık bulunan piksel değerleri daha geniş bir aralığa yayılır. Sonuç olarak, düşük kontrastlı bölgeler daha belirgin hale gelir.</p>"
     },
     {
       "type": "short-answer",
-      "question": "13. Histogram Eşleştirme uygulama alanları nelerdir?",
+      "question": "13. (⭐) Histogram Eşleştirme uygulama alanları nelerdir?",
       "correctAnswer": "<ul><li>Bir fotoğrafın kontrastını belirli bir stile göre ayarlamak.</li><li>Uydu görüntülerinde belli bir ton aralığına uydurmak.</li><li>Fotoğrafların kontrastını düzeltmek.</li><li>Medikal Görüntüleme (X-ray ve CT): Kontrastı artırarak detayları daha net görmek.</li></ul>"
     },
     {
@@ -74,7 +74,7 @@
     },
     {
       "type": "short-answer",
-      "question": "15. Histogram Eşitleme Adımları nelerdir?",
+      "question": "15. (⭐)  Histogram Eşitleme Adımları nelerdir?",
       "correctAnswer": "<ol><li><strong>Giriş histogramını çıkarmak:</strong> Görüntüdeki her gri seviyenin kaç piksel içerdiğini belirlemek.</li><li><strong>Kümülatif dağılım fonksiyonunu (CDF) oluşturmak.</strong></li><li><strong>Hedef histogramın kümülatif dağılım fonksiyonunu oluşturmak:</strong> (Bu, istenilen dağılımdır).</li><li><strong>Eşleştirme yapmak:</strong> Girişin CDF'sindeki her değeri, hedefin CDF'sindeki en yakın değere eşleştirmek.</li><li><strong>Yeni görüntüyü oluşturmak:</strong> Tüm piksellerin değerini eşleştirilmiş tonla değiştirmek.</li></ol>"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "type": "short-answer",
-      "question": "17. CLAHE’nin Aşamaları nelerdir?",
+      "question": "17. (⭐) CLAHE’nin Aşamaları nelerdir?",
       "correctAnswer": "<ol><li>Görüntüyü küçük bloklara böl.</li><li>Her blok için histogramı hesapla.</li><li>ClipLimit ile aşırı değerleri sınırlayıp normalize et.</li><li>Her bloğu eşitle.</li><li>Blokları birleştir (bu sırada geçiş bölgeleri yumuşatılır).</li></ol>"
     },
     {
@@ -99,12 +99,12 @@
     },
     {
       "type": "short-answer",
-      "question": "20. Uzaysal Korelasyon ve Konvolüsyon işlemlerini tanımlayarak aralarındaki temel farkı belirtiniz.",
+      "question": "20. (⭐)  Uzaysal Korelasyon ve Konvolüsyon işlemlerini tanımlayarak aralarındaki temel farkı belirtiniz.",
       "correctAnswer": "<ul><li><strong>Korelasyon:</strong> Bir çekirdek (kernel) penceresini görüntü üzerinde kaydırmak ve her konumda piksel değerleri ile çekirdek değerlerinin çarpımını toplamak işlemidir.</li><li><strong>Konvolüsyon:</strong> Korelasyon işlemine çok benzerdir.</li><li><strong>Temel Fark:</strong> Konvolüsyon işleminde, korelasyondan farklı olarak, kernel (çekirdek) <strong>180° döndürülür</strong>.</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "21. Gürültü nedir? Görüntüde gürültü oluşumunun başlıca iki kaynağını (edinme ve iletim) örneklerle açıklayınız.",
+      "question": "21.  (⭐)  Gürültü nedir? Görüntüde gürültü oluşumunun başlıca iki kaynağını (edinme ve iletim) örneklerle açıklayınız.",
       "correctAnswer": "<p><strong>Gürültü Tanımı:</strong> Çeşitli nedenlerle (örn: sensör hataları, düşük ışık koşulları, elektronik parazitler) görüntüye karışan istenmeyen rastgele sinyaller veya bozulmalardır.</p><p><strong>Kaynakları:</strong></p><ol><li><strong>Görüntü Edinimi (Alımı) Sırasında:</strong> Görüntü sensörlerinin performansı, çevresel faktörlerden (düşük ışık, sensör sıcaklığı) etkilenir.</li><li><strong>Görüntü İletimi Sırasında:</strong> Görüntü iletilirken (örn: ağ üzerinden gönderilirken), iletişim kanalındaki parazit (şimşek, atmosferik bozulma) nedeniyle oluşur.</li></ol>"
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "type": "short-answer",
-      "question": "24. (⭐) Tuz-Biber (Salt-and-Pepper) gürültüsünü tanımlayınız. Diğer gürültü modellerinden temel farkı nedir ve hangi filtreleme yöntemi önerilir?",
+      "question": "24. Tuz-Biber (Salt-and-Pepper) gürültüsünü tanımlayınız. Diğer gürültü modellerinden temel farkı nedir ve hangi filtreleme yöntemi önerilir?",
       "correctAnswer": "<ul><li><strong>Tanım:</strong> Görüntüye rastgele siyah (pepper) veya beyaz (salt) değerler atayan bir gürültü tipidir.</li><li><strong>Temel Fark:</strong> Normal gürültü modellerinde gürültü tüm piksellere eklenirken, Tuz-Biber gürültüsü tüm piksellere değil, sadece seçilen piksellere rastgele siyah veya beyaz değer atar.</li><li><strong>Filtreleme:</strong> Özellikle çok yüksek varyans durumunda <strong>\"median filter\" (medyan filtre)</strong> uygulanması önerilir.</li></ul>"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "type": "short-answer",
-      "question": "27. Uzamsal filtrelemeye neden ihtiyaç duyarız? Görüntülerde bozulmaya yol açan etkenler ve sonuçları nelerdir?",
+      "question": "27. (⭐) Uzamsal filtrelemeye neden ihtiyaç duyarız? Görüntülerde bozulmaya yol açan etkenler ve sonuçları nelerdir?",
       "correctAnswer": "<p>Filtrelemeye ihtiyaç duyarız çünkü gerçek dünyadan elde edilen dijital görüntüler her zaman ideal değildir.</p><ul><li><strong>Etkenler:</strong> Kamera sensörleri, ortam ışığı, iletim hataları veya sıkıştırma gibi etkenler bozulmalara neden olabilir.</li><li><strong>Sonuçları:</strong> Bu etkenler nedeniyle görüntülerde gürültü (noise) oluşabilir, kenarlar belirsizleşebilir veya detaylar kaybolabilir.</li></ul>"
     },
     {
@@ -144,7 +144,7 @@
     },
     {
       "type": "short-answer",
-      "question": "29. Ortalama Filtreyi (Box Filtre) tanımlayınız. Avantajlarını ve sınırlamalarını (dezavantajlarını) açıklayınız.",
+      "question": "29. (⭐) Ortalama Filtreyi (Box Filtre) tanımlayınız. Avantajlarını ve sınırlamalarını (dezavantajlarını) açıklayınız.",
       "correctAnswer": "<p>Ortalama filtre, uzamsal filtrelemede kullanılan en basit düşük geçiren (low-pass) filtre çekirdeğidir. Özelliği, tüm katsayılarının aynı değere (genellikle 1) sahip olmasıdır. \"Box kernel\" adını, çekirdeği üç boyutlu olarak düşündüğümüzde düz bir kutu (box) gibi görünmesinden alır.</p><p><strong>Avantajları:</strong></p><ul><li><strong>Basitlik:</strong> Tüm katsayıları eşit olduğundan uygulanması son derece kolaydır.</li><li><strong>Yeterli Sonuçlar:</strong> Küçük çekirdek boyutlarında elde edilen yumuşatma (smoothing) etkisi çoğu zaman görsel olarak yeterince tatmin edici olur.</li></ul><p><strong>Sınırlamaları:</strong></p><ul><li><strong>Doğal Olmayan Bulanıklık:</strong> Gerçek hayattaki odak dışı bir kamera merceğinin (defocused lens) oluşturduğu doğal bulanıklığı doğru biçimde modelleyemez.</li><li><strong>Yönsel Artefaktlar:</strong> Yatay ve dikey yönlerde daha fazla bulanıklaştırma eğilimindedir.</li></ul>"
     },
     {
@@ -159,7 +159,7 @@
     },
     {
       "type": "short-answer",
-      "question": "32. Sobel Filtresi nedir ve hangi amaçla kullanılır? Nasıl çalıştığını ve çıktı olarak hangi bilgileri ürettiğini açıklayınız.",
+      "question": "32. (⭐) Sobel Filtresi nedir ve hangi amaçla kullanılır? Nasıl çalıştığını ve çıktı olarak hangi bilgileri ürettiğini açıklayınız.",
       "correctAnswer": "<p>Sobel filtre, <strong>kenar tespiti</strong> amacıyla kullanılan bir filtreleme yöntemidir.</p><ul><li><strong>Çalışma Prensibi:</strong> Her bir noktada, hem yatay hem de dikey yöndeki yoğunluk değişimlerini gösteren iki ayrı filtre çekirdeği ile konvolüsyon uygulanır.</li><li><strong>Çıktıları:</strong> Bu türev değerleri alındıktan sonra, iki temel bilgi üretilir:<br>1. <strong>Kenar Yoğunluğu (G):</strong> Büyük değerler, görüntüde yoğunluk geçişlerinin olduğu yerleri (kenarları) gösterir.<br>2. <strong>Kenar Yönü (Θ):</strong> Kenarın eğim açısını verir.</li></ul>"
     },
     {
