@@ -1,53 +1,32 @@
 <!DOCTYPE html>
-<!-- Dil 'tr' olarak başlıyor, JS bunu değiştirebilir -->
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- data-key="appTitle" yerine "mainTitle" olarak güncellendi -->
     <title data-key="mainTitle">LecturePod - E-Learning Platform</title>
-    
-    <!-- Google Font (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Google Material Simgeleri (İkonlar) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <!-- CSS Dosyamız (Cache-bust eklendi) -->
-    <!-- SÜRÜM v1.0.2 OLARAK GÜNCELLENDİ -->
-    <link rel="stylesheet" href="style.css?v=1.0.2">
+    <!-- Cache-busting version updated to 2.1.0 for new changes -->
+    <link rel="stylesheet" href="style.css?v=2.1.0">
 </head>
-<!-- 
-  JS, sayfa yüklendiğinde buraya 'data-theme="dark"' 
-  ekleyerek karanlık modu etkinleştirecek
--->
 <body>
-
-    <!-- Ana Uygulama Konteyneri -->
     <div class="container">
-        
         <header>
             <h1>LecturePod</h1>
-            <!-- YENİ: Başlık Kontrolleri -->
+            <p data-key="mainSubtitle">Modern E-Öğrenme Merkeziniz</p>
             <div class="header-controls">
-                <button id="lang-toggle-btn" class="btn-icon" aria-label="Dili Değiştir">
-                    TR
-                </button>
-                <button id="theme-toggle-btn" class="btn-icon" aria-label="Temayı Değiştir">
-                    <!-- JS bu ikonu 'dark_mode' olarak değiştirecek -->
+                <button id="lang-toggle-btn" class="btn-icon">TR</button>
+                <button id="theme-toggle-btn" class="btn-icon">
                     <span class="material-symbols-outlined" id="theme-icon">light_mode</span>
                 </button>
             </div>
         </header>
 
-        <!-- Ana İçerik Alanı -->
         <main id="app-container">
-
-            <!-- VIEW 1: LECTURE SELECTION -->
-            <div id="lecture-selection-view" class="view active">
-                <!-- "selectLectureTitle" yerine "selectLecture" olarak güncellendi -->
+             <!-- VIEW 1: LECTURE SELECTION -->
+             <div id="lecture-selection-view" class="view active">
                 <h2 data-key="selectLecture">Bir Ders Seçin</h2>
                 <div id="lecture-list-container" class="space-y-4">
                     <p class="loading-text" data-key="loadingLectures">Dersler yükleniyor...</p>
@@ -62,32 +41,54 @@
                 </button>
                 <h2 id="selected-course-title"></h2>
                 <h3 id="selected-lecture-title"></h3>
-                <!-- "studyModeTitle" yerine "howToStudy" olarak güncellendi -->
                 <p class="section-title" data-key="howToStudy">Nasıl çalışmak istersiniz?</p>
                 
                 <div class="mode-selection-grid">
+                    <button id="start-read-mode" class="mode-btn">
+                        <span class="mode-title">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <span data-key="readMode">Okuma Modu</span>
+                        </span>
+                        <span class="mode-description" data-key="readModeDesc">Soruları ve cevapları sırayla incele.</span>
+                    </button>
                     <button id="start-quiz-mode" class="mode-btn">
                         <span class="mode-title">
                             <span class="material-symbols-outlined">quiz</span>
-                            <span data-key="quizMode">Quiz Modu</span>
+                            <span data-key="quizMode">Test Modu</span>
                         </span>
-                        <span class="mode-description" data-key="quizModeDesc">Puan alın. Rastgele seçilmiş sorular.</span>
+                        <span class="mode-description" data-key="quizModeDesc">Puan al. Rastgele seçilmiş sorular.</span>
                     </button>
                     <button id="start-practice-mode" class="mode-btn">
                         <span class="mode-title">
                             <span class="material-symbols-outlined">psychology</span>
                             <span data-key="practiceMode">Pratik Modu</span>
                         </span>
-                        <span class="mode-description" data-key="practiceModeDesc">Tüm soruları çözün. Otomatik-ileri.</span>
+                        <span class="mode-description" data-key="practiceModeDesc">Tüm sorular. Anında geri bildirim.</span>
                     </button>
                     <button id="start-learn-mode" class="mode-btn">
                         <span class="mode-title">
                             <span class="material-symbols-outlined">style</span>
                             <span data-key="learnMode">Öğrenme Modu</span>
                         </span>
-                        <span class="mode-description" data-key="learnModeDesc">Bilgi kartları. Cevabı hazır olunca gör.</span>
+                        <span class="mode-description" data-key="learnModeDesc">Bilgi kartları. Hazır olunca cevabı göster.</span>
                     </button>
                 </div>
+            </div>
+
+            <!-- YENİ VIEW: READ MODE (Toplu Görünüm) -->
+            <div id="read-mode-view" class="view">
+                <button class="btn-back back-to-modes">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span data-key="backToModes">Modlara Geri Dön</span>
+                </button>
+                <h2 data-key="readModeTitle">Okuma Modu</h2>
+                <!-- Soruların listeleneceği alan -->
+                <div id="read-mode-list" class="results-review"></div>
+                <!-- Alt kısma da geri dön butonu ekleyelim, uzun listeler için -->
+                <button class="btn btn-primary back-to-modes" style="margin-top: 2rem;">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span data-key="backToModes">Modlara Geri Dön</span>
+                </button>
             </div>
 
             <!-- VIEW 3: QUIZ SETUP -->
@@ -96,44 +97,39 @@
                     <span class="material-symbols-outlined">arrow_back</span>
                     <span data-key="backToModes">Modlara Geri Dön</span>
                 </button>
-                <h2 data-key="quizSetupTitle">Quiz Modu Kurulumu</h2>
+                <h2 data-key="quizSetupTitle">Test Modu Kurulumu</h2>
                 <label for="quiz-question-count" data-key="howManyQuestions">Kaç soru istersiniz?</label>
-                <p id="quiz-max-questions" class="help-text">(Maks: 10)</p>
+                <p id="quiz-max-questions" class="help-text">(En fazla: 10)</p>
                 <input type="number" id="quiz-question-count" min="1" value="5">
-                <button id="start-quiz-btn" class="btn btn-primary" data-key="startQuiz">Quiz'i Başlat</button>
+                <button id="start-quiz-btn" class="btn btn-primary" data-key="startQuiz">Testi Başlat</button>
             </div>
 
-            <!-- VIEW 4: QUESTION VIEW (Quiz & Practice) -->
+            <!-- VIEW 4: QUESTION VIEW (Quiz & Practice Only Now) -->
             <div id="question-view" class="view">
                 <button class="btn-back back-to-modes">
                     <span class="material-symbols-outlined">close</span>
                     <span data-key="quitSession">Oturumu Kapat</span>
                 </button>
                 <div class="question-header">
-                    <h2 id="question-mode-title">Quiz Modu</h2>
+                    <h2 id="question-mode-title">Mod Başlığı</h2>
                     <span id="question-counter">1 / 10</span>
                 </div>
                 <div class="question-content">
                     <p id="question-text">...</p>
-                    <div id="question-options-container" class="options-container">
-                        <!-- JS burayı dolduracak -->
-                    </div>
+                    <div id="question-options-container" class="options-container"></div>
                 </div>
                 
                 <div class="navigation-buttons">
                     <button id="prev-question-btn" class="btn hidden">
                         <span class="material-symbols-outlined">arrow_back</span>
-                        <!-- "prevButton" yerine "previous" olarak güncellendi -->
                         <span data-key="previous">Önceki</span>
                     </button>
                     <button id="next-question-btn" class="btn btn-primary hidden">
-                        <!-- "nextButton" yerine "next" olarak güncellendi -->
                         <span data-key="next">Sonraki</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
                     <button id="finish-btn" class="btn btn-finish hidden">
-                        <!-- "finishButton" yerine "finish" olarak güncellendi -->
-                        <span data-key="finish">Oturumu Bitir</span>
+                        <span data-key="finish">Bitir</span>
                         <span class="material-symbols-outlined">check_circle</span>
                     </button>
                 </div>
@@ -146,14 +142,12 @@
                     <span data-key="quitSession">Oturumu Kapat</span>
                 </button>
                 <div class="question-header">
-                    <!-- "learnMode" yerine "learnModeTitle" olarak güncellendi -->
                     <h2 data-key="learnModeTitle">Öğrenme Modu</h2>
                     <span id="learn-counter">1 / 5</span>
                 </div>
                 <div class="flashcard">
                     <p id="learn-question">...</p>
-                    <!-- innerHTML ile doldurulacağı için 'pre-wrap' stilini CSS'den alacak -->
-                    <div id="learn-answer" class="hidden"></div>
+                    <div id="learn-answer" class="hidden">...</div>
                 </div>
                 <button id="show-answer-btn" class="btn btn-primary" data-key="showAnswer">Cevabı Göster</button>
                 <div id="learn-feedback-btns" class="hidden learn-feedback-grid">
@@ -168,30 +162,32 @@
                 <p id="result-score">8 / 10</p>
                 <p id="result-percentage">80%</p>
                 <div class="results-review">
-                    <h3 data-key="reviewAnswers">Cevapları Gözden Geçir</h3>
-                    <div id="result-details-container">
-                        <!-- JS burayı dolduracak -->
-                    </div>
+                    <h3 data-key="reviewAnswers">Cevaplarını Gözden Geçir</h3>
+                    <div id="result-details-container"></div>
                 </div>
-                <button id="back-to-modes-from-results" class="btn btn-primary">
+                <button id="back-to-modes-from-results" class="btn btn-primary back-to-modes">
                     <span class="material-symbols-outlined">refresh</span>
-                    <!-- "backToModes" "backToModesFromResults" idi, JS ile eşleşmesi için düzeltildi -->
-                    <span data-key="backToModesFromResults">Modlara Geri Dön</span>
+                    <span data-key="backToModes">Modlara Geri Dön</span>
                 </button>
             </div>
-
         </main>
     </div>
 
-    <!-- Streak (Seri) Bildirimi -->
+    <!-- STREAK POP-UP -->
     <div id="streak-popup" class="streak-popup">
-        <span id="streak-emoji" class="streak-emoji">🤩</span>
-        <!-- HATA DÜZELTMESİ: ID 'streak-text' yerine 'streak-message' olarak düzeltildi -->
-        <p id="streak-message">...</p>
+        <div class="streak-content">
+            <span id="streak-emoji" class="streak-emoji">🤩</span>
+            <p id="streak-message">...</p>
+        </div>
+        <button id="streak-close-btn" class="streak-close-btn">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="streak-timer-bar">
+            <div id="streak-timer-progress"></div>
+        </div>
     </div>
 
-    <!-- JavaScript Dosyamız (Cache-bust eklendi) -->
-    <!-- SÜRÜM v1.0.2 OLARAK GÜNCELLENDİ -->
-    <script src="script.js?v=1.0.2" defer></script>
+    <!-- Cache-busting version updated to 2.1.0 -->
+    <script src="script.js?v=2.1.0" defer></script>
 </body>
 </html>

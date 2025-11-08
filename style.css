@@ -1,745 +1,134 @@
 /* --- 1. Global Styles & CSS Variables --- */
-
-/* :root, aydınlık modun (varsayılan) renklerini tanımlar */
 :root {
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-icons: 'Material Symbols Outlined', sans-serif;
     
-    /* Renk Değişkenleri (Aydınlık Mod) */
-    --primary-color: #0d94eb; /* blue-500 */
-    --primary-hover: #0a74bc; /* blue-600 */
+    /* Light Mode */
+    --primary-color: #0d94eb;
+    --primary-hover: #0a74bc;
     --primary-gradient: linear-gradient(135deg, #0d94eb 0%, #07b6d5 100%);
-    --streak-gradient: linear-gradient(135deg, #fde047 0%, #f97316 100%); /* yellow-300 to orange-500 */
-    --green-color: #10b981; /* emerald-500 */
-    --green-bg: #ecfdf5; /* emerald-50 */
-    --red-color: #ef4444;   /* red-500 */
-    --red-bg: #fef2f2; /* red-50 */
+    --streak-success-bg: linear-gradient(135deg, #fde047 0%, #f97316 100%);
+    --streak-failure-bg: linear-gradient(135deg, #9ca3af 0%, #4b5563 100%);
     
-    --text-dark: #1f2937;   /* gray-800 */
-    --text-light: #4b5563;  /* gray-600 */
-    --text-on-gradient: #ffffff; /* Ana düğmelerdeki beyaz metin */
-    --text-streak: #1f2937; /* Streak pop-up'ındaki koyu metin */
-
-    --bg-app: #f3f4f6;    /* (Ana arka plan) gray-100 */
-    --bg-container: #ffffff; /* (Kartların arka planı) white */
-    --border-color: #e5e7eb; /* gray-200 */
-
-    /* Gölgeler (Aydınlık Mod) */
-    --shadow-color-value: 0, 0, 0; /* Siyah gölge */
+    --green-color: #10b981; --green-bg: #ecfdf5;
+    --red-color: #ef4444; --red-bg: #fef2f2;
+    --text-dark: #1f2937; --text-light: #4b5563;
+    --text-on-gradient: #ffffff; --text-streak: #1f2937; --text-streak-fail: #f9fafb;
+    --bg-app: #f3f4f6; --bg-container: #ffffff; --border-color: #e5e7eb;
+    --shadow-color-value: 0, 0, 0;
     --shadow-sm: 0 1px 2px 0 rgba(var(--shadow-color-value), 0.05);
     --shadow: 0 4px 6px -1px rgba(var(--shadow-color-value), 0.07), 0 2px 4px -2px rgba(var(--shadow-color-value), 0.07);
     --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-value), 0.08), 0 4px 6px -4px rgba(var(--shadow-color-value), 0.08);
-
-    --border-radius-lg: 0.75rem; /* 12px */
-    --border-radius-md: 0.5rem; /* 8px */
+    --border-radius-lg: 0.75rem; --border-radius-md: 0.5rem;
 }
-
-/* YENİ: Karanlık Mod Renkleri */
 [data-theme="dark"] {
-    --primary-color: #38bdf8; /* sky-400 */
-    --primary-hover: #0ea5e9; /* sky-500 */
+    --primary-color: #38bdf8; --primary-hover: #0ea5e9;
     --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
-    
-    --green-color: #34d399; /* emerald-400 */
-    --green-bg: #10382d; /* Koyu yeşil arka plan */
-    --red-color: #f87171;   /* red-400 */
-    --red-bg: #451a1a; /* Koyu kırmızı arka plan */
-
-    --text-dark: #f3f4f6;   /* (Artık açık renk) gray-100 */
-    --text-light: #9ca3af;  /* (Artık orta açık) gray-400 */
-    --text-on-gradient: #ffffff;
-    --text-streak: #1f2937; /* Streak pop-up'ı hep açık renk kalacak */
-
-    --bg-app: #111827;    /* (Ana arka plan) gray-900 */
-    --bg-container: #1f2937; /* (Kartların arka planı) gray-800 */
-    --border-color: #374151; /* gray-700 */
-
-    /* Gölgeler (Karanlık Mod) - Çok hafif ve açık renk */
-    --shadow-color-value: 255, 255, 255; /* Beyaz gölge */
+    --green-color: #34d399; --green-bg: #064e3b;
+    --red-color: #f87171; --red-bg: #451a1a;
+    --text-dark: #f3f4f6; --text-light: #9ca3af; --text-on-gradient: #ffffff;
+    --bg-app: #111827; --bg-container: #1f2937; --border-color: #374151;
+    --shadow-color-value: 255, 255, 255;
     --shadow-sm: 0 1px 2px 0 rgba(var(--shadow-color-value), 0.03);
     --shadow: 0 4px 6px -1px rgba(var(--shadow-color-value), 0.04), 0 2px 4px -2px rgba(var(--shadow-color-value), 0.04);
     --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-value), 0.05), 0 4px 6px -4px rgba(var(--shadow-color-value), 0.05);
 }
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-family);
-    background-color: var(--bg-app); /* Değişken kullanıldı */
-    color: var(--text-dark); /* Değişken kullanıldı */
-    line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.material-symbols-outlined {
-  font-family: var(--font-family-icons);
-  font-weight: normal;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-  vertical-align: -5px; 
-}
-
-
-.container {
-    max-w: 768px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* YENİ: Başlık kontrolleri stilleri */
-header {
-    position: relative;
-    padding-bottom: 2rem; /* Kontrollere yer açmak için */
-}
-
-.header-controls {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn-icon {
-    background-color: var(--bg-container);
-    color: var(--text-light);
-    border: 1px solid var(--border-color);
-    border-radius: 9999px; /* Tam yuvarlak */
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-sm);
-    font-weight: 600; /* Dil düğmesi için */
-}
-.btn-icon:hover {
-    box-shadow: var(--shadow);
-    color: var(--text-dark);
-    border-color: #9ca3af; /* gray-400 */
-}
-.btn-icon .material-symbols-outlined {
-    font-size: 20px;
-    vertical-align: 0;
-}
-
-
-#app-container {
-    background-color: var(--bg-container); /* Değişken kullanıldı */
-    padding: 1.5rem 2rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
-    overflow: hidden;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-/* --- 2. Panel Switching (View) System --- */
-.view {
-    display: none;
-    animation: fadeIn 0.4s ease-in-out;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-family); background-color: var(--bg-app); color: var(--text-dark); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; }
+.material-symbols-outlined { font-family: var(--font-family-icons); font-weight: normal; font-style: normal; font-size: 20px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; vertical-align: -5px; }
+.container { max-w: 768px; margin: 2rem auto; padding: 0 1rem; }
+header { position: relative; padding-bottom: 2rem; }
+.header-controls { position: absolute; top: 0; right: 0; display: flex; gap: 0.5rem; }
+.btn-icon { background-color: var(--bg-container); color: var(--text-light); border: 1px solid var(--border-color); border-radius: 9999px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-sm); font-weight: 600; }
+.btn-icon:hover { box-shadow: var(--shadow); color: var(--text-dark); border-color: #9ca3af; }
+.btn-icon .material-symbols-outlined { font-size: 20px; vertical-align: 0; }
+#app-container { background-color: var(--bg-container); padding: 1.5rem 2rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; position: relative; transition: background-color 0.3s ease; }
+.view { display: none; animation: fadeIn 0.4s ease-in-out; }
 .view.active { display: block; }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- 3. Typography & Headers --- */
-h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    /* Degrade metin karanlık modda iyi çalışmayabilir, şimdilik böyle kalsın */
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
-    padding-right: 6rem; /* Kontrollerle üst üste binmesin */
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.2px;
-    color: var(--text-dark); /* Değişken kullanıldı */
-}
-h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-.section-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-light); /* Değişken kullanıldı */
-}
-.loading-text, .help-text {
-    color: var(--text-light); /* Değişken kullanıldı */
-    font-size: 0.875rem;
-}
-
-/* --- 4. Buttons --- */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-family: inherit;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    padding: 0.65rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    background-color: #e5e7eb; /* Bu, aydınlık modda kalabilir */
-    color: var(--text-dark);
-    box-shadow: var(--shadow-sm);
-}
-.btn .material-symbols-outlined {
-    font-size: 18px;
-    vertical-align: -4px;
-}
-.btn:hover {
-    background-color: #d1d5db; /* Bu da */
-    box-shadow: var(--shadow);
-}
-/* Karanlık mod için düz (flat) düğme stili */
-[data-theme="dark"] .btn {
-    background-color: var(--border-color);
-    color: var(--text-dark);
-}
-[data-theme="dark"] .btn:hover {
-    background-color: #4b5563; /* gray-600 */
-}
-
-
-.btn-primary {
-    background: var(--primary-gradient);
-    color: var(--text-on-gradient);
-    width: 100%;
-    border: none;
-    box-shadow: var(--shadow);
-}
-.btn-primary:hover {
-    background: var(--primary-gradient);
-    opacity: 0.9;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-1px);
-}
-
-.btn-finish {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: var(--text-on-gradient);
-    box-shadow: var(--shadow);
-}
-.btn-finish:hover {
-    opacity: 0.9;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-1px);
-}
-/* Karanlık mod için 'finish' düğmesi */
-[data-theme="dark"] .btn-finish {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-}
-
-
-.btn-back {
-    display: inline-flex; 
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--bg-container); /* Değişken kullanıldı */
-    color: var(--text-light);
-    border: 1px solid var(--border-color); /* Değişken kullanıldı */
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-sm);
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.btn-back:hover {
-    text-decoration: none;
-    background-color: var(--bg-app); /* Ana arka plana dönüş */
-    border-color: #9ca3af; /* gray-400 */
-    box-shadow: var(--shadow);
-    color: var(--text-dark);
-}
-.btn-back .material-symbols-outlined {
-    font-size: 18px;
-    vertical-align: -4px;
-}
-
-/* --- 5. View-Specific Styles --- */
-
-/* View 1: Lecture Selection */
-.lecture-btn {
-    width: 100%;
-    text-align: left;
-    padding: 1rem 1.25rem;
-    background-color: var(--bg-container); /* Değişken kullanıldı */
-    border: 1px solid var(--border-color); /* Değişken kullanıldı */
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: var(--shadow-sm);
-}
-.lecture-btn:hover {
-    background-color: var(--bg-app); /* Değişken kullanıldı */
-    border-color: #9ca3af; /* gray-400 */
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-.lecture-btn h3 {
-    color: var(--primary-hover); /* Değişken kullanıldı */
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
-}
-.lecture-btn p {
-    color: var(--text-light); /* Değişken kullanıldı */
-    font-size: 0.9rem;
-}
-.space-y-4 > * + * {
-    margin-top: 1rem;
-}
-
-/* View 2: Mode Selection */
-#selected-lecture-title {
-    color: var(--text-light);
-    font-weight: 400;
-    margin-top: -1.25rem;
-    margin-bottom: 1.5rem;
-}
-.mode-selection-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-@media (min-width: 640px) {
-    .mode-selection-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-.mode-btn {
-    padding: 1.5rem;
-    border-radius: var(--border-radius-md);
-    color: var(--text-on-gradient);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 10rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: var(--shadow);
-    border: none;
-    gap: 0.5rem;
-}
-.mode-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-.mode-btn:disabled {
-    background: #9ca3af !important; /* gray-400 */
-    cursor: not-allowed;
-    opacity: 0.6;
-    box-shadow: none;
-    transform: none;
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+h1 { font-size: 2rem; font-weight: 700; text-align: center; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; padding-right: 6rem; }
+h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-dark); }
+h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
+.section-title { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-light); }
+.loading-text, .help-text { color: var(--text-light); font-size: 0.875rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: inherit; font-size: 0.9375rem; font-weight: 600; padding: 0.65rem 1.25rem; border: 1px solid transparent; border-radius: var(--border-radius-md); cursor: pointer; transition: all 0.2s ease-in-out; background-color: #e5e7eb; color: var(--text-dark); box-shadow: var(--shadow-sm); }
+.btn:hover { background-color: #d1d5db; box-shadow: var(--shadow); }
+.btn-primary { background: var(--primary-gradient); color: var(--text-on-gradient); width: 100%; border: none; box-shadow: var(--shadow); }
+.btn-primary:hover { opacity: 0.9; box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+.btn-finish { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: var(--text-on-gradient); box-shadow: var(--shadow); }
+.btn-finish:hover { opacity: 0.9; box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+.btn-back { display: inline-flex; align-items: center; gap: 0.5rem; background-color: var(--bg-container); color: var(--text-light); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); padding: 0.5rem 1rem; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; cursor: pointer; transition: all 0.2s ease; }
+.btn-back:hover { background-color: var(--bg-app); border-color: #9ca3af; box-shadow: var(--shadow); color: var(--text-dark); }
+.lecture-btn { width: 100%; text-align: left; padding: 1rem 1.25rem; background-color: var(--bg-container); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); cursor: pointer; transition: all 0.2s ease-in-out; box-shadow: var(--shadow-sm); }
+.lecture-btn:hover { background-color: var(--bg-app); border-color: #9ca3af; transform: translateY(-2px); box-shadow: var(--shadow); }
+.lecture-btn h3 { color: var(--primary-hover); margin-bottom: 0.25rem; font-size: 1.1rem; }
+.lecture-btn p { color: var(--text-light); font-size: 0.9rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+#selected-lecture-title { color: var(--text-light); font-weight: 400; margin-top: -1.25rem; margin-bottom: 1.5rem; }
+.mode-selection-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .mode-selection-grid { grid-template-columns: repeat(2, 1fr); } } 
+.mode-btn { padding: 1.5rem; border-radius: var(--border-radius-md); color: var(--text-on-gradient); text-align: left; display: flex; flex-direction: column; justify-content: space-between; min-height: 10rem; cursor: pointer; transition: all 0.2s ease-in-out; box-shadow: var(--shadow); border: none; gap: 0.5rem; }
+.mode-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.mode-btn:disabled { background: #9ca3af; cursor: not-allowed; opacity: 0.6; box-shadow: none; transform: none; }
+#start-read-mode { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
 #start-quiz-mode { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); } 
 #start-practice-mode { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
 #start-learn-mode { background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%); }
-
-/* Karanlık mod için mod düğmeleri */
-[data-theme="dark"] #start-quiz-mode { background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); } 
-[data-theme="dark"] #start-practice-mode { background: linear-gradient(135deg, #16a34a 0%, #4ade80 100%); }
-[data-theme="dark"] #start-learn-mode { background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%); }
-
-
-.mode-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-.mode-title .material-symbols-outlined {
-    font-size: 28px;
-    vertical-align: -6px;
-}
-.mode-description {
-    font-size: 0.875rem;
-    opacity: 0.9;
-}
-
-/* View 3: Quiz Setup */
-input[type="number"] {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    font-family: inherit;
-    background-color: var(--bg-app); /* Değişken kullanıldı */
-    color: var(--text-dark); /* Değişken kullanıldı */
-    border: 1px solid var(--border-color); /* Değişken kullanıldı */
-    border-radius: var(--border-radius-md);
-    margin-bottom: 1.5rem;
-    transition: all 0.2s ease;
-}
-input[type="number"]:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.2);
-}
-label[for="quiz-question-count"] {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-/* View 4: Question View */
-.question-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color); /* Değişken kullanıldı */
-    padding-bottom: 1rem;
-}
-#question-counter,
-#learn-counter {
-    font-family: monospace;
-    font-size: 1.125rem;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--bg-app); /* Değişken kullanıldı */
-    border-radius: 99px;
-    font-weight: 600;
-    color: var(--text-light);
-}
-#question-text {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    min-height: 3.5rem;
-    line-height: 1.5;
-}
-.options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-.options-container.answered {
-    pointer-events: none;
-}
-
-.option-label {
-    display: block;
-    padding: 1rem;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-}
-.option-label:hover {
-    background-color: var(--bg-app);
-    border-color: var(--primary-color);
-}
-.option-label input[type="radio"] {
-    display: none;
-}
-
-.option-label.selected {
-    border-color: var(--primary-color);
-    background-color: rgba(13, 148, 235, 0.1); /* Mavi arka plan */
-}
-[data-theme="dark"] .option-label.selected {
-    background-color: rgba(56, 189, 248, 0.1); /* Koyu mod mavi */
-}
-
-.option-label.correct-answer {
-    border-color: var(--green-color) !important;
-    background-color: var(--green-bg) !important;
-    font-weight: 600;
-    color: var(--green-color) !important;
-}
-.option-label.incorrect-answer {
-    border-color: var(--red-color) !important;
-    background-color: var(--red-bg) !important;
-    font-weight: 600;
-    color: var(--red-color) !important;
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
-}
-.shake {
-    animation: shake 0.5s ease-in-out;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-}
-.navigation-buttons .btn {
-    min-width: 120px;
-}
-#prev-question-btn {
-    background-color: var(--bg-container);
-    color: var(--text-dark);
-    border: 1px solid var(--border-color);
-}
-#prev-question-btn:hover {
-    background-color: var(--bg-app);
-}
-#next-question-btn {
-    background: var(--primary-gradient);
-    border: none;
-    color: var(--text-on-gradient);
-}
-#next-question-btn:hover {
-    opacity: 0.9;
-}
-
-
-/* === View 5: Learn View (Flashcard) === */
-.flashcard {
-    min-height: 250px;
-    padding: 1.5rem;
-    background-color: var(--bg-app);
-    border: 2px dashed var(--border-color);
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    flex-direction: column;
-    /* Sola hizalandı */
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-#learn-question {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-}
-#learn-answer {
-    font-size: 1.125rem;
-    color: var(--text-dark);
-    font-weight: 500;
-    width: 100%;
-    /* Okunabilirlik için yeni stil */
-    background-color: var(--bg-container); /* Konteyner rengiyle aynı */
-    border-left: 4px solid var(--primary-color);
-    padding: 1rem;
-    line-height: 1.7;
-    white-space: pre-wrap; /* JSON'daki satır atlamalarını koru */
-}
-#learn-answer p, 
-#learn-answer ul, 
-#learn-answer ol {
-    margin-bottom: 1rem;
-}
-#learn-answer ul,
-#learn-answer ol {
-    padding-left: 1.5rem;
-}
-/* Cevaptaki son elemanın alt boşluğunu kaldır */
-#learn-answer > *:last-child {
-    margin-bottom: 0;
-}
-
-
-.learn-feedback-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-.btn-feedback-bad {
-    background-color: var(--red-bg);
-    color: var(--red-color);
-    font-weight: 600;
-    border: 1px solid var(--red-color);
-}
-.btn-feedback-bad:hover {
-    background-color: var(--red-bg);
-    opacity: 0.8;
-}
-.btn-feedback-good {
-    background-color: var(--green-bg);
-    color: var(--green-color);
-    font-weight: 600;
-    border: 1px solid var(--green-color);
-}
-.btn-feedback-good:hover {
-    background-color: var(--green-bg);
-    opacity: 0.8;
-}
-
-/* View 6: Results View */
-#result-score {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-align: center;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-}
-#result-percentage {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-}
-.results-review {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-    margin-bottom: 2rem;
-}
-.result-card {
-    padding: 1.25rem;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-md);
-    margin-bottom: 1rem;
-    transition: all 0.2s ease;
-}
-.result-card.correct {
-    background-color: var(--green-bg);
-    border-color: var(--green-color);
-}
-.result-card.incorrect {
-    background-color: var(--red-bg);
-    border-color: var(--red-color);
-}
-.result-card p {
-    font-size: 0.9rem;
-}
-.result-card .question-text {
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--text-dark);
-}
-.result-card .user-answer {
-    font-weight: 500;
-    color: var(--text-dark); /* Yanlış olsa bile ana metin rengi */
-}
-.result-card .user-answer.incorrect > strong {
-    color: var(--red-color); /* Sadece "Your Answer:" kısmı kırmızı */
-}
-
-/* Sonuç ekranındaki cevap için de HTML formatlama stilleri */
-.correct-answer-review {
-    font-weight: 500;
-    margin-top: 0.75rem;
-    font-size: 1rem; /* Flashcard ile aynı boyutta */
-    background-color: var(--bg-container);
-    border-left: 4px solid var(--green-color);
-    padding: 1rem;
-    line-height: 1.7;
-    white-space: pre-wrap; /* JSON'daki satır atlamalarını koru */
-}
-.correct-answer-review strong {
-    color: var(--green-color);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-.correct-answer-review .answer-content {
-    color: var(--text-dark);
-}
-
-.correct-answer-review p, 
-.correct-answer-review ul, 
-.correct-answer-review ol {
-    margin-bottom: 1rem;
-}
-.correct-answer-review ul,
-.correct-answer-review ol {
-    padding-left: 1.5rem;
-}
-.correct-answer-review > *:last-child {
-    margin-bottom: 0;
-}
-
-
-/* --- GÜNCELLEME: Streak (Seri) Bildirim Stilleri --- */
-.streak-popup {
-    position: fixed;
-    /* GÜNCELLEME: Alttan üste taşındı */
-    top: -150px; /* Başlangıçta ekranın tamamen dışında */
-    left: 50%;
-    transform: translateX(-50%);
-    
-    background: var(--streak-gradient);
-    color: var(--text-streak); /* Değişken kullanıldı */
-    border-radius: var(--border-radius-lg);
-    padding: 1rem 1.5rem;
-    box-shadow: var(--shadow-lg);
-    
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    
-    max-width: 90%; /* Mobilde taşmasın */
-    z-index: 1000;
-    /* GÜNCELLEME: 'bottom' yerine 'top' geçişi */
-    transition: top 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.streak-popup.active {
-    /* GÜNCELLEME: Alttan üste taşındı */
-    top: 20px;
-}
-.streak-popup .streak-emoji {
-    font-size: 2.5rem;
-    animation: tada 1s ease;
-}
-.streak-popup p {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-/* Emojiyi zıplatmak için */
-@keyframes tada {
-    from { transform: scale3d(1, 1, 1); }
-    10%, 20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
-    30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
-    40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
-    to { transform: scale3d(1, 1, 1); }
-}
+.mode-title { font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem; }
+.mode-title .material-symbols-outlined { font-size: 28px; vertical-align: -6px; }
+.mode-description { font-size: 0.875rem; opacity: 0.9; }
+input[type="number"] { width: 100%; padding: 0.75rem; font-size: 1rem; font-family: inherit; background-color: var(--bg-app); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); margin-bottom: 1.5rem; transition: all 0.2s ease; }
+input[type="number"]:focus { border-color: var(--primary-color); outline: none; box-shadow: 0 0 0 3px rgba(13, 148, 235, 0.2); }
+label[for="quiz-question-count"] { font-weight: 600; display: block; margin-bottom: 0.5rem; }
+.question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+#question-counter, #learn-counter { font-family: monospace; font-size: 1.125rem; padding: 0.25rem 0.75rem; background-color: var(--bg-app); border-radius: 99px; font-weight: 600; color: var(--text-light); }
+#question-text { font-size: 1.25rem; font-weight: 500; margin-bottom: 2rem; min-height: 3.5rem; line-height: 1.5; }
+.options-container { display: flex; flex-direction: column; gap: 0.75rem; }
+.options-container.answered { pointer-events: none; }
+.option-label { display: block; padding: 1rem; border: 2px solid var(--border-color); border-radius: var(--border-radius-md); cursor: pointer; font-weight: 500; transition: all 0.2s ease-in-out; position: relative; }
+.option-label:hover { background-color: var(--bg-app); border-color: var(--primary-color); }
+.option-label input[type="radio"] { display: none; }
+.option-label.selected { border-color: var(--primary-color); background-color: rgba(13, 148, 235, 0.1); }
+.option-label.correct-answer { border-color: var(--green-color) !important; background-color: var(--green-bg) !important; font-weight: 600; color: var(--green-color); }
+.option-label.incorrect-answer { border-color: var(--red-color) !important; background-color: var(--red-bg) !important; font-weight: 600; color: var(--red-color); }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); } 20%, 40%, 60%, 80% { transform: translateX(5px); } }
+.shake { animation: shake 0.5s ease-in-out; }
+.hidden { display: none !important; }
+.navigation-buttons { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+.navigation-buttons .btn { min-width: 120px; }
+#prev-question-btn { background-color: var(--bg-container); color: var(--text-dark); border: 1px solid var(--border-color); }
+#prev-question-btn:hover { background-color: var(--bg-app); }
+#next-question-btn { background: var(--primary-gradient); border: none; color: var(--text-on-gradient); }
+#next-question-btn:hover { opacity: 0.9; }
+.flashcard { min-height: 250px; padding: 1.5rem; background-color: var(--bg-app); border: 2px dashed var(--border-color); border-radius: var(--border-radius-lg); display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; margin-bottom: 1.5rem; }
+#learn-question { font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem; color: var(--text-dark); }
+#learn-answer { font-size: 1.125rem; color: var(--text-dark); font-weight: 500; width: 100%; background-color: var(--bg-container); border-left: 4px solid var(--primary-color); padding: 1rem; line-height: 1.7; }
+#learn-answer > *:last-child { margin-bottom: 0; }
+.learn-feedback-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+.btn-feedback-bad { background-color: var(--red-bg); color: var(--red-color); font-weight: 600; border: 1px solid var(--red-color); }
+.btn-feedback-bad:hover { opacity: 0.8; }
+.btn-feedback-good { background-color: var(--green-bg); color: var(--green-color); font-weight: 600; border: 1px solid var(--green-color); }
+.btn-feedback-good:hover { opacity: 0.8; }
+#result-score { font-size: 3.5rem; font-weight: 700; text-align: center; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+#result-percentage { font-size: 1.5rem; font-weight: 600; text-align: center; color: var(--text-light); margin-bottom: 2rem; }
+.results-review { border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-bottom: 2rem; }
+.result-card { padding: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--border-radius-md); margin-bottom: 1rem; transition: all 0.2s ease; }
+.result-card.correct { background-color: var(--green-bg); border-color: var(--green-color); }
+.result-card.incorrect { background-color: var(--red-bg); border-color: var(--red-color); }
+.result-card.read-mode-card { background-color: var(--bg-app); border-color: var(--border-color); } /* Yeni: Okuma modu kart stili (nötr) */
+.result-card p { font-size: 0.9rem; }
+.result-card .question-text { font-weight: 600; margin-bottom: 0.75rem; color: var(--text-dark); }
+.result-card .user-answer.incorrect { color: var(--red-color); font-weight: 500; }
+.result-card .correct-answer, .result-card .correct-answer-review { color: var(--green-color); font-weight: 500; margin-top: 0.75rem; font-size: 1rem; background-color: var(--bg-container); border-left: 4px solid var(--green-color); padding: 1rem; line-height: 1.7; }
+.result-card .correct-answer > *:last-child, .result-card .correct-answer-review .answer-content > *:last-child { margin-bottom: 0; }
+.streak-popup { position: fixed; top: -200px; left: 50%; transform: translateX(-50%); background: var(--streak-success-bg); color: var(--text-streak); border-radius: var(--border-radius-lg); padding: 0; box-shadow: var(--shadow-lg); width: 90%; max-width: 400px; z-index: 1000; transition: top 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; }
+.streak-popup.failure { background: var(--streak-failure-bg); color: var(--text-streak-fail); }
+.streak-popup.active { top: 20px; }
+.streak-content { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; }
+.streak-popup .streak-emoji { font-size: 2.5rem; animation: tada 1s ease; }
+.streak-popup p { font-size: 1.125rem; font-weight: 600; line-height: 1.4; flex: 1; }
+.streak-close-btn { position: absolute; top: 5px; right: 5px; background: transparent; border: none; color: inherit; opacity: 0.6; cursor: pointer; padding: 5px; display: flex; align-items: center; justify-content: center; }
+.streak-close-btn:hover { opacity: 1; }
+.streak-timer-bar { height: 4px; width: 100%; background-color: rgba(0,0,0,0.1); position: absolute; bottom: 0; left: 0; }
+#streak-timer-progress { height: 100%; width: 100%; background-color: rgba(255,255,255,0.7); }
+@keyframes tada { 0% { transform: scale(1); } 10%, 20% { transform: scale(0.9) rotate(-3deg); } 30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); } 40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); } 100% { transform: scale(1); } }
