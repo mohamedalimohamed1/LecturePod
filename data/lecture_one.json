@@ -1,6 +1,6 @@
 {
   "courseTitle": "Sistem Analizi",
-  "lectureTitle": "Bölüm 1-4",
+  "lectureTitle": "Bölüm 1-4 (100 Soru)",
   "questions": [
     {
       "type": "multiple-choice",
@@ -224,7 +224,62 @@
     },
     {
       "type": "multiple-choice",
-      "question": "21. Soru: Sistemlerin işleyişini ve durumlarını açıklamak ve göstermek amacıyla faydalanılan araçlara ne ad verilir?",
+      "question": "21. Bir sistemin çevresiyle olan etkileşiminde bilgi, enerji veya madde alışverişi varsa bu sistem aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Kapalı sistem",
+        "B) Açık sistem",
+        "C) Statik sistem",
+        "D) Mekanik sistem"
+      ],
+      "correctAnswer": "B) Açık sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "22. Sistemi oluşturan alt sistemlerin birlikte çalışarak bir bütün oluşturması hangi kavrama karşılık gelir?",
+      "options": [
+        "A) Geri besleme",
+        "B) Sinerji",
+        "C) Modülerlik",
+        "D) Bütünsellik"
+      ],
+      "correctAnswer": "B) Sinerji"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "23. Aşağıdakilerden hangisi sosyal sistemlere örnektir?",
+      "options": [
+        "A) Üretim bandı",
+        "B) Bilgisayar ağı",
+        "C) Aile yapısı",
+        "D) Trafik ışıkları"
+      ],
+      "correctAnswer": "C) Aile yapısı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "24. Bir sistemde “çıktının girdiye dönerek sistemi etkilemesi” ne olarak adlandırılır?",
+      "options": [
+        "A) Geri besleme",
+        "B) Kontrol",
+        "C) Karar verme",
+        "D) Planlama"
+      ],
+      "correctAnswer": "A) Geri besleme"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "25. Sistem yaklaşımının temel felsefesi aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Parçaların ayrı ayrı incelenmesi",
+        "B) Sistemin sadece çıktılarına odaklanılması",
+        "C) Sistemi bir bütün olarak ele alıp alt sistemlerle ilişkilendirmek",
+        "D) Çevresel faktörleri yok saymak"
+      ],
+      "correctAnswer": "C) Sistemi bir bütün olarak ele alıp alt sistemlerle ilişkilendirmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "26. Soru: Sistemlerin işleyişini ve durumlarını açıklamak ve göstermek amacıyla faydalanılan araçlara ne ad verilir?",
       "options": [
         "A) Sistem Hiyerarşisi",
         "B) Sistem Sınırları",
@@ -235,7 +290,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "22. Soru: Sistem modelleri içinde en eski ve en genel olan, sistemi sözcüklerle açıklamaya çalışan model türü aşağıdakilerden hangisidir?",
+      "question": "27. Soru: Sistem modelleri içinde en eski ve en genel olan, sistemi sözcüklerle açıklamaya çalışan model türü aşağıdakilerden hangisidir?",
       "options": [
         "A) Şematik Modeller",
         "B) Sözel (Kavramsal) Modeller",
@@ -246,7 +301,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "23. Soru: Aşağıdakilerden hangisi sözel (kavramsal) modellerin avantajlarından biri değildir?",
+      "question": "28. Soru: Aşağıdakilerden hangisi sözel (kavramsal) modellerin avantajlarından biri değildir?",
       "options": [
         "A) Düşük maliyetli olmaları",
         "B) Kolay kurulabilir olmaları",
@@ -257,7 +312,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "24. Soru: İnsanların bilgileri gözle görerek algılama kabiliyetlerinin yüksek olmasından dolayı, yanlış anlamaları önlemek için sistem modellemede hangi model türü önemlidir?",
+      "question": "29. Soru: İnsanların bilgileri gözle görerek algılama kabiliyetlerinin yüksek olmasından dolayı, yanlış anlamaları önlemek için sistem modellemede hangi model türü önemlidir?",
       "options": [
         "A) Matematiksel Modeller",
         "B) Fiziksel Modeller",
@@ -268,7 +323,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "25. Soru: Bir firmada yıl içinde yapılan satışların aylık çubuk grafik yardımıyla gösterilmesi, hangi şematik model türünün kullanımına örnektir?",
+      "question": "30. Soru: Bir firmada yıl içinde yapılan satışların aylık çubuk grafik yardımıyla gösterilmesi, hangi şematik model türünün kullanımına örnektir?",
       "options": [
         "A) Karar Ağacı",
         "B) Ağ Diyagramı",
@@ -279,7 +334,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "26. Soru: Bir işletme sistemi tarafından üretilen bir ürünün sabit ve değişken maliyetlerinin yanı sıra, fiyat analizinin de yapılabildiği grafik türü hangisidir?",
+      "question": "31. Soru: Bir işletme sistemi tarafından üretilen bir ürünün sabit ve değişken maliyetlerinin yanı sıra, fiyat analizinin de yapılabildiği grafik türü hangisidir?",
       "options": [
         "A) Başabaş Noktası Grafiği",
         "B) Pasta Grafik",
@@ -290,7 +345,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "27. Soru: Proje yönetimi tekniğinin önemli araçlarından biri sayılan ve bir proje kapsamında yapılması gereken işleri bir zaman planında göstermek için kullanılan şematik model aşağıdakilerden hangisidir?",
+      "question": "32. Soru: Proje yönetimi tekniğinin önemli araçlarından biri sayılan ve bir proje kapsamında yapılması gereken işleri bir zaman planında göstermek için kullanılan şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Organizasyon Şeması",
         "B) Ağ Diyagramı",
@@ -301,7 +356,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "28. Soru: Sistemdeki bazı faaliyetlerin çözümlenmesi ve optimal sonuçlara ulaşılabilmesi için faydalanılan, örneğin bir dağıtım sisteminde kamyonların izleyeceği optimal rotayı tespit etmek için kullanılan şematik model nedir?",
+      "question": "33. Soru: Sistemdeki bazı faaliyetlerin çözümlenmesi ve optimal sonuçlara ulaşılabilmesi için faydalanılan, örneğin bir dağıtım sisteminde kamyonların izleyeceği optimal rotayı tespit etmek için kullanılan şematik model nedir?",
       "options": [
         "A) Süreç Akış Şeması",
         "B) Karar Ağacı",
@@ -312,7 +367,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "29. Soru: İşletmelerde sistemle ilgili kararlar verilirken, alınan kararların sistemi götüreceği sonuçları kestirmek için kullanılan, deterministik veya stokastik olabilen şematik model aşağıdakilerden hangisidir?",
+      "question": "34. Soru: İşletmelerde sistemle ilgili kararlar verilirken, alınan kararların sistemi götüreceği sonuçları kestirmek için kullanılan, deterministik veya stokastik olabilen şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Ağ Diyagramı",
         "B) Organizasyon Şeması",
@@ -323,7 +378,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "30. Soru: Bir işletme sistemindeki hiyerarşiyi ve nasıl bir örgütlenme olduğunu gösteren şematik model aşağıdakilerden hangisidir?",
+      "question": "35. Soru: Bir işletme sistemindeki hiyerarşiyi ve nasıl bir örgütlenme olduğunu gösteren şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Organizasyon Şeması",
         "B) Süreç Akış Şeması",
@@ -334,7 +389,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "31. Soru: Sistemde bulunan genel sürecin (proses) veya alt süreçlerin nasıl işlediğini izah etmek için kullanılan şematik gösterim nedir?",
+      "question": "36. Soru: Sistemde bulunan genel sürecin (proses) veya alt süreçlerin nasıl işlediğini izah etmek için kullanılan şematik gösterim nedir?",
       "options": [
         "A) Karar Ağacı",
         "B) Süreç Akış Şeması",
@@ -345,7 +400,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "32. Soru: Süreç Akış Şeması sembollerinden 'Başlangıç / Bitiş' sembolü, aynı zamanda hangi akış şeması tipinde de aynı işlevi görür?",
+      "question": "37. Soru: Süreç Akış Şeması sembollerinden 'Başlangıç / Bitiş' sembolü, aynı zamanda hangi akış şeması tipinde de aynı işlevi görür?",
       "options": [
         "A) Gannt Şeması",
         "B) Ağ Diyagramı",
@@ -356,7 +411,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "33. Soru: Süreç Akış Şemasında 'Karar' sembolü hangi akış şeması tipinde aynı şekilde kullanılır?",
+      "question": "38. Soru: Süreç Akış Şemasında 'Karar' sembolü hangi akış şeması tipinde aynı şekilde kullanılır?",
       "options": [
         "A) Bilgisayar Program Akış Şeması",
         "B) Veri Akış Diyagramı",
@@ -367,7 +422,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "34. Soru: Süreç Akış Şeması sembollerinden hangisi 'Belge' anlamına gelir ve Sistem Akış Şemasında kullanılırken, Bilgisayar Program Akış Şemasında karşılığı kullanılmaz?",
+      "question": "39. Soru: Süreç Akış Şeması sembollerinden hangisi 'Belge' anlamına gelir ve Sistem Akış Şemasında kullanılırken, Bilgisayar Program Akış Şemasında karşılığı kullanılmaz?",
       "options": [
         "A) İşlem",
         "B) Doküman",
@@ -378,7 +433,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "35. Soru: Süreç Akış Şemasındaki 'Girdi / Çıktı' sembolünün, Bilgisayar Program Akış Şemasındaki karşılığı aşağıdakilerden hangisidir?",
+      "question": "40. Soru: Süreç Akış Şemasındaki 'Girdi / Çıktı' sembolünün, Bilgisayar Program Akış Şemasındaki karşılığı aşağıdakilerden hangisidir?",
       "options": [
         "A) İşlem",
         "B) Bilgi Depolama (Dosyalama)",
@@ -389,7 +444,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "36. Soru: Sistem Analizi, esas olarak aşağıdakilerden hangisiyle ilgilidir?",
+      "question": "41. Soru: Sistem Analizi, esas olarak aşağıdakilerden hangisiyle ilgilidir?",
       "options": [
         "A) Yalnızca donanım ve ağ altyapısının kurulması.",
         "B) Mevcut bir sistemi, nasıl işlediğini, neden işlediğini ve nasıl geliştirilebileceğini anlamak.",
@@ -400,7 +455,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "37. Soru: Aşağıdakilerden hangisi bir Sistem Modeli değildir?",
+      "question": "42. Soru: Aşağıdakilerden hangisi bir Sistem Modeli değildir?",
       "options": [
         "A) Karar Ağacı",
         "B) Organizasyon Şeması",
@@ -411,7 +466,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "38. Soru: Hangi şematik model, özellikle proje yönetimi faaliyetlerini bir zaman çizelgesinde göstermek için tasarlanmıştır?",
+      "question": "43. Soru: Hangi şematik model, özellikle proje yönetimi faaliyetlerini bir zaman çizelgesinde göstermek için tasarlanmıştır?",
       "options": [
         "A) Ağ Diyagramı",
         "B) Başabaş Noktası Grafiği",
@@ -422,7 +477,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "39. Soru: Sözlü (Kavramsal) modellerin en büyük dezavantajı nedir?",
+      "question": "44. Soru: Sözlü (Kavramsal) modellerin en büyük dezavantajı nedir?",
       "options": [
         "A) Kurulum maliyetlerinin çok yüksek olması.",
         "B) Görsel algılamanın zor olması.",
@@ -433,7 +488,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "40. Soru: Karar Ağaçları hangi tip analizler için özellikle yararlıdır?",
+      "question": "45. Soru: Karar Ağaçları hangi tip analizler için özellikle yararlıdır?",
       "options": [
         "A) Sadece geçmiş satış verilerinin görselleştirilmesi",
         "B) Bir projedeki her göreve ne kadar zaman harcandığının izlenmesi",
@@ -444,282 +499,62 @@
     },
     {
       "type": "multiple-choice",
-      "question": "41. Aşağıdakilerden hangisi bilgi kavramını en doğru şekilde tanımlar?",
+      "question": "46. Soru Aşağıdakilerden hangisi matematiksel modellere örnek teşkil eder?",
       "options": [
-        "A) İşlenmemiş, ham veriler",
-        "B) Gözlem sonucu elde edilen olgular",
-        "C) Karar vermede kullanılmak üzere işlenmiş ve anlam kazandırılmış veriler",
-        "D) Sadece sayısal değerler"
+        "A) Bir sistemin formülle ifade edilmesi",
+        "B) İş akışının grafikle gösterilmesi",
+        "C) Karar ağaçlarının çizilmesi",
+        "D) Organizasyon şeması hazırlanması"
       ],
-      "correctAnswer": "C) Karar vermede kullanılmak üzere işlenmiş ve anlam kazandırılmış veriler"
+      "correctAnswer": "A) Bir sistemin formülle ifade edilmesi"
     },
     {
       "type": "multiple-choice",
-      "question": "42. Veri ile bilgi arasındaki temel fark aşağıdakilerden hangisidir?",
+      "question": "47.Soru Sistem modellemede kullanılan “simülasyon” tekniği neyi amaçlar?",
       "options": [
-        "A) Veri, anlamlı iken bilgi anlamsızdır",
-        "B) Bilgi, işlenmiş veridir",
-        "C) Bilgi ve veri aynı anlama gelir",
-        "D) Veri karar vermede daha değerlidir"
+        "A) Sistemin gerçeğe uygun şekilde taklit edilmesini",
+        "B) Sistemin sadece grafikle gösterilmesini",
+        "C) Sistemin maliyetini hesaplamayı",
+        "D) Sistemin belgelenmesini"
       ],
-      "correctAnswer": "B) Bilgi, işlenmiş veridir"
+      "correctAnswer": "A) Sistemin gerçeğe uygun şekilde taklit edilmesini"
     },
     {
       "type": "multiple-choice",
-      "question": "43. “Bir kişinin işe gitmeden önce saat farkını hesaplayıp ne kadar vaktinin kaldığını belirlemesi” örneği aşağıdaki kavramlardan hangisini gösterir?",
+      "question": "48. Soru Bir işletmedeki sipariş sürecinin adımlarını kutular ve oklarla gösteren diyagram hangi model türüne örnektir?",
       "options": [
-        "A) Verinin bilgiye dönüştürülmesi",
-        "B) Bilgi güvenliği",
-        "C) Veri kaybı",
-        "D) Bilgi doğruluğu"
+        "A) Süreç Akış Şeması",
+        "B) Karar Ağacı",
+        "C) Veri Akış Diyagramı",
+        "D) Gantt Şeması"
       ],
-      "correctAnswer": "A) Verinin bilgiye dönüştürülmesi"
+      "correctAnswer": "A) Süreç Akış Şeması"
     },
     {
       "type": "multiple-choice",
-      "question": "44. Bilginin hatasız olma derecesi hangi kavramla ilgilidir?",
+      "question": "49.Soru Şematik modellerin en önemli avantajı aşağıdakilerden hangisidir?",
       "options": [
-        "A) Bilginin ilgililiği",
-        "B) Bilginin doğruluğu",
-        "C) Bilginin tamlığı",
-        "D) Bilginin zamanlılığı"
+        "A) Karmaşık sistemleri sadeleştirerek görsel olarak anlatmaları",
+        "B) Matematiksel hesaplamaları kolaylaştırmaları",
+        "C) Yazılım hatalarını azaltmaları",
+        "D) Deneysel sonuçları gösterebilmeleri"
       ],
-      "correctAnswer": "B) Bilginin doğruluğu"
+      "correctAnswer": "A) Karmaşık sistemleri sadeleştirerek görsel olarak anlatmaları"
     },
     {
       "type": "multiple-choice",
-      "question": "45. Bir bilginin “tam” olması aşağıdakilerden hangisini ifade eder?",
+      "question": "50.Soru Veri akış diyagramlarında (VAD) kullanılan “ok” sembolü neyi ifade eder?",
       "options": [
-        "A) Bilginin sadece bir kısmının bilinmesi",
-        "B) Bilginin hatasız olması",
-        "C) Konuyla ilgili bilinmesi gereken tüm yönleri kapsaması",
-        "D) Bilginin eski olması"
+        "A) İşlem",
+        "B) Veri akışı",
+        "C) Veri deposu",
+        "D) Karar noktası"
       ],
-      "correctAnswer": "C) Konuyla ilgili bilinmesi gereken tüm yönleri kapsaması"
+      "correctAnswer": "B) Veri akışı"
     },
     {
       "type": "multiple-choice",
-      "question": "46. Bir bilgi doğru ve tam olsa bile zamanında elde edilmezse değeri azalır. Bu durum hangi bilgi özelliğiyle ilgilidir?",
-      "options": [
-        "A) Bilginin doğruluğu",
-        "B) Bilginin ilgililiği",
-        "C) Bilginin zamanlılığı",
-        "D) Bilginin ekonomikliği"
-      ],
-      "correctAnswer": "C) Bilginin zamanlılığı"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "47. “Bir yöneticinin sadece karar vereceği konuyla ilgili bilgiye ihtiyaç duyması” hangi bilgi özelliğini anlatır?",
-      "options": [
-        "A) Bilginin doğruluğu",
-        "B) Bilginin ilgililiği",
-        "C) Bilginin ekonomikliği",
-        "D) Bilginin tamlığı"
-      ],
-      "correctAnswer": "B) Bilginin ilgililiği"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "48. Bilgi üretmenin maliyetine karşılık sağladığı faydanın dengelenmesi gerekliliği hangi kavramı açıklar?",
-      "options": [
-        "A) Bilginin doğruluğu",
-        "B) Bilginin ilgililiği",
-        "C) Bilginin ekonomikliği",
-        "D) Bilginin zamanlılığı"
-      ],
-      "correctAnswer": "C) Bilginin ekonomikliği"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "49. Stratejik karar verme ile ilgili aşağıdakilerden hangisi doğrudur?",
-      "options": [
-        "A) Günlük işlemlerin yürütülmesiyle ilgilidir",
-        "B) Uzun vadeli ve belirsizlik seviyesi yüksek kararlardır",
-        "C) Sadece orta düzey yöneticiler tarafından alınır",
-        "D) Üretim planlamasıyla ilgilidir"
-      ],
-      "correctAnswer": "B) Uzun vadeli ve belirsizlik seviyesi yüksek kararlardır"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "50. “Tesis yerleşimi, bütçe tahsisi ve üretim planlama” kararları hangi yönetim seviyesine aittir?",
-      "options": [
-        "A) Stratejik",
-        "B) Operasyonel",
-        "C) Taktik",
-        "D) Denetimsel"
-      ],
-      "correctAnswer": "C) Taktik"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "51. Operasyonel karar verme düzeyi için aşağıdakilerden hangisi doğrudur?",
-      "options": [
-        "A) Uzun dönem planlama içerir",
-        "B) Alt kademe yöneticilerin günlük işlerle ilgili kararlarıdır",
-        "C) Şirketin vizyonunu belirler",
-        "D) Bilgi sistemleriyle ilgilenmez"
-      ],
-      "correctAnswer": "B) Alt kademe yöneticilerin günlük işlerle ilgili kararlarıdır"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "52. Yapısal kararlar için aşağıdakilerden hangisi doğrudur?",
-      "options": [
-        "A) Problemler tam tanımlanmamıştır",
-        "B) Bilgisayarlar tarafından verilebilen kararlardır",
-        "C) Her zaman insan sezgisine dayanır",
-        "D) Rutin olmayan kararlardır"
-      ],
-      "correctAnswer": "B) Bilgisayarlar tarafından verilebilen kararlardır"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "53. “Yeni bir ürünün piyasaya sürülüp sürülmeyeceğine karar vermek” hangi tür karara örnektir?",
-      "options": [
-        "A) Yapısal karar",
-        "B) Yapısal olmayan karar",
-        "C) Taktik karar",
-        "D) Operasyonel karar"
-      ],
-      "correctAnswer": "B) Yapısal olmayan karar"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "54. Bilgi sistemleri aşağıdakilerden hangisini amaçlamaz?",
-      "options": [
-        "A) Karar vericilere bilgi sağlamak",
-        "B) Veriyi işleyerek anlamlı hale getirmek",
-        "C) Karar verme sürecine yardımcı olmak",
-        "D) İnsanları karar sürecinden tamamen çıkarmak"
-      ],
-      "correctAnswer": "D) İnsanları karar sürecinden tamamen çıkarmak"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "55. Aşağıdakilerden hangisi iyi tasarlanmış bir bilgi sisteminin faydalarından biri değildir?",
-      "options": [
-        "A) Daha iyi hizmet",
-        "B) Daha fazla hata",
-        "C) Rekabet avantajı",
-        "D) Verimliliğin artması"
-      ],
-      "correctAnswer": "B) Daha fazla hata"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "56. Bilgi sistemlerinin en temel amacı nedir?",
-      "options": [
-        "A) Veriyi depolamak",
-        "B) Karar vericilere bilgi sağlamak",
-        "C) Yazılım geliştirmek",
-        "D) İnsan kaynaklarını yönetmek"
-      ],
-      "correctAnswer": "B) Karar vericilere bilgi sağlamak"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "57. Aşağıdakilerden hangisi bilgi sistemi bileşenlerinden biri değildir?",
-      "options": [
-        "A) Donanım",
-        "B) Yazılım",
-        "C) Personel",
-        "D) Rakip analizleri"
-      ],
-      "correctAnswer": "D) Rakip analizleri"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "58. Bilgi sistemlerinde “VT” kısaltması neyi ifade eder?",
-      "options": [
-        "A) Veri Tabanı",
-        "B) Veri Tablosu",
-        "C) Veritabanı Tipi",
-        "D) Veri Transferi"
-      ],
-      "correctAnswer": "A) Veri Tabanı"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "59. Bir bilgi sisteminde karar verme süreci hangi unsura dayanır?",
-      "options": [
-        "A) Sadece yöneticinin sezgisine",
-        "B) Bilgi birikimi ve veriye",
-        "C) Donanım gücüne",
-        "D) Yazılım diline"
-      ],
-      "correctAnswer": "B) Bilgi birikimi ve veriye"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "60. Bilgi sistemlerinin manuel olarak da yapılabilmesi ne anlama gelir?",
-      "options": [
-        "A) Sadece bilgisayarda çalıştığı",
-        "B) Bilgisayara gerek kalmadan da tasarlanabileceği",
-        "C) Elektronik verilerin gereksiz olduğu",
-        "D) Karar sürecinin rastgele olduğu"
-      ],
-      "correctAnswer": "B) Bilgisayara gerek kalmadan da tasarlanabileceği"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "61. Etkin bilgi sistemleri organizasyonlara hangi faydayı sağlar?",
-      "options": [
-        "A) Karmaşık raporlama",
-        "B) Daha fazla iş gücü ihtiyacı",
-        "C) Maliyetlerin azaltılması",
-        "D) Daha fazla manuel işlem"
-      ],
-      "correctAnswer": "C) Maliyetlerin azaltılması"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "62. “Bilgi sistemleri yapay sistemlerdir” ifadesiyle anlatılmak istenen nedir?",
-      "options": [
-        "A) Tamamen doğal süreçlerden oluşur",
-        "B) İnsan kontrolü dışında gelişir",
-        "C) İnsan tarafından tasarlanan sistemlerdir",
-        "D) Sadece doğadaki bilgilere dayanır"
-      ],
-      "correctAnswer": "C) İnsan tarafından tasarlanan sistemlerdir"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "63. Bilgi sistemleri hangi karar türlerinin alınmasına en çok yardımcı olur?",
-      "options": [
-        "A) Yapısal kararlar",
-        "B) Sezgisel kararlar",
-        "C) Politik kararlar",
-        "D) Tesadüfi kararlar"
-      ],
-      "correctAnswer": "A) Yapısal kararlar"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "64. Bilgi sistemleri sürecinde “çıktı” neyi ifade eder?",
-      "options": [
-        "A) Sisteme girilen veriler",
-        "B) İşlenmiş bilgi",
-        "C) Personel girdisi",
-        "D) Yazılım kodları"
-      ],
-      "correctAnswer": "B) İşlenmiş bilgi"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "65. Aşağıdakilerden hangisi bilgi sistemlerinin sağladığı faydalardan biridir?",
-      "options": [
-        "A) Karar kalitesinin düşmesi",
-        "B) Bilgiye erişim süresinin uzaması",
-        "C) Verimliliğin artması",
-        "D) Maliyetlerin artması"
-      ],
-      "correctAnswer": "C) Verimliliğin artması"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "66. Sistem analizi sürecinin temel amacı aşağıdakilerden hangisidir?",
+      "question": "51. Sistem analizi sürecinin temel amacı aşağıdakilerden hangisidir?",
       "options": [
         "A) Donanım maliyetlerini artırmak",
         "B) Kullanıcı hatalarını gizlemek",
@@ -730,7 +565,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "67. Aşağıdakilerden hangisi sistem analizinde kullanılan araçlardan biridir?",
+      "question": "52. Aşağıdakilerden hangisi sistem analizinde kullanılan araçlardan biridir?",
       "options": [
         "A) Paint",
         "B) DFD (Data Flow Diagram)",
@@ -741,7 +576,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "68. Hangi aşamada sistemin girdi ve çıktıları, bileşenleri ve çevresi incelenir?",
+      "question": "53. Hangi aşamada sistemin girdi ve çıktıları, bileşenleri ve çevresi incelenir?",
       "options": [
         "A) Hedef Belirleme",
         "B) Sistemin İncelenmesi",
@@ -749,6 +584,523 @@
         "D) Uygulama"
       ],
       "correctAnswer": "B) Sistemin İncelenmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "54. “Problemin belirlenmesi” aşamasının temel amacı nedir?",
+      "options": [
+        "A) Mevcut sistemin güçlü yönlerini tespit etmek",
+        "B) Sistemdeki tüm verileri analiz etmek",
+        "C) Net bir problem tanımı yapmaktır",
+        "D) Sistemin test sürecini başlatmaktır"
+      ],
+      "correctAnswer": "C) Net bir problem tanımı yapmaktır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "55. Bir hedefin ölçülebilir, anlaşılabilir ve ulaşılabilir olması gerektiğini belirten aşama hangisidir?",
+      "options": [
+        "A) Sistemin İncelenmesi",
+        "B) Hedefin Belirlenmesi",
+        "C) Alternatifin Seçilmesi",
+        "D) Değerlendirme"
+      ],
+      "correctAnswer": "B) Hedefin Belirlenmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "56. Alternatiflerin araştırılması aşamasında ne yapılır?",
+      "options": [
+        "A) Farklı çözüm yolları geliştirilir",
+        "B) Yeni sistem devreye alınır",
+        "C) Eski sistem kapatılır",
+        "D) Kullanıcı testleri başlatılır"
+      ],
+      "correctAnswer": "A) Farklı çözüm yolları geliştirilir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "57. Aşağıdakilerden hangisi alternatiflerin değerlendirilmesinde kullanılan yöntemlerden biridir?",
+      "options": [
+        "A) SWOT Analizi",
+        "B) Binary Kodlama",
+        "C) Veri Şifreleme",
+        "D) Dosya Transferi"
+      ],
+      "correctAnswer": "A) SWOT Analizi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "58. Alternatifin seçilmesi aşamasında temel amaç nedir?",
+      "options": [
+        "A) Rastgele bir seçenek belirlemek",
+        "B) En uygun çözümü seçip belirsizlikleri azaltmak",
+        "C) Yeni sistemin maliyetini artırmak",
+        "D) Hedefleri gizlemek"
+      ],
+      "correctAnswer": "B) En uygun çözümü seçip belirsizlikleri azaltmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "59. “Düzenleme ve planlama” aşamasında yapılan işlem aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Kullanıcı arayüzü tasarımı",
+        "B) Görev sıralaması ve proje planı oluşturma",
+        "C) Kod yazımı",
+        "D) Rapor yazımı"
+      ],
+      "correctAnswer": "B) Görev sıralaması ve proje planı oluşturma"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "60. Uygulama ve izleme sürecinin amacı nedir?",
+      "options": [
+        "A) Sistemi devre dışı bırakmak",
+        "B) Kullanıcı hatalarını artırmak",
+        "C) Hedeflere uygunluğu test etmek ve aksaklıkları izlemek",
+        "D) Analiz aşamasını tekrarlamak"
+      ],
+      "correctAnswer": "C) Hedeflere uygunluğu test etmek ve aksaklıkları izlemek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "61. Gantt şeması neyi gösterir?",
+      "options": [
+        "A) Kullanıcı memnuniyet oranlarını",
+        "B) Faaliyetlerin zaman planını",
+        "C) Sistemin veri tabanını",
+        "D) Donanım hatalarını"
+      ],
+      "correctAnswer": "B) Faaliyetlerin zaman planını"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "62. Doğrudan geçiş yöntemi hangi durumda tercih edilir?",
+      "options": [
+        "A) Büyük ölçekli firmalarda",
+        "B) Riskin çok yüksek olduğu ortamlarda",
+        "C) Eski sistemin tamamen devre dışı kalması gerektiğinde",
+        "D) Uzun sürede geçiş yapılmak istendiğinde"
+      ],
+      "correctAnswer": "C) Eski sistemin tamamen devre dışı kalması gerektiğinde"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "63. Paralel geçiş yönteminin en belirgin özelliği nedir?",
+      "options": [
+        "A) Eski ve yeni sistemin aynı anda çalışması",
+        "B) Sistemin tek adımda uygulanması",
+        "C) Verilerin elle girilmesi",
+        "D) Pilot test yapılmaması"
+      ],
+      "correctAnswer": "A) Eski ve yeni sistemin aynı anda çalışması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "64. Safhalı geçiş yöntemi hangi durumda uygundur?",
+      "options": [
+        "A) Küçük ölçekli projelerde",
+        "B) Basit sistemlerde",
+        "C) Büyük ve karmaşık sistemlerde",
+        "D) Pilot uygulamalarda"
+      ],
+      "correctAnswer": "C) Büyük ve karmaşık sistemlerde"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "65. Pilot geçiş yönteminin temel avantajı nedir?",
+      "options": [
+        "A) Hızlı geçiş sağlar",
+        "B) Gerçek ortamda test imkânı sunar",
+        "C) Düşük maliyetli değildir",
+        "D) Geri dönüş zordur"
+      ],
+      "correctAnswer": "B) Gerçek ortamda test imkânı sunar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "66. Aşağıdakilerden hangisi sistem analizinde kullanılan bir görsel modelleme aracıdır?",
+      "options": [
+        "A) UML Diyagramı",
+        "B) HTML Kodlama",
+        "C) MS Word",
+        "D) C# Sınıfları"
+      ],
+      "correctAnswer": "A) UML Diyagramı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "67. Sistem analizinde SWOT analizinin amacı nedir?",
+      "options": [
+        "A) Yazılım kodlarını düzenlemek",
+        "B) Veri tabanı yapısını tanımlamak",
+        "C) Güçlü ve zayıf yönleri analiz etmektir",
+        "D) Kullanıcı arayüzü tasarlamak"
+      ],
+      "correctAnswer": "C) Güçlü ve zayıf yönleri analiz etmektir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "68. Sistem analizi sürecinde “değerlendirme” aşaması neyi ifade eder?",
+      "options": [
+        "A) Sistemin hedeflerle karşılaştırılması",
+        "B) Kullanıcı eğitimlerinin planlanması",
+        "C) Donanım kurulumu",
+        "D) Veri girişi"
+      ],
+      "correctAnswer": "A) Sistemin hedeflerle karşılaştırılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "69. Aşağıdakilerden hangisi sistem analizinin sağladığı yararlardan biridir?",
+      "options": [
+        "A) Riskleri artırır",
+        "B) Kaynak kullanımını azaltır",
+        "C) Proje başarısını düşürür",
+        "D) Kullanıcı gereksinimlerini gizler"
+      ],
+      "correctAnswer": "B) Kaynak kullanımını azaltır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "70. Yeni sistem geçiş yöntemlerinden hangisi en düşük risklidir?",
+      "options": [
+        "A) Doğrudan Geçiş",
+        "B) Paralel Geçiş",
+        "C) Safhalı Geçiş",
+        "D) Pilot Geçiş"
+      ],
+      "correctAnswer": "D) Pilot Geçiş"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "71. Paralel geçiş yönteminin dezavantajı nedir?",
+      "options": [
+        "A) Veri kaybı riski yüksek olması",
+        "B) Eski sistemin hızlı kapanması",
+        "C) İki sistemin aynı anda çalışmasından dolayı yüksek maliyet",
+        "D) Kullanıcıların eğitilmemesi"
+      ],
+      "correctAnswer": "C) İki sistemin aynı anda çalışmasından dolayı yüksek maliyet"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "72. Safhalı geçişin zayıf yönü aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Hızlı geçiş sağlar",
+        "B) Süreç uzun sürer ve modüller arasında uyumsuzluk olabilir",
+        "C) Risk tamamen ortadan kalkar",
+        "D) Deneme yapılmadan uygulanır"
+      ],
+      "correctAnswer": "B) Süreç uzun sürer ve modüller arasında uyumsuzluk olabilir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "73. Aşağıdakilerden hangisi sistem analizi sürecinin döngüsel yapısını doğru açıklar?",
+      "options": [
+        "A) Her aşama birbirinden bağımsız yürütülür",
+        "B) Bir aşamanın çıktısı diğerine girdi olur",
+        "C) Değerlendirme sadece proje sonunda yapılır",
+        "D) Süreç sadece bir kez uygulanır"
+      ],
+      "correctAnswer": "B) Bir aşamanın çıktısı diğerine girdi olur"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "74. Sistem analizi sürecinde “geri bildirim toplama” işlemi hangi aşamada yapılır?",
+      "options": [
+        "A) Sistemin incelenmesi",
+        "B) Değerlendirme ve izleme",
+        "C) Alternatif seçimi",
+        "D) Uygulama planlaması"
+      ],
+      "correctAnswer": "B) Değerlendirme ve izleme"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "75. Sistem analizinde kullanılan “maliyet–fayda analizi”nin amacı nedir?",
+      "options": [
+        "A) Sistemin yazılım dilini belirlemek",
+        "B) Sistemin performansını test etmek",
+        "C) Sistemin uygulanabilirliğini ekonomik açıdan değerlendirmek",
+        "D) Sistemin veri tabanı şemasını oluşturmak"
+      ],
+      "correctAnswer": "C) Sistemin uygulanabilirliğini ekonomik açıdan değerlendirmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "76. Aşağıdakilerden hangisi bilgi kavramını en doğru şekilde tanımlar?",
+      "options": [
+        "A) İşlenmemiş, ham veriler",
+        "B) Gözlem sonucu elde edilen olgular",
+        "C) Karar vermede kullanılmak üzere işlenmiş ve anlam kazandırılmış veriler",
+        "D) Sadece sayısal değerler"
+      ],
+      "correctAnswer": "C) Karar vermede kullanılmak üzere işlenmiş ve anlam kazandırılmış veriler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "77. Veri ile bilgi arasındaki temel fark aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Veri, anlamlı iken bilgi anlamsızdır",
+        "B) Bilgi, işlenmiş veridir",
+        "C) Bilgi ve veri aynı anlama gelir",
+        "D) Veri karar vermede daha değerlidir"
+      ],
+      "correctAnswer": "B) Bilgi, işlenmiş veridir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "78. “Bir kişinin işe gitmeden önce saat farkını hesaplayıp ne kadar vaktinin kaldığını belirlemesi” örneği aşağıdaki kavramlardan hangisini gösterir?",
+      "options": [
+        "A) Verinin bilgiye dönüştürülmesi",
+        "B) Bilgi güvenliği",
+        "C) Veri kaybı",
+        "D) Bilgi doğruluğu"
+      ],
+      "correctAnswer": "A) Verinin bilgiye dönüştürülmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "79. Bilginin hatasız olma derecesi hangi kavramla ilgilidir?",
+      "options": [
+        "A) Bilginin ilgililiği",
+        "B) Bilginin doğruluğu",
+        "C) Bilginin tamlığı",
+        "D) Bilginin zamanlılığı"
+      ],
+      "correctAnswer": "B) Bilginin doğruluğu"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "80. Bir bilginin “tam” olması aşağıdakilerden hangisini ifade eder?",
+      "options": [
+        "A) Bilginin sadece bir kısmının bilinmesi",
+        "B) Bilginin hatasız olması",
+        "C) Konuyla ilgili bilinmesi gereken tüm yönleri kapsaması",
+        "D) Bilginin eski olması"
+      ],
+      "correctAnswer": "C) Konuyla ilgili bilinmesi gereken tüm yönleri kapsaması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "81. Bir bilgi doğru ve tam olsa bile zamanında elde edilmezse değeri azalır. Bu durum hangi bilgi özelliğiyle ilgilidir?",
+      "options": [
+        "A) Bilginin doğruluğu",
+        "B) Bilginin ilgililiği",
+        "C) Bilginin zamanlılığı",
+        "D) Bilginin ekonomikliği"
+      ],
+      "correctAnswer": "C) Bilginin zamanlılığı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "82. “Bir yöneticinin sadece karar vereceği konuyla ilgili bilgiye ihtiyaç duyması” hangi bilgi özelliğini anlatır?",
+      "options": [
+        "A) Bilginin doğruluğu",
+        "B) Bilginin ilgililiği",
+        "C) Bilginin ekonomikliği",
+        "D) Bilginin tamlığı"
+      ],
+      "correctAnswer": "B) Bilginin ilgililiği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "83. Bilgi üretmenin maliyetine karşılık sağladığı faydanın dengelenmesi gerekliliği hangi kavramı açıklar?",
+      "options": [
+        "A) Bilginin doğruluğu",
+        "B) Bilginin ilgililiği",
+        "C) Bilginin ekonomikliği",
+        "D) Bilginin zamanlılığı"
+      ],
+      "correctAnswer": "C) Bilginin ekonomikliği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "84. Stratejik karar verme ile ilgili aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        "A) Günlük işlemlerin yürütülmesiyle ilgilidir",
+        "B) Uzun vadeli ve belirsizlik seviyesi yüksek kararlardır",
+        "C) Sadece orta düzey yöneticiler tarafından alınır",
+        "D) Üretim planlamasıyla ilgilidir"
+      ],
+      "correctAnswer": "B) Uzun vadeli ve belirsizlik seviyesi yüksek kararlardır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "85. “Tesis yerleşimi, bütçe tahsisi ve üretim planlama” kararları hangi yönetim seviyesine aittir?",
+      "options": [
+        "A) Stratejik",
+        "B) Operasyonel",
+        "C) Taktik",
+        "D) Denetimsel"
+      ],
+      "correctAnswer": "C) Taktik"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "86. Operasyonel karar verme düzeyi için aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        "A) Uzun dönem planlama içerir",
+        "B) Alt kademe yöneticilerin günlük işlerle ilgili kararlarıdır",
+        "C) Şirketin vizyonunu belirler",
+        "D) Bilgi sistemleriyle ilgilenmez"
+      ],
+      "correctAnswer": "B) Alt kademe yöneticilerin günlük işlerle ilgili kararlarıdır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "87. Yapısal kararlar için aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        "A) Problemler tam tanımlanmamıştır",
+        "B) Bilgisayarlar tarafından verilebilen kararlardır",
+        "C) Her zaman insan sezgisine dayanır",
+        "D) Rutin olmayan kararlardır"
+      ],
+      "correctAnswer": "B) Bilgisayarlar tarafından verilebilen kararlardır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "88. “Yeni bir ürünün piyasaya sürülüp sürülmeyeceğine karar vermek” hangi tür karara örnektir?",
+      "options": [
+        "A) Yapısal karar",
+        "B) Yapısal olmayan karar",
+        "C) Taktik karar",
+        "D) Operasyonel karar"
+      ],
+      "correctAnswer": "B) Yapısal olmayan karar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "89. Bilgi sistemleri aşağıdakilerden hangisini amaçlamaz?",
+      "options": [
+        "A) Karar vericilere bilgi sağlamak",
+        "B) Veriyi işleyerek anlamlı hale getirmek",
+        "C) Karar verme sürecine yardımcı olmak",
+        "D) İnsanları karar sürecinden tamamen çıkarmak"
+      ],
+      "correctAnswer": "D) İnsanları karar sürecinden tamamen çıkarmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "90. Aşağıdakilerden hangisi iyi tasarlanmış bir bilgi sisteminin faydalarından biri değildir?",
+      "options": [
+        "A) Daha iyi hizmet",
+        "B) Daha fazla hata",
+        "C) Rekabet avantajı",
+        "D) Verimliliğin artması"
+      ],
+      "correctAnswer": "B) Daha fazla hata"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "91. Bilgi sistemlerinin en temel amacı nedir?",
+      "options": [
+        "A) Veriyi depolamak",
+        "B) Karar vericilere bilgi sağlamak",
+        "C) Yazılım geliştirmek",
+        "D) İnsan kaynaklarını yönetmek"
+      ],
+      "correctAnswer": "B) Karar vericilere bilgi sağlamak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "92. Aşağıdakilerden hangisi bilgi sistemi bileşenlerinden biri değildir?",
+      "options": [
+        "A) Donanım",
+        "B) Yazılım",
+        "C) Personel",
+        "D) Rakip analizleri"
+      ],
+      "correctAnswer": "D) Rakip analizleri"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "93. Bilgi sistemlerinde “VT” kısaltması neyi ifade eder?",
+      "options": [
+        "A) Veri Tabanı",
+        "B) Veri Tablosu",
+        "C) Veritabanı Tipi",
+        "D) Veri Transferi"
+      ],
+      "correctAnswer": "A) Veri Tabanı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "94. Bir bilgi sisteminde karar verme süreci hangi unsura dayanır?",
+      "options": [
+        "A) Sadece yöneticinin sezgisine",
+        "B) Bilgi birikimi ve veriye",
+        "C) Donanım gücüne",
+        "D) Yazılım diline"
+      ],
+      "correctAnswer": "B) Bilgi birikimi ve veriye"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "95. Bilgi sistemlerinin manuel olarak da yapılabilmesi ne anlama gelir?",
+      "options": [
+        "A) Sadece bilgisayarda çalıştığı",
+        "B) Bilgisayara gerek kalmadan da tasarlanabileceği",
+        "C) Elektronik verilerin gereksiz olduğu",
+        "D) Karar sürecinin rastgele olduğu"
+      ],
+      "correctAnswer": "B) Bilgisayara gerek kalmadan da tasarlanabileceği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "96. Etkin bilgi sistemleri organizasyonlara hangi faydayı sağlar?",
+      "options": [
+        "A) Karmaşık raporlama",
+        "B) Daha fazla iş gücü ihtiyacı",
+        "C) Maliyetlerin azaltılması",
+        "D) Daha fazla manuel işlem"
+      ],
+      "correctAnswer": "C) Maliyetlerin azaltılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "97. “Bilgi sistemleri yapay sistemlerdir” ifadesiyle anlatılmak istenen nedir?",
+      "options": [
+        "A) Tamamen doğal süreçlerden oluşur",
+        "B) İnsan kontrolü dışında gelişir",
+        "C) İnsan tarafından tasarlanan sistemlerdir",
+        "D) Sadece doğadaki bilgilere dayanır"
+      ],
+      "correctAnswer": "C) İnsan tarafından tasarlanan sistemlerdir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "98. Bilgi sistemleri hangi karar türlerinin alınmasına en çok yardımcı olur?",
+      "options": [
+        "A) Yapısal kararlar",
+        "B) Sezgisel kararlar",
+        "C) Politik kararlar",
+        "D) Tesadüfi kararlar"
+      ],
+      "correctAnswer": "A) Yapısal kararlar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "99. Bilgi sistemleri sürecinde “çıktı” neyi ifade eder?",
+      "options": [
+        "A) Sisteme girilen veriler",
+        "B) İşlenmiş bilgi",
+        "C) Personel girdisi",
+        "D) Yazılım kodları"
+      ],
+      "correctAnswer": "B) İşlenmiş bilgi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "100. Aşağıdakilerden hangisi bilgi sistemlerinin sağladığı faydalardan biridir?",
+      "options": [
+        "A) Karar kalitesinin düşmesi",
+        "B) Bilgiye erişim süresinin uzaması",
+        "C) Verimliliğin artması",
+        "D) Maliyetlerin artması"
+      ],
+      "correctAnswer": "C) Verimliliğin artması"
     }
   ]
 }

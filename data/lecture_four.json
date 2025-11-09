@@ -54,12 +54,12 @@
     },
     {
       "type": "short-answer",
-      "question": "11. (⭐) Histogramın önemini ve temel uygulamalarını belirtiniz.",
+      "question": "11. Histogramın önemini ve temel uygulamalarını belirtiniz.",
       "correctAnswer": "Histogram, görüntü istatistiklerini verir ve görüntü iyileştirme için temel bir araçtır. Hesaplaması kolay olduğu ve donanımda ekonomik olarak uygulanabildiği için gerçek zamanlı işleme için uygundur. Temel uygulamaları <strong>görüntü sıkıştırma</strong> ve <strong>görüntü segmentasyonu</strong>'dur."
     },
     {
       "type": "short-answer",
-      "question": "12. Histogram Eşitleme yönteminin tanımını ve nasıl çalıştığını açıklayınız?",
+      "question": "12. (⭐) Histogram Eşitleme yönteminin tanımını ve nasıl çalıştığını açıklayınız?",
       "correctAnswer": "<p><strong>Histogram Eşitleme (HE):</strong> Görüntü işlemede görüntünün histogramını kullanarak kontrast ayarlama yöntemidir. Bir görüntünün global kontrastını artırmak için kullanılan temel bir tekniktir.</p><p><strong>Temel amacı,</strong> görüntüdeki gri seviyelerini artırmak, düşük kontrastlı görüntüleri iyileştirmek ve gri ton değerlerini görüntüde daha dengeli dağıtmaktır.</p><p>Bu yöntemde, görüntüdeki tüm piksel değerlerinin histogramı çıkarılır ve histogramda sık bulunan piksel değerleri daha geniş bir aralığa yayılır. Sonuç olarak, düşük kontrastlı bölgeler daha belirgin hale gelir.</p>"
     },
     {

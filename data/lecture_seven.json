@@ -1,0 +1,206 @@
+{
+  "courseTitle": "Kriptoloji ve Bilgi Güvenliği",
+  "lectureTitle": "Bölüm (1-5)",
+  "questions": [
+    {
+      "type": "short-answer",
+      "question": "1. (⭐) Bilgi Güvenliğinin Temelleri Nelerdir?",
+      "correctAnswer": "<ul><li><strong>Gizlilik:</strong> Bilgi ve kaynakların gizlenerek, önemli bilgilerin yetkisiz kişilerce erişilerek ifşa edilmesini önlemek ve sadece yetkili kişilerin erişebilmesini sağlamak için kullanılan bir terimdir.</li><li><strong>Bütünlük:</strong> Veriyi bir bütün olarak değerlendirerek içeriğin yetkisiz kişilerce bozulmadan ve herhangi bir değişikliğe uğramadan (silme ve yeni veri ekleme gibi) korunması anlamına gelmektedir. Ayrıca bu terim içerikte herhangi bir değişiklik meydana geldiğinde ise, bunun tespit edilmesini amaçlamaktadır.</li><li><strong>Erişilebilirlik:</strong> Yetkili kişiler tarafından bilgiye ihtiyaç duyulduğu her an eksiksiz ve doğru bir şekilde erişilebilmesi anlamına gelmektedir. Yani elektrik kesintileri, çeşitli donanım arızaları, sistem güncelleştirmeleri vb. durumlarda bile bilgiye erişimin sağlanabilmesi gerekmektedir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "2. Günümüzde veriyi korumak ve güvenliğini sağlamak için geliştirilen farklı yaklaşımlar nelerdir?",
+      "correctAnswer": "<p><strong>Bilgiyi gizleme:</strong> İsminden de anlaşılabileceği üzere bilginin göndericisinden alıcısına bir ortam içerisinde gizlenerek aktarılmasıdır. Bilgiyi gizleme, steganografi ve damgalama olarak iki alt gruba ayrılmaktadır.</p><ul><li><strong>Steganografi</strong> yönteminde amaç, mesajın varlığını gizlemektir.</li><li><strong>Damgalama</strong> yönteminde ise amaç; telif hakkının korunmasını sağlamak ve kimlik doğrulaması yapabilmek için imgenin içerisine bir damganın çeşitli yöntemler kullanılarak eklenmesidir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "3. Damgalama (Watermarking) Türleri nelerdir?",
+      "correctAnswer": "<ul><li><strong>Gürbüz Damgalama (Robust):</strong> Görüntüye eklenen verinin, saldırılara (kırpma, döndürme vb.) karşı korunmasını amaçlar.</li><li><strong>Kırılgan Damgalama (Fragile):</strong> Görüntüye eklenen verinin, en ufak bir değişiklikte bozulmasını amaçlar (Böylece değişiklik yapılıp yapılmadığı tespit edilir).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "4. Bilgiyi gizlemenin üç temel özelliği nelerdir?",
+      "correctAnswer": "<ol><li><strong>Kapasite:</strong> Gizlenecek veri miktarını ifade etmektedir. Etkili bir steganografik sistem minimum gizleme alanı ile maksimum veri göndermeyi hedeflemektedir. Çünkü bu durumda gizlenen ortam üzerinde daha az değişiklik meydana geleceği için başkaları tarafından fark edilme ihtimalini azaltacaktır.</li><li><strong>Güvenlik:</strong> Gizli verilerin fark edilememesi ya da fark edilse bile tespit edilememesi anlamına gelmektedir.</li><li><strong>Sağlamlık:</strong> Gizli mesajın, üçüncü bir şahıs tarafından gizlendiği ortamın yeniden boyutlandırılması, döndürülmesi, kırpılması vb. çeşitli bozulmalara maruz kalsa bile gizleme ve geri elde etme şemasının bozulmadan kalabilmesidir.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "5. (⭐) Steganografi Nedir?",
+      "correctAnswer": "<p>Steganografi, kısaca bilgiyi gizleyerek gönderme sanatıdır. Temel amacı, bir mesajı üçüncü şahısların şüphesini uyandırmayacak bir şekilde, masum görünen bir nesneye gizleyerek göndermektir. Yunanca \"örtülü\" (steganos) ve \"yazı\" (graphein) kelimelerinden türetilmiştir.</p><p><em>Örneği: Tarihte bilinen ilk örnek, Pers Kralı Demaratus’un yaklaşan bir saldırıyı haber vermek için kullandığı yöntemdir. Kral, bilgiyi tahta bir tablete kazıtmış ve ardından tabletin üzerini balmumu ile kaplatmıştır. Mesajı alan kişi, tableti ısıtarak balmumu eritmiş ve böylece gizli bilgiyi ortaya çıkarmıştır.</em></p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "6. Steganografik bir sistemin temel bileşenleri nelerdir?",
+      "correctAnswer": "<ul><li><strong>Gizlenecek mesaj:</strong> Bir örtü nesnesi içerisinde karşı tarafa iletilmek istenen bilgi veya mesajdır.</li><li><strong>Örtü nesnesi:</strong> Gizli mesajın içerisine gizlenerek gönderilecek olan taşıyıcı ortamdır. Bu ortam imge, video, ses veya metin olabilir.</li><li><strong>Stego anahtar (Gizleme anahtarı):</strong> Mesajın gizlenmesi ve tekrar elde edilmesi için hem gönderici hem de alıcı tarafından bilinmesi gereken ek gizli veridir.</li><li><strong>Steganografik yöntem:</strong> Gizli mesajı ve stego anahtarı örtü nesnesine yerleştirmek için kullanılan gizleme algoritmasıdır.</li><li><strong>Stego nesne:</strong> Gizli mesajın içine yerleştirildiği örtü nesnesinin son, değiştirilmiş halidir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "7. Teknik Steganografi yöntemleri nelerdir?",
+      "correctAnswer": "<ol><li><strong>Görünmez mürekkep:</strong> Gizlenecek mesajın görünmez bir mürekkep kullanılarak yazılmasıdır. Mesajı ortaya çıkarmak için ısı ya da ışığa ihtiyaç duyulur.</li><li><strong>Mikrodotlar:</strong> Gizlenecek olan mesajın bir sayfaya çok küçük noktalar halinde gizlenmesi yöntemidir.</li><li><strong>Gizli yerler:</strong> Gizli mesajın kimsenin göremeyeceği, fiziksel olarak gizli bir yere saklanarak gönderilmesi yöntemidir.</li><li><strong>Bilgisayar tabanlı yöntemler:</strong> Dijital ortamdaki imge, ses, metin gibi çoklu ortam nesnelerini kullanarak veriyi gizleme yöntemidir.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "8. Metin, Ses ve İmge Steganografi'de kullanılan temel yöntemler nelerdir?",
+      "correctAnswer": "<ul><li><strong>Metin steganografi:</strong> Satır ve kelime kaydırma, Boşluklar ve kısaltmalar, HTML dokümanları, Kelimelerdeki belirli karakterler.</li><li><strong>Ses steganografi:</strong> Düşük bit kodlaması (LSB), Aşama (Faz) kodlaması, Yayılı spektrum, Yankı veri gizlemesi.</li><li><strong>İmge steganografi:</strong> En Önemsiz Bite Ekleme (EÖB / LSB), Piksel Değer Farklılıkları (PDV), Palet Tabanlı Yöntem, Histogram Kaydırma Tabanlı Yöntem.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "9. (⭐) Kriptoloji (Bilgiyi Şifreleme) nedir, Steganografiden temel farkı nedir?",
+      "correctAnswer": "<p><strong>Kriptoloji:</strong> Yunanca \"gizli yazı\" anlamına gelir. Bazı matematiksel işlemler uygulayarak mesajları anlaşılamaz bir hale getirmek için kodlayarak güvenliğini sağlama bilimidir.</p><p><strong>Steganografiden Farkı:</strong> Steganografide mesajın <em>varlığı</em> gizlenirken, şifrelemede mesajın varlığı fark edilir ancak <em>içeriği</em> gizlenir. Şifrelemede amaç içeriği gizlemektir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "10. (⭐) Bir kriptoloji sistemini oluşturan temel terimler nelerdir?",
+      "correctAnswer": "<ul><li><strong>Düz metin:</strong> Göndericinin şifrelenmeden önceki, okunamaz olmasını istediği orijinal gizli verilerdir.</li><li><strong>Şifreli metin:</strong> Düz metne bir şifreleme anahtarı ve şifreleme algoritması uygulandıktan sonra ortaya çıkan anlaşılamaz, şifreli metindir.</li><li><strong>Şifreleme algoritması:</strong> Düz metni, bir şifreleme anahtarına dayanarak şifreli metne dönüştürmek için kullanılan matematiksel işlemler dizisidir.</li><li><strong>Şifre çözme algoritması:</strong> Şifreleme algoritmasının tam tersi işlemdir. Şifreli metne şifre çözme anahtarını uygulayarak orijinal düz metni geri üretir.</li><li><strong>Anahtar:</strong> Şifreleme ve şifre çözme algoritmaları içinde uygulanan, güvenliği sağlayan kritik değerdir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "11. (⭐) Temel şifreleme türleri (Açık ve Kapalı Şifreleme) arasındaki fark nedir?",
+      "correctAnswer": "<ul><li><strong>Kapalı/Özel Şifreleme (Simetrik):</strong> Şifreleme ve şifre çözme işlemleri için yalnızca bir adet gizli anahtar bulunur. Gönderici, gizli mesajla birlikte bu gizli anahtarı da alıcıya gönderir ve alıcı bu anahtar yardımıyla şifreyi çözer.</li><li><strong>Açık Şifreleme (Asimetrik):</strong> Kullanıcıların iki adet anahtarı bulunur: biri herkese açık, diğeri gizli. Posta kutusu örneğinde olduğu gibi, adresini (açık anahtar) bilenler mesaj bırakabilir, ancak kutuyu sadece sahibi (gizli anahtar) açabilir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "12. Kriptolojinin günümüzde en yaygın kullanım alanları nelerdir?",
+      "correctAnswer": "Devletlerarası iletişim, Askeri alanlar, Özel ve devlet kuruluşları, Bankacılık sistemleri, İnternet (web sayfalarına ve e-postalara erişim)."
+    },
+    {
+      "type": "short-answer",
+      "question": "13. (⭐) Güvenli bir iletişimin sağlaması gereken dört temel amaç nedir?",
+      "correctAnswer": "<ol><li><strong>Gizlilik:</strong> İletişime geçen iki kişinin mesajlarının üçüncü şahıslar tarafından okunmamasını (bilinmemesini) sağlamak.</li><li><strong>Bütünlük:</strong> İletilen bilginin alıcıya ulaşana kadar hiçbir değişikliğe uğramadığından ve tam bir şekilde iletildiğinden emin olmak.</li><li><strong>Kimlik Denetimi:</strong> Mesajı gönderenin gerçekten iddia ettiği kişi olduğunu doğrulayabilmek.</li><li><strong>İnkar Edememe:</strong> Bilgiyi gönderen kişinin, daha sonra bu bilgiyi kendisinin gönderdiğini inkar edememesini sağlamak.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "14. (⭐) Bilgisayar sistemlerinde güvenliği sağlamak için kullanılan üç temel yaklaşım (Engelleme, Tespit ve Tedbir) nelerdir?",
+      "correctAnswer": "<ol><li><strong>Engelleme (Önleme):</strong> Saldırı daha gerçekleşmeden, olası saldırılara karşı tedbir almayı ifade eder.</li><li><strong>Tespit:</strong> Meydana gelen anormal durumların tespit edilip kayıt altına alınması veya belirli kişilere bildirilmesidir (örn: güvenlik kameraları).</li><li><strong>Tedbir (Müdahale):</strong> Bir saldırı durumunda ne yapılacağı ile ilgili kısımdır (örn: veri akışını kesmek, portları engellemek).</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "15. (⭐) Kriptoloji sistemleri nasıl sınıflandırılır?",
+      "correctAnswer": "<ul><li><strong>Kullanılan Anahtar Sayısına Göre:</strong><br>- <em>Simetrik:</em> Aynı anahtar.<br>- <em>Asimetrik:</em> Farklı anahtarlar.</li><li><strong>Veri İşleme Yöntemine Göre:</strong><br>- <em>Dizi şifreleme (Stream Cipher):</em> Verinin her biti sırayla şifrelenir.<br>- <em>Blok şifreleme (Block Cipher):</em> Veri bloklara ayrılarak bütün olarak şifrelenir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "16. (⭐) Simetrik şifrelemede karşılaşılan en temel sorun nedir ve çözümleri nelerdir?",
+      "correctAnswer": "<p><strong>Temel Sorun:</strong> Ortak anahtarın her iki tarafça bilinmesi zorunluluğudur. Eğer bu anahtar iletişim sırasında üçüncü kişilerin eline geçerse, bilgilerin güvenliği garanti edilemez.</p><p><strong>Çözümleri:</strong><br>1. Güvenli anahtar değişim algoritmaları kullanılabilir.<br>2. Bu şifreleme yöntemi iletişim için değil, kişisel bilgilerin (depolanan verinin) güvenliği için kullanılabilir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "17. Şifreleme yöntemleri nelerdir? (İsim olarak)",
+      "correctAnswer": "Sezar, ROT13, Polybius, Doğrusal (Affine), Playfair, Bifid, Trifid, Vernam, Hill, Vigenere Şifreleme."
+    },
+    {
+      "type": "short-answer",
+      "question": "18. (⭐) Önemli klasik şifreleme yöntemlerinin çalışma mantıkları (Özet):",
+      "correctAnswer": "<ul><li><strong>Sezar:</strong> Bir harf değiştirme şifresidir. Alfabedeki her harf, kendisinden sonra gelen belirli bir sıradaki (örn: 3 harf sonraki) harfle değiştirilir.</li><li><strong>Polybius:</strong> İki boyutlu bir tabloya (matrise) dayalı çalışır. Harfler tabloya yerleştirilir ve bulundukları satır/sütun numarasına göre kodlanır.</li><li><strong>Vernam:</strong> \"Mükemmel şifreleme yöntemi\" olarak bilinir. Mesaj, kendisiyle aynı uzunlukta rastgele bir anahtarla (ikilik tabanda) XOR'lanır.</li><li><strong>Vigenere:</strong> Çoklu alfabeli bir yöntemdir. Tek bir kaydırma yerine, bir anahtar kelime kullanarak metnin her harfi için farklı bir kaydırma miktarı uygular.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "19. (⭐) DES (Data Encryption Standard) algoritmasını tanımlayınız.",
+      "correctAnswer": "<p>DES, 64 bitlik bloklara bölünmüş metinleri 56 bitlik anahtar ile şifreleyen eski bir standarttır. Günümüzde bilgisayarların işlem hızının artmasıyla DES'e yönelik saldırılar kolay hale gelmiş ve zayıf kabul edilmiştir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "20. (⭐) 3DES (Üçlü DES) nedir ve DES'ten farkı nedir?",
+      "correctAnswer": "<p>3DES, DES'e yapılan saldırıları zorlaştırmak için geliştirilmiş bir yöntemdir. DES algoritmasını, farklı anahtarlar kullanarak üç kez uygular. Böylece etkili anahtar boyutu 112 veya 168 bit'e çıkarılmıştır.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "21. (⭐) AES (Advanced Encryption Standard) nedir?",
+      "correctAnswer": "<p>DES algoritması kırıldıktan sonra NIST tarafından yeni şifreleme standardı olarak belirlenmiştir. Temel aldığı algoritmanın adı Rijndael'dir. DES'e göre daha hızlı ve daha güvenli bir blok şifreleme algoritmasıdır (128, 192, 256 bit anahtar seçenekleri vardır).</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "22. (⭐) AES şifreleme turunun adımları nelerdir?",
+      "correctAnswer": "<ol><li><strong>Bayt Değiştirme (SubBytes):</strong> Algoritmanın tek doğrusal olmayan işlemidir. Her bayt, S-Kutusu tablosuna bakılarak değiştirilir.</li><li><strong>Satır Kaydırma (ShiftRows):</strong> Matrisin satırları çevrimsel olarak sola kaydırılır.</li><li><strong>Sütun Karıştırma (MixColumns):</strong> Her sütundaki baytlar, belirli bir matrisle çarpılarak birbirine karıştırılır.</li><li><strong>Tur Anahtarıyla Toplama (AddRoundKey):</strong> Durum matrisi, o tur için üretilmiş tur anahtarı ile XOR işlemine tabi tutulur.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "23. AES şifre çözme işlemi nasıl yapılır?",
+      "correctAnswer": "Şifreli metni çözmek için şifreleme adımlarının ters işlemleri uygulanır: Ters Satır Kaydırma, Ters S-Kutusu, Ters Sütun Karıştırma ve Tur Anahtarıyla Toplama (XOR'un tersi kendisidir)."
+    },
+    {
+      "type": "short-answer",
+      "question": "24. (⭐) Diğer bazı simetrik algoritmaların (IDEA, RC4) temel özellikleri nelerdir?",
+      "correctAnswer": "<ul><li><strong>IDEA:</strong> PGP'nin temelini oluşturan algoritmalardan biridir. 64 bitlik metni 128 bitlik anahtar ile şifreler.</li><li><strong>RC4:</strong> Bir dizi şifreleme (stream cipher) algoritmasıdır. Hız gerektiren uygulamalarda (Web SSL/TLS, PDF) yaygın kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "25. (⭐) Asimetrik Şifreleme (Açık Anahtarlı Kriptografi) nedir? Tanımlayınız.",
+      "correctAnswer": "<p>Simetrik Kriptografi'deki <strong>anahtar dağıtımı sorununa</strong> kesin bir çözüm getirmek için ortaya çıkmıştır. Bu sistemde her kullanıcının iki anahtarı vardır:</p><ul><li><strong>Açık Anahtar (Public Key):</strong> Herkes tarafından bilinir ve mesajları şifrelemek için kullanılır.</li><li><strong>Gizli Anahtar (Private Key):</strong> Kişiye özeldir, kesinlikle gizli tutulur ve şifrelenmiş mesajları çözmek için kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "26. Asimetrik şifrelemenin sağladığı güvenlik hizmetleri nelerdir?",
+      "correctAnswer": "<ul><li>Gizlilik (Şifreleme)</li><li>Kimlik Doğrulama</li><li>İnkâr Edememe (Dijital İmza ile)</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "27. (⭐) Asimetrik şifrelemenin avantajları ve dezavantajları nelerdir?",
+      "correctAnswer": "<ul><li><strong>Avantajları:</strong> Anahtar Dağıtımı Sorununu Çözer, Geniş Güvenlik Kapsamı (Dijital İmza vb.) sağlar, Yüksek Ölçeklenebilirlik sunar.</li><li><strong>Dezavantajları:</strong> Simetrik şifrelemeye göre çok yavaştır, aynı güvenlik için çok daha büyük anahtar boyutu gerektirir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "28. (⭐) Diffie-Hellman (DH) Anahtar Değişim Sistemi nedir? Amacı ve dezavantajı nedir?",
+      "correctAnswer": "<p><strong>Amacı:</strong> İki kullanıcının güvenli olmayan bir kanal üzerinden ortak bir gizli (simetrik) anahtar oluşturmasını sağlamaktır. DH, tek amaca yöneliktir; sadece anahtar oluşturma işlevine sahiptir, şifreleme yapamaz.</p><p><strong>Dezavantajı:</strong> Kimlik Doğrulama Yapmaz. Bu yüzden \"Ortadaki Adam Saldırısına\" (MITM) açıktır.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "29. (⭐) RSA Algoritması nedir? Amacını, avantajlarını ve dezavantajlarını açıklayınız.",
+      "correctAnswer": "<p><strong>Tanımı:</strong> En yaygın asimetrik algoritmadır. Güvenilirliği, çok büyük asal sayıları çarpanlarına ayırmanın zorluğuna dayanır.</p><ul><li><strong>Avantajı:</strong> Çok amaçlıdır; hem şifreleme hem de dijital imza işlemlerini gerçekleştirebilir.</li><li><strong>Dezavantajı:</strong> Yavaştır ve özellikle kablosuz ağlarda band genişliğini fazlaca tüketir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "30. (⭐) Dijital İmza Algoritması (DSA) nedir? RSA'dan farkı nedir?",
+      "correctAnswer": "<p><strong>Tanımı:</strong> Veri aktarımı sırasında kimlik doğrulama ve veri bütünlüğünü garantilemek için kullanılan asimetrik bir algoritmadır.</p><p><strong>RSA'dan Farkı:</strong> RSA hem şifreleme hem imza yapabilirken, DSA sadece imzalama amaçlı kullanılır, şifreleme yapamaz.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "31. (⭐) DSA ve RSA Algoritmalarını hız açısından karşılaştırınız.",
+      "correctAnswer": "<ul><li><strong>Anahtar Oluşturma Hızı:</strong> DSA daha hızlıdır.</li><li><strong>İmzalama Hızı:</strong> DSA daha hızlıdır.</li><li><strong>Doğrulama Hızı:</strong> RSA daha hızlıdır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "33. (⭐) Eliptik Eğri Kriptografisi (ECC) nedir? En önemli avantajı nedir?",
+      "correctAnswer": "<p><strong>ECC:</strong> Matematiksel olarak eliptik eğriler üzerine kurulu bir asimetrik şifreleme yöntemidir.</p><p><strong>En Önemli Avantajı:</strong> RSA ve DSA gibi diğer algoritmalara kıyasla <strong>çok daha küçük anahtar boyutlarıyla</strong> aynı güvenlik seviyesini sunmasıdır. Bu, ECC'yi özellikle düşük güçlü cihazlar (mobil vb.) için ideal hale getirir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "34. (⭐) Hash fonksiyonu nedir ve temel amacı nedir?",
+      "correctAnswer": "<p>Hash algoritmaları, herhangi bir boyuttaki bir veri kümesini (metin veya dosya gibi) sabit uzunlukta bir \"hash değerine\" (dijital parmak izi) dönüştüren bir işlemdir. Temel amaçları dijital veri güvenliği, doğrulama ve veri bütünlüğünü sağlamaktır.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "35. (⭐) Hash algoritmaları neden \"tek yönlü\" (one-way) olarak adlandırılır?",
+      "correctAnswer": "Çünkü hashlenen bir verinin orijinal hali, hash değeri ile tekrar üretilemez (geri döndürülemez). Giriş mesajını biliyorsanız hash'i hesaplamak kolaydır, ancak yalnızca hash değerini biliyorsanız giriş mesajını hesaplamak imkansıza yakındır."
+    },
+    {
+      "type": "short-answer",
+      "question": "36. (⭐) Bir hash fonksiyonunun çalışma mantığı nasıldır? \"Çığ Etkisi\" nedir?",
+      "correctAnswer": "<p>Hash fonksiyonu, giriş verilerini sabit boyutlu bloklara böler ve bunları teker teker işleyerek birleştirir.</p><p><strong>Çığ Etkisi (Avalanche Effect):</strong> Girdi verisindeki çok küçük bir değişiklik (tek bir bitin değişmesi gibi), hash çıktısında çok büyük değişikliklere (tüm hash değerinin değişmesine) yol açar.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "37. (⭐) Kriptografik bir hash fonksiyonunun üç temel güvenlik özelliği nedir?",
+      "correctAnswer": "<ol><li><strong>Ön Görüntü Direnci (Pre-Image Resistance):</strong> Hash değerinden orijinal veriyi bulmanın imkansız olmasıdır.</li><li><strong>İkinci Ön Görüntü Direnci:</strong> Verilen bir girdiyle aynı hash'i verecek <em>ikinci</em> bir girdi bulmanın mümkün olmamasıdır.</li><li><strong>Çakışma Direnci (Collision Resistance):</strong> Herhangi iki farklı girdinin aynı hash üretmesinin mümkün olmamasıdır.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "38. (⭐) \"Hash Çakışması\" nedir ve hangi algoritmalar etkilenmiştir?",
+      "correctAnswer": "<p><strong>Hash Çakışması:</strong> İki farklı mesaj girişinin aynı çıktı hash değerini üretmesi durumudur.</p><p><strong>Etkilenenler:</strong> Hem MD5 hem de SHA-1 algoritmalarında çakışmalar bulunduğu için artık güvenli kabul edilmemektedirler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "39. (⭐) Dijital İmza nedir?",
+      "correctAnswer": "Dijital imza, elektronik belgelerin güvenilirliğini ve kimliğini doğrulamak için kullanılan, gücünü RSA gibi asimetrik algoritmalardan ve hash fonksiyonlarından alan bir yöntemdir. İnkâr edilemezlik sağlar."
+    },
+    {
+      "type": "short-answer",
+      "question": "40. (⭐) MAC (Message Authentication Code) nedir ve Dijital İmzadan farkı nedir?",
+      "correctAnswer": "<p><strong>MAC:</strong> Dijital mesajların bütünlüğünü ve kimliğini doğrulamak için kullanılan kriptografik bir koddur.</p><p><strong>Önemli Fark:</strong> MAC, asimetrik anahtar yerine <strong>Simetrik (Gizli) Anahtar</strong> kullanır. Hem gönderici hem de alıcı aynı anahtara sahip olduğu için İnkâr Edilemezlik <em>sağlamaz</em>.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "41. Hash Algoritmalarının Türleri nelerdir? (Kısa bilgi)",
+      "correctAnswer": "<ul><li><strong>MD5 & SHA-1:</strong> Kırılmıştır, artık güvenli kabul edilmezler.</li><li><strong>SHA-2 (SHA-256, SHA-512):</strong> Günümüzde güvenli ve yaygındır (Bitcoin vb. kullanır).</li><li><strong>SHA-3:</strong> En yeni standarttır, Keccak algoritması temellidir.</li></ul>"
+    }
+  ]
+}
