@@ -1,6 +1,6 @@
 {
   "courseTitle": "İşletim Sistemleri",
-  "lectureTitle": "Final Sınavı",
+  "lectureTitle": "Sınav Soruları",
   "questions": [
     {
       "type": "multiple-choice",
@@ -884,6 +884,146 @@
         "E) Program, sadece kernel modda; süreç kullanıcı modda çalışır."
       ],
       "correctAnswer": "C) Program, pasif bir komut yığınıdır; süreç o programın bellekte çalışan aktif hâlidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "1. İşletim Sistemi nedir? \"Çekirdek Modu\" ve \"Kullanıcı Modu\" nedir?",
+      "correctAnswer": "<ul><li><strong>İşletim Sistemi (OS):</strong> Donanım ile kullanıcı uygulamaları arasında köprü görevi gören, kaynakları (CPU, bellek) yöneten temel sistem yazılımıdır.</li><li><strong>Çekirdek Modu (Kernel Mode):</strong> İşlemcinin sınırsız yetkiye sahip olduğu moddur. Sadece OS çekirdeği burada çalışır, tüm donanıma erişebilir.</li><li><strong>Kullanıcı Modu (User Mode):</strong> Standart uygulamaların (tarayıcı, oyun) çalıştığı kısıtlı moddur. Donanıma doğrudan erişemez, işletim sisteminden istekte bulunur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "2. Monolitik ve Mikroçekirdek mimarilerini karşılaştırınız. Hibrit yaklaşım neden tercih edilir?",
+      "correctAnswer": "<ul><li><strong>Monolitik Çekirdek:</strong> Tüm servisler (sürücüler, dosya sistemi) tek bir büyük çekirdek programı içindedir. <em>Avantajı:</em> Yüksek performans. <em>Dezavantajı:</em> Düşük hata dayanıklılığı (bir sürücü hatası sistemi çökertebilir).</li><li><strong>Mikroçekirdek:</strong> Çekirdek sadece en temel işlevleri yapar, diğer servisler kullanıcı modunda çalışır. <em>Avantajı:</em> Yüksek güvenlik ve hata dayanıklılığı. <em>Dezavantajı:</em> Performans düşüklüğü (çok fazla mod geçişi).</li><li><strong>Hibrit Yaklaşım:</strong> Modern sistemler (Windows, macOS), monolitik yapının performansını mikroçekirdeğin güvenliğiyle birleştirmek için bu yaklaşımı tercih eder.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "4. Context Switch (Bağlam Değişimi) nedir? Nasıl gerçekleşir?",
+      "correctAnswer": "<p><strong>Context Switch:</strong> İşletim sisteminin, CPU'yu bir süreçten alıp diğerine vermesi işlemidir.</p><p><strong>Nasıl Gerçekleşir:</strong> <em>Dağıtıcı (Dispatcher)</em> modülü, mevcut sürecin o anki durumunu (Program Sayacı, Yazmaçlar) sürecin <strong>PCB</strong>'sine (Süreç Kontrol Bloğu) kaydeder. Ardından, yeni seçilen sürecin PCB'sindeki durumu CPU'ya yükler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "5. Bir sürecin diskteki pasif halinden sonlanmasına kadar geçen aşamalar nelerdir?",
+      "correctAnswer": "<ol><li><strong>Program (Disk):</strong> Pasif haldeki dosya (örn: .exe).</li><li><strong>Yeni (New):</strong> <em>Loader</em> programı RAM'e yükler, OS bir PCB oluşturur.</li><li><strong>Hazır (Ready):</strong> Süreç CPU'yu beklemek üzere hazır kuyruğuna alınır.</li><li><strong>Çalışıyor (Running):</strong> <em>Scheduler</em> seçer, <em>Dispatcher</em> CPU'yu verir, süreç çalışır.</li><li><strong>Bekliyor (Waiting):</strong> G/Ç gerekirse beklemeye geçer.</li><li><strong>Sonlanmış (Terminated):</strong> İş biter, kaynaklar serbest bırakılır, PCB silinir.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "6. Süreç oluşturmada fork(), exec() ve Copy-on-Write (COW) kavramlarını açıklayınız.",
+      "correctAnswer": "<ul><li><strong>fork():</strong> Ebeveyn sürecin neredeyse birebir kopyası olan bir \"çocuk\" süreç oluşturur (Yeni PID, yeni PCB).</li><li><strong>exec():</strong> Mevcut sürecin bellek alanını yeni bir program koduyla değiştirir (Farklı bir iş yapmak için).</li><li><strong>Copy-on-Write (COW):</strong> <code>fork()</code> sonrası belleğin hemen kopyalanması yerine, ebeveyn veya çocuktan biri belleğe \"yazmaya\" çalışana kadar paylaşılması optimizasyonudur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "7. Zombi Süreç (Zombie Process) nedir, neden tehlikelidir?",
+      "correctAnswer": "<p><strong>Zombi Süreç:</strong> Çalışması bitmiş ancak ebeveyni tarafından çıkış durumu henüz okunmamış (toplanmamış) süreçtir.</p><p><strong>Tehlikesi:</strong> CPU/RAM kullanmaz ancak süreç tablosunda yer işgal eder. Çok fazla zombi, tablonun dolmasına ve yeni süreç oluşturulamamasına yol açabilir. Ebeveynin <code>wait()</code> çağrısı yapmasıyla temizlenir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "8. Yetim Süreç (Orphan Process) nedir? Sistem nasıl yönetir?",
+      "correctAnswer": "<p><strong>Yetim Süreç:</strong> Ebeveyni ölmüş (sonlanmış) ancak kendisi hala çalışan süreçtir.</p><p><strong>Yönetimi:</strong> İşletim sistemi (init veya systemd) bu süreçleri otomatik olarak \"evlat edinir\" ve sonlandıklarında onları toplayarak zombiye dönüşmelerini engeller.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "9. Thread (İş Parçacığı) nedir? Process ile farkları nelerdir?",
+      "correctAnswer": "<p><strong>Thread:</strong> Bir süreç içinde çalışan en küçük yürütme birimidir.</p><p><strong>Process ile Farkları:</strong></p><ul><li><strong>Kaynak:</strong> Thread'ler aynı sürecin belleğini paylaşır (hafif siklet), süreçler izoledir (ağır siklet).</li><li><strong>İletişim:</strong> Thread'ler arası iletişim kolaydır (ortak bellek), süreçler arası zordur (IPC gerekir).</li><li><strong>Hata Etkisi:</strong> Bir thread çökerse tüm süreç çöker, bir süreç çökerse diğerlerini etkilemez.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "10. Thread Yaşam Döngüsündeki temel durumlar nelerdir?",
+      "correctAnswer": "<ol><li><strong>New:</strong> Oluşturuldu, henüz hazır değil.</li><li><strong>Runnable (Hazır):</strong> Çalışmaya hazır, CPU bekliyor.</li><li><strong>Running (Çalışıyor):</strong> CPU üzerinde aktif olarak komut işliyor.</li><li><strong>Blocked/Waiting:</strong> Bir olay (G/Ç, kilit) bekliyor, CPU kullanmıyor.</li><li><strong>Terminated:</strong> İşi bitti.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "11. Thread Türleri (User-Level, Kernel-Level) arasındaki farklar nelerdir?",
+      "correctAnswer": "<ul><li><strong>User-Level Threads (ULT):</strong> Kullanıcı uzayında yönetilir. Çekirdeğin haberi yoktur. Hızlıdır ancak biri bloklanırsa tüm süreç bloklanır.</li><li><strong>Kernel-Level Threads (KLT):</strong> Çekirdek tarafından yönetilir. Gerçek paralellik sağlar (biri bloklansa diğeri çalışır) ancak yönetimi daha maliyetlidir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "12. SMT (Hyper-Threading) nedir ve planlamaya etkisi nasıldır?",
+      "correctAnswer": "<p><strong>SMT / Hyper-Threading:</strong> Tek bir fiziksel çekirdeğin, kaynaklarını paylaştırarak işletim sistemine kendini birden fazla (genellikle 2) \"mantıksal çekirdek\" gibi göstermesidir.</p><p><strong>Etkisi:</strong> OS planlayıcısı daha fazla çekirdek görür ve aynı anda daha fazla thread yürütebilir (%15-30 performans artışı).</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "13. Race Condition, Deadlock ve Starvation nedir?",
+      "correctAnswer": "<ul><li><strong>Race Condition (Yarış Durumu):</strong> Birden fazla thread'in paylaşılan veriye aynı anda erişip değiştirmeye çalışması sonucu oluşan belirsiz/hatalı durum.</li><li><strong>Deadlock (Kilitlenme):</strong> Thread'lerin birbirlerinin elindeki kaynakları sonsuza kadar beklemesi durumu.</li><li><strong>Starvation (Açlık):</strong> Düşük öncelikli thread'lerin, yüksek öncelikliler yüzünden asla kaynak (CPU) alamaması.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "15. CPU Scheduler, Dispatcher ve Timer Interrupt nedir?",
+      "correctAnswer": "<ul><li><strong>CPU Scheduler (Zamanlayıcı):</strong> Hazır kuyruğundan hangi sürecin çalışacağına karar veren \"karar mekanizması\".</li><li><strong>Dispatcher (Dağıtıcı):</strong> Seçilen süreci CPU'ya yükleyen (context switch yapan) \"uygulayıcı mekanizma\".</li><li><strong>Timer Interrupt:</strong> Bir sürecin CPU'yu tekeline almasını önlemek için belirli süre sonunda çalan \"donanım saati\".</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "16. Preemptive ve Non-Preemptive Zamanlama farkı nedir?",
+      "correctAnswer": "<ul><li><strong>Non-Preemptive (Kesintisiz):</strong> Süreç CPU'yu kendi isteğiyle bırakana kadar (işi bitince veya G/Ç beklerken) çalışır. (Örn: FCFS).</li><li><strong>Preemptive (Kesintili):</strong> İşletim sistemi, çalışan süreci zorla durdurup CPU'yu başkasına verebilir. (Örn: Round Robin).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "18. FCFS, SJF, RR ve MLFQ algoritmalarının temel özellikleri nelerdir?",
+      "correctAnswer": "<ul><li><strong>FCFS (İlk Gelen İlk Çıkar):</strong> Basit ama \"Konvoy Etkisi\" yaratır (uzun iş kısa işi bekletir).</li><li><strong>SJF (En Kısa İş Önce):</strong> Ortalama bekleme süresi en iyidir ama uzun işler \"aç kalabilir\" (starvation).</li><li><strong>RR (Round Robin):</strong> Her sürece eşit zaman dilimi (quantum) verir. Adil ve hızlı yanıt süresi sağlar (etkileşimli sistemler için ideal).</li><li><strong>MLFQ (Çok Seviyeli Kuyruk):</strong> Dinamiktir. İşleri davranışlarına (CPU veya G/Ç yoğun) göre farklı öncelikli kuyruklara ayırır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "23. IPC (Süreçler Arası İletişim) nedir ve neden gereklidir?",
+      "correctAnswer": "<p><strong>IPC:</strong> İzole bellek alanlarında çalışan bağımsız süreçlerin veri paylaşmasını ve koordinasyonunu sağlayan mekanizmalardır.</p><p><strong>Gereklilik:</strong> Modern OS'lerde süreçler güvenlik için birbirinden yalıtılmıştır, doğrudan birbirlerinin belleğine erişemezler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "25. Paylaşılan Bellek (Shared Memory) kullanırken neden senkronizasyon gerekir?",
+      "correctAnswer": "<p>Shared Memory en hızlı IPC yöntemidir çünkü çekirdek aradan çekilir ve süreçler doğrudan belleğe erişir. Ancak bu, <strong>Race Condition</strong> (veri bozulması) riski yaratır. Bu yüzden erişimler mutlaka <strong>Mutex</strong> veya <strong>Semafor</strong> gibi araçlarla koordine edilmelidir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "28. Yarış Koşulu (Race Condition) neden tehlikelidir? (Örnekle)",
+      "correctAnswer": "<p>İşlemlerin sonucunun, thread'lerin çalışma sırasına bağlı olarak değişmesine (ve hatalı olmasına) yol açar.</p><p><strong>Örnek (counter++):</strong> İki thread aynı anda `counter` değerini 10 olarak okur, ikisi de 11 yapar ve yazar. Sonuç 12 olması gerekirken 11 olur (bir artırma işlemi kaybolur).</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "29. Spinlock nedir, Mutex'ten farkı nedir?",
+      "correctAnswer": "<p><strong>Spinlock:</strong> Kilit meşgulse uyumayan, bunun yerine \"kilit açıldı mı?\" diye sürekli aktif bir döngüde (busy-waiting) CPU'yu meşgul ederek bekleyen kilittir.</p><p><strong>Farkı:</strong> Mutex beklerken uyur (CPU kullanmaz), Spinlock beklerken CPU'yu %100 kullanır. Spinlock sadece çok kısa beklemeler için (örn: çekirdek içinde) uygundur.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "31. Semafor nedir? wait() ve signal() ne yapar?",
+      "correctAnswer": "<p><strong>Semafor:</strong> Senkronizasyon için kullanılan bir tamsayı sayaçtır.</p><ul><li><strong>wait() (P):</strong> Sayacı 1 azaltır. Sayaç 0 ise, pozitif olana kadar bekler (uyur).</li><li><strong>signal() (V):</strong> Sayacı 1 artırır. Bekleyen bir süreç varsa onu uyandırır.</li></ul><p><em>(Bu işlemler atomik olmak zorundadır.)</em></p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "32. Binary ve Counting Semafor farkı nedir?",
+      "correctAnswer": "<ul><li><strong>Binary Semafor:</strong> Sadece 0 veya 1 değerini alır. Mutex gibi çalışır (karşılıklı dışlama).</li><li><strong>Counting Semafor:</strong> 0'dan N'e kadar değer alabilir. Belirli sayıdaki bir kaynak havuzunu (örn: 10 bağlantı) yönetmek için kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "33. Atomik İşlem ne demektir?",
+      "correctAnswer": "Bölünemez, kesintisiz işlemdir. Başladığı an ya tamamen biter ya da hiç başlamamış sayılır. Araya başka bir işlem giremez. (Race condition'ı önlemek için temel şarttır)."
+    },
+    {
+      "type": "short-answer",
+      "question": "35. Read-Write Lock (RWLock) nedir ve avantajı nedir?",
+      "correctAnswer": "<p><strong>RWLock:</strong> Okuma ve yazma için farklı kilit modları sunar. Birden fazla \"okuyucu\"nun aynı anda erişmesine izin verirken, \"yazıcı\"ya özel (tek) erişim verir.</p><p><strong>Avantajı:</strong> Okuma işlemlerinin çok yoğun olduğu sistemlerde Mutex'e göre çok daha yüksek performans sağlar.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "37. Üretici-Tüketici Problemi ve Sınırlı Tampon (Bounded Buffer) kritiği nedir?",
+      "correctAnswer": "<p>Üretici veri üretir tampona koyar, tüketici alır. Tampon sınırlı olduğu için:</p><ul><li>Üretici, tampon doluysa beklemelidir (Overflow önleme).</li><li>Tüketici, tampon boşsa beklemelidir (Underflow önleme).</li><li>Tampon erişimi Race Condition'dan korunmalıdır (Mutex ile).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "40. Deadlock (Kilitlenme) nedir? Örnek veriniz.",
+      "correctAnswer": "<p>Süreçlerin, birbirlerinin elindeki kaynakları beklemesi sonucu sistemin durmasıdır.</p><p><strong>Örnek:</strong> Süreç A yazıcıyı tutuyor, tarayıcıyı bekliyor. Süreç B tarayıcıyı tutuyor, yazıcıyı bekliyor. İkisi de sonsuza kadar bekler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "41. Deadlock için gerekli 4 Coffman Koşulu nedir?",
+      "correctAnswer": "<ol><li><strong>Mutual Exclusion:</strong> Kaynak paylaşılamaz olmalı.</li><li><strong>Hold and Wait:</strong> Süreç, elinde kaynak varken yenisini istemeli.</li><li><strong>No Preemption:</strong> Kaynak zorla geri alınamamalı.</li><li><strong>Circular Wait:</strong> Dairesel bir bekleme zinciri olmalı.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "43. Banker's Algorithm (Bankacı Algoritması) ne yapar?",
+      "correctAnswer": "Bir <strong>Deadlock Kaçınma</strong> algoritmasıdır. Bir süreç kaynak istediğinde, sistem \"Eğer bu kaynağı verirsem 'Güvenli Durum'da kalır mıyım?\" diye simülasyon yapar. Eğer güvensiz duruma düşecekse, talebi reddeder ve süreci bekletir."
+    },
+    {
+      "type": "short-answer",
+      "question": "44. Adres Uzayı (Address Space) nedir ve bölümleri nelerdir?",
+      "correctAnswer": "<p>Bir sürecin erişebileceği sanal bellek alanıdır.</p><ul><li><strong>Text:</strong> Program kodu.</li><li><strong>Data/BSS:</strong> Global değişkenler.</li><li><strong>Heap:</strong> Dinamik bellek (malloc).</li><li><strong>Stack:</strong> Fonksiyon çağrıları ve yerel değişkenler.</li></ul>"
     }
   ]
 }

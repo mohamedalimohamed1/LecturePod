@@ -74,7 +74,7 @@
     },
     {
       "type": "short-answer",
-      "question": "15. (⭐)  Histogram Eşitleme Adımları nelerdir?",
+      "question": "15. (⭐)  Histogram Eşitleme Adımları nelerdir?",
       "correctAnswer": "<ol><li><strong>Giriş histogramını çıkarmak:</strong> Görüntüdeki her gri seviyenin kaç piksel içerdiğini belirlemek.</li><li><strong>Kümülatif dağılım fonksiyonunu (CDF) oluşturmak.</strong></li><li><strong>Hedef histogramın kümülatif dağılım fonksiyonunu oluşturmak:</strong> (Bu, istenilen dağılımdır).</li><li><strong>Eşleştirme yapmak:</strong> Girişin CDF'sindeki her değeri, hedefin CDF'sindeki en yakın değere eşleştirmek.</li><li><strong>Yeni görüntüyü oluşturmak:</strong> Tüm piksellerin değerini eşleştirilmiş tonla değiştirmek.</li></ol>"
     },
     {
@@ -99,12 +99,12 @@
     },
     {
       "type": "short-answer",
-      "question": "20. (⭐)  Uzaysal Korelasyon ve Konvolüsyon işlemlerini tanımlayarak aralarındaki temel farkı belirtiniz.",
+      "question": "20. (⭐)  Uzaysal Korelasyon ve Konvolüsyon işlemlerini tanımlayarak aralarındaki temel farkı belirtiniz.",
       "correctAnswer": "<ul><li><strong>Korelasyon:</strong> Bir çekirdek (kernel) penceresini görüntü üzerinde kaydırmak ve her konumda piksel değerleri ile çekirdek değerlerinin çarpımını toplamak işlemidir.</li><li><strong>Konvolüsyon:</strong> Korelasyon işlemine çok benzerdir.</li><li><strong>Temel Fark:</strong> Konvolüsyon işleminde, korelasyondan farklı olarak, kernel (çekirdek) <strong>180° döndürülür</strong>.</li></ul>"
     },
     {
       "type": "short-answer",
-      "question": "21.  (⭐)  Gürültü nedir? Görüntüde gürültü oluşumunun başlıca iki kaynağını (edinme ve iletim) örneklerle açıklayınız.",
+      "question": "21.  (⭐)  Gürültü nedir? Görüntüde gürültü oluşumunun başlıca iki kaynağını (edinme ve iletim) örneklerle açıklayınız.",
       "correctAnswer": "<p><strong>Gürültü Tanımı:</strong> Çeşitli nedenlerle (örn: sensör hataları, düşük ışık koşulları, elektronik parazitler) görüntüye karışan istenmeyen rastgele sinyaller veya bozulmalardır.</p><p><strong>Kaynakları:</strong></p><ol><li><strong>Görüntü Edinimi (Alımı) Sırasında:</strong> Görüntü sensörlerinin performansı, çevresel faktörlerden (düşük ışık, sensör sıcaklığı) etkilenir.</li><li><strong>Görüntü İletimi Sırasında:</strong> Görüntü iletilirken (örn: ağ üzerinden gönderilirken), iletişim kanalındaki parazit (şimşek, atmosferik bozulma) nedeniyle oluşur.</li></ol>"
     },
     {
@@ -129,38 +129,38 @@
     },
     {
       "type": "short-answer",
-      "question": "26. (⭐) Uzamsal filtreleme nedir, hangi amaçlarla yapılır ve bu işlem hangi temel araçla (matris) ve hangi matematiksel operasyonla gerçekleştirilir?",
-      "correctAnswer": "<p><strong>Uzamsal filtreleme,</strong> bir görüntüdeki her pikseli yalnızca kendi değeriyle değil, komşu piksellerin değerleriyle birlikte değerlendirerek yeni bir görüntü oluşturma işlemidir.</p><p><strong>Amaçları:</strong> Gürültüyü azaltma, kenarları ortaya çıkarma, detayları keskinleştirme ve bulanıklaştırma.</p><p>Bu işlem, <strong>\"çekirdek\" (kernel veya maske)</strong> adı verilen küçük bir matrisle yapılır. Çekirdeğin görüntü üzerinde kaydırılarak uygulanması işlemine matematiksel olarak <strong>\"konvülasyon\" (convolution)</strong> denir.</p>"
+      "question": "26. (⭐) Uzamsal Filtreleme nedir, hangi amaçlarla yapılır ve bu işlem hangi temel araçla (matris) ve hangi matematiksel operasyonla gerçekleştirilir?",
+      "correctAnswer": "<p><strong>Uzamsal Filtreleme:</strong> Bir görüntüdeki her pikseli, yalnızca kendi değeriyle değil, komşu piksellerin değerleriyle birlikte değerlendirerek yeni bir görüntü oluşturma işlemidir.</p><p><strong>Amaçları:</strong> Görüntü üzerinde gürültüyü azaltma, kenarları ortaya çıkarma veya detayları keskinleştirme gibi işlemler gerçekleştirilebilir.</p><p><strong>Filtreleme ve Konvülasyon:</strong> Filtreleme, bir görüntü üzerindeki piksellerin değerlerini, komşuluklarındaki diğer piksellerin değerlerine göre değiştirme işlemidir. Bu işlem, <strong>\"çekirdek\" (kernel, maske)</strong> adı verilen küçük bir matrisle yapılır. Çekirdek, görüntü üzerinde kaydırılarak (sliding) uygulanır. Bu işlem matematiksel olarak <strong>\"konvülasyon\" (convolution)</strong> olarak adlandırılır.</p>"
     },
     {
       "type": "short-answer",
       "question": "27. (⭐) Uzamsal filtrelemeye neden ihtiyaç duyarız? Görüntülerde bozulmaya yol açan etkenler ve sonuçları nelerdir?",
-      "correctAnswer": "<p>Filtrelemeye ihtiyaç duyarız çünkü gerçek dünyadan elde edilen dijital görüntüler her zaman ideal değildir.</p><ul><li><strong>Etkenler:</strong> Kamera sensörleri, ortam ışığı, iletim hataları veya sıkıştırma gibi etkenler bozulmalara neden olabilir.</li><li><strong>Sonuçları:</strong> Bu etkenler nedeniyle görüntülerde gürültü (noise) oluşabilir, kenarlar belirsizleşebilir veya detaylar kaybolabilir.</li></ul>"
+      "correctAnswer": "<p><strong>Neden Filtreleme Yapıyoruz?</strong> Gerçek dünyadan elde edilen dijital görüntüler her zaman ideal değildir.</p><ul><li><strong>Etkenler:</strong> Kamera sensörleri, ortam ışığı, iletim hataları gibi etkenler bozulmalara neden olabilir.</li><li><strong>Sonuçları:</strong> Bu etkenler nedeniyle görüntülerde gürültü oluşabilir, kenarlar belirsizleşebilir veya detaylar kaybolabilir. Bu bozulmaların düzeltilmesi için filtreleme teknikleri kullanılır.</li></ul>"
     },
     {
       "type": "short-answer",
       "question": "28. (⭐) \"Alçak Geçirgen Filtreler\" (Smoothing) nedir ve başlıca kullanım amaçları nelerdir?",
-      "correctAnswer": "<p>\"Smoothing\" (yumuşatma), bazen \"averaging\" (ortalama alma) olarak da adlandırılır ve görüntüdeki yoğunluktaki ani değişimleri azaltmak için kullanılır.</p><p><strong>Başlıca kullanım amaçları:</strong></p><ul><li><strong>Gürültü Azaltma:</strong> Rastgele gürültü, görüntüde keskin değişimlerle ortaya çıktığından, smoothing filtrelerinin en bariz uygulaması gürültü azaltmadır.</li><li><strong>Aliasing'i Azaltma:</strong> Görüntü yeniden örneklenmeden önce uygulanarak \"aliasing\"i azaltmak için kullanılır.</li><li><strong>Detayları Bastırma/Yumuşatma:</strong> Görüntüde önemsiz küçük detayları bastırmak veya yetersiz sayıda yoğunluk seviyesinden kaynaklanan sahte konturları yumuşatmak için kullanılır.</li></ul>"
+      "correctAnswer": "<p><strong>Tanım:</strong> Smoothing (yumuşatma), bazen averaging (ortalama alma) olarak da adlandırılır ve yoğunluktaki ani değişimleri azaltmak için kullanılır.</p><p><strong>Kullanım Alanları:</strong></p><ul><li><strong>Gürültü Azaltma:</strong> Rastgele gürültü keskin değişimlerle ortaya çıktığından, en bariz uygulaması gürültü azaltmadır.</li><li><strong>Aliasing Azaltma:</strong> Görüntü yeniden örneklenmeden önce uygulanır.</li><li><strong>Detay Bastırma:</strong> Görüntüde önemsiz küçük detayları bastırmak veya yetersiz sayıda yoğunluk seviyesinden kaynaklanan sahte konturları yumuşatmak için kullanılır.</li></ul>"
     },
     {
       "type": "short-answer",
       "question": "29. (⭐) Ortalama Filtreyi (Box Filtre) tanımlayınız. Avantajlarını ve sınırlamalarını (dezavantajlarını) açıklayınız.",
-      "correctAnswer": "<p>Ortalama filtre, uzamsal filtrelemede kullanılan en basit düşük geçiren (low-pass) filtre çekirdeğidir. Özelliği, tüm katsayılarının aynı değere (genellikle 1) sahip olmasıdır. \"Box kernel\" adını, çekirdeği üç boyutlu olarak düşündüğümüzde düz bir kutu (box) gibi görünmesinden alır.</p><p><strong>Avantajları:</strong></p><ul><li><strong>Basitlik:</strong> Tüm katsayıları eşit olduğundan uygulanması son derece kolaydır.</li><li><strong>Yeterli Sonuçlar:</strong> Küçük çekirdek boyutlarında elde edilen yumuşatma (smoothing) etkisi çoğu zaman görsel olarak yeterince tatmin edici olur.</li></ul><p><strong>Sınırlamaları:</strong></p><ul><li><strong>Doğal Olmayan Bulanıklık:</strong> Gerçek hayattaki odak dışı bir kamera merceğinin (defocused lens) oluşturduğu doğal bulanıklığı doğru biçimde modelleyemez.</li><li><strong>Yönsel Artefaktlar:</strong> Yatay ve dikey yönlerde daha fazla bulanıklaştırma eğilimindedir.</li></ul>"
+      "correctAnswer": "<p><strong>Tanım:</strong> Uzamsal filtrelemede kullanılan en basit düşük geçiren (low-pass) filtre çekirdeğidir.</p><p><strong>Özelliği:</strong> Tüm katsayılarının aynı değere sahip olmasıdır (genellikle hepsi 1). \"Average\" veya \"mean filter\" olarak da adlandırılır.</p><p><strong>Amacı:</strong> Görüntüdeki ani değişimleri yumuşatmak ve gürültüyü azaltmaktır.</p><p><strong>Avantajları:</strong></p><ul><li><strong>Basitlik:</strong> Uygulanması son derece kolaydır.</li><li><strong>Görsel Olarak Yeterli Sonuçlar:</strong> Küçük çekirdek boyutlarında ($3\\times3$ veya $5\\times5$) elde edilen yumuşatma etkisi çoğu zaman görsel olarak yeterince tatmin edicidir.</li><li><strong>Kenarlara Etkisi Az:</strong> Bazen kenar detaylarını tamamen yok etmeden gürültüyü azaltmak için uygun bir seçim olabilir.</li></ul><p><strong>Sınırlamaları:</strong></p><ul><li><strong>Gerçek Bulanıklığı İyi Taklit Edemez:</strong> Odak dışı bir kamera merceğinin (defocused lens) oluşturduğu doğal bulanıklığı doğru biçimde modelleyemez.</li><li><strong>Yönsel (Dik Eksenli) Bulanıklaştırma Yapar:</strong> Satır ve sütun boyunca eşit etki yaptığı için yatay ve dikey yönlerde daha fazla bulanıklaştırma eğilimindedir. Bu durum istenmeyen yönsel artefaktlar oluşturabilir.</li></ul>"
     },
     {
       "type": "short-answer",
       "question": "30. (⭐) Gauss Filtresi nedir? Temel amacı, çalışma mantığı ve Ortalama Filtreden (Box Filtre) farkı nedir?",
-      "correctAnswer": "<p>Gauss filtresi, görüntü işleme ve bilgisayarla görmede en yaygın kullanılan düşük geçiren (low-pass) filtrelerden biridir.</p><ul><li><strong>Temel Amaç:</strong> Görüntüdeki yüksek frekanslı gürültü ve detayları yumuşatmak ve doğal bir bulanıklık yaratmaktır.</li><li><strong>Çalışma Mantığı ve Farkı:</strong> Ortalama filtreden farklı olarak, Gauss filtresi merkezden uzaklaştıkça etkisi azalan ağırlıklar kullanır. Yani, bir pikselin yeni değeri hesaplanırken merkeze yakın komşular daha fazla, uzak komşular ise daha az etki eder. Bu sayede kenarlar, ortalama filtreye kıyasla daha az bozulur.</li></ul>"
+      "correctAnswer": "<p><strong>Tanım:</strong> Görüntü işleme ve bilgisayarla görmede en yaygın kullanılan düşük geçiren (low-pass) filtrelerden biridir.</p><ul><li><strong>Temel Amaç:</strong> Görüntüdeki yüksek frekanslı gürültü ve detayları yumuşatmak ve doğal bir bulanıklık yaratmaktır.</li><li><strong>Çalışma Mantığı ve Farkı:</strong> Filtre, merkezden uzaklaştıkça etkisi azalan ağırlıklar kullanır. Merkeze yakın komşular daha fazla etki eder, uzak komşular daha az etki eder.</li><li><strong>Avantajı (Ortalama Filtreye Göre):</strong> Bu şekilde kenarlar ortalama filtreye göre daha az bozulur.</li></ul>"
     },
     {
       "type": "short-answer",
       "question": "31. (⭐) Medyan Filtre nedir ve hangi filtre sınıfına aittir? Çalışma prensibini, avantajlarını ve hangi gürültü tipinde özellikle etkili olduğunu açıklayınız.",
-      "correctAnswer": "<p>Medyan Filtre, <strong>\"Nonlineer (Doğrusal Olmayan)\"</strong> bir filtredir.</p><ul><li><strong>Çalışma Prensibi:</strong> Bir pikselin komşuluk bölgesindeki tüm piksel değerleri alınır. Bu değerler küçükten büyüğe sıralanır. Ortadaki değer (medyan) seçilir ve merkez pikselin değeri bu medyan değeri ile değiştirilir.</li><li><strong>Etkili Olduğu Gürültü:</strong> Özellikle <strong>Tuz-biber gürültüsü (Salt-and-Pepper)</strong> gibi beyaz-siyah noktalarla ortaya çıkan gürültülerde ve impuls (ani parazitli) gürültülerde çok etkilidir.</li><li><strong>Avantajları:</strong> Gürültüyü azaltırken kenarları korur. Lineer filtreler (Gaussian veya Box) gibi görüntüyü bulanıklaştırmaz.</li><li><strong>Sınırlamaları:</strong> Büyük çekirdek boyutlarında detay kaybı olabilir.</li></ul>"
+      "correctAnswer": "<p>Medyan Filtre, <strong>\"Nonlineer (Doğrusal Olmayan)\"</strong> bir filtredir.</p><ul><li><strong>Çalışma Prensibi:</strong> Pikselin komşuluk bölgesindeki tüm piksellerin değerlerini alır. Bu değerleri küçükten büyüğe sıralar. Ortadaki değer (medyan) seçilir. Merkez pikselin değeri bu medyan ile değiştirilir.</li><li><strong>Etkili Olduğu Gürültü (Temel Kullanım Alanı):</strong> Özellikle <strong>Tuz-biber gürültüsü</strong> (beyaz-siyah noktalar) gibi impuls (ani parazitli) gürültülerde çok etkilidir.</li><li><strong>Avantajları:</strong> Gürültüyü azaltırken kenarları korur. Lineer filtreler (Gaussian veya Box) gibi görüntüyü bulanıklaştırmaz.</li><li><strong>Sınırlamaları:</strong> Büyük çekirdek boyutlarında detay kaybı olabilir. Hesaplama olarak biraz daha maliyetlidir.</li></ul>"
     },
     {
       "type": "short-answer",
       "question": "32. (⭐) Sobel Filtresi nedir ve hangi amaçla kullanılır? Nasıl çalıştığını ve çıktı olarak hangi bilgileri ürettiğini açıklayınız.",
-      "correctAnswer": "<p>Sobel filtre, <strong>kenar tespiti</strong> amacıyla kullanılan bir filtreleme yöntemidir.</p><ul><li><strong>Çalışma Prensibi:</strong> Her bir noktada, hem yatay hem de dikey yöndeki yoğunluk değişimlerini gösteren iki ayrı filtre çekirdeği ile konvolüsyon uygulanır.</li><li><strong>Çıktıları:</strong> Bu türev değerleri alındıktan sonra, iki temel bilgi üretilir:<br>1. <strong>Kenar Yoğunluğu (G):</strong> Büyük değerler, görüntüde yoğunluk geçişlerinin olduğu yerleri (kenarları) gösterir.<br>2. <strong>Kenar Yönü (Θ):</strong> Kenarın eğim açısını verir.</li></ul>"
+      "correctAnswer": "<p><strong>Amacı:</strong> Sobel filtre, <strong>kenar tespiti</strong> amacıyla kullanılan bir filtreleme yöntemidir.</p><ul><li><strong>Çalışma Prensibi:</strong> Her bir noktada, hem yatay (Gx) hem de dikey (Gy) yöndeki yoğunluk değişimlerini gösteren iki ayrı filtre çekirdeği ile konvolüsyon uygulanır.</li><li><strong>Çıktıları:</strong> Türev değerleri alındıktan sonra Kenar Gücü ve Kenar Yönü bulunur. G kenar yoğunluğudur (büyük değerler geçişleri gösterir). O kenarın yönünü, yani eğim açısını verir.</li></ul>"
     },
     {
       "type": "short-answer",
