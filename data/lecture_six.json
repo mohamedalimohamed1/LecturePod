@@ -1,0 +1,511 @@
+{
+  "courseTitle": "Dijital Okuryazarlık",
+  "lectureTitle": "Sınav Soruları",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "1. Aşağıdakilerden hangisi bir web sitesine erişmek için kullanılan standart kaynak bulucu anlamına gelen terimdir?",
+      "options": [
+        "a) DNS",
+        "b) IP",
+        "c) URL",
+        "d) WWW"
+      ],
+      "correctAnswer": "c) URL"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "2. Metin, resim, video veya animasyon verilerinin transferini sağlayan hiper metin transfer protokolü aşağıdakilerden hangisidir?",
+      "options": [
+        "a) HTML",
+        "b) FTP",
+        "c) WWW",
+        "d) HTTP"
+      ],
+      "correctAnswer": "d) HTTP"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "3. İnternet'in gelişiminde önemli bir rol oynayan ve ilk e-mail sisteminin geliştirildiği ağ aşağıdakilerden hangisidir?",
+      "options": [
+        "a) ULAKNET",
+        "b) NSFNET",
+        "c) ARPANET",
+        "d) TÜVEKA"
+      ],
+      "correctAnswer": "c) ARPANET"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "4. Aşağıdaki mobil iletişim teknolojilerinden hangisi, bağlantı süresine göre değil, veri alışveriş miktarına göre ücretlendirme olanağı sağlar?",
+      "options": [
+        "a) EDGE",
+        "b) 3G",
+        "c) GSM",
+        "d) GPRS"
+      ],
+      "correctAnswer": "d) GPRS"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "5. Türkiye'de ilk internet bağlantısı hangi kurum üzerinden ve ne zaman gerçekleştirilmiştir?",
+      "options": [
+        "a) ODTÜ - 1993",
+        "b) TÜBİTAK - 1996",
+        "c) Ege Üniversitesi - 1997",
+        "d) PTT - 1992"
+      ],
+      "correctAnswer": "a) ODTÜ - 1993"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "6. Aşağıdaki arama motorlarından hangisi, makaleler, tezler, bildiriler ve raporlar gibi akademik çalışmalar için özel olarak geliştirilmiştir?",
+      "options": [
+        "a) Yandex",
+        "b) Google Akademik",
+        "c) Bing",
+        "d) Mynet"
+      ],
+      "correctAnswer": "b) Google Akademik"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "7. Bir arama motorunda tam olarak 'Anadolu Üniversitesi Açıköğretim' ifadesini içeren sonuçları bulmak için kullanılması gereken sorgu ifadesi aşağıdakilerden hangisidir?",
+      "options": [
+        "a) Anadolu AND Açıköğretim",
+        "b) Anadolu+Açıköğretim",
+        "c) \"Anadolu Üniversitesi Açıköğretim\"",
+        "d) Anadolu*Açıköğretim"
+      ],
+      "correctAnswer": "c) \"Anadolu Üniversitesi Açıköğretim\""
+    },
+    {
+      "type": "multiple-choice",
+      "question": "8. Aşağıdaki web tarayıcılarından hangisi, açık kaynak kodlu olması ve esnek özelleştirme arayüzü sunmasıyla öne çıkmaktadır?",
+      "options": [
+        "a) Google Chrome",
+        "b) Windows Internet Explorer",
+        "c) Safari",
+        "d) Mozilla Firefox"
+      ],
+      "correctAnswer": "d) Mozilla Firefox"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "9. Aşağıdakilerden hangisi bir URL yapısının 'http' ile başlayan kısmının anlamıdır?",
+      "options": [
+        "a) Alan Adı",
+        "b) Dosya Yolu",
+        "c) Hiper metin transfer protokolü",
+        "d) Sunucu Adı"
+      ],
+      "correctAnswer": "c) Hiper metin transfer protokolü"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "10. e-Devlet Kapısı'na giriş yapmak için aşağıdakilerden hangisi kimlik doğrulama araçlarından biri değildir?",
+      "options": [
+        "a) e-Devlet Şifresi",
+        "b) Mobil İmza",
+        "c) Elektronik İmza",
+        "d) Parmak İzi"
+      ],
+      "correctAnswer": "d) Parmak İzi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "11. Web 2.0 sitelerini Web 1.0’dan ayıran temel fark aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Yalnızca metin tabanlı içerik sunmaları",
+        "B) Kullanıcıların pasif tüketici olması",
+        "C) Kullanıcıların içerik üretimine ve paylaşıma aktif katılması",
+        "D) İnternet bağlantısı gerektirmemesi"
+      ],
+      "correctAnswer": "C) Kullanıcıların içerik üretimine ve paylaşıma aktif katılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "12. Sosyal medyanın “katılım” özelliği neyi vurgular?",
+      "options": [
+        "A) İçeriklerin ücretli olması",
+        "B) Kullanıcı geri bildiriminin ve üretiminin teşvik edilmesi",
+        "C) Tüm profillerin gizli olması",
+        "D) Sadece kurumların paylaşım yapması"
+      ],
+      "correctAnswer": "B) Kullanıcı geri bildiriminin ve üretiminin teşvik edilmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "13. Aşağıdakilerden hangisi sosyal medyanın ortak özelliklerinden BİRİ değildir?",
+      "options": [
+        "A) Karşılıklı konuşma (diyalog)",
+        "B) Topluluk oluşturma",
+        "C) Bağlantısallık (linkler ile bağ kurma)",
+        "D) Tamamen tek yönlü yayıncılık"
+      ],
+      "correctAnswer": "D) Tamamen tek yönlü yayıncılık"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "14. “Sosyal ağ haritasındaki düğümler ve çizgiler” neyi temsil eder?",
+      "options": [
+        "A) Düğümler kişiler/kurumlar, çizgiler aralarındaki ilişkiler",
+        "B) Düğümler cihazlar, çizgiler elektrik akımı",
+        "C) Düğümler reklamlar, çizgiler tıklamalar",
+        "D) Düğümler veriler, çizgiler depolama alanı"
+      ],
+      "correctAnswer": "A) Düğümler kişiler/kurumlar, çizgiler aralarındaki ilişkiler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "15. Gerçek yaşama kıyasla çevrim içi sosyal ağların “geçirgen” oluşu hangi sonucu doğurur?",
+      "options": [
+        "A) Gruplara dâhil olmak daha zordur",
+        "B) Gruplara dâhil olmak daha kolaydır",
+        "C) Kimse yeni bağlantı kuramaz",
+        "D) Profiller zorunlu olarak kapalıdır"
+      ],
+      "correctAnswer": "B) Gruplara dâhil olmak daha kolaydır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "16. “Üç Derece Kuralı”na göre sosyal ağlardaki etki için en doğru ifade hangisidir?",
+      "options": [
+        "A) Etki sınırsız sayıda dereceye kadar sürer",
+        "B) Etki genellikle üç dereceyi aşmadan zayıflar",
+        "C) Sadece birinci derecede ortaya çıkar",
+        "D) Yalnızca ekonomik ağlarda geçerlidir"
+      ],
+      "correctAnswer": "B) Etki genellikle üç dereceyi aşmadan zayıflar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "17. Sosyal ağların eğitimde kullanılmasına ilişkin aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        "A) Öğrenme topluluklarını zayıflatır",
+        "B) Akran desteği ve işbirlikli öğrenmeyi kolaylaştırabilir",
+        "C) Yalnızca eğlence amaçlıdır",
+        "D) Dersle ilgili paylaşımı zorlaştırır"
+      ],
+      "correctAnswer": "B) Akran desteği ve işbirlikli öğrenmeyi kolaylaştırabilir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "18. Facebook’ta “Beğen”, “Yorum Yap” ve “Paylaş” işlevleri hangi amaca hizmet eder?",
+      "options": [
+        "A) İçeriği gizlemek",
+        "B) İçeriği tek kişiye kapatmak",
+        "C) İçeriğe geri bildirim vermek ve yayılmasını sağlamak",
+        "D) Hesabı silmek"
+      ],
+      "correctAnswer": "C) İçeriğe geri bildirim vermek ve yayılmasını sağlamak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "19. Twitter’da bir konuyu vurgulamak/kategorize etmek için hangi öğe kullanılır?",
+      "options": [
+        "A) @mention",
+        "B) DM",
+        "C) #hashtag",
+        "D) RT"
+      ],
+      "correctAnswer": "C) #hashtag"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "20. Twitter’daki “Trending Topic (TT)” neyi gösterir?",
+      "options": [
+        "A) En uzun videoları",
+        "B) En popüler 10 konuyu",
+        "C) En gizli hesapları",
+        "D) En çok indirilen uygulamaları"
+      ],
+      "correctAnswer": "B) En popüler 10 konuyu"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "21. Instagram’ın marka/ürün iletişiminde öne çıkan yönü nedir?",
+      "options": [
+        "A) Sadece metin paylaşımı sunması",
+        "B) Görsele dayalı pazarlama için uygun filtre ve düzenleme imkânları",
+        "C) Hesap açmadan sınırsız paylaşım",
+        "D) Etiket (hashtag) kullanılamaması"
+      ],
+      "correctAnswer": "B) Görsele dayalı pazarlama için uygun filtre ve düzenleme imkânları"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "22. LinkedIn’in diğer sosyal ağlardan ayrılan temel odağı nedir?",
+      "options": [
+        "A) Oyun ve eğlence içerikleri",
+        "B) Anonim sohbet odaları",
+        "C) Profesyonel ağ kurma, özgeçmiş ve iş ilanları",
+        "D) Sadece video paylaşımı"
+      ],
+      "correctAnswer": "C) Profesyonel ağ kurma, özgeçmiş ve iş ilanları"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "23. YouTube’da “Abonelikler” bölümünün temel işlevi nedir?",
+      "options": [
+        "A) Sadece gizli videoları saklamak",
+        "B) Beğenilmeyen videoları engellemek",
+        "C) Sevilen kanalları takip ederek yeni videolardan haberdar olmak",
+        "D) Videolara reklam eklemek"
+      ],
+      "correctAnswer": "C) Sevilen kanalları takip ederek yeni videolardan haberdar olmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "24. Sosyal ağlarda “viral pazarlama” ne anlama gelir?",
+      "options": [
+        "A) İçeriğin yalnızca kapalı gruplarda kalması",
+        "B) İçeriğin kullanıcılardan birbirlerine tavsiye ve paylaşımlarla hızla yayılması",
+        "C) İçeriğin arama motorlarında indekslenmemesi",
+        "D) İçeriğin sadece ücretli görülmesi"
+      ],
+      "correctAnswer": "B) İçeriğin kullanıcılardan birbirlerine tavsiye ve paylaşımlarla hızla yayılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "25. Sosyal ağlarda medya okuryazarlığının iki temel bileşeninden biri değildir?",
+      "options": [
+        "A) Teknolojiyi kullanarak içeriğe erişebilme",
+        "B) İçeriği analiz etme ve değerlendirme",
+        "C) İçeriği üretme",
+        "D) İçeriği ezberden hızlı okuma"
+      ],
+      "correctAnswer": "D) İçeriği ezberden hızlı okuma"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "26. Aşağıdakilerden hangisi insanlığın kullandığı ilk teknolojik araçların temel amacı olmuştur?",
+      "options": [
+        "A) Barınak inşa etmek",
+        "B) Yiyecek aramak ve yırtıcı hayvanlardan korunmak",
+        "C) Tarım üretimine geçmek",
+        "D) Ağaç kesmek",
+        "E) Metal alet üretmek"
+      ],
+      "correctAnswer": "B) Yiyecek aramak ve yırtıcı hayvanlardan korunmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "27. Avcı-toplayıcı toplumdan tarım toplumuna geçişin en önemli sonucu aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Göçebe yaşamın artması",
+        "B) Avcılığın gelişmesi",
+        "C) Yerleşik hayata geçilmesi",
+        "D) Taş aletlerin kullanımı azalması",
+        "E) Sanayi üretiminin başlaması"
+      ],
+      "correctAnswer": "C) Yerleşik hayata geçilmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "28. Sanayi Devrimi ile birlikte aşağıdakilerden hangisi yaşanmıştır?",
+      "options": [
+        "A) Göçebe yaşam tarzı yaygınlaşmıştır.",
+        "B) El emeği üretim artmıştır.",
+        "C) Kentleşme oranı azalmıştır.",
+        "D) İş bölümü ve seri üretim gelişmiştir.",
+        "E) Bilgi toplumu ortaya çıkmıştır."
+      ],
+      "correctAnswer": "D) İş bölümü ve seri üretim gelişmiştir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "29. Bilgi toplumunun ortaya çıkmasında en etkili faktör aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Buhar makinesinin icadı",
+        "B) Elektronik ve iletişim teknolojilerindeki gelişmeler",
+        "C) Tarım araçlarının gelişmesi",
+        "D) Demir ve kömür üretimi",
+        "E) Sanayi üretiminde el işçiliğinin artması"
+      ],
+      "correctAnswer": "B) Elektronik ve iletişim teknolojilerindeki gelişmeler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "30. Teknolojinin toplum üzerindeki olumsuz etkilerinden biri aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Bilgiye erişimin kolaylaşması",
+        "B) Sosyal ilişkilerin güçlenmesi",
+        "C) İşsizliğin artması",
+        "D) Eğitim imkânlarının artması",
+        "E) Bilimsel çalışmaların yaygınlaşması"
+      ],
+      "correctAnswer": "C) İşsizliğin artması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "31. Teknolojinin etkisinin kullanıcılar tarafından belirlendiğini, yani toplumun teknolojiye yön verdiğini savunan yaklaşım aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Teknolojik determinizm",
+        "B) Sosyal inşacılık",
+        "C) Bilişsel davranışçılık",
+        "D) Yapısalcılık",
+        "E) Postmodernizm"
+      ],
+      "correctAnswer": "B) Sosyal inşacılık"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "32. İnsan-bilgisayar etkileşimi hangi bilim alanlarıyla ilişkilidir?",
+      "options": [
+        "A) Yalnızca bilgisayar mühendisliği",
+        "B) Sadece psikoloji",
+        "C) Psikoloji, ergonomi, grafik tasarımı gibi disiplinlerle",
+        "D) Yalnızca yazılım teknolojileriyle",
+        "E) Sadece sosyoloji ile"
+      ],
+      "correctAnswer": "C) Psikoloji, ergonomi, grafik tasarımı gibi disiplinlerle"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "33. İnsan-bilgisayar etkileşiminin temel amacı aşağıdakilerden hangisidir?",
+      "options": [
+        "A) İnsanları makinelerden uzak tutmak",
+        "B) Bilgisayarları daha karmaşık hale getirmek",
+        "C) Bilgisayarları daha hızlı ve kullanıcı dostu hâle getirmek",
+        "D) Sadece yazılım geliştirmeye odaklanmak",
+        "E) İnsan davranışlarını sınırlamak"
+      ],
+      "correctAnswer": "C) Bilgisayarları daha hızlı ve kullanıcı dostu hâle getirmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "34. Sosyal medya ortamlarında kişilerin çevrim içi kimliklerini oluşturma biçimleri aşağıdaki kavramlardan hangisiyle açıklanır?",
+      "options": [
+        "A) Sosyal mühendislik",
+        "B) Avatar",
+        "C) Bilişim etiği",
+        "D) Sanal donanım",
+        "E) Ağ toplumu"
+      ],
+      "correctAnswer": "B) Avatar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "35. Teknoloji, toplum ve insan arasındaki ilişkinin daha iyi anlaşılabilmesi için aşağıdakilerden hangisine dikkat edilmelidir?",
+      "options": [
+        "A) Sadece teknolojik yeniliklere",
+        "B) Yalnızca bireysel yaratıcılığa",
+        "C) Tüm öğeler arasındaki karşılıklı etkileşime",
+        "D) Politik faktörlerin yok sayılmasına",
+        "E) Toplumun teknolojiye uyum sağlamasına"
+      ],
+      "correctAnswer": "C) Tüm öğeler arasındaki karşılıklı etkileşime"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "36. Taşınabilir teknolojilerin gelişiminde en büyük dönüm noktası aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Ekran çözünürlüklerinin artması",
+        "B) Kablosuz ağların yaygınlaşması",
+        "C) Yeniden şarj edilebilir bataryaların kullanılması",
+        "D) Dokunmatik ekranların ortaya çıkması"
+      ],
+      "correctAnswer": "C) Yeniden şarj edilebilir bataryaların kullanılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "37. Günümüzde akıllı telefonların masaüstü bilgisayarlardan farkı olarak aşağıdakilerden hangisi söylenebilir?",
+      "options": [
+        "A) Daha düşük depolama kapasitesi vardır.",
+        "B) Sadece telefon görüşmesi yapabilirler.",
+        "C) Birçok işlevi (fotoğraf, video, internet, oyun vb.) tek cihazda birleştirirler.",
+        "D) Kablolu bağlantı olmadan çalışamazlar."
+      ],
+      "correctAnswer": "C) Birçok işlevi (fotoğraf, video, internet, oyun vb.) tek cihazda birleştirirler."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "38. Dizüstü bilgisayarlar masaüstü bilgisayarlara göre hangi avantajı sağlar?",
+      "options": [
+        "A) Daha düşük performans",
+        "B) Sabit enerji bağlantısına ihtiyaç duyması",
+        "C) Taşınabilirlik ve şarjlı çalışma olanağı",
+        "D) Yalnızca oyun oynamaya uygun olması"
+      ],
+      "correctAnswer": "C) Taşınabilirlik ve şarjlı çalışma olanağı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "39. “Nomofobi” terimi neyi ifade eder?",
+      "options": [
+        "A) Teknolojiden tamamen uzak yaşama isteği",
+        "B) Cep telefonu bağımlılığı ve telefonsuz kalma korkusu",
+        "C) İnterneti kullanamama korkusu",
+        "D) Sosyal medyadan uzak kalma isteği"
+      ],
+      "correctAnswer": "B) Cep telefonu bağımlılığı ve telefonsuz kalma korkusu"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "40. Aşağıdakilerden hangisi cep telefonlarının çocuklar üzerindeki olumsuz etkilerinden biridir?",
+      "options": [
+        "A) Gerçek sosyal etkileşimi artırması",
+        "B) Görme sorunlarına yol açabilmesi",
+        "C) Bilişsel gelişimi hızlandırması",
+        "D) Aile bağlarını güçlendirmesi"
+      ],
+      "correctAnswer": "B) Görme sorunlarına yol açabilmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "41. Giyilebilir teknolojilerle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": [
+        "A) Sadece sağlık sektöründe kullanılabilirler.",
+        "B) Taşınabilir teknolojilerin geldiği son noktayı temsil ederler.",
+        "C) Kablosuz çalışmazlar.",
+        "D) Sadece askeri amaçla kullanılırlar."
+      ],
+      "correctAnswer": "B) Taşınabilir teknolojilerin geldiği son noktayı temsil ederler."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "42. Akıllı saatlerin temel özelliği aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Yalnızca zamanı gösterir.",
+        "B) İnternete bağlanamaz.",
+        "C) Akıllı telefonlarla senkronize çalışarak çağrı ve mesajları gösterebilir.",
+        "D) Kamera özelliği yoktur."
+      ],
+      "correctAnswer": "C) Akıllı telefonlarla senkronize çalışarak çağrı ve mesajları gösterebilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "43. “SMS” ve “MMS” arasındaki fark aşağıdakilerden hangisidir?",
+      "options": [
+        "A) MMS yalnızca sesli mesaj gönderir.",
+        "B) SMS 3G teknolojisinde çalışmaz.",
+        "C) MMS, fotoğraf, ses ve video içeren çoklu mesajlar gönderebilir.",
+        "D) SMS, görüntü eklenmesine izin verir."
+      ],
+      "correctAnswer": "C) MMS, fotoğraf, ses ve video içeren çoklu mesajlar gönderebilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "44. Aşağıdaki hizmetlerden hangisi taşınabilir teknolojilerin sunduğu bir protokol değildir?",
+      "options": [
+        "A) E-posta",
+        "B) MMS",
+        "C) HTTP",
+        "D) Video görüşme"
+      ],
+      "correctAnswer": "C) HTTP"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "45. Aşağıdakilerden hangisi akıllı telefonların hayatımıza kattığı yararlardan biridir?",
+      "options": [
+        "A) Gerçek sosyal etkileşimi azaltır.",
+        "B) Mobil bankacılık, sağlık ve iletişim kolaylığı sağlar.",
+        "C) Kullanıcıları bilgiye erişimden uzaklaştırır.",
+        "D) Sadece eğlence amacıyla kullanılır."
+      ],
+      "correctAnswer": "B) Mobil bankacılık, sağlık ve iletişim kolaylığı sağlar."
+    }
+  ]
+}
