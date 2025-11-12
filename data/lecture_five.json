@@ -4,510 +4,7 @@
   "questions": [
     {
       "type": "multiple-choice",
-      "question": "1. Deadlock tespiti sonrası recovery (kurtarma) aşamasında işletim sistemi aşağıdaki işlemlerden hangisini uygulayabilir?",
-      "options": [
-        "A) Deadlock oluşmadan önce tüm süreçleri bekletmek.",
-        "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak.",
-        "C) Banker's Algorithm'i yeniden çalıştırmak.",
-        "D) Tüm kaynakları paylaşımlı hale getirmek.",
-        "E) Süreçlerin tümüne kaynaklarını yeniden tahsis etmek."
-      ],
-      "correctAnswer": "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "2. Aşağıdakilerden hangisi SJF (Shortest Job First) ve HRRN (Highest Response Ratio Next) algoritmaları arasındaki farkı doğru açıklar?",
-      "options": [
-        "A) SJF kesintilidir, HRRN kesintisizdir.",
-        "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar.",
-        "C) HRRN, Round Robin'e benzer zaman dilimi mantığı kullanır.",
-        "D) SJF'de starvation önlenir, HRRN'de ortaya çıkar.",
-        "E) HRRN, konvoy etkisi oluşturur, SJF oluşturmaz."
-      ],
-      "correctAnswer": "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "3. Aşağıdaki IPC mekanizması → tipik en uygun kullanım eşleştirmelerinden hangisi yanlıştır?",
-      "options": [
-        "A) Shared memory → Büyük hacimli ve yüksek performanslı veri paylaşımı",
-        "B) Message queue → Asenkron, tip bazlı kuyruklu mesajlaşma",
-        "C) UNIX domain socket → Aynı makinede client-server iletişimi",
-        "D) Signal → Yüksek hacimli ikili veri akışı",
-        "E) Anonymous pipe → Shell hattı (producer→consumer) akışları"
-      ],
-      "correctAnswer": "D) Signal → Yüksek hacimli ikili veri akışı"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "4. Zombie süreç, çocuk süreç sonlandıktan sonra ebeveyn süreç wait() çağrısı yapmadığında oluşur.",
-      "options": [
-        "A) Doğru",
-        "B) Yanlış"
-      ],
-      "correctAnswer": "A) Doğru"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "5. Çekirdek Modu (Kernel Mode) hakkında aşağıdakilerden hangileri doğrudur? I. İşletim sistemi çekirdeği ve sürücüler bu modda çalışır. II. Donanıma doğrudan erişim mümkündür. III. Kullanıcı programları bu modda çalışır. IV. Bu modda yapılan hatalar tüm sistemi etkileyebilir.",
-      "options": [
-        "A) I, II ve IV",
-        "B) I ve II",
-        "C) I, III ve IV",
-        "D) II ve III",
-        "E) Yalnız III"
-      ],
-      "correctAnswer": "A) I, II ve IV"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "6. Bir işletim sisteminde timer interrupt (zamanlayıcı kesmesi) gerçekleştiğinde, CPU zamanlayıcı (scheduler) tarafından hangi olay sırası doğru biçimde gerçekleşir?",
-      "options": [
-        "A) Scheduler yeni süreci seçer → Timer interrupt tetiklenir → Dispatcher süreci çalıştırır",
-        "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir",
-        "C) Dispatcher seçimi yapar → Scheduler süreci çalıştırır → Context switch tamamlanır",
-        "D) Dispatcher süreci seçer → Scheduler context switch yapar → Timer interrupt sonlanır",
-        "E) Timer interrupt gerçekleşir → Dispatcher doğrudan CPU'yu atar → Scheduler devre dışı kalır"
-      ],
-      "correctAnswer": "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "7. Aşağıdakilerden hangisi thread (iş parçacığı) ile process (süreç) arasındaki farklardan biri değildir?",
-      "options": [
-        "A) Bir process çökerse diğer process'ler etkilenmez, ancak bir thread çökerse aynı süreçteki diğer thread'ler etkilenebilir.",
-        "B) Thread'ler aynı süreçteki diğer thread'lerle aynı kod ve veri alanını kullanabilir.",
-        "C) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir.",
-        "D) Thread'ler aynı bellek alanını paylaşabilirken, process'ler ayrı bellek alanlarına sahiptir.",
-        "E) Thread oluşturmak, process oluşturmaktan daha düşük maliyetlidir."
-      ],
-      "correctAnswer": "C) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "8. Aşağıdakilerden hangisi deadlock önleme (prevention) yaklaşımına örnektir?",
-      "options": [
-        "A) Banker's Algorithm kullanılarak güvenli durum kontrol edilir.",
-        "B) Deadlock oluşmasına izin verir, sonra tespit algoritmasıyla süreçleri analiz eder.",
-        "C) Kaynaklar zorla geri alınamaz.",
-        "D) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır.",
-        "E) Sistem, yalnızca güvenli durumlarda kaynak tahsisine izin verir."
-      ],
-      "correctAnswer": "D) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "9. Aşağıdakilerden hangisi Thread Pool (İş Parçacığı Havuzu) kavramının temel amacını en doğru açıklar?",
-      "options": [
-        "A) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak.",
-        "B) Her işlem (process) için ayrı çekirdek (core) tahsis edilmesini sağlamak.",
-        "C) Thread'ler arası veri paylaşımını devre dışı bırakmak.",
-        "D) Sinyal işleme mekanizmasını thread düzeyine taşımak.",
-        "E) Tüm thread'lerin aynı anda CPU kullanmasını engellemek."
-      ],
-      "correctAnswer": "A) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "10. Aşağıdakilerden hangisi spinlock (döngü kilidi) için doğru bir tanımdır?",
-      "options": [
-        "A) Thread, kilidi beklerken uyur ve CPU başka işlere geçer.",
-        "B) Spinlock, I/O işlemleri sırasında idealdir.",
-        "C) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder.",
-        "D) Spinlock, yalnızca tek çekirdekli sistemlerde kullanılmalıdır.",
-        "E) Spinlock, context switch gerektirir."
-      ],
-      "correctAnswer": "C) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "11. Bellek Alanı (Memory Space) Aşağıdakilerden hangisi bir sürecin bellek alanı (Memory Space) içinde yer almaz?",
-      "options": [
-        "A) Yığın (Stack) segmenti",
-        "B) Veri (Data) segmenti",
-        "C) Öbek (Heap) segmenti",
-        "D) Kod (Text) segmenti",
-        "E) Dosya Tanımlayıcı Tablosu (File Descriptor Table)"
-      ],
-      "correctAnswer": "E) Dosya Tanımlayıcı Tablosu (File Descriptor Table)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "12. Parent-Child İlişkisi UNIX benzeri sistemlerde yeni süreçler hangi sistem çağrısıyla oluşturulur?",
-      "options": [
-        "A) exec()",
-        "B) create_process()",
-        "C) init()",
-        "D) spawn()",
-        "E) fork()"
-      ],
-      "correctAnswer": "E) fork()"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "13. Senaryo: Round Robin zamanlayıcıda zaman dilimi (quantum) 30 ms olarak ayarlandı. Sistem çoğunlukla CPU-bound süreçler çalıştırıyor. Zaman dilimi çok büyük seçildiğinde hangi sonuç ortaya çıkar?",
-      "options": [
-        "A) Bağlam değiştirme sayısı artar ve CPU verimliliği düşer.",
-        "B) Preemptive planlama tamamen devre dışı kalır ve sistem deadlock'a girer.",
-        "C) Sadece I/O-bound süreçler seçilir, CPU-bound süreçler bekler.",
-        "D) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar."
-      ],
-      "correctAnswer": "D) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "14. Aşağıdakilerden hangisi Priority Scheduling (Öncelikli Zamanlama) algoritmasının dezavantajıdır?",
-      "options": [
-        "A) Interactive sistemlerde uygun değildir.",
-        "B) Öncelikler dinamik olarak belirlenir.",
-        "C) Starvation (açlık) problemi yaşanabilir.",
-        "D) Tüm süreçlere eşit CPU zamanı verilir.",
-        "E) Convoy effect oluşturur."
-      ],
-      "correctAnswer": "C) Starvation (açlık) problemi yaşanabilir."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "15. Süreç Durumu (Process State) Bir süreç, I/O işleminin tamamlanmasını beklediği durumda hangi süreç durumunda (process state) bulunur?",
-      "options": [
-        "A) Waiting (Blocked)",
-        "B) Running",
-        "C) Terminated",
-        "D) New",
-        "E) Ready"
-      ],
-      "correctAnswer": "A) Waiting (Blocked)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "16. Aşağıdakilerden hangisi deadlock kavramını en doğru şekilde tanımlar?",
-      "options": [
-        "A) Tüm process'lerin aynı anda CPU'ya erişmeye çalıştığı durumdur.",
-        "B) İşletim sisteminin donanım arızası nedeniyle durmasıdır.",
-        "C) Process'lerin tamamlanma süresinin beklenenden uzun olduğu durumdur.",
-        "D) Yalnızca thread'ler arasında oluşabilen bir yarış koşuludur.",
-        "E) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur."
-      ],
-      "correctAnswer": "E) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "17. Aşağıdakilerden hangisi Üretici-Tüketici Problemini en doğru şekilde açıklar?",
-      "options": [
-        "A) Üretici ve tüketici farklı sistemlerde çalıştığından senkronizasyon gerekmez.",
-        "B) Tüketici veriyi üretir, üretici bunu işler.",
-        "C) Üretici, tüketiciye doğrudan veri gönderir, tampon kullanılmaz.",
-        "D) Üretici ve tüketici aynı anda aynı tamponu günceller.",
-        "E) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır."
-      ],
-      "correctAnswer": "E) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "18. Aşağıdakilerden hangisi anonymous pipe için doğrudur?",
-      "options": [
-        "A) Kalıcıdır, reboot sonrasında da var olur.",
-        "B) Dosya sisteminde kalıcı adla görünür.",
-        "C) Mesaj tipine göre filtreleme yapar.",
-        "D) Farklı makinelere ağ üzerinden veri aktarır.",
-        "E) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur."
-      ],
-      "correctAnswer": "E) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "19. Aşağıdaki süreçler arası iletişim (IPC) mekanizmalarından hangisi büyük veri bloklarını aktarırken çekirdek üzerinden kopyalama maliyeti nedeniyle daha fazla ek yük oluşturur?",
-      "options": [
-        "A) Paylaşımlı bellek (shared memory)",
-        "B) Sinyaller (signals)",
-        "C) Mesaj kuyruğu (message queue)",
-        "D) Bellek eşlenmiş dosyalar (memory-mapped files)"
-      ],
-      "correctAnswer": "C) Mesaj kuyruğu (message queue)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "20. Aşağıdakilerden hangisi User-Level Threads (ULT) ve Kernel-Level Threads (KLT) arasındaki farklardan biri değildir?",
-      "options": [
-        "A) KLT'lerde her thread ayrı CPU çekirdeğinde gerçek paralel çalışabilir.",
-        "B) KLT'lerde scheduler her thread'i ayrı yürütme birimi olarak planlar.",
-        "C) ULT'lerde bir thread bloklanırsa tüm süreç etkilenir.",
-        "D) ULT'lerde thread yönetimi kullanıcı alanında, KLT'lerde çekirdek alanında yapılır.",
-        "E) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır."
-      ],
-      "correctAnswer": "E) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "21. Aşağıdaki ifadelerden hangisi deadlock (kilitlenme) durumunu en doğru biçimde açıklar?",
-      "options": [
-        "A) Thread'in bekleme koşulu sağlanmadığı için uyku modunda kalmasıdır.",
-        "B) Thread'lerin planlayıcı tarafından sıralı biçimde yürütülmesidir.",
-        "C) Bir thread'in öncelik düşük olduğu için CPU zamanı alamamasıdır.",
-        "D) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir.",
-        "E) İki thread'in aynı anda paylaşılan veriye erişmesi sonucu belirsizlik oluşmasıdır."
-      ],
-      "correctAnswer": "D) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "22. Atomik işlemler hakkında aşağıdaki ifadelerden hangisi doğrudur?",
-      "options": [
-        "A) Atomik işlemler birden fazla CPU döngüsünde tamamlanabilir.",
-        "B) Atomik işlemler sadece bir process tarafından kullanılabilir.",
-        "C) Atomik işlemler mutex'lerden daha yavaş çalışır.",
-        "D) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür.",
-        "E) Atomik işlemler yalnızca kullanıcı seviyesi (user-space) kodda geçerlidir."
-      ],
-      "correctAnswer": "D) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "23. Unix sistemlerde yeni bir süreç (process) oluşturmak için kullanılan fork() sistem çağrısının temel özelliği aşağıdakilerden hangisidir?",
-      "options": [
-        "A) Yeni sürece aynı PID'yi atar.",
-        "B) Dosya sistemi üzerinde yeni bir işlem başlatır.",
-        "C) Üst sürecin bellek alanını tamamen siler.",
-        "D) Mevcut sürecin yürütülmesini durdurur ve belleği temizler.",
-        "E) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur."
-      ],
-      "correctAnswer": "E) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "24. Bir süreçteki Program Sayacı (Program Counter - PC) neyi belirtir?",
-      "options": [
-        "A) Sürecin öncelik derecesini (Priority Level)",
-        "B) Sürecin kullandığı toplam bellek miktarını",
-        "C) CPU'nun bir sonraki çalıştıracağı komutun adresini",
-        "D) Sürecin çalışma kipini (User Mode / Kernel Mode)",
-        "E) Sürecin açık dosyalarının listesini"
-      ],
-      "correctAnswer": "C) CPU'nun bir sonraki çalıştıracağı komutun adresini"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "25. PCB (Process Control Block) Process Control Block (PCB) aşağıdaki bilgilerden hangisini içermez?",
-      "options": [
-        "A) Program sayacı (Program Counter)",
-        "B) Kullanıcı arayüzü tasarımı",
-        "C) Süreç durumu (Process State)",
-        "D) CPU yazmaçlarının değerleri (Register Values)",
-        "E) I/O durum bilgisi (I/O Status Info)"
-      ],
-      "correctAnswer": "B) Kullanıcı arayüzü tasarımı"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "26. Aşağıdakilerden hangisi CPU Scheduler (Zamanlayıcı) bileşeninin doğrudan görevi değildir?",
-      "options": [
-        "A) Zaman paylaşımını sağlamak için timer interrupt'ları kullanmak.",
-        "B) Hangi sürecin CPU'yu kullanacağına karar vermek.",
-        "C) CPU kullanımını artırmak için hazır kuyruktaki süreçleri değerlendirmek.",
-        "D) Çoklu programlama sırasında süreç geçişini yönetmek.",
-        "E) Seçilen süreci CPU'ya yüklemek (dispatch etmek)."
-      ],
-      "correctAnswer": "E) Seçilen süreci CPU'ya yüklemek (dispatch etmek)."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "27. Aşağıdakilerden hangisi program ile süreç farkını \"Spotify örneği\" üzerinden doğru biçimde açıklar?",
-      "options": [
-        "A) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur.",
-        "B) Spotify süreci diskte kalır, program RAM'de çalışır.",
-        "C) Spotify simgesine tıklamak süreci sonlandırır.",
-        "D) spotify.exe dosyası bellekteyken program, diskteyken süreçtir.",
-        "E) Spotify uygulaması hem program hem süreçtir, fark yoktur."
-      ],
-      "correctAnswer": "A) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "28. Yandaki program çalıştırıldığında (başlangıçtaki ana süreç dahil) toplam kaç süreç oluşur? #include int main(void) { fork(); fork(); return 0; }",
-      "options": [
-        "A) 2",
-        "B) 5",
-        "C) 3",
-        "D) 4"
-      ],
-      "correctAnswer": "D) 4"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "29. Senaryo: P1 (varış=0, burst=5), P2 (varış=1, burst=3) ve P3 (varış=2, burst=2) süreçleri FCFS algoritması ile planlanıyor. Bu durumda süreçlerin ortalama bekleme süresi yaklaşık kaç zaman birimidir?",
-      "options": [
-        "A) 2.00",
-        "B) 3.33",
-        "C) 4.00",
-        "D) 5.50"
-      ],
-      "correctAnswer": "B) 3.33"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "30. İşletim sistemlerinde read-write lock (okuma-yazma kilidi) kullanımıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-      "options": [
-        "A) RWLock yalnızca tek çekirdekli sistemlerde etkilidir.",
-        "B) RWLock, semaforlarla birlikte kullanılamaz.",
-        "C) RWLock, yazma işlemlerinde okuma kilidini otomatik olarak devralır.",
-        "D) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır.",
-        "E) Hem okuma hem yazma işlemleri aynı anda yapılabilir."
-      ],
-      "correctAnswer": "D) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "31. Aşağıdakilerden hangisi RWLock'un mutex'e göre avantajını doğru açıklar?",
-      "options": [
-        "A) RWLock yalnızca yazma işlemleri için optimize edilmiştir.",
-        "B) RWLock, tek bir thread'in okuma yapmasına izin verir.",
-        "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar.",
-        "D) RWLock her zaman mutex'ten daha hızlıdır.",
-        "E) RWLock, writer starvation problemini tamamen ortadan kaldırır."
-      ],
-      "correctAnswer": "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "32. Aşağıdakilerden hangisi Arrival Time (Varış Zamanı) kavramını en doğru şekilde açıklar?",
-      "options": [
-        "A) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman.",
-        "B) Sürecin CPU'yu ilk kez kullanmaya başladığı an.",
-        "C) Sürecin I/O işlemi için beklemeye alındığı an.",
-        "D) Sürecin planlayıcı (scheduler) tarafından seçildiği an.",
-        "E) Sürecin tamamlandığı zaman noktası."
-      ],
-      "correctAnswer": "A) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "33. Aşağıdakilerden hangisi MLFQ (Multi-Level Feedback Queue) algoritmasının karakteristik özelliğidir?",
-      "options": [
-        "A) Sabit öncelikli, değişmez kuyruk yapısı vardır.",
-        "B) Sadece batch sistemlerde kullanılır.",
-        "C) Tüm süreçler aynı quantum süresini kullanır.",
-        "D) Starvation riskini önlemek için aging uygulanmaz.",
-        "E) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir."
-      ],
-      "correctAnswer": "E) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "34. Süreç Durumu (Process State) Aşağıdakilerden hangisi geçerli bir süreç durumu (process state) değildir?",
-      "options": [
-        "A) New",
-        "B) Executing (doğru terim Running olmalı)",
-        "C) Terminated",
-        "D) Ready",
-        "E) Waiting"
-      ],
-      "correctAnswer": "B) Executing (doğru terim Running olmalı)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "35. Context Switch Aşağıdaki ifadelerden hangisi bağlam değiştirme (context switch) işlemini en iyi tanımlar?",
-      "options": [
-        "A) Sürecin I/O işlemini tamamlaması",
-        "B) Bir sürecin bellekten diske kaydedilmesi",
-        "C) Dosya sisteminin bir dosyayı açması",
-        "D) İşletim sisteminin sürücüleri yüklemesi",
-        "E) CPU'nun yürütmeyi bir süreçten diğerine devretmesi"
-      ],
-      "correctAnswer": "E) CPU'nun yürütmeyi bir süreçten diğerine devretmesi"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "36. Aşağıdakilerden hangisi zombi süreç (zombie process) için doğrudur?",
-      "options": [
-        "A) CPU ve bellek kaynaklarını aktif biçimde kullanır.",
-        "B) Çalışmaya devam eden, henüz bitmemiş süreçtir.",
-        "C) Process table'dan hemen silinir.",
-        "D) Kernel tarafından otomatik olarak yeniden başlatılır.",
-        "E) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur."
-      ],
-      "correctAnswer": "E) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "37. Mikro çekirdek (microkernel) mimarisinin monolitik çekirdeğe göre sağladığı temel avantajlardan biri aşağıdakilerden hangisidir?",
-      "options": [
-        "A) Sistem çağrılarına olan ihtiyacı ortadan kaldırması",
-        "B) Çekirdek boyutunu artırarak disk kullanımını azaltması",
-        "C) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi",
-        "D) Tüm sürücüleri çekirdek modunda tutarak performansı garanti etmesi"
-      ],
-      "correctAnswer": "C) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "38. Aşağıdaki durumlardan hangisi deadlock (kilitlenme) durumuna en uygun örnektir?",
-      "options": [
-        "A) Bir thread, CPU zamanlayıcısı tarafından sürekli erteleniyor (starvation).",
-        "B) Bir thread'in kilidi bırakmadan sleep() fonksiyonuna girmesi.",
-        "C) İki thread aynı global değişkene aynı anda yazma işlemi yapıyor.",
-        "D) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor.",
-        "E) Bir process'in I/O işlemi sırasında kernel tarafından askıya alınması."
-      ],
-      "correctAnswer": "D) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "39. Process ID (PID) İşletim sisteminde PID (Process ID) neyi temsil eder?",
-      "options": [
-        "A) Sürecin kullandığı bellek adresini",
-        "B) Sürecin dosya erişim izinlerini",
-        "C) Sürecin öncelik seviyesini",
-        "D) Sürecin CPU zamanı yüzdesini",
-        "E) Süreci benzersiz biçimde tanımlayan kimliği"
-      ],
-      "correctAnswer": "E) Süreci benzersiz biçimde tanımlayan kimliği"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "40. Bir iş parçacığı (thread) bloklandığında (blocked), aynı süreçteki diğer iş parçacıkları da bloklanır.",
-      "options": [
-        "A) Doğru",
-        "B) Yanlış"
-      ],
-      "correctAnswer": "B) Yanlış"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "41. Aşağıdakilerden hangisi Convoy Effect kavramını en doğru açıklar?",
-      "options": [
-        "A) Uzun süre bekleyen süreçlerin önceliğinin artması.",
-        "B) CPU'nun birden fazla çekirdeğe sahip olması.",
-        "C) Preemptive scheduling'in devre dışı bırakılması.",
-        "D) Birden fazla thread'in aynı veriye erişmeye çalışması.",
-        "E) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi."
-      ],
-      "correctAnswer": "E) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "42. Senaryo: Çok iş parçacıklı bir web sunucusu, her isteği ayrı bir iş parçacığında işliyor ve global 'aktif_istek' sayacını artırıp azaltıyor. Verinin tutarlı kalması için hangi mekanizma kullanılmalıdır?",
-      "options": [
-        "A) İş parçacıklarını tek çekirdekli sisteme sınırlandırmak",
-        "B) İş parçacıklarını ayrı süreçlerde çalıştırmak",
-        "C) Non-blocking I/O kullanmak",
-        "D) Muteks (mutex) kilidi kullanmak"
-      ],
-      "correctAnswer": "D) Muteks (mutex) kilidi kullanmak"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "43. Senaryo: Bir kullanıcı uygulaması diskten veri okumak için read() sistem çağrısını çağırıyor. Uygulama hâlâ kullanıcı modunda çalışıyor. Bu isteğin çekirdek modunda karşılanabilmesi için hangi mekanizma devreye girerek kontrolü işletim sistemine devreder?",
-      "options": [
-        "A) Dosya sistemi önbelleği (buffer cache) yöneticisi",
-        "B) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)",
-        "C) Zamanlayıcı (scheduler) tarafından yapılan bağlam değişimi",
-        "D) Kabuk (shell) yorumlayıcısı"
-      ],
-      "correctAnswer": "B) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "44. Aşağıdakilerden hangisi modern bir işletim sisteminin temel görevlerinden biri değildir?",
+      "question": "1. Aşağıdakilerden hangisi modern bir işletim sisteminin temel görevlerinden biri değildir?",
       "options": [
         "A) Donanım kaynaklarını yönetmek ve planlamak",
         "B) Kullanıcılara sistem çağrıları üzerinden kontrollü erişim sunmak",
@@ -518,19 +15,102 @@
     },
     {
       "type": "multiple-choice",
-      "question": "45. Aşağıdakilerden hangisi SMT (Simultaneous Multithreading) veya Hyper-Threading teknolojisinin temel amacını en doğru açıklar?",
+      "question": "2. Kullanıcı modunda çalışan bir program, çekirdek modundaki tüm talimatlara doğrudan erişebilir.",
       "options": [
-        "A) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır.",
-        "B) İşletim sistemine fiziksel çekirdek sayısını gizlemektir.",
-        "C) İşletim sisteminde her thread'e ayrı bellek alanı tahsis etmektir.",
-        "D) Bir CPU çekirdeğinin saat hızını (clock speed) iki katına çıkarmaktır.",
-        "E) CPU üzerindeki tüm cache seviyelerini devre dışı bırakmaktır."
+        "Doğru",
+        "Yanlış"
       ],
-      "correctAnswer": "A) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır."
+      "correctAnswer": "Yanlış"
     },
     {
       "type": "multiple-choice",
-      "question": "46. Aşağıdakilerden hangisi iş parçacıklarının (threads) süreçlere göre sağladığı bir avantajdır?",
+      "question": "3. Senaryo: Bir kullanıcı uygulaması diskten veri okumak için read() sistem çağrısını çağırıyor. [...] Bu isteğin çekirdek modunda karşılanabilmesi için hangi mekanizma devreye girerek kontrolü işletim sistemine devreder?",
+      "options": [
+        "A) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)",
+        "B) Zamanlayıcı (scheduler) tarafından yapılan bağlam değişimi",
+        "C) Dosya sistemi önbelleği (buffer cache) yöneticisi",
+        "D) Kabuk (shell) yorumlayıcısı"
+      ],
+      "correctAnswer": "A) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "4. Mikro çekirdek (microkernel) mimarisinin monolitik çekirdeğe göre sağladığı temel avantajlardan biri aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Çekirdek boyutunu artırarak disk kullanımını azaltması",
+        "B) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi",
+        "C) Tüm sürücüleri çekirdek modunda tutarak performansı garanti etmesi",
+        "D) Sistem çağrılarına olan ihtiyacı ortadan kaldırması"
+      ],
+      "correctAnswer": "B) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "5. Çekirdek mimarisi türlerini özellikleriyle eşleştiriniz: 1. Monolitik Çekirdek, 2. Mikro Çekirdek, 3. Hibrit Çekirdek, 4. Modüler Çekirdek",
+      "options": [
+        "A. Doğrudan çekirdeğe yüklenebilen ayrı modüller ile gerektiğinde genişletilebilir.",
+        "B. Minimum çekirdek, sürücüler ve servisler kullanıcı modunda çalışır.",
+        "C. Monolitik yapı ile kullanıcı moduna taşınan servislerin birleşimiyle esneklik sağlar.",
+        "D. Tüm temel servisler tek adres alanında; yüksek performans fakat düşük hata izolasyonu."
+      ],
+      "correctAnswer": "1→D, 2→B, 3→C, 4→A"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "6. Bir süreç (process), 'running' durumundan 'waiting' durumuna hangi durumda geçiş yapar?",
+      "options": [
+        "A) Zaman dilimi (CPU quantum) dolduğunda",
+        "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında",
+        "C) Sistem çağrısı (system call) tamamlandığında",
+        "D) Zamanlayıcı (scheduler) süreci durdurduğunda"
+      ],
+      "correctAnswer": "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "7. Senaryo: İki süreç (process) aynı anda global bir sayaç değişkenini (counter variable) artırıyor. [...] Süreçler arası veri bütünlüğünü korumak için kritik bölgeler (critical sections) korunmazsa ne olur?",
+      "options": [
+        "A) Hiçbir fark olmaz, işlem tamamlanır.",
+        "B) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir.",
+        "C) Kilitlenme (deadlock) oluşur ve sistem donar.",
+        "D) Zamanlayıcı (scheduler) hata verir ve süreç sonlanır."
+      ],
+      "correctAnswer": "B) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "8. Yandaki program çalıştırıldığında (başlangıçtaki ana süreç dahil) toplam kaç süreç oluşur? Kod: #include <unistd.h> int main(void) { fork(); fork(); return 0; }",
+      "options": [
+        "A) 2",
+        "B) 3",
+        "C) 4",
+        "D) 5"
+      ],
+      "correctAnswer": "C) 4"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "9. Bağlam değişimi (context switch) sırasında aşağıdaki bilgilerden hangisi saklanmak zorunda değildir?",
+      "options": [
+        "A) Program sayacı (program counter) değeri",
+        "B) CPU yazmaç (register) içerikleri",
+        "C) Ön bellek (cache) bloklarının tamamının içeriği",
+        "D) Yığın işaretçisi (stack pointer)"
+      ],
+      "correctAnswer": "C) Ön bellek (cache) bloklarının tamamının içeriği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "10. Zombie süreç, çocuk süreç sonlandıktan sonra ebeveyn süreç wait() çağrısı yapmadığında oluşur.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "correctAnswer": "Doğru"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "11. Aşağıdakilerden hangisi iş parçacıklarının (threads) süreçlere göre sağladığı bir avantajdır?",
       "options": [
         "A) Her iş parçacığı ayrı adres alanı kullanır.",
         "B) Daha düşük bağlam değiştirme maliyeti ile daha hızlı yanıt verebilirler.",
@@ -541,138 +121,38 @@
     },
     {
       "type": "multiple-choice",
-      "question": "47. Senaryo: İki süreç (process) aynı anda global bir sayaç değişkenini (counter variable) artırıyor. Süreçler arası veri bütünlüğünü korumak için kritik bölgeler (critical sections) korunmazsa ne olur?",
+      "question": "12. İş parçacığı modellerini (thread models) özellikleriyle eşleştiriniz: 1. Many-to-One, 2. One-to-One, 3. Many-to-Many, 4. Two-Level",
       "options": [
-        "A) Hiçbir fark olmaz, işlem tamamlanır.",
-        "B) Kilitlenme (deadlock) oluşur ve sistem donar.",
-        "C) Zamanlayıcı (scheduler) hata verir ve süreç sonlanır.",
-        "D) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir."
+        "A. Kullanıcı iş parçacıkları çekirdek iş parçacıklarına esnek biçimde bağlanır.",
+        "B. Tüm kullanıcı iş parçacıkları tek bir çekirdek iş parçacığı üzerinden yürütülür.",
+        "C. Her kullanıcı iş parçacığı için ayrı bir çekirdek iş parçacığı atanır.",
+        "D. Many-to-Many modelinin özelleştirilmiş bir versiyonudur."
       ],
-      "correctAnswer": "D) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir."
+      "correctAnswer": "1→B, 2→C, 3→A, 4→D"
     },
     {
       "type": "multiple-choice",
-      "question": "48. Aşağıdakilerden hangisi spinlock kullanımına en uygun senaryodur?",
+      "question": "13. Bir iş parçacığı (thread) bloklandığında (blocked), aynı süreçteki diğer iş parçacıkları da bloklanır.",
       "options": [
-        "A) Thread'lerin saniyeler süren beklemeleri.",
-        "B) Kullanıcı arayüzü işlemleri.",
-        "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar.",
-        "D) Uzun süren disk I/O işlemleri.",
-        "E) Tek çekirdekli gömülü sistemler."
+        "Doğru",
+        "Yanlış"
       ],
-      "correctAnswer": "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar."
+      "correctAnswer": "Yanlış"
     },
     {
       "type": "multiple-choice",
-      "question": "49. Aşağıdakilerden hangisi Round Robin (RR) algoritmasının temel özelliğidir?",
+      "question": "14. Senaryo: Çok iş parçacıklı bir web sunucusu... 'aktif_istek' sayacını artırıp azaltıyor. Verinin tutarlı kalması için hangi mekanizma kullanılmalıdır?",
       "options": [
-        "A) Öncelik değerine göre sıralama yapar.",
-        "B) Her sürece eşit zaman dilimi (quantum) verir.",
-        "C) CPU'yu alan süreç bitene kadar çalışır.",
-        "D) Ortalama bekleme süresi her zaman en düşüktür.",
-        "E) En kısa işi önce seçer."
+        "A) Muteks (mutex) kilidi kullanmak",
+        "B) İş parçacıklarını ayrı süreçlerde çalıştırmak",
+        "C) Non-blocking I/O kullanmak",
+        "D) İş parçacıklarını tek çekirdekli sisteme sınırlandırmak"
       ],
-      "correctAnswer": "B) Her sürece eşit zaman dilimi (quantum) verir."
+      "correctAnswer": "A) Muteks (mutex) kilidi kullanmak"
     },
     {
       "type": "multiple-choice",
-      "question": "50. Aşağıdakilerden hangisi Burst Time (CPU Patlama Süresi) terimini doğru tanımlar?",
-      "options": [
-        "A) Sürecin ilk CPU erişimiyle bitişi arasındaki süre.",
-        "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre.",
-        "C) Sürecin hazır kuyruğunda kaldığı süre.",
-        "D) Sürecin CPU ve I/O arasında geçirdiği toplam süre.",
-        "E) Sürecin bekleme süresi ile dönüş süresi farkı."
-      ],
-      "correctAnswer": "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "51. Aşağıdakilerden hangisi Süreç Kontrol Bloğu (Process Control Block - PCB) içinde yer almaz?",
-      "options": [
-        "A) Program Sayacı (Program Counter)",
-        "B) Kullanıcı arayüzü bileşenleri (User Interface Components)",
-        "C) Yazmaç değerleri (Register Values)",
-        "D) Sayfa tablosu işaretçisi (Page Table Pointer)",
-        "E) Süreç önceliği (Process Priority)"
-      ],
-      "correctAnswer": "B) Kullanıcı arayüzü bileşenleri (User Interface Components)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "52. Aşağıdakilerden hangisi Coffman koşullarından biri değildir?",
-      "options": [
-        "A) Karşılıklı dışlama (Mutual Exclusion)",
-        "B) Öncelikli planlama (Priority Scheduling)",
-        "C) Geri alma yok (No Preemption)",
-        "D) Tut ve bekle (Hold and Wait)",
-        "E) Dairesel bekleme (Circular Wait)"
-      ],
-      "correctAnswer": "B) Öncelikli planlama (Priority Scheduling)"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "53. Aşağıdaki durumlardan hangisi Producer-Consumer modelinde Underflow (Yetersiz Veri) durumuna örnektir?",
-      "options": [
-        "A) Üretici dolu tampona yazmaya çalışıyor",
-        "B) Tüketici veriyi işleyip geri yazıyor",
-        "C) Üretici veriyi iki kez aynı slota yazıyor",
-        "D) Tüketici boş tampondan veri almaya çalışıyor",
-        "E) Üretici mutex'i bırakmadan devam ediyor"
-      ],
-      "correctAnswer": "D) Tüketici boş tampondan veri almaya çalışıyor"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "54. 🧩 Soru - Program-Süreç Konum Farkı Bir program ve bir süreç sistemde nerede bulunur?",
-      "options": [
-        "A) Her ikisi de donanım ROM alanında saklanır.",
-        "B) Her ikisi de sadece çekirdek belleğinde tutulur.",
-        "C) Program CPU yazmaçlarında, süreç sanal bellektedir.",
-        "D) Program bellekte, süreç diskte bulunur.",
-        "E) Program diskte (storage), süreç bellekte (RAM)'de bulunur."
-      ],
-      "correctAnswer": "E) Program diskte (storage), süreç bellekte (RAM)'de bulunur."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "55. Aşağıdakilerden hangisi program ve süreç ömrü arasındaki farkı doğru şekilde ifade eder?",
-      "options": [
-        "A) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır).",
-        "B) Programlar oluşturulup sonlandırılır; süreçler kalıcıdır.",
-        "C) Programlar geçicidir, süreçler kalıcıdır.",
-        "D) Her ikisi de sistem kapanınca kalıcı hâle gelir.",
-        "E) Program, sadece kullanıcı oturumunda geçicidir."
-      ],
-      "correctAnswer": "A) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır)."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "56. Producer-Consumer probleminde kullanılan semaforlardan full, empty ve mutex için doğru ilişki aşağıdakilerden hangisidir?",
-      "options": [
-        "A) empty → dolu slot sayısı, full → boş slot sayısı",
-        "B) Tüketici sadece mutex semaforunu kullanır",
-        "C) mutex → veri üretimi, empty → mutual exclusion",
-        "D) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur",
-        "E) Üçü de yalnızca üretici tarafından kullanılır"
-      ],
-      "correctAnswer": "D) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "57. Süreç Tanımı Aşağıdakilerden hangisi \"süreç (process)\" kavramını en doğru biçimde açıklar?",
-      "options": [
-        "A) Yalnızca derlenmiş bir program dosyasıdır",
-        "B) Sistemdeki tüm thread'lerin toplamıdır",
-        "C) Belleğe yüklenmemiş pasif kod kümesidir",
-        "D) İşletim sistemi tarafından yürütülen aktif bir program örneğidir",
-        "E) CPU tarafından çalıştırılan donanım kesmesidir"
-      ],
-      "correctAnswer": "D) İşletim sistemi tarafından yürütülen aktif bir program örneğidir"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "58. Bir uygulamanın işlemlerinin %40'ı paralelleştirilebilir, geri kalanı seridir. Dört çekirdekte iş parçacıkları kullanıldığında teorik hızlanma (Amdahl Yasası) yaklaşık kaç olur?",
+      "question": "15. Bir uygulamanın işlemlerinin %40'ı paralelleştirilebilir, geri kalanı seridir. Dört çekirdekte iş parçacıkları kullanıldığında teorik hızlanma (Amdahl Yasası) yaklaşık kaç olur?",
       "options": [
         "A) 1.25",
         "B) 1.43",
@@ -683,207 +163,752 @@
     },
     {
       "type": "multiple-choice",
-      "question": "59. Aşağıdakilerden hangisi Compare-and-Swap (CAS) işleminin doğru tanımıdır?",
+      "question": "16. CPU zamanlama (CPU scheduling) algoritmalarında aç kalma (starvation) hangi durumda kaçınılmaz hale gelir?",
       "options": [
-        "A) CPU context switch işlemiyle gerçekleştirilir.",
-        "B) Bellekteki değeri kontrol etmeden doğrudan değiştirir.",
-        "C) İki değişkenin değerini her durumda birbirine eşitler.",
-        "D) Değer beklenenle aynıysa değiştirir, değilse değiştirmez.",
-        "E) Bellek erişiminde semafor kullanarak bekler."
+        "A) Round Robin algoritmasında zaman dilimi (quantum) küçük seçildiğinde",
+        "B) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse",
+        "C) En kısa iş (Shortest Job First - SJF) algoritmasında burst time yanlış hesaplandığında",
+        "D) İlk gelen ilk çıkar (First-Come First-Served FCFS) algoritmasında süreçler aynı anda gelirse"
       ],
-      "correctAnswer": "D) Değer beklenenle aynıysa değiştirir, değilse değiştirmez."
+      "correctAnswer": "B) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse"
     },
     {
       "type": "multiple-choice",
-      "question": "60. Aşağıdakilerden hangisi System V/POSIX message queue için doğru bir ifadedir?",
+      "question": "17. Senaryo: P1 (varış=0, burst=5), P2 (varış=1, burst=3) ve P3 (varış=2, burst=2) süreçleri FCFS algoritması ile planlanıyor. Bu durumda süreçlerin ortalama bekleme süresi yaklaşık kaç zaman birimidir?",
       "options": [
-        "A) En hızlı IPC'dir çünkü kopyasız (zero-copy) çalışır.",
-        "B) Gönderici ve alıcı aynı anda hazır değilse iletişim kurulamaz.",
-        "C) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir.",
-        "D) Sadece tek yönlüdür.",
-        "E) Yalnızca parent-child arasında kullanılabilir."
+        "A) 2.00",
+        "B) 3.33",
+        "C) 4.00",
+        "D) 5.50"
       ],
-      "correctAnswer": "C) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir."
+      "correctAnswer": "B) 3.33"
     },
     {
       "type": "multiple-choice",
-      "question": "61. Shared memory ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "question": "18. Senaryo: Round Robin zamanlayıcıda zaman dilimi (quantum) 30 ms olarak ayarlandı... Zaman dilimi çok büyük seçildiğinde hangi sonuç ortaya çıkar?",
       "options": [
-        "A) Kernel, mesaj başlıklarını otomatik sıraya dizer.",
-        "B) POSIX'te shm_open ve mmap ile kullanılabilir.",
-        "C) Senkronizasyon mekanizmaları olmadan race condition riski vardır.",
-        "D) En hızlı IPC'lerden biridir çünkü kopyalama gerektirmez.",
-        "E) Birden çok süreç aynı fiziksel belleği eşleyebilir."
+        "A) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar.",
+        "B) Bağlam değiştirme sayısı artar ve CPU verimliliği düşer.",
+        "C) Preemptive planlama tamamen devre dışı kalır ve sistem deadlock'a girer.",
+        "D) Sadece I/O-bound süreçler seçilir, CPU-bound süreçler bekler."
       ],
-      "correctAnswer": "A) Kernel, mesaj başlıklarını otomatik sıraya dizer."
+      "correctAnswer": "A) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar."
     },
     {
       "type": "multiple-choice",
-      "question": "62. Aşağıdakilerden hangisi signal mekanizması için doğrudur?",
+      "question": "19. Aşağıdaki süreçler arası iletişim (IPC) mekanizmalarından hangisi büyük veri bloklarını aktarırken çekirdek üzerinden kopyalama maliyeti nedeniyle daha fazla ek yük oluşturur?",
       "options": [
-        "A) Signal, IPC değildir.",
-        "B) Signal eşzamansız değildir.",
-        "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar.",
-        "D) SIGKILL kullanıcı handler'ı ile yakalanabilir ve ertelenebilir.",
-        "E) Sinyaller her zaman tüm süreçteki tüm thread'lere aynı anda teslim edilir."
+        "A) Paylaşımlı bellek (shared memory)",
+        "B) Mesaj kuyruğu (message queue)",
+        "C) Bellek eşlenmiş dosyalar (memory-mapped files)",
+        "D) Sinyaller (signals)"
       ],
-      "correctAnswer": "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar."
+      "correctAnswer": "B) Mesaj kuyruğu (message queue)"
     },
     {
       "type": "multiple-choice",
-      "question": "63. Aşağıdakilerden hangisi mutex ile spinlock arasındaki farklardan biri değildir?",
+      "question": "20. Semaphore wait (P) ve signal (V) işlemleri atomik değilse yarış durumları ortaya çıkabilir.",
       "options": [
-        "A) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz.",
-        "B) Spinlock kısa kilitler için daha hızlı olabilir.",
-        "C) Mutex context switch gerektirebilir, spinlock gerektirmez.",
-        "D) Spinlock CPU'yu meşgul eder, mutex etmez.",
-        "E) Mutex beklerken thread uyuyabilir, spinlock döngüde aktif bekler."
+        "Doğru",
+        "Yanlış"
       ],
-      "correctAnswer": "A) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz."
+      "correctAnswer": "Doğru"
     },
     {
       "type": "multiple-choice",
-      "question": "64. Kullanıcı modunda çalışan bir program, çekirdek modundaki tüm talimatlara doğrudan erişebilir.",
+      "question": "21. Kullanıcı Modu (User Mode) ile ilgili aşağıdakilerden hangileri doğrudur? I. Donanım kaynaklarına doğrudan erişebilir. II. Hatalı bir işlem tüm sistemi çökertmez... III. Uygulama programları bu modda çalışır. IV. Bu modda çalışan işlemler tam yetkilidir...",
       "options": [
-        "A) Doğru",
-        "B) Yanlış"
+        "A) Yalnız I",
+        "B) I ve IV",
+        "C) II ve III",
+        "D) II, III ve IV",
+        "E) Yalnız IV"
       ],
-      "correctAnswer": "B) Yanlış"
+      "correctAnswer": "C) II ve III"
     },
     {
       "type": "multiple-choice",
-      "question": "65. İşletim sistemlerinde süreçler arası senkronizasyonu sağlamak için kullanılan semaforlar, temelde iki çeşittir: binary (ikili) semafor ve counting (sayma) semafor. Bu iki semafor türü, kullanım alanı ve kaynak yönetim şekli bakımından birbirinden farklıdır. Aşağıdakilerden hangisi counting semafor ile binary semafor arasındaki farkı doğru şekilde açıklar?",
+      "question": "22. Çekirdek Modu (Kernel Mode) hakkında aşağıdakilerden hangileri doğrudur? I. İşletim sistemi çekirdeği ve sürücüler bu modda çalışır. II. Donanıma doğrudan erişim mümkündür. III. Kullanıcı programları bu modda çalışır. IV. Bu modda yapılan hatalar tüm sistemi etkileyebilir.",
       "options": [
-        "A) Counting semafor race condition oluşmasını garanti eder.",
-        "B) Counting semafor yalnızca 0 veya 1 değerini alabilir.",
-        "C) Binary semafor birden fazla thread'in aynı anda girmesine izin verir.",
-        "D) Counting semafor, birden fazla kaynağın yönetiminde kullanılır.",
-        "E) Binary semafor yalnızca kernel seviyesinde çalışır."
+        "A) I ve II",
+        "B) I, II ve IV",
+        "C) II ve III",
+        "D) Yalnız III",
+        "E) I, III ve IV"
       ],
-      "correctAnswer": "D) Counting semafor, birden fazla kaynağın yönetiminde kullanılır."
+      "correctAnswer": "B) I, II ve IV"
     },
     {
       "type": "multiple-choice",
-      "question": "66. Aşağıdakilerden hangisi wait(P) işleminin doğru davranışını tanımlar?",
+      "question": "23. Bir süreçteki Program Sayacı (Program Counter - PC) neyi belirtir?",
       "options": [
-        "A) Semafor değerini artırır; bekleyen varsa uyandırır.",
-        "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır.",
-        "C) Her zaman sinyal gönderir.",
-        "D) Yalnızca binary semaforlarda çalışır.",
-        "E) Semafor değerini okur ama değiştirmez."
+        "A) Sürecin çalışma kipini (User Mode / Kernel Mode)",
+        "B) CPU'nun bir sonraki çalıştıracağı komutun adresini",
+        "C) Sürecin açık dosyalarının listesini",
+        "D) Sürecin kullandığı toplam bellek miktarını",
+        "E) Sürecin öncelik derecesini (Priority Level)"
       ],
-      "correctAnswer": "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır."
+      "correctAnswer": "B) CPU'nun bir sonraki çalıştıracağı komutun adresini"
     },
     {
       "type": "multiple-choice",
-      "question": "67. Aşağıdakilerden hangisi Response Time (Yanıt Süresi) kavramını doğru açıklar?",
+      "question": "24. Aşağıdakilerden hangisi bir sürecin bellek alanı (Memory Space) içinde yer almaz?",
       "options": [
-        "A) Sürecin CPU'dan tamamen ayrıldığı zamandır.",
-        "B) Sürecin CPU'yu kullanmaya başladığı andan itibaren geçen toplam süredir.",
-        "C) Turnaround time'a eşittir.",
-        "D) Sürecin bekleme süresiyle burst time farkıdır.",
-        "E) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir."
+        "A) Kod (Text) segmenti",
+        "B) Veri (Data) segmenti",
+        "C) Yığın (Stack) segmenti",
+        "D) Dosya Tanımlayıcı Tablosu (File Descriptor Table)",
+        "E) Öbek (Heap) segmenti"
       ],
-      "correctAnswer": "E) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir."
+      "correctAnswer": "D) Dosya Tanımlayıcı Tablosu (File Descriptor Table)"
     },
     {
       "type": "multiple-choice",
-      "question": "68. Kullanıcı Modu (User Mode) ile ilgili aşağıdakilerden hangileri doğrudur? I. Donanım kaynaklarına doğrudan erişebilir. II. Hatalı bir işlem tüm sistemi çökertmez, yalnızca ilgili süreci etkiler. III. Uygulama programları bu modda çalışır. IV. Bu modda çalışan işlemler tam yetkilidir (full privilege).",
+      "question": "25. Bir süreç, I/O işleminin tamamlanmasını beklediği durumda hangi süreç durumunda (process state) bulunur?",
       "options": [
-        "A) Yalnız IV",
-        "B) II ve III",
-        "C) I ve IV",
-        "D) Yalnız I",
-        "E) II, III ve IV"
+        "A) New",
+        "B) Ready",
+        "C) Running",
+        "D) Waiting (Blocked)",
+        "E) Terminated"
       ],
-      "correctAnswer": "B) II ve III"
+      "correctAnswer": "D) Waiting (Blocked)"
     },
     {
       "type": "multiple-choice",
-      "question": "69. CPU zamanlama (CPU scheduling) algoritmalarında aç kalma (starvation) hangi durumda kaçınılmaz hale gelir?",
+      "question": "26. Aşağıdakilerden hangisi \"süreç (process)\" kavramını en doğru biçimde açıklar?",
       "options": [
-        "A) En kısa iş (Shortest Job First - SJF) algoritmasında burst time yanlış hesaplandığında",
-        "B) İlk gelen ilk çıkar (First-Come First-Served - FCFS) algoritmasında süreçler aynı anda gelirse",
-        "C) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse",
-        "D) Round Robin algoritmasında zaman dilimi (quantum) küçük seçildiğinde"
+        "A) Yalnızca derlenmiş bir program dosyasıdır",
+        "B) Belleğe yüklenmemiş pasif kod kümesidir",
+        "C) İşletim sistemi tarafından yürütülen aktif bir program örneğidir",
+        "D) CPU tarafından çalıştırılan donanım kesmesidir",
+        "E) Sistemdeki tüm thread'lerin toplamıdır"
       ],
-      "correctAnswer": "C) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse"
+      "correctAnswer": "C) İşletim sistemi tarafından yürütülen aktif bir program örneğidir"
     },
     {
       "type": "multiple-choice",
-      "question": "70. Bir süreç (process), 'running' durumundan 'waiting' durumuna hangi durumda geçiş yapar?",
+      "question": "27. İşletim sisteminde PID (Process ID) neyi temsil eder?",
       "options": [
-        "A) Zamanlayıcı (scheduler) süreci durdurduğunda",
-        "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında",
-        "C) Sistem çağrısı (system call) tamamlandığında",
-        "D) Zaman dilimi (CPU quantum) dolduğunda"
+        "A) Sürecin öncelik seviyesini",
+        "B) Sürecin kullandığı bellek adresini",
+        "C) Süreci benzersiz biçimde tanımlayan kimliği",
+        "D) Sürecin CPU zamanı yüzdesini",
+        "E) Sürecin dosya erişim izinlerini"
       ],
-      "correctAnswer": "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında"
+      "correctAnswer": "C) Süreci benzersiz biçimde tanımlayan kimliği"
     },
     {
       "type": "multiple-choice",
-      "question": "71. Süreçler Arası İletişim (Inter-Process Communication) Aşağıdakilerden hangisi süreçler arası iletişim (IPC) mekanizması değildir?",
+      "question": "28. Process Control Block (PCB) aşağıdaki bilgilerden hangisini içermez?",
       "options": [
-        "A) Shared Memory",
-        "B) Pipes",
-        "C) Semaphores",
-        "D) Message Queues",
+        "A) Süreç durumu (Process State)",
+        "B) CPU yazmaçlarının değerleri (Register Values)",
+        "C) Program sayacı (Program Counter)",
+        "D) Kullanıcı arayüzü tasarımı",
+        "E) I/O durum bilgisi (I/O Status Info)"
+      ],
+      "correctAnswer": "D) Kullanıcı arayüzü tasarımı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "29. Aşağıdaki ifadelerden hangisi bağlam değiştirme (context switch) işlemini en iyi tanımlar?",
+      "options": [
+        "A) İşletim sisteminin sürücüleri yüklemesi",
+        "B) Bir sürecin bellekten diske kaydedilmesi",
+        "C) CPU'nun yürütmeyi bir süreçten diğerine devretmesi",
+        "D) Sürecin I/O işlemini tamamlaması",
+        "E) Dosya sisteminin bir dosyayı açması"
+      ],
+      "correctAnswer": "C) CPU'nun yürütmeyi bir süreçten diğerine devretmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "30. Aşağıdakilerden hangisi geçerli bir süreç durumu (process state) değildir?",
+      "options": [
+        "A) New",
+        "B) Waiting",
+        "C) Executing (doğru terim Running olmalı)",
+        "D) Ready",
+        "E) Terminated"
+      ],
+      "correctAnswer": "C) Executing (doğru terim Running olmalı)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "31. UNIX benzeri sistemlerde yeni süreçler hangi sistem çağrısıyla oluşturulur?",
+      "options": [
+        "A) exec()",
+        "B) fork()",
+        "C) spawn()",
+        "D) init()",
+        "E) create_process()"
+      ],
+      "correctAnswer": "B) fork()"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "32. Aşağıdakilerden hangisi süreçler arası iletişim (IPC) mekanizması değildir?",
+      "options": [
+        "A) Pipes",
+        "B) Message Queues",
+        "C) Shared Memory",
+        "D) Semaphores",
         "E) Virtual Memory"
       ],
       "correctAnswer": "E) Virtual Memory"
     },
     {
       "type": "multiple-choice",
-      "question": "72. Kullanıcı modunda çalışan bir program, çekirdek modundaki tüm talimatlara doğrudan erişebilir.",
+      "question": "33. Aşağıdakilerden hangisi program ve süreç (process) arasındaki farkı en doğru biçimde açıklar?",
       "options": [
-        "A) Doğru",
-        "B) Yanlış"
-      ],
-      "correctAnswer": "B) Yanlış"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "73. Semaphore wait (P) ve signal (V) işlemleri atomik değilse yarış durumları ortaya çıkabilir.",
-      "options": [
-        "A) Doğru",
-        "B) Yanlış"
-      ],
-      "correctAnswer": "A) Doğru"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "74. Aşağıdaki durumlardan hangisinde sistemin CPU Utilization (CPU Kullanımı) düşüktür?",
-      "options": [
-        "A) CPU çoğu zaman idle (boşta) bekliyor.",
-        "B) CPU %80 oranında aktif, %20 idle durumda.",
-        "C) CPU sürekli hazır kuyruktaki süreçleri çalıştırıyor.",
-        "D) CPU'yu kullanan süreçler kısa burst'lara sahip.",
-        "E) CPU %90 üzerinde sürekli dolu çalışıyor."
-      ],
-      "correctAnswer": "A) CPU çoğu zaman idle (boşta) bekliyor."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "75. Bağlam değişimi (context switch) sırasında aşağıdaki bilgilerden hangisi saklanmak zorunda değildir?",
-      "options": [
-        "A) Ön bellek (cache) bloklarının tamamının içeriği",
-        "B) Program sayacı (program counter) değeri",
-        "C) Yığın işaretçisi (stack pointer)",
-        "D) CPU yazmaç (register) içerikleri"
-      ],
-      "correctAnswer": "A) Ön bellek (cache) bloklarının tamamının içeriği"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "76. Program ve Süreç Arasındaki Fark Aşağıdakilerden hangisi program ve süreç (process) arasındaki farkı en doğru biçimde açıklar?",
-      "options": [
-        "A) Program, RAM'de geçici olarak tutulur; süreç kalıcıdır.",
+        "A) Program, aktif; süreç ise pasif bir varlıktır.",
         "B) Program, CPU'da yürütülür; süreç diskte saklanır.",
         "C) Program, pasif bir komut yığınıdır; süreç o programın bellekte çalışan aktif hâlidir.",
-        "D) Program, aktif; süreç ise pasif bir varlıktır.",
+        "D) Program, RAM'de geçici olarak tutulur; süreç kalıcıdır.",
         "E) Program, sadece kernel modda; süreç kullanıcı modda çalışır."
       ],
       "correctAnswer": "C) Program, pasif bir komut yığınıdır; süreç o programın bellekte çalışan aktif hâlidir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "34. Bir program ve bir süreç sistemde nerede bulunur?",
+      "options": [
+        "A) Program bellekte, süreç diskte bulunur.",
+        "B) Program CPU yazmaçlarında, süreç sanal bellektedir.",
+        "C) Program diskte (storage), süreç bellekte (RAM)'de bulunur.",
+        "D) Her ikisi de sadece çekirdek belleğinde tutulur.",
+        "E) Her ikisi de donanım ROM alanında saklanır."
+      ],
+      "correctAnswer": "C) Program diskte (storage), süreç bellekte (RAM)'de bulunur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "35. Aşağıdakilerden hangisi program ve süreç ömrü arasındaki farkı doğru şekilde ifade eder?",
+      "options": [
+        "A) Programlar geçicidir, süreçler kalıcıdır.",
+        "B) Programlar oluşturulup sonlandırılır; süreçler kalıcıdır.",
+        "C) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır).",
+        "D) Her ikisi de sistem kapanınca kalıcı hâle gelir.",
+        "E) Program, sadece kullanıcı oturumunda geçicidir."
+      ],
+      "correctAnswer": "C) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "36. Aşağıdakilerden hangisi program ile süreç farkını \"Spotify örneği\" üzerinden doğru biçimde açıklar?",
+      "options": [
+        "A) spotify.exe dosyası bellekteyken program, diskteyken süreçtir.",
+        "B) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur.",
+        "C) Spotify uygulaması hem program hem süreçtir, fark yoktur.",
+        "D) Spotify simgesine tıklamak süreci sonlandırır.",
+        "E) Spotify süreci diskte kalır, program RAM'de çalışır."
+      ],
+      "correctAnswer": "B) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "37. Aşağıdakilerden hangisi Süreç Kontrol Bloğu (Process Control Block PCB) içinde yer almaz?",
+      "options": [
+        "A) Program Sayacı (Program Counter)",
+        "B) Yazmaç değerleri (Register Values)",
+        "C) Sayfa tablosu işaretçisi (Page Table Pointer)",
+        "D) Kullanıcı arayüzü bileşenleri (User Interface Components)",
+        "E) Süreç önceliği (Process Priority)"
+      ],
+      "correctAnswer": "D) Kullanıcı arayüzü bileşenleri (User Interface Components)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "38. Unix sistemlerde yeni bir süreç (process) oluşturmak için kullanılan fork() sistem çağrısının temel özelliği aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Mevcut sürecin yürütülmesini durdurur ve belleği temizler.",
+        "B) Üst sürecin bellek alanını tamamen siler.",
+        "C) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur.",
+        "D) Yeni sürece aynı PID'yi atar.",
+        "E) Dosya sistemi üzerinde yeni bir işlem başlatır."
+      ],
+      "correctAnswer": "C) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "39. Aşağıdakilerden hangisi zombi süreç (zombie process) için doğrudur?",
+      "options": [
+        "A) CPU ve bellek kaynaklarını aktif biçimde kullanır.",
+        "B) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur.",
+        "C) Çalışmaya devam eden, henüz bitmemiş süreçtir.",
+        "D) Process table'dan hemen silinir.",
+        "E) Kernel tarafından otomatik olarak yeniden başlatılır."
+      ],
+      "correctAnswer": "B) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "40. Aşağıdakilerden hangisi thread (iş parçacığı) ile process (süreç) arasındaki farklardan biri değildir?",
+      "options": [
+        "A) Thread'ler aynı bellek alanını paylaşabilirken, process'ler ayrı bellek alanlarına sahiptir.",
+        "B) Bir process çökerse diğer process'ler etkilenmez, ancak bir thread çökerse aynı süreçteki diğer thread'ler etkilenebilir.",
+        "C) Thread oluşturmak, process oluşturmaktan daha düşük maliyetlidir.",
+        "D) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir.",
+        "E) Thread'ler aynı süreçteki diğer thread'lerle aynı kod ve veri alanını kullanabilir."
+      ],
+      "correctAnswer": "D) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "41. Aşağıdakilerden hangisi User-Level Threads (ULT) ve Kernel-Level Threads (KLT) arasındaki farklardan biri değildir?",
+      "options": [
+        "A) ULT'lerde thread yönetimi kullanıcı alanında, KLT'lerde çekirdek alanında yapılır.",
+        "B) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır.",
+        "C) KLT'lerde her thread ayrı CPU çekirdeğinde gerçek paralel çalışabilir.",
+        "D) ULT'lerde bir thread bloklanırsa tüm süreç etkilenir.",
+        "E) KLT'lerde scheduler her thread'i ayrı yürütme birimi olarak planlar."
+      ],
+      "correctAnswer": "B) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "42. Aşağıdakilerden hangisi SMT (Simultaneous Multithreading) veya Hyper-Threading teknolojisinin temel amacını en doğru açıklar?",
+      "options": [
+        "A) Bir CPU çekirdeğinin saat hızını (clock speed) iki katına çıkarmaktır.",
+        "B) İşletim sistemine fiziksel çekirdek sayısını gizlemektir.",
+        "C) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır.",
+        "D) İşletim sisteminde her thread'e ayrı bellek alanı tahsis etmektir.",
+        "E) CPU üzerindeki tüm cache seviyelerini devre dışı bırakmaktır."
+      ],
+      "correctAnswer": "C) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "43. Aşağıdaki ifadelerden hangisi deadlock (kilitlenme) durumunu en doğru biçimde açıklar?",
+      "options": [
+        "A) İki thread'in aynı anda paylaşılan veriye erişmesi sonucu belirsizlik oluşmasıdır.",
+        "B) Bir thread'in öncelik düşük olduğu için CPU zamanı alamamasıdır.",
+        "C) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir.",
+        "D) Thread'in bekleme koşulu sağlanmadığı için uyku modunda kalmasıdır.",
+        "E) Thread'lerin planlayıcı tarafından sıralı biçimde yürütülmesidir."
+      ],
+      "correctAnswer": "C) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "44. Aşağıdakilerden hangisi Thread Pool (İş Parçacığı Havuzu) kavramının temel amacını en doğru açıklar?",
+      "options": [
+        "A) Her işlem (process) için ayrı çekirdek (core) tahsis edilmesini sağlamak.",
+        "B) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak.",
+        "C) Tüm thread'lerin aynı anda CPU kullanmasını engellemek.",
+        "D) Thread'ler arası veri paylaşımını devre dışı bırakmak.",
+        "E) Sinyal işleme mekanizmasını thread düzeyine taşımak."
+      ],
+      "correctAnswer": "B) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "45. Aşağıdakilerden hangisi CPU Scheduler (Zamanlayıcı) bileşeninin doğrudan görevi değildir?",
+      "options": [
+        "A) Hangi sürecin CPU'yu kullanacağına karar vermek.",
+        "B) Seçilen süreci CPU'ya yüklemek (dispatch etmek).",
+        "C) CPU kullanımını artırmak için hazır kuyruktaki süreçleri değerlendirmek.",
+        "D) Zaman paylaşımını sağlamak için timer interrupt'ları kullanmak.",
+        "E) Çoklu programlama sırasında süreç geçişini yönetmek."
+      ],
+      "correctAnswer": "B) Seçilen süreci CPU'ya yüklemek (dispatch etmek)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "46. Bir işletim sisteminde timer interrupt (zamanlayıcı kesmesi) gerçekleştiğinde, CPU zamanlayıcı (scheduler) tarafından hangi olay sırası doğru biçimde gerçekleşir?",
+      "options": [
+        "A) Dispatcher seçimi yapar → Scheduler süreci çalıştırır → Context switch tamamlanır",
+        "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir",
+        "C) Scheduler yeni süreci seçer → Timer interrupt tetiklenir → Dispatcher süreci çalıştırır",
+        "D) Dispatcher süreci seçer → Scheduler context switch yapar → Timer interrupt sonlanır",
+        "E) Timer interrupt gerçekleşir → Dispatcher doğrudan CPU'yu atar Scheduler devre dışı kalır"
+      ],
+      "correctAnswer": "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "47. Aşağıdakilerden hangisi Convoy Effect kavramını en doğru açıklar?",
+      "options": [
+        "A) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi.",
+        "B) Birden fazla thread'in aynı veriye erişmeye çalışması.",
+        "C) Uzun süre bekleyen süreçlerin önceliğinin artması.",
+        "D) CPU'nun birden fazla çekirdeğe sahip olması.",
+        "E) Preemptive scheduling'in devre dışı bırakılması."
+      ],
+      "correctAnswer": "A) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "48. Aşağıdakilerden hangisi Round Robin (RR) algoritmasının temel özelliğidir?",
+      "options": [
+        "A) En kısa işi önce seçer.",
+        "B) CPU'yu alan süreç bitene kadar çalışır.",
+        "C) Her sürece eşit zaman dilimi (quantum) verir.",
+        "D) Öncelik değerine göre sıralama yapar.",
+        "E) Ortalama bekleme süresi her zaman en düşüktür."
+      ],
+      "correctAnswer": "C) Her sürece eşit zaman dilimi (quantum) verir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "49. Aşağıdakilerden hangisi SJF (Shortest Job First) ve HRRN (Highest Response Ratio Next) algoritmaları arasındaki farkı doğru açıklar?",
+      "options": [
+        "A) SJF kesintilidir, HRRN kesintisizdir.",
+        "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar.",
+        "C) HRRN, konvoy etkisi oluşturur, SJF oluşturmaz.",
+        "D) SJF'de starvation önlenir, HRRN'de ortaya çıkar.",
+        "E) HRRN, Round Robin'e benzer zaman dilimi mantığı kullanır."
+      ],
+      "correctAnswer": "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "50. Aşağıdakilerden hangisi MLFQ (Multi-Level Feedback Queue) algoritmasının karakteristik özelliğidir?",
+      "options": [
+        "A) Sabit öncelikli, değişmez kuyruk yapısı vardır.",
+        "B) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir.",
+        "C) Tüm süreçler aynı quantum süresini kullanır.",
+        "D) Starvation riskini önlemek için aging uygulanmaz.",
+        "E) Sadece batch sistemlerde kullanılır."
+      ],
+      "correctAnswer": "B) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "51. Aşağıdakilerden hangisi Priority Scheduling (Öncelikli Zamanlama) algoritmasının dezavantajıdır?",
+      "options": [
+        "A) Convoy effect oluşturur.",
+        "B) Starvation (açlık) problemi yaşanabilir.",
+        "C) Tüm süreçlere eşit CPU zamanı verilir.",
+        "D) Öncelikler dinamik olarak belirlenir.",
+        "E) Interactive sistemlerde uygun değildir."
+      ],
+      "correctAnswer": "B) Starvation (açlık) problemi yaşanabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "52. Aşağıdakilerden hangisi Arrival Time (Varış Zamanı) kavramını en doğru şekilde açıklar?",
+      "options": [
+        "A) Sürecin CPU'yu ilk kez kullanmaya başladığı an.",
+        "B) Sürecin tamamlandığı zaman noktası.",
+        "C) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman.",
+        "D) Sürecin I/O işlemi için beklemeye alındığı an.",
+        "E) Sürecin planlayıcı (scheduler) tarafından seçildiği an."
+      ],
+      "correctAnswer": "C) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "53. Aşağıdakilerden hangisi Burst Time (CPU Patlama Süresi) terimini doğru tanımlar?",
+      "options": [
+        "A) Sürecin CPU ve I/O arasında geçirdiği toplam süre.",
+        "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre.",
+        "C) Sürecin bekleme süresi ile dönüş süresi farkı.",
+        "D) Sürecin hazır kuyruğunda kaldığı süre.",
+        "E) Sürecin ilk CPU erişimiyle bitişi arasındaki süre."
+      ],
+      "correctAnswer": "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "54. Aşağıdakilerden hangisi Response Time (Yanıt Süresi) kavramını doğru açıklar?",
+      "options": [
+        "A) Sürecin CPU'yu kullanmaya başladığı andan itibaren geçen toplam süredir.",
+        "B) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir.",
+        "C) Sürecin CPU'dan tamamen ayrıldığı zamandır.",
+        "D) Sürecin bekleme süresiyle burst time farkıdır.",
+        "E) Turnaround time'a eşittir."
+      ],
+      "correctAnswer": "B) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "55. Aşağıdaki durumlardan hangisinde sistemin CPU Utilization (CPU Kullanımı) düşüktür?",
+      "options": [
+        "A) CPU sürekli hazır kuyruktaki süreçleri çalıştırıyor.",
+        "B) CPU %80 oranında aktif, %20 idle durumda.",
+        "C) CPU çoğu zaman idle (boşta) bekliyor.",
+        "D) CPU %90 üzerinde sürekli dolu çalışıyor.",
+        "E) CPU'yu kullanan süreçler kısa burst'lara sahip."
+      ],
+      "correctAnswer": "C) CPU çoğu zaman idle (boşta) bekliyor."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "56. Aşağıdakilerden hangisi anonymous pipe için doğrudur?",
+      "options": [
+        "A) Farklı makinelere ağ üzerinden veri aktarır.",
+        "B) Dosya sisteminde kalıcı adla görünür.",
+        "C) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur.",
+        "D) Mesaj tipine göre filtreleme yapar.",
+        "E) Kalıcıdır, reboot sonrasında da var olur."
+      ],
+      "correctAnswer": "C) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "57. Aşağıdakilerden hangisi System V/POSIX message queue için doğru bir ifadedir?",
+      "options": [
+        "A) Gönderici ve alıcı aynı anda hazır değilse iletişim kurulamaz.",
+        "B) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir.",
+        "C) En hızlı IPC'dir çünkü kopyasız (zero-copy) çalışır.",
+        "D) Sadece tek yönlüdür.",
+        "E) Yalnızca parent-child arasında kullanılabilir."
+      ],
+      "correctAnswer": "B) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "58. Shared memory ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": [
+        "A) En hızlı IPC'lerden biridir çünkü kopyalama gerektirmez.",
+        "B) Senkronizasyon mekanizmaları olmadan race condition riski vardır.",
+        "C) Birden çok süreç aynı fiziksel belleği eşleyebilir.",
+        "D) Kernel, mesaj başlıklarını otomatik sıraya dizer.",
+        "E) POSIX'te shm_open ve mmap ile kullanılabilir."
+      ],
+      "correctAnswer": "D) Kernel, mesaj başlıklarını otomatik sıraya dizer."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "59. Aşağıdakilerden hangisi UNIX domain socket ile TCP socket arasındaki farkı doğru açıklar?",
+      "options": [
+        "A) UNIX domain socket farklı makineler arasında kullanılır.",
+        "B) TCP socket dosya yolu ile adreslenir.",
+        "C) UNIX domain socket aynı makinede daha düşük overhead'le çalışır.",
+        "D) TCP socket her zaman daha hızlıdır.",
+        "E) UNIX domain socket yalnızca UDP türünde olabilir."
+      ],
+      "correctAnswer": "C) UNIX domain socket aynı makinede daha düşük overhead'le çalışır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "60. Aşağıdakilerden hangisi signal mekanizması için doğrudur?",
+      "options": [
+        "A) SIGKILL kullanıcı handler'ı ile yakalanabilir ve ertelenebilir.",
+        "B) Sinyaller her zaman tüm süreçteki tüm thread'lere aynı anda teslim edilir.",
+        "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar.",
+        "D) Signal eşzamansız değildir.",
+        "E) Signal, IPC değildir."
+      ],
+      "correctAnswer": "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "61. Aşağıdaki IPC mekanizması tipik en uygun kullanım eşleştirmelerinden hangisi yanlıştır?",
+      "options": [
+        "A) Shared memory → Büyük hacimli ve yüksek performanslı veri paylaşımı",
+        "B) Message queue → Asenkron, tip bazlı kuyruklu mesajlaşma",
+        "C) UNIX domain socket → Aynı makinede client-server iletişimi",
+        "D) Signal → Yüksek hacimli ikili veri akışı",
+        "E) Anonymous pipe → Shell hattı (producer consumer) akışları"
+      ],
+      "correctAnswer": "D) Signal → Yüksek hacimli ikili veri akışı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "62. Aşağıdakilerden hangisi spinlock (döngü kilidi) için doğru bir tanımdır?",
+      "options": [
+        "A) Thread, kilidi beklerken uyur ve CPU başka işlere geçer.",
+        "B) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder.",
+        "C) Spinlock, yalnızca tek çekirdekli sistemlerde kullanılmalıdır.",
+        "D) Spinlock, context switch gerektirir.",
+        "E) Spinlock, I/O işlemleri sırasında idealdir."
+      ],
+      "correctAnswer": "B) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "63. Aşağıdakilerden hangisi spinlock kullanımına en uygun senaryodur?",
+      "options": [
+        "A) Uzun süren disk I/O işlemleri.",
+        "B) Thread'lerin saniyeler süren beklemeleri.",
+        "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar.",
+        "D) Tek çekirdekli gömülü sistemler.",
+        "E) Kullanıcı arayüzü işlemleri."
+      ],
+      "correctAnswer": "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "64. Aşağıdakilerden hangisi mutex ile spinlock arasındaki farklardan biri değildir?",
+      "options": [
+        "A) Mutex beklerken thread uyuyabilir, spinlock döngüde aktif bekler.",
+        "B) Mutex context switch gerektirebilir, spinlock gerektirmez.",
+        "C) Spinlock CPU'yu meşgul eder, mutex etmez.",
+        "D) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz.",
+        "E) Spinlock kısa kilitler için daha hızlı olabilir."
+      ],
+      "correctAnswer": "D) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "65. Aşağıdakilerden hangisi wait(P) işleminin doğru davranışını tanımlar?",
+      "options": [
+        "A) Semafor değerini artırır; bekleyen varsa uyandırır.",
+        "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır.",
+        "C) Semafor değerini okur ama değiştirmez.",
+        "D) Her zaman sinyal gönderir.",
+        "E) Yalnızca binary semaforlarda çalışır."
+      ],
+      "correctAnswer": "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "66. ...Aşağıdakilerden hangisi counting semafor ile binary semafor arasındaki farkı doğru şekilde açıklar?",
+      "options": [
+        "A) Counting semafor yalnızca 0 veya 1 değerini alabilir.",
+        "B) Binary semafor birden fazla thread'in aynı anda girmesine izin verir.",
+        "C) Counting semafor, birden fazla kaynağın yönetiminde kullanılır.",
+        "D) Binary semafor yalnızca kernel seviyesinde çalışır.",
+        "E) Counting semafor race condition oluşmasını garanti eder."
+      ],
+      "correctAnswer": "C) Counting semafor, birden fazla kaynağın yönetiminde kullanılır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "67. Atomik işlemler hakkında aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": [
+        "A) Atomik işlemler birden fazla CPU döngüsünde tamamlanabilir.",
+        "B) Atomik işlemler yalnızca kullanıcı seviyesi (user-space) kodda geçerlidir.",
+        "C) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür.",
+        "D) Atomik işlemler sadece bir process tarafından kullanılabilir.",
+        "E) Atomik işlemler mutex'lerden daha yavaş çalışır."
+      ],
+      "correctAnswer": "C) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "68. Aşağıdakilerden hangisi Compare-and-Swap (CAS) işleminin doğru tanımıdır?",
+      "options": [
+        "A) Bellekteki değeri kontrol etmeden doğrudan değiştirir.",
+        "B) İki değişkenin değerini her durumda birbirine eşitler.",
+        "C) Değer beklenenle aynıysa değiştirir, değilse değiştirmez.",
+        "D) Bellek erişiminde semafor kullanarak bekler.",
+        "E) CPU context switch işlemiyle gerçekleştirilir."
+      ],
+      "correctAnswer": "C) Değer beklenenle aynıysa değiştirir, değilse değiştirmez."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "69. İşletim sistemlerinde read-write lock (okuma-yazma kilidi) kullanımıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": [
+        "A) Hem okuma hem yazma işlemleri aynı anda yapılabilir.",
+        "B) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır.",
+        "C) RWLock, yazma işlemlerinde okuma kilidini otomatik olarak devralır.",
+        "D) RWLock yalnızca tek çekirdekli sistemlerde etkilidir.",
+        "E) RWLock, semaforlarla birlikte kullanılamaz."
+      ],
+      "correctAnswer": "B) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "70. Aşağıdakilerden hangisi RWLock'un mutex'e göre avantajını doğru açıklar?",
+      "options": [
+        "A) RWLock her zaman mutex'ten daha hızlıdır.",
+        "B) RWLock yalnızca yazma işlemleri için optimize edilmiştir.",
+        "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar.",
+        "D) RWLock, tek bir thread'in okuma yapmasına izin verir.",
+        "E) RWLock, writer starvation problemini tamamen ortadan kaldırır."
+      ],
+      "correctAnswer": "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "71. Aşağıdakilerden hangisi Üretici-Tüketici Problemini en doğru şekilde açıklar?",
+      "options": [
+        "A) Üretici, tüketiciye doğrudan veri gönderir, tampon kullanılmaz.",
+        "B) Üretici ve tüketici aynı anda aynı tamponu günceller.",
+        "C) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır.",
+        "D) Üretici ve tüketici farklı sistemlerde çalıştığından senkronizasyon gerekmez.",
+        "E) Tüketici veriyi üretir, üretici bunu işler."
+      ],
+      "correctAnswer": "C) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "72. Producer-Consumer probleminde kullanılan semaforlardan full, empty ve mutex için doğru ilişki aşağıdakilerden hangisidir?",
+      "options": [
+        "A) empty → dolu slot sayısı, full → boş slot sayısı",
+        "B) mutex → veri üretimi, empty → mutual exclusion",
+        "C) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur",
+        "D) Üçü de yalnızca üretici tarafından kullanılır",
+        "E) Tüketici sadece mutex semaforunu kullanır"
+      ],
+      "correctAnswer": "C) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "73. Aşağıdaki durumlardan hangisi Producer-Consumer modelinde Underflow (Yetersiz Veri) durumuna örnektir?",
+      "options": [
+        "A) Üretici dolu tampona yazmaya çalışıyor",
+        "B) Tüketici boş tampondan veri almaya çalışıyor",
+        "C) Üretici veriyi iki kez aynı slota yazıyor",
+        "D) Tüketici veriyi işleyip geri yazıyor",
+        "E) Üretici mutex'i bırakmadan devam ediyor"
+      ],
+      "correctAnswer": "B) Tüketici boş tampondan veri almaya çalışıyor"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "74. Aşağıdakilerden hangisi deadlock kavramını en doğru şekilde tanımlar?",
+      "options": [
+        "A) Tüm process'lerin aynı anda CPU'ya erişmeye çalıştığı durumdur.",
+        "B) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur.",
+        "C) Process'lerin tamamlanma süresinin beklenenden uzun olduğu durumdur.",
+        "D) Yalnızca thread'ler arasında oluşabilen bir yarış koşuludur.",
+        "E) İşletim sisteminin donanım arızası nedeniyle durmasıdır."
+      ],
+      "correctAnswer": "B) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "75. Aşağıdaki durumlardan hangisi deadlock (kilitlenme) durumuna en uygun örnektir?",
+      "options": [
+        "A) İki thread aynı global değişkene aynı anda yazma işlemi yapıyor.",
+        "B) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor.",
+        "C) Bir thread, CPU zamanlayıcısı tarafından sürekli erteleniyor (starvation).",
+        "D) Bir process'in I/O işlemi sırasında kernel tarafından askıya alınması.",
+        "E) Bir thread'in kilidi bırakmadan sleep() fonksiyonuna girmesi."
+      ],
+      "correctAnswer": "B) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "76. Aşağıdakilerden hangisi Coffman koşullarından biri değildir?",
+      "options": [
+        "A) Karşılıklı dışlama (Mutual Exclusion)",
+        "B) Tut ve bekle (Hold and Wait)",
+        "C) Geri alma yok (No Preemption)",
+        "D) Dairesel bekleme (Circular Wait)",
+        "E) Öncelikli planlama (Priority Scheduling)"
+      ],
+      "correctAnswer": "E) Öncelikli planlama (Priority Scheduling)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "77. Aşağıdakilerden hangisi deadlock önleme (prevention) yaklaşımına örnektir?",
+      "options": [
+        "A) Sistem, yalnızca güvenli durumlarda kaynak tahsisine izin verir.",
+        "B) Deadlock oluşmasına izin verir, sonra tespit algoritmasıyla süreçleri analiz eder.",
+        "C) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır.",
+        "D) Kaynaklar zorla geri alınamaz.",
+        "E) Banker's Algorithm kullanılarak güvenli durum kontrol edilir."
+      ],
+      "correctAnswer": "C) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "78. Deadlock tespiti sonrası recovery (kurtarma) aşamasında işletim sistemi aşağıdaki işlemlerden hangisini uygulayabilir?",
+      "options": [
+        "A) Süreçlerin tümüne kaynaklarını yeniden tahsis etmek.",
+        "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak.",
+        "C) Tüm kaynakları paylaşımlı hale getirmek.",
+        "D) Banker's Algorithm'i yeniden çalıştırmak.",
+        "E) Deadlock oluşmadan önce tüm süreçleri bekletmek."
+      ],
+      "correctAnswer": "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak."
     },
     {
       "type": "short-answer",
