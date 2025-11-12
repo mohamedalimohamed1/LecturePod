@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
         { id: 'lecture-2', title: 'Dijital Okuryazarlık - Vize Sınavı', file: 'data/lecture_six.json' },
         { id: 'lecture-2', title: 'Görüntü İşleme - Vize Sınavı', file: 'data/lecture_four.json' },
-        { id: 'lecture-2', title: 'Kriptoloji ve Bilgi Güvenliği', file: 'data/lecture_seven.json' },
+        { id: 'lecture-2', title: 'Kriptoloji ve Bilgi Güvenliği - Vize Sınavı', file: 'data/lecture_seven.json' },
         { id: 'lecture-3', title: 'Uzaktan algılama - Vize Sınavı', file: 'data/lecture_three.json' },
         { id: 'lecture-2', title: 'İşletim Sistemleri - Vize Sınavı', file: 'data/lecture_five.json' },
         { id: 'lecture-2', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' },
