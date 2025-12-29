@@ -912,7 +912,7 @@
     },
     {
       "type": "short-answer",
-      "question": "1. İşletim Sistemi nedir? \"Çekirdek Modu\" ve \"Kullanıcı Modu\" nedir?",
+      "question": "1. (⭐) İşletim Sistemi nedir? \"Çekirdek Modu\" ve \"Kullanıcı Modu\" nedir?",
       "correctAnswer": "<ul><li><strong>İşletim Sistemi (OS):</strong> Donanım ile kullanıcı uygulamaları arasında köprü görevi gören, kaynakları (CPU, bellek) yöneten temel sistem yazılımıdır.</li><li><strong>Çekirdek Modu (Kernel Mode):</strong> İşlemcinin sınırsız yetkiye sahip olduğu moddur. Sadece OS çekirdeği burada çalışır, tüm donanıma erişebilir.</li><li><strong>Kullanıcı Modu (User Mode):</strong> Standart uygulamaların (tarayıcı, oyun) çalıştığı kısıtlı moddur. Donanıma doğrudan erişemez, işletim sisteminden istekte bulunur.</li></ul>"
     },
     {
@@ -922,12 +922,17 @@
     },
     {
       "type": "short-answer",
+      "question": "3. (⭐) İşletim sistemlerinde süreç (process) nedir? Aşağıda süreçlerin yapısal bileşenleri verilmiştir. Her bir bileşenin işletim sistemi açısından ne işe yaradığını kısaca açıklayınız.",
+      "correctAnswer": "<p><strong>Süreç (process):</strong> İşletim sistemi tarafından yönetilen, \"çalıştırılmakta olan\" bir program örneğidir. Daha basit bir ifadeyle: Diskinizde duran pasif bir programın (örneğin spotify.exe) belleğe (RAM) yüklenerek \"canlanmış\", aktif hale gelmesine süreç denir.</p><p><strong>Bileşenler ve Görevleri:</strong></p><ul><li><strong>Süreç Kimliği (Process ID - PID):</strong> Sürecin benzersiz kimlik numarasıdır.</li><li><strong>Süreç Durumu (Process State):</strong> Sürecin mevcut durumunu belirtir (Hazır-Ready, Çalışıyor-Running vb.).</li><li><strong>Program Sayacı (Program Counter):</strong> Çalıştırılacak sıradaki komutun bellek adresini tutar.</li><li><strong>CPU Yazmaçları (CPU Registers):</strong> Akümülatör, indeks yazmaçları gibi o anki işlemci verilerini tutar.</li><li><strong>Bellek Limitleri (Memory Limits):</strong> Sürecin işletim sistemi tarafından atanan ve erişebileceği bellek sınırlarını belirtir.</li><li><strong>Açık Dosyalar Listesi (Open Files List):</strong> Süreç tarafından o anda açılmış olan dosyaların bir listesidir.</li><li><strong>G/Ç Durumu (I/O Status):</strong> Sürece atanmış olan G/Ç cihazları (örn: yazıcı, disk) hakkındaki bilgileri içerir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
       "question": "4. Context Switch (Bağlam Değişimi) nedir? Nasıl gerçekleşir?",
       "correctAnswer": "<p><strong>Context Switch:</strong> İşletim sisteminin, CPU'yu bir süreçten alıp diğerine vermesi işlemidir.</p><p><strong>Nasıl Gerçekleşir:</strong> <em>Dağıtıcı (Dispatcher)</em> modülü, mevcut sürecin o anki durumunu (Program Sayacı, Yazmaçlar) sürecin <strong>PCB</strong>'sine (Süreç Kontrol Bloğu) kaydeder. Ardından, yeni seçilen sürecin PCB'sindeki durumu CPU'ya yükler.</p>"
     },
     {
       "type": "short-answer",
-      "question": "5. Bir sürecin diskteki pasif halinden sonlanmasına kadar geçen aşamalar nelerdir?",
+      "question": "5. (⭐) Bir sürecin diskteki pasif halinden sonlanmasına kadar geçen aşamalar nelerdir?",
       "correctAnswer": "<ol><li><strong>Program (Disk):</strong> Pasif haldeki dosya (örn: .exe).</li><li><strong>Yeni (New):</strong> <em>Loader</em> programı RAM'e yükler, OS bir PCB oluşturur.</li><li><strong>Hazır (Ready):</strong> Süreç CPU'yu beklemek üzere hazır kuyruğuna alınır.</li><li><strong>Çalışıyor (Running):</strong> <em>Scheduler</em> seçer, <em>Dispatcher</em> CPU'yu verir, süreç çalışır.</li><li><strong>Bekliyor (Waiting):</strong> G/Ç gerekirse beklemeye geçer.</li><li><strong>Sonlanmış (Terminated):</strong> İş biter, kaynaklar serbest bırakılır, PCB silinir.</li></ol>"
     },
     {
@@ -969,6 +974,11 @@
       "type": "short-answer",
       "question": "13. Race Condition, Deadlock ve Starvation nedir?",
       "correctAnswer": "<ul><li><strong>Race Condition (Yarış Durumu):</strong> Birden fazla thread'in paylaşılan veriye aynı anda erişip değiştirmeye çalışması sonucu oluşan belirsiz/hatalı durum.</li><li><strong>Deadlock (Kilitlenme):</strong> Thread'lerin birbirlerinin elindeki kaynakları sonsuza kadar beklemesi durumu.</li><li><strong>Starvation (Açlık):</strong> Düşük öncelikli thread'lerin, yüksek öncelikliler yüzünden asla kaynak (CPU) alamaması.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "14. Modern işletim sistemlerinde ileri düzey thread yönetimi kavramlarını (Thread Pool, Thread Cancellation, TLS, Signal Handling) açıklayınız ve modern sistemlerdeki (Windows, Linux, macOS, Android) farklarını belirtiniz.",
+      "correctAnswer": "<ul><li><strong>Thread Pool (İş Parçacığı Havuzu):</strong><ul><li><strong>Tanım/İşlev:</strong> Her görev için yeni bir thread oluşturmak/yok etmek maliyetli olduğu için, başlangıçta belirli sayıda thread oluşturup bir \"havuzda\" bekletme yöntemidir. Görev geldiğinde, havuzdaki boş bir thread görevi alır, bitirince havuza geri döner ve yeni görev bekler.</li><li><strong>Avantajı:</strong> Sürekli thread oluşturma/yok etme maliyetini (performans) önler ve maksimum thread sayısını sınırlar (kaynak kontrolü).</li></ul></li><li><strong>Thread Cancellation (Thread İptali):</strong><ul><li><strong>Tanım:</strong> Bir thread'in görevi bitmeden onu sonlandırma işlemidir.</li><li><strong>İşlev (Türleri):</strong><ul><li><strong>Asenkron İptal:</strong> Thread'i anında ve zorla sonlandırır (tehlikelidir, kaynak sızıntısına yol açabilir).</li><li><strong>Gecikmeli İptal (Tercih Edilen):</strong> Thread düzenli aralıklarla \"iptal isteği var mı?\" diye kontrol eder ve güvenli bir noktada kendini sonlandırır.</li></ul></li></ul></li><li><strong>Thread-Local Storage (TLS – Thread'e Özgü Veri):</strong><ul><li><strong>Tanım:</strong> Thread'ler normalde sürece ait belleği paylaşsa da, TLS her thread'in sadece kendisine ait, diğer thread'lerden izole bir veri alanı tutmasını sağlar.</li><li><strong>İşlev (Örnek):</strong> Bir web sunucusunda her thread'in, o an hizmet verdiği kullanıcıya ait oturum ID'sini TLS'de saklaması.</li></ul></li><li><strong>Signal Handling (Çoklu Thread Ortamında Sinyal Yönetimi):</strong><ul><li><strong>Tanım/İşlev:</strong> UNIX benzeri sistemlerde bir sürece gelen sinyallerin (örn: Ctrl+C) çoklu thread ortamında nasıl yönetileceğidir. Gelen sinyalin tüm sürece mi, sadece belirli bir thread'e mi, yoksa o an uygun olan herhangi bir thread'e mi iletileceğine karar verilmesi gerekir.</li></ul></li><li><strong>Modern Sistemlerde Thread Yönetimi (Farklar):</strong><ul><li><strong>Windows:</strong> Her süreç kendi thread'lerini yönetir (Görev Yöneticisi'nde görülebilir).</li><li><strong>Linux:</strong> Thread'ler aslında \"hafif süreç (lightweight process)\" olarak yönetilir.</li><li><strong>macOS/iOS:</strong> Thread havuzu yönetimi büyük ölçüde \"Grand Central Dispatch (GCD)\" ile otomatik olarak yapılır.</li><li><strong>Android:</strong> Her uygulama için bir ana (UI) thread vardır; ağır arka plan işleri (ağ, veri) mutlaka ayrı bir \"Background Thread\" (örn: Kotlin Coroutines) üzerinde yapılır.</li></ul></li></ul>"
     },
     {
       "type": "short-answer",
