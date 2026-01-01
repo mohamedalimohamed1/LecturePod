@@ -1,0 +1,104 @@
+/* //css/main.css */
+:root {
+    --font-family: 'Inter', sans-serif;
+    
+    /* VARSAYILAN: SİYAH (DARK) TEMA */
+    --bg-app: #0f172a; 
+    --bg-container: #1e293b; 
+    --border-color: #334155;
+    --text-dark: #f1f5f9; 
+    --text-light: #94a3b8;
+    
+    --primary-gradient: linear-gradient(135deg, #0d94eb 0%, #07b6d5 100%);
+    --orange-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    --streak-success-bg: linear-gradient(135deg, #facc15 0%, #f97316 100%);
+    --streak-failure-bg: linear-gradient(135deg, #64748b 0%, #334155 100%);
+    
+    --green-color: #10b981;
+    --red-color: #ef4444;
+    
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    --border-radius-lg: 1.25rem;
+    --border-radius-md: 0.75rem;
+}
+
+[data-theme="light"] {
+    --bg-app: #f3f4f6; 
+    --bg-container: #ffffff; 
+    --border-color: #e5e7eb;
+    --text-dark: #1f2937; 
+    --text-light: #4b5563;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 14px;
+}
+
+body { 
+    font-family: var(--font-family); 
+    background-color: var(--bg-app); 
+    color: var(--text-dark); 
+    line-height: 1.5; 
+    transition: background 0.3s ease, color 0.3s ease; 
+    overflow-x: hidden; 
+}
+
+/* İkonların metin yerine sembol olarak görünmesi için KRİTİK FİX */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important; /* Font ailesini zorunlu kılıyoruz */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-flex; /* inline-block yerine flex kullanarak hizalamayı güçlendirdik */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.container { 
+    max-width: 1600px; 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+}
+
+.hidden { display: none !important; }
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+    html { font-size: 13px; }
+    .container { padding: 0 1rem; }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 12px; }
+    .container { padding: 0 0.75rem; }
+}
