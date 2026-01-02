@@ -1,6 +1,6 @@
 {
-  "courseTitle": "Sistem Analizi",
-  "lectureTitle": "Tüm Bölümler",
+  "courseTitle": "Sistem Analizi ve Tasarımı",
+  "lectureTitle": "1-7. Üniteler Kapsamlı Soru Bankası",
   "questions": [
     {
       "type": "multiple-choice",
@@ -279,7 +279,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "26. Soru: Sistemlerin işleyişini ve durumlarını açıklamak ve göstermek amacıyla faydalanılan araçlara ne ad verilir?",
+      "question": "26. Sistemlerin işleyişini ve durumlarını açıklamak ve göstermek amacıyla faydalanılan araçlara ne ad verilir?",
       "options": [
         "A) Sistem Hiyerarşisi",
         "B) Sistem Sınırları",
@@ -290,7 +290,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "27. Soru: Sistem modelleri içinde en eski ve en genel olan, sistemi sözcüklerle açıklamaya çalışan model türü aşağıdakilerden hangisidir?",
+      "question": "27. Sistem modelleri içinde en eski ve en genel olan, sistemi sözcüklerle açıklamaya çalışan model türü aşağıdakilerden hangisidir?",
       "options": [
         "A) Şematik Modeller",
         "B) Sözel (Kavramsal) Modeller",
@@ -301,7 +301,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "28. Soru: Aşağıdakilerden hangisi sözel (kavramsal) modellerin avantajlarından biri değildir?",
+      "question": "28. Aşağıdakilerden hangisi sözel (kavramsal) modellerin avantajlarından biri değildir?",
       "options": [
         "A) Düşük maliyetli olmaları",
         "B) Kolay kurulabilir olmaları",
@@ -312,7 +312,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "29. Soru: İnsanların bilgileri gözle görerek algılama kabiliyetlerinin yüksek olmasından dolayı, yanlış anlamaları önlemek için sistem modellemede hangi model türü önemlidir?",
+      "question": "29. İnsanların bilgileri gözle görerek algılama kabiliyetlerinin yüksek olmasından dolayı, yanlış anlamaları önlemek için sistem modellemede hangi model türü önemlidir?",
       "options": [
         "A) Matematiksel Modeller",
         "B) Fiziksel Modeller",
@@ -323,7 +323,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "30. Soru: Bir firmada yıl içinde yapılan satışların aylık çubuk grafik yardımıyla gösterilmesi, hangi şematik model türünün kullanımına örnektir?",
+      "question": "30. Bir firmada yıl içinde yapılan satışların aylık çubuk grafik yardımıyla gösterilmesi, hangi şematik model türünün kullanımına örnektir?",
       "options": [
         "A) Karar Ağacı",
         "B) Ağ Diyagramı",
@@ -334,7 +334,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "31. Soru: Bir işletme sistemi tarafından üretilen bir ürünün sabit ve değişken maliyetlerinin yanı sıra, fiyat analizinin de yapılabildiği grafik türü hangisidir?",
+      "question": "31. Bir işletme sistemi tarafından üretilen bir ürünün sabit ve değişken maliyetlerinin yanı sıra, fiyat analizinin de yapılabildiği grafik türü hangisidir?",
       "options": [
         "A) Başabaş Noktası Grafiği",
         "B) Pasta Grafik",
@@ -345,7 +345,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "32. Soru: Proje yönetimi tekniğinin önemli araçlarından biri sayılan ve bir proje kapsamında yapılması gereken işleri bir zaman planında göstermek için kullanılan şematik model aşağıdakilerden hangisidir?",
+      "question": "32. Proje yönetimi tekniğinin önemli araçlarından biri sayılan ve bir proje kapsamında yapılması gereken işleri bir zaman planında göstermek için kullanılan şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Organizasyon Şeması",
         "B) Ağ Diyagramı",
@@ -356,7 +356,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "33. Soru: Sistemdeki bazı faaliyetlerin çözümlenmesi ve optimal sonuçlara ulaşılabilmesi için faydalanılan, örneğin bir dağıtım sisteminde kamyonların izleyeceği optimal rotayı tespit etmek için kullanılan şematik model nedir?",
+      "question": "33. Sistemdeki bazı faaliyetlerin çözümlenmesi ve optimal sonuçlara ulaşılabilmesi için faydalanılan, örneğin bir dağıtım sisteminde kamyonların izleyeceği optimal rotayı tespit etmek için kullanılan şematik model nedir?",
       "options": [
         "A) Süreç Akış Şeması",
         "B) Karar Ağacı",
@@ -367,7 +367,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "34. Soru: İşletmelerde sistemle ilgili kararlar verilirken, alınan kararların sistemi götüreceği sonuçları kestirmek için kullanılan, deterministik veya stokastik olabilen şematik model aşağıdakilerden hangisidir?",
+      "question": "34. İşletmelerde sistemle ilgili kararlar verilirken, alınan kararların sistemi götüreceği sonuçları kestirmek için kullanılan, deterministik veya stokastik olabilen şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Ağ Diyagramı",
         "B) Organizasyon Şeması",
@@ -378,7 +378,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "35. Soru: Bir işletme sistemindeki hiyerarşiyi ve nasıl bir örgütlenme olduğunu gösteren şematik model aşağıdakilerden hangisidir?",
+      "question": "35. Bir işletme sistemindeki hiyerarşiyi ve nasıl bir örgütlenme olduğunu gösteren şematik model aşağıdakilerden hangisidir?",
       "options": [
         "A) Organizasyon Şeması",
         "B) Süreç Akış Şeması",
@@ -389,7 +389,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "36. Soru: Sistemde bulunan genel sürecin (proses) veya alt süreçlerin nasıl işlediğini izah etmek için kullanılan şematik gösterim nedir?",
+      "question": "36. Sistemde bulunan genel sürecin (proses) veya alt süreçlerin nasıl işlediğini izah etmek için kullanılan şematik gösterim nedir?",
       "options": [
         "A) Karar Ağacı",
         "B) Süreç Akış Şeması",
@@ -400,7 +400,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "37. Soru: Süreç Akış Şeması sembollerinden 'Başlangıç / Bitiş' sembolü, aynı zamanda hangi akış şeması tipinde de aynı işlevi görür?",
+      "question": "37. Süreç Akış Şeması sembollerinden 'Başlangıç / Bitiş' sembolü, aynı zamanda hangi akış şeması tipinde de aynı işlevi görür?",
       "options": [
         "A) Gannt Şeması",
         "B) Ağ Diyagramı",
@@ -411,7 +411,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "38. Soru: Süreç Akış Şemasında 'Karar' sembolü hangi akış şeması tipinde aynı şekilde kullanılır?",
+      "question": "38. Süreç Akış Şemasında 'Karar' sembolü hangi akış şeması tipinde aynı şekilde kullanılır?",
       "options": [
         "A) Bilgisayar Program Akış Şeması",
         "B) Veri Akış Diyagramı",
@@ -422,7 +422,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "39. Soru: Süreç Akış Şeması sembollerinden hangisi 'Belge' anlamına gelir ve Sistem Akış Şemasında kullanılırken, Bilgisayar Program Akış Şemasında karşılığı kullanılmaz?",
+      "question": "39. Süreç Akış Şeması sembollerinden hangisi 'Belge' anlamına gelir ve Sistem Akış Şemasında kullanılırken, Bilgisayar Program Akış Şemasında karşılığı kullanılmaz?",
       "options": [
         "A) İşlem",
         "B) Doküman",
@@ -433,7 +433,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "40. Soru: Süreç Akış Şemasındaki 'Girdi / Çıktı' sembolünün, Bilgisayar Program Akış Şemasındaki karşılığı aşağıdakilerden hangisidir?",
+      "question": "40. Süreç Akış Şemasındaki 'Girdi / Çıktı' sembolünün, Bilgisayar Program Akış Şemasındaki karşılığı aşağıdakilerden hangisidir?",
       "options": [
         "A) İşlem",
         "B) Bilgi Depolama (Dosyalama)",
@@ -444,7 +444,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "41. Soru: Sistem Analizi, esas olarak aşağıdakilerden hangisiyle ilgilidir?",
+      "question": "41. Sistem Analizi, esas olarak aşağıdakilerden hangisiyle ilgilidir?",
       "options": [
         "A) Yalnızca donanım ve ağ altyapısının kurulması.",
         "B) Mevcut bir sistemi, nasıl işlediğini, neden işlediğini ve nasıl geliştirilebileceğini anlamak.",
@@ -455,7 +455,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "42. Soru: Aşağıdakilerden hangisi bir Sistem Modeli değildir?",
+      "question": "42. Aşağıdakilerden hangisi bir Sistem Modeli değildir?",
       "options": [
         "A) Karar Ağacı",
         "B) Organizasyon Şeması",
@@ -466,7 +466,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "43. Soru: Hangi şematik model, özellikle proje yönetimi faaliyetlerini bir zaman çizelgesinde göstermek için tasarlanmıştır?",
+      "question": "43. Hangi şematik model, özellikle proje yönetimi faaliyetlerini bir zaman çizelgesinde göstermek için tasarlanmıştır?",
       "options": [
         "A) Ağ Diyagramı",
         "B) Başabaş Noktası Grafiği",
@@ -477,7 +477,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "44. Soru: Sözlü (Kavramsal) modellerin en büyük dezavantajı nedir?",
+      "question": "44. Sözlü (Kavramsal) modellerin en büyük dezavantajı nedir?",
       "options": [
         "A) Kurulum maliyetlerinin çok yüksek olması.",
         "B) Görsel algılamanın zor olması.",
@@ -488,7 +488,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "45. Soru: Karar Ağaçları hangi tip analizler için özellikle yararlıdır?",
+      "question": "45. Karar Ağaçları hangi tip analizler için özellikle yararlıdır?",
       "options": [
         "A) Sadece geçmiş satış verilerinin görselleştirilmesi",
         "B) Bir projedeki her göreve ne kadar zaman harcandığının izlenmesi",
@@ -499,7 +499,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "46. Soru Aşağıdakilerden hangisi matematiksel modellere örnek teşkil eder?",
+      "question": "46. Aşağıdakilerden hangisi matematiksel modellere örnek teşkil eder?",
       "options": [
         "A) Bir sistemin formülle ifade edilmesi",
         "B) İş akışının grafikle gösterilmesi",
@@ -510,7 +510,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "47.Soru Sistem modellemede kullanılan “simülasyon” tekniği neyi amaçlar?",
+      "question": "47. Sistem modellemede kullanılan “simülasyon” tekniği neyi amaçlar?",
       "options": [
         "A) Sistemin gerçeğe uygun şekilde taklit edilmesini",
         "B) Sistemin sadece grafikle gösterilmesini",
@@ -521,7 +521,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "48. Soru Bir işletmedeki sipariş sürecinin adımlarını kutular ve oklarla gösteren diyagram hangi model türüne örnektir?",
+      "question": "48. Bir işletmedeki sipariş sürecinin adımlarını kutular ve oklarla gösteren diyagram hangi model türüne örnektir?",
       "options": [
         "A) Süreç Akış Şeması",
         "B) Karar Ağacı",
@@ -532,7 +532,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "49.Soru Şematik modellerin en önemli avantajı aşağıdakilerden hangisidir?",
+      "question": "49. Şematik modellerin en önemli avantajı aşağıdakilerden hangisidir?",
       "options": [
         "A) Karmaşık sistemleri sadeleştirerek görsel olarak anlatmaları",
         "B) Matematiksel hesaplamaları kolaylaştırmaları",
@@ -543,7 +543,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "50.Soru Veri akış diyagramlarında (VAD) kullanılan “ok” sembolü neyi ifade eder?",
+      "question": "50. Veri akış diyagramlarında (VAD) kullanılan “ok” sembolü neyi ifade eder?",
       "options": [
         "A) İşlem",
         "B) Veri akışı",
@@ -735,7 +735,7 @@
         "A) Yazılım kodlarını düzenlemek",
         "B) Veri tabanı yapısını tanımlamak",
         "C) Güçlü ve zayıf yönleri analiz etmektir",
-        "D) Kullanıcı arayüzü tasarlamak"
+        "D) Kullanıcı arayüzü tasaramak"
       ],
       "correctAnswer": "C) Güçlü ve zayıf yönleri analiz etmektir"
     },
@@ -1105,13 +1105,23 @@
     {
       "type": "multiple-choice",
       "question": "101. Aşağıdakilerden hangisi akış şemasında kullanılan temel sembollerden biridir?",
-      "options": ["A) Süre", "B) İşlem", "C) Fonksiyon", "D) İş akışı"],
+      "options": [
+        "A) Süre",
+        "B) İşlem",
+        "C) Fonksiyon",
+        "D) İş akışı"
+      ],
       "correctAnswer": "B) İşlem"
     },
     {
       "type": "multiple-choice",
       "question": "102. Veri Akış Diyagramlarında (VAD) süreçleri temsil eden sembol aşağıdakilerden hangisidir?",
-      "options": ["A) Kare", "B) Daire/oval", "C) Üçgen", "D) Ok"],
+      "options": [
+        "A) Kare",
+        "B) Daire/oval",
+        "C) Üçgen",
+        "D) Ok"
+      ],
       "correctAnswer": "B) Daire/oval"
     },
     {
@@ -1156,12 +1166,17 @@
         "C) Somut veri depoları",
         "D) Süreçlerin fiziksel karşılıkları"
       ],
-      "correctAnswer": "A) Kullanıcılar"
+      "correctAnswer": "B) Gerçek donanım"
     },
     {
       "type": "multiple-choice",
       "question": "107. Yapısal şemalarda kullanılan temel yapı hangisidir?",
-      "options": ["A) Dallanma", "B) Döngü", "C) Sıralı yapı", "D) Hepsi"],
+      "options": [
+        "A) Dallanma",
+        "B) Döngü",
+        "C) Sıralı yapı",
+        "D) Hepsi"
+      ],
       "correctAnswer": "D) Hepsi"
     },
     {
@@ -1178,7 +1193,12 @@
     {
       "type": "multiple-choice",
       "question": "109. Aşağıdakilerden hangisi yapısal dilde kullanılan ifadelerden biridir?",
-      "options": ["A) Eğer–ise", "B) Amaç–sonuç", "C) Kaynak–hedef", "D) Sistem–alt sistem"],
+      "options": [
+        "A) Eğer–ise",
+        "B) Amaç–sonuç",
+        "C) Kaynak–hedef",
+        "D) Sistem–alt sistem"
+      ],
       "correctAnswer": "A) Eğer–ise"
     },
     {
@@ -1195,13 +1215,23 @@
     {
       "type": "multiple-choice",
       "question": "111. Karar tablolarında “şartlar” neyi ifade eder?",
-      "options": ["A) Eylemleri", "B) Çıktıları", "C) Koşulları", "D) Süreç akışını"],
+      "options": [
+        "A) Eylemleri",
+        "B) Çıktıları",
+        "C) Koşulları",
+        "D) Süreç akışını"
+      ],
       "correctAnswer": "C) Koşulları"
     },
     {
       "type": "multiple-choice",
       "question": "112. Aşağıdakilerden hangisi karar tablosunun bölümlerinden biri değildir?",
-      "options": ["A) Şartlar", "B) Eylemler", "C) Karar ağacı", "D) Kural sütunları"],
+      "options": [
+        "A) Şartlar",
+        "B) Eylemler",
+        "C) Karar ağacı",
+        "D) Kural sütunları"
+      ],
       "correctAnswer": "C) Karar ağacı"
     },
     {
@@ -1218,13 +1248,23 @@
     {
       "type": "multiple-choice",
       "question": "114. Karar ağaçlarında dallar neyi ifade eder?",
-      "options": ["A) Karar noktalarını", "B) Olasılıkları", "C) Alternatif sonuçları", "D) Eylem maliyetlerini"],
-      "correctAnswer": "B) Olasılıkları"
+      "options": [
+        "A) Karar noktalarını",
+        "B) Olasılıkları",
+        "C) Alternatif sonuçları",
+        "D) Eylem maliyetlerini"
+      ],
+      "correctAnswer": "C) Alternatif sonuçları"
     },
     {
       "type": "multiple-choice",
       "question": "115. Aşağıdakilerden hangisi karar ağacının kullanım alanıdır?",
-      "options": ["A) Matematik modelleme", "B) Senaryo analizi", "C) Donanım tasarımı", "D) Veri depolama"],
+      "options": [
+        "A) Matematik modelleme",
+        "B) Senaryo analizi",
+        "C) Donanım tasarımı",
+        "D) Veri depolama"
+      ],
       "correctAnswer": "B) Senaryo analizi"
     },
     {
@@ -1252,7 +1292,12 @@
     {
       "type": "multiple-choice",
       "question": "118. HIPO hiyerarşi diyagramı hangi bilgiyi gösterir?",
-      "options": ["A) Veri akışlarını", "B) Program modüllerinin hiyerarşisini", "C) Fiziksel yapıyı", "D) Donanım bağlantılarını"],
+      "options": [
+        "A) Veri akışlarını",
+        "B) Program modüllerinin hiyerarşisini",
+        "C) Fiziksel yapıyı",
+        "D) Donanım bağlantılarını"
+      ],
       "correctAnswer": "B) Program modüllerinin hiyerarşisini"
     },
     {
@@ -1269,192 +1314,507 @@
     {
       "type": "multiple-choice",
       "question": "120. VAD sembollerinden “kare” neyi temsil eder?",
-      "options": ["A) Süreç", "B) Kaynak veya hedef dış varlık", "C) Veri deposu", "D) Donanım"],
+      "options": [
+        "A) Süreç",
+        "B) Kaynak veya hedef dış varlık",
+        "C) Veri deposu",
+        "D) Donanım"
+      ],
       "correctAnswer": "B) Kaynak veya hedef dış varlık"
     },
     {
       "type": "multiple-choice",
       "question": "121. Akış şemalarında “karar sembolü” hangi şekildir?",
-      "options": ["A) Daire", "B) Kare", "C) Üçgen", "D) Baklava (lojik karar sembolü)"],
+      "options": [
+        "A) Daire",
+        "B) Kare",
+        "C) Üçgen",
+        "D) Baklava (lojik karar sembolü)"
+      ],
       "correctAnswer": "D) Baklava (lojik karar sembolü)"
     },
     {
       "type": "multiple-choice",
       "question": "122. Süreç akış şemalarında kullanılan “ok” sembolü ne anlama gelir?",
-      "options": ["A) Başlangıç", "B) Süreç", "C) Akış yönü", "D) Karar"],
+      "options": [
+        "A) Başlangıç",
+        "B) Süreç",
+        "C) Akış yönü",
+        "D) Karar"
+      ],
       "correctAnswer": "C) Akış yönü"
     },
     {
       "type": "multiple-choice",
       "question": "123. Veri Akış Diyagramlarında “çift çizgi” şeklindeki sembol neyi ifade eder?",
-      "options": ["A) Veri deposu", "B) Dış bağlantı", "C) Süreç", "D) Karar noktası"],
+      "options": [
+        "A) Veri deposu",
+        "B) Dış bağlantı",
+        "C) Süreç",
+        "D) Karar noktası"
+      ],
       "correctAnswer": "A) Veri deposu"
     },
     {
       "type": "multiple-choice",
       "question": "124. Yapısal şemalar hangi yaklaşımın temelini oluşturur?",
-      "options": ["A) Yapısal programlama", "B) Makine öğrenmesi", "C) Veri madenciliği", "D) Donanım tasarımı"],
+      "options": [
+        "A) Yapısal programlama",
+        "B) Makine öğrenmesi",
+        "C) Veri madenciliği",
+        "D) Donanım tasarımı"
+      ],
       "correctAnswer": "A) Yapısal programlama"
     },
     {
       "type": "multiple-choice",
-      "question": "125. Aşağıdakilerden hangisi bu bölümde anlatılan araçlardan biri değildir?",
-      "options": ["A) Karar tabloları", "B) VAD", "C) Yapısal Dil", "D) Normalizasyon adımları"],
+      "question": "125. Aşağıdakilerden hangisi 6. bölümde anlatılan araçlardan biri değildir?",
+      "options": [
+        "A) Karar tabloları",
+        "B) VAD",
+        "C) Yapısal Dil",
+        "D) Normalizasyon adımları"
+      ],
       "correctAnswer": "D) Normalizasyon adımları"
     },
     {
       "type": "multiple-choice",
-      "question": "126. Veri hiyerarşisindeki en küçük birim hangisidir?",
-      "options": ["A) Bit", "B) Byte", "C) Karakter", "D) Alan"],
+      "question": "126. Bilgisayara Dayalı Bilgi Sistemleri’nin temel amacı nedir?",
+      "options": [
+        "A) Sadece eğlence sağlar",
+        "B) Bilgi toplamak, işlemek ve yönetime sunmak",
+        "C) Yalnızca veri saklamak",
+        "D) İnternetsiz çalışma sunmak"
+      ],
+      "correctAnswer": "B) Bilgi toplamak, işlemek ve yönetime sunmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "127. Aşağıdakilerden hangisi temel bilgi sistemi türlerinden biridir?",
+      "options": [
+        "A) Finans Sistemi",
+        "B) Lojistik Sistemi",
+        "C) YBS (Yönetim Bilgi Sistemleri)",
+        "D) Proje Yönetim Sistemi"
+      ],
+      "correctAnswer": "C) YBS (Yönetim Bilgi Sistemleri)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "128. VİS (Veri İşleme Sistemi) hangi amacı taşır?",
+      "options": [
+        "A) Stratejik plan yapmak",
+        "B) Günlük operasyonel işlemleri kaydetmek",
+        "C) Üretim planlaması yapmak",
+        "D) Reklam kampanyası oluşturmak"
+      ],
+      "correctAnswer": "B) Günlük operasyonel işlemleri kaydetmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "129. Doğrudan (Hemen) İşleme yöntemi hangi sistemde kullanılır?",
+      "options": [
+        "A) Depo sayımı",
+        "B) Banka işlemleri ve rezervasyon sistemleri",
+        "C) Stok raporu hazırlama",
+        "D) Faks gönderme"
+      ],
+      "correctAnswer": "B) Banka işlemleri ve rezervasyon sistemleri"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "130. Parti İşleme hangi duruma örnektir?",
+      "options": [
+        "A) ATM’den para çekmek",
+        "B) Online bilet almak",
+        "C) Posta işlemlerinin gün sonunda toplu işlenmesi",
+        "D) İnternetten canlı ders izlemek"
+      ],
+      "correctAnswer": "C) Posta işlemlerinin gün sonunda toplu işlenmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "131. YBS (Yönetim Bilgi Sistemleri) için aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        "A) Tek yöneticiyi destekler",
+        "B) Sadece bir departmanda kullanılır",
+        "C) Bütünleşik veritabanı kullanır",
+        "D) Veri saklamaz"
+      ],
+      "correctAnswer": "C) Bütünleşik veritabanı kullanır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "132. YBS (Yönetim Bilgi Sistemleri) hangi avantajı sunar?",
+      "options": [
+        "A) Manuel hesaplama",
+        "B) Otomatik karar alma",
+        "C) Yetkili kullanıcı erişim güvenliği",
+        "D) Veri saklamama"
+      ],
+      "correctAnswer": "C) Yetkili kullanıcı erişim güvenliği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "133. “Fonksiyonel alanları bütünleştirir” ifadesi hangi sisteme aittir?",
+      "options": [
+        "A) Pazarlama sistemi",
+        "B) YBS (Yönetim Bilgi Sistemleri)",
+        "C) Bordro sistemi",
+        "D) Faks sistemi"
+      ],
+      "correctAnswer": "B) YBS (Yönetim Bilgi Sistemleri)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "134. KDS (Karar Destek Sistemi) hangi işlevi sağlar?",
+      "options": [
+        "A) Tam otomatik karar alma",
+        "B) Alternatifleri belirleme ve değerlendirme",
+        "C) Yalnızca kayıt saklama",
+        "D) Ücret bordrosu hazırlama"
+      ],
+      "correctAnswer": "B) Alternatifleri belirleme ve değerlendirme"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "135. Aşağıdakilerden hangisi OOS (Ofis Otomasyon Sistemleri) örneğidir?",
+      "options": [
+        "A) Finansal analiz",
+        "B) Elektronik posta ve takvim",
+        "C) Veri madenciliği",
+        "D) Robotik üretim hattı"
+      ],
+      "correctAnswer": "B) Elektronik posta ve takvim"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "136. Yapay zekânın (YZ) temel amacı nedir?",
+      "options": [
+        "A) Grafik üretmek",
+        "B) İnsan zekâsını taklit etmek",
+        "C) Veritabanı oluşturmak",
+        "D) Sadece matematiksel işlem yapmak"
+      ],
+      "correctAnswer": "B) İnsan zekâsını taklit etmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "137. Uzman Sistemler (US) nasıl çalışır?",
+      "options": [
+        "A) Rastgele seçim yapar",
+        "B) IF–THEN kurallarına göre çalışır",
+        "C) Sadece sesle kontrol edilir",
+        "D) Görüntü işleme yapar"
+      ],
+      "correctAnswer": "B) IF–THEN kurallarına göre çalışır"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "138. Doğal Dil İşleme (NLP – Natural Language Processing) neyi sağlar?",
+      "options": [
+        "A) Bilgisayarın insan dilini anlamasını",
+        "B) Fotoğraf filtreleme",
+        "C) Donanım hızlandırma",
+        "D) İnternet hızını artırma"
+      ],
+      "correctAnswer": "A) Bilgisayarın insan dilini anlamasını"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "139. Robotik sistemler otomotiv sektöründe neden yaygındır?",
+      "options": [
+        "A) Çok maliyetli olduğu için",
+        "B) Yüksek hassasiyet ve verimlilik sağladığı için",
+        "C) İnsan gücü gerektirmediği için",
+        "D) Sadece depolama için kullanıldığı için"
+      ],
+      "correctAnswer": "B) Yüksek hassasiyet ve verimlilik sağladığı için"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "140. ÜDS (Üst Yönetim Destek Sistemleri) hangi amaç için kullanılır?",
+      "options": [
+        "A) Ofis çalışanlarını izlemek",
+        "B) Stratejik karar vermeyi desteklemek",
+        "C) Günlük veri girişi yapmak",
+        "D) Depo stoklarını hesaplamak"
+      ],
+      "correctAnswer": "B) Stratejik karar vermeyi desteklemek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "141. ÜDS (Üst Yönetim Destek Sistemleri) dış veri toplama aşamasına aşağıdakilerden hangisi girer?",
+      "options": [
+        "A) Personel giriş-çıkış saatleri",
+        "B) Depo stok seviyeleri",
+        "C) Rakip firma bilgileri, yasa değişiklikleri",
+        "D) E-posta kayıtları"
+      ],
+      "correctAnswer": "C) Rakip firma bilgileri, yasa değişiklikleri"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "142. ÜDS (Üst Yönetim Destek Sistemleri) iç veri entegrasyonunda hangi kaynaklar kullanılır?",
+      "options": [
+        "A) YBS (Yönetim Bilgi Sistemleri) ve KDS (Karar Destek Sistemi)",
+        "B) Yalnızca satış raporları",
+        "C) İnternet geçmişi",
+        "D) Kamera kayıtları"
+      ],
+      "correctAnswer": "A) YBS (Yönetim Bilgi Sistemleri) ve KDS (Karar Destek Sistemi)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "143. Aşağıdakilerden hangisi YBS (Yönetim Bilgi Sistemleri) örneğidir?",
+      "options": [
+        "A) Bordro programı",
+        "B) Muhasebe verilerini tek merkezde analiz eden sistem",
+        "C) Kelime işlemci",
+        "D) ZIP arşiv programı"
+      ],
+      "correctAnswer": "B) Muhasebe verilerini tek merkezde analiz eden sistem"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "144. KDS (Karar Destek Sistemi) hangi tür kararlar için uygundur?",
+      "options": [
+        "A) Tamamen rutin kararlar",
+        "B) Veri gerektirmeyen kararlar",
+        "C) Yarı-yapısal ve yapısal olmayan kararlar",
+        "D) Şansa dayalı kararlar"
+      ],
+      "correctAnswer": "C) Yarı-yapısal ve yapısal olmayan kararlar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "145. OOS (Ofis Otomasyon Sistemleri) temel amacı nedir?",
+      "options": [
+        "A) Ücret hesaplama",
+        "B) Ofis verimliliğini artırmak",
+        "C) Üretim kontrolü yapmak",
+        "D) Stratejik planlama yapmak"
+      ],
+      "correctAnswer": "B) Ofis verimliliğini artırmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "146. Veri hiyerarşisindeki en küçük (mantıksal) birim hangisidir?",
+      "options": [
+        "A) Veritabanı",
+        "B) Dosya",
+        "C) Kayıt",
+        "D) Alan"
+      ],
       "correctAnswer": "D) Alan"
     },
     {
       "type": "multiple-choice",
-      "question": "127. Geleneksel dosya sistemlerinde en sık görülen sorun hangisidir?",
-      "options": ["A) Veri hızı", "B) Veri tekrarı", "C) Veri güvenliği", "D) Veri boyutu"],
+      "question": "147. Geleneksel dosya sistemlerinde en sık görülen ve veri bütünlüğünü bozan sorun hangisidir?",
+      "options": [
+        "A) Veri güvenliği",
+        "B) Veri tekrarı",
+        "C) Veri hızı",
+        "D) Veri hacmi"
+      ],
       "correctAnswer": "B) Veri tekrarı"
     },
     {
       "type": "multiple-choice",
-      "question": "128. Veri sözlüğünde bulunması zorunlu olmayan bilgi hangisidir?",
-      "options": ["A) Alan adı", "B) Veri tipi", "C) Kullanıcı parolaları", "D) Alan uzunluğu"],
+      "question": "148. Veri sözlüğünde (Data Dictionary) bulunması zorunlu olmayan bilgi hangisidir?",
+      "options": [
+        "A) Alan isimleri",
+        "B) Veri tipleri",
+        "C) Kullanıcı parolaları",
+        "D) Alan uzunlukları"
+      ],
       "correctAnswer": "C) Kullanıcı parolaları"
     },
     {
       "type": "multiple-choice",
-      "question": "129. Hiyerarşik modelin temel yapısı hangisidir?",
-      "options": ["A) Graf", "B) Ağaç", "C) Tablo", "D) Liste"],
+      "question": "149. Hiyerarşik modelin (Hierarchical Model) temel aldığı yapı hangisidir?",
+      "options": [
+        "A) Matris",
+        "B) Ağaç",
+        "C) İlişkisel tablo",
+        "D) Küme"
+      ],
       "correctAnswer": "B) Ağaç"
     },
     {
       "type": "multiple-choice",
-      "question": "130. Bir varlığın birden fazla ebeveyne sahip olmasına izin veren model hangisidir?",
-      "options": ["A) Hiyerarşik", "B) İlişkisel", "C) Ağ", "D) Nesne tabanlı"],
+      "question": "150. Bir varlığın birden fazla ebeveyne (parent) sahip olmasına izin veren veritabanı modeli hangisidir?",
+      "options": [
+        "A) Hiyerarşik",
+        "B) Nesne tabanlı",
+        "C) Ağ",
+        "D) İlişkisel"
+      ],
       "correctAnswer": "C) Ağ"
     },
     {
       "type": "multiple-choice",
-      "question": "131. Birincil anahtar (Primary Key) için doğru ifade hangisidir?",
+      "question": "151. Birincil anahtar (Primary Key) için en doğru ifade hangisidir?",
       "options": [
-        "A) Null değer alabilir",
-        "B) Rastgele atanmalıdır",
+        "A) Tablodaki tüm verileri toplar",
+        "B) Sadece sayısal değerler alır",
         "C) Her satırı benzersiz tanımlar",
-        "D) Her tabloda en az iki tane olmalıdır"
+        "D) Veri tekrarına izin verir"
       ],
       "correctAnswer": "C) Her satırı benzersiz tanımlar"
     },
     {
       "type": "multiple-choice",
-      "question": "132. VTYS’de verinin fiziksel saklanmasından sorumlu bileşen hangisidir?",
-      "options": ["A) Sorgu İşlemcisi", "B) Şema Yöneticisi", "C) Depolama yöneticisi", "D) Yetkilendirme Birimi"],
+      "question": "152. VTYS’de verinin fiziksel saklanmasından sorumlu bileşen hangisidir?",
+      "options": [
+        "A) Sorgu işlemcisi",
+        "B) Veri sözlüğü",
+        "C) Depolama yöneticisi",
+        "D) Uygulama arayüzü"
+      ],
       "correctAnswer": "C) Depolama yöneticisi"
     },
     {
       "type": "multiple-choice",
-      "question": "133. Veri bağımsızlığı neyi ifade eder?",
+      "question": "153. Veritabanı yönetiminde 'Veri Bağımsızlığı' neyi ifade eder?",
       "options": [
-        "A) Verinin kimseden izin almadan silinebilmesi",
+        "A) Verinin kimseden izin almadan kullanılması",
         "B) Verinin fiziksel yapısının programlardan bağımsız olması",
-        "C) Verinin her kullanıcı için farklı olması",
-        "D) Verinin sadece internette saklanması"
+        "C) Verinin her kullanıcıya açık olması",
+        "D) Veritabanının internetten bağımsız çalışması"
       ],
       "correctAnswer": "B) Verinin fiziksel yapısının programlardan bağımsız olması"
     },
     {
       "type": "multiple-choice",
-      "question": "134. ER diyagramında kardinaliteyi gösteren yapı hangisidir?",
-      "options": ["A) Dikdörtgen sembolü", "B) İlişki çizgisi", "C) Crow’s foot notasyonu", "D) Elips sembolü"],
+      "question": "154. ER diyagramında kardinaliteyi gösteren yapı hangisidir?",
+      "options": [
+        "A) UML notasyonu",
+        "B) Akış şeması notasyonu",
+        "C) Crow’s foot notasyonu",
+        "D) Blok diyagramı"
+      ],
       "correctAnswer": "C) Crow’s foot notasyonu"
     },
     {
       "type": "multiple-choice",
-      "question": "135. Zayıf varlık hangi durumda kullanılır?",
+      "question": "155. Bir varlık ancak başka bir varlığın varlığına bağlı olarak anlam kazanıyorsa buna ne ad verilir?",
       "options": [
-        "A) Veri boyutu çok küçük olduğunda",
-        "B) Başka bir varlığa bağımlı olduğunda",
-        "C) İçinde hiç alan bulunmadığında",
-        "D) Sadece sayısal veriler içerdiğinde"
+        "A) Güçlü varlık",
+        "B) Zayıf varlık",
+        "C) İlişkisel varlık",
+        "D) Soyut varlık"
       ],
       "correctAnswer": "B) Başka bir varlığa bağımlı olduğunda"
     },
     {
       "type": "multiple-choice",
-      "question": "136. 1NF’i bozan durum hangisidir?",
-      "options": ["A) Tekrarlanan anahtarlar", "B) Çoklu değerli alanlar", "C) Boş bırakılan alanlar", "D) Sayısal olmayan alanlar"],
+      "question": "156. 1. Normal Form (1NF) kuralını bozan durum hangisidir?",
+      "options": [
+        "A) Boş alanlar",
+        "B) Çoklu değerli alanlar",
+        "C) Yanlış birincil anahtar",
+        "D) Yetersiz veri hacmi"
+      ],
       "correctAnswer": "B) Çoklu değerli alanlar"
     },
     {
       "type": "multiple-choice",
-      "question": "137. 2NF’e aykırı durum hangisidir?",
-      "options": ["A) Kısmi bağımlılık", "B) Tam bağımlılık", "C) Geçişli bağımlılık", "D) Hiçbiri"],
+      "question": "157. 2. Normal Form (2NF) kurallarına aykırı olan durum hangisidir?",
+      "options": [
+        "A) Kısmi bağımlılık",
+        "B) Geçişli bağımlılık",
+        "C) Tam bağımlılık",
+        "D) Fonksiyonel bağımlılık"
+      ],
       "correctAnswer": "A) Kısmi bağımlılık"
     },
     {
       "type": "multiple-choice",
-      "question": "138. BCNF’in 3NF’ten farkı nedir?",
+      "question": "158. BCNF’in 3NF’ten farkı nedir?",
       "options": [
         "A) Her belirleyici bir aday anahtar olmalıdır",
-        "B) Sadece metin alanlarını kapsar",
-        "C) 1NF'ten önce uygulanmalıdır",
-        "D) En az 5 tablo gerektirir"
+        "B) Daha fazla tablo birleştirmesi gerektirir",
+        "C) Sadece sayısal alanlara uygulanır",
+        "D) Birincil anahtar kullanımını yasaklar"
       ],
       "correctAnswer": "A) Her belirleyici bir aday anahtar olmalıdır"
     },
     {
       "type": "multiple-choice",
-      "question": "139. 4NF hangi bağımlılığı ortadan kaldırır?",
-      "options": ["A) Kısmi bağımlılık", "B) Çok değerli bağımlılık", "C) Geçişli bağımlılık", "D) Fonksiyonel bağımlılık"],
+      "question": "159. 4. Normal Form (4NF) hangi bağımlılığı ortadan kaldırır?",
+      "options": [
+        "A) Kısmi bağımlılık",
+        "B) Çok değerli bağımlılık",
+        "C) Matematiksel bağımlılık",
+        "D) Zamansal bağımlılık"
+      ],
       "correctAnswer": "B) Çok değerli bağımlılık"
     },
     {
       "type": "multiple-choice",
-      "question": "140. 5NF’in amacı nedir?",
+      "question": "160. 5. Normal Form’un (5NF) amacı nedir?",
       "options": [
         "A) Birleştirme bağımlılıklarını ortadan kaldırmak",
-        "B) Tablo sayısını azaltmak",
-        "C) Veriyi şifrelemek",
-        "D) Sorgu hızını artırmak"
+        "B) Veri giriş hızını artırmak",
+        "C) Tablo sayısını azaltmak",
+        "D) Sadece metin verilerini düzenlemek"
       ],
       "correctAnswer": "A) Birleştirme bağımlılıklarını ortadan kaldırmak"
     },
     {
       "type": "multiple-choice",
-      "question": "141. Veri sözlüğünün içermesi gereken bilgi hangisidir?",
-      "options": ["A) Şirket bilançosu", "B) Alan açıklamaları", "C) Kullanıcı ekran ayarları", "D) Donanım özellikleri"],
+      "question": "161. Veri sözlüğünün içermesi gereken bilgi hangisidir?",
+      "options": [
+        "A) Şirket vizyonu",
+        "B) Alan açıklamaları",
+        "C) Personel maaş listesi",
+        "D) Elektrik tüketim verileri"
+      ],
       "correctAnswer": "B) Alan açıklamaları"
     },
     {
       "type": "multiple-choice",
-      "question": "142. Sorgu işlemcisinin görevi nedir?",
+      "question": "162. Sorgu işlemcisinin görevi nedir?",
       "options": [
         "A) Veriyi yedeklemek",
         "B) Kullanıcı sorgularını optimize etmek",
-        "C) Yeni donanım tanımlamak",
-        "D) Kullanıcı arayüzü tasarlamak"
+        "C) Yeni donanım yüklemek",
+        "D) Raporları yazdırmak"
       ],
       "correctAnswer": "B) Kullanıcı sorgularını optimize etmek"
     },
     {
       "type": "multiple-choice",
-      "question": "143. Depolama yöneticisinin görevi hangisidir?",
+      "question": "163. Depolama yöneticisinin görevi hangisidir?",
       "options": [
-        "A) Program kodu yazmak",
+        "A) Kullanıcı şifresi belirlemek",
         "B) Diske veri yazma–okuma işlemlerini yönetmek",
-        "C) Veri girişini kısıtlamak",
-        "D) Rapor tasarımı yapmak"
+        "C) Grafik çizmek",
+        "D) İnternet bağlantısını kontrol etmek"
       ],
       "correctAnswer": "B) Diske veri yazma–okuma işlemlerini yönetmek"
     },
     {
       "type": "multiple-choice",
-      "question": "144. Yalnızca son yedekten sonraki değişiklikleri kaydeden yedek türü hangisidir?",
-      "options": ["A) Tam yedek", "B) Artımlı yedek", "C) Fark yedeği", "D) Aynalama"],
+      "question": "164. Yalnızca son yedekten sonraki değişiklikleri kaydeden yedek türü hangisidir?",
+      "options": [
+        "A) Tam yedek",
+        "B) Artımlı yedek",
+        "C) Rastgele yedek",
+        "D) Manuel yedek"
+      ],
       "correctAnswer": "B) Artımlı yedek"
     },
     {
       "type": "multiple-choice",
-      "question": "145. Tablo satırının benzersizliğini garanti eden kısıt hangisidir?",
-      "options": ["A) NOT NULL", "B) DEFAULT", "C) UNIQUE", "D) CHECK"],
+      "question": "165. Tablo satırının benzersizliğini garanti eden kısıt hangisidir?",
+      "options": [
+        "A) CHECK",
+        "B) DEFAULT",
+        "C) UNIQUE",
+        "D) NOT NULL"
+      ],
       "correctAnswer": "C) UNIQUE"
     }
   ]

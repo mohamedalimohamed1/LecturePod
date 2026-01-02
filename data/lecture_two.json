@@ -5,7 +5,7 @@
     {
       "type": "short-answer",
       "question": "Örüntü tanıma nedir?",
-      "correctAnswer": "Verilerdeki örüntülerin ve düzenliliklerin otomatik olarak tanınmasıdır. Daha modern bir tanımıyla, bilgisayar algoritmalarını kullanarak verilerdeki düzenliliklerin otomatik olarak keşfedilmesi ve bu düzenliliklerin, verilerin farklı kategorilere sınıflandırılması gibi eylemler için kullanılması ile ilgili bir alandır."
+      "correctAnswer": "Örüntü tanıma, verilerdeki örüntülerin ve düzenliliklerin otomatik olarak tanınmasıdır. Daha modern bir tanımıyla, bilgisayar algoritmalarını kullanarak verilerdeki düzenliliklerin otomatik olarak keşfedilmesi ve bu düzenliliklerin, verilerin farklı kategorilere sınıflandırılması gibi eylemler için kullanılması ile ilgili bir alandır."
     },
     {
       "type": "short-answer",
@@ -15,22 +15,27 @@
     {
       "type": "short-answer",
       "question": "Örüntü tanıma sistemleri nasıl eğitilir?",
-      "correctAnswer": "Çoğunlukla etiketli \"eğitim\" verilerinden faydalanır (denetimli öğrenme), ancak etiketli veri olmadığında, daha önce bilinmeyen modelleri keşfetmek için başka algoritmalar da (denetimsiz öğrenme) kullanmaktadır."
+      "correctAnswer": "Örüntü tanıma sistemleri çoğunlukla etiketli \"eğitim\" verilerinden faydalanır (denetimli öğrenme), ancak etiketli veri olmadığında, daha önce bilinmeyen modelleri keşfetmek için başka algoritmalar da (denetimsiz öğrenme) kullanmaktadır."
     },
     {
       "type": "short-answer",
       "question": "Denetimli öğrenme (supervised learning) nedir?",
-      "correctAnswer": "Bir girdiyi örnek girdi-çıktı çiftlerine dayalı olarak çıktıyla eşleyen bir makine öğrenme yöntemidir."
+      "correctAnswer": "Denetimli öğrenme, bir girdiyi örnek girdi-çıktı çiftlerine dayalı olarak çıktıyla eşleyen bir makine öğrenme yöntemidir."
     },
     {
       "type": "short-answer",
       "question": "Denetimsiz öğrenme (unsupervised learning) nedir?",
-      "correctAnswer": "Önceden belirlenmiş etiketler olmadan veri kümesinde önceden bilinmeyen kalıpları bulmaya yardımcı olan kendi kendine organize edilen bir öğrenim türüdür. Bu yöntem kendi kendini örgütleme olarak da bilinir."
+      "correctAnswer": "Denetimsiz öğrenme, önceden belirlenmiş etiketler olmadan veri kümesinde önceden bilinmeyen kalıpları bulmaya yardımcı olan kendi kendine organize edilen bir öğrenim türüdür. Bu yöntem kendi kendini örgütleme olarak da bilinir."
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma uygulamalarına genel örnekler nelerdir?",
-      "correctAnswer": "Yüz tanıma, karakter tanıma, parmak izi tanıma, harita tanımlama ve canlı türleri tanıma gibi uygulamalar örnek gösterilebilir."
+      "question": "Örüntü tanıma uygulamalarına ne gibi örnekler verilebilir?",
+      "correctAnswer": "Yüz tanıma , karakter tanıma , parmak izi tanıma , harita tanımlama ve canlı türleri tanıma gibi uygulamalar örnek gösterilebilir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Örüntü tanıma hangi alanlarda uygulanmaktadır?",
+      "correctAnswer": "Örüntü tanıma; savunma sanayi , tıp bilimi , trafikte plaka tanıma , konuşma tanıma teknolojileri , metalürjide sert metallerin otomatik derecelendirilmesi , jeolojide sismik hareketlerin incelenmesi ve deprem tahmini , el yazısı, parmak izi ve yüz tanıma , uydu resimlerinin yorumlanması , ses tanıma , EEG sınıflama , DTMF haberleşme işaretlerini tanıma, radar hedef sınıflama , biyomedikal kontrol ve veri madenciliği gibi alanlarda uygulanmaktadır."
     },
     {
       "type": "short-answer",
@@ -40,62 +45,97 @@
     {
       "type": "short-answer",
       "question": "Örüntü tanımanın temel aşamaları nelerdir?",
-      "correctAnswer": "Temel olarak üç aşamadan oluşur: 1. Algılayıcılar ve Ön İşlemler, 2. Özellik Çıkarma, 3. Sınıflandırma."
-    },
-    {
-      "type": "short-answer",
-      "question": "Örüntü tanımanın 'Özellik Çıkarma' aşamasını açıklayın.",
-      "correctAnswer": "İşaret ve görüntünün veri boyutunun indirgendiği, tanımlayıcı anahtar özelliklerinin tespit edildiği ve normalizasyona tabi tutulduğu aşamadır. Bu aşama, sistemin başarımında en etkili rolü oynar."
-    },
-    {
-      "type": "short-answer",
-      "question": "Örüntü tanımanın 'Sınıflandırma' aşamasını açıklayın.",
-      "correctAnswer": "Çıkarılan özellik kümesinin indirgendiği ve formüle edildiği tanımlayıcı karar aşamasıdır. Sınıflandırıcının rolü, örüntüyü özelliklerine göre kategorize ederek uygun sınıflara kaydetmektir."
+      "correctAnswer": "Örüntü tanıma temel olarak üç aşamadan oluşur:\n1.\tAlgılayıcılar ve Ön İşlemler: Örüntünün algılandığı, işaret veya görüntünün filtrelendiği, çeşitli dönüşüm ve gösterim teknikleri ile işlendiği, bileşenlerine ayrıldığı veya modellendiği kısımdır.\n2.\tÖzellik Çıkarma: İşaret ve görüntünün veri boyutunun indirgendiği, tanımlayıcı anahtar özelliklerinin tespit edildiği ve normalizasyona tabi tutulduğu aşamadır. Bu aşama, sistemin başarımında en etkili rolü oynar.\n3.\tSınıflandırma: Çıkarılan özellik kümesinin indirgendiği ve formüle edildiği tanımlayıcı karar aşamasıdır. Sınıflandırıcının rolü, örüntüyü özelliklerine göre kategorize ederek uygun sınıflara kaydetmektir."
     },
     {
       "type": "short-answer",
       "question": "İstatistiksel örüntü tanıma yaklaşımının temel prensibi nedir?",
-      "correctAnswer": "Bu yaklaşım Bayes Karar Teorisi üzerine kurulmuştur. Her örüntü bir özellik vektörü ile tanımlanır ve sınıflama, giriş veri uzayının olasılık yoğunluk fonksiyonlarının tahmini üzerine kurulu bir istatistiksel yapıdır."
+      "correctAnswer": "İstatistiksel örüntü tanıma yönteminde, sınıflama algoritmaları istatistiksel analiz üzerine kurulmuştur. Her örüntü bir özellik vektörü ile tanımlanır ve sınıflama, giriş veri uzayının olasılık yoğunluk fonksiyonlarının tahmini üzerine kurulu bir istatistiksel yapıdır. Bu yaklaşım Bayes Karar Teorisi üzerine olup, uzun bir geçmişe sahiptirler."
     },
     {
       "type": "short-answer",
       "question": "Yapısal örüntü tanıma nasıl çalışır?",
-      "correctAnswer": "Verilen bir örüntü, şekilsel yapıdan temel karakteristik tanımlanmaya indirgenir. Özelliklerin birbirine bağlanması veya aralarındaki karşılıklı ilişki (örn: köşe sayısı, kenar açıları) tanımlamayı ve sınıflandırmayı kolaylaştırır."
+      "correctAnswer": "Yapısal örüntü tanıma yaklaşımında, verilen bir örüntü, şekilsel yapıdan temel karakteristik tanımlanmaya indirgenir. Özelliklerin birbirine bağlanması veya aralarındaki karşılıklı ilişki, tanımlamayı ve sınıflandırmayı kolaylaştıran önemli yapısal bilgiye sahiptir. Örneğin, örüntünün köşe sayısı veya kenar açıları gibi özellikler kullanılır. Bu yöntemde çevre uzunluğu, alan ve ağırlık merkezi gibi genel özellikler kullanılır."
     },
     {
       "type": "short-answer",
       "question": "Akıllı örüntü tanıma sisteminin özellikleri nelerdir?",
-      "correctAnswer": "Öğrendiklerini tutabilecek bir hafızaya sahipse, çıkarım, genelleme ve belirli bir hata toleransı ile karar verebilme yeteneklerini içeriyorsa, bu sistem akıllı örüntü tanıma sistemi olarak değerlendirilir."
+      "correctAnswer": "Bir örüntü tanıma sistemi, öğrendiklerini tutabilecek bir hafızaya sahipse, çıkarım, genelleme ve belirli bir hata toleransı ile karar verebilme yeteneklerini içeriyorsa, bu sistem akıllı örüntü tanıma sistemi olarak değerlendirilir. Bu yaklaşımlar öğrenme tabanlı olup, karar aşamasında geçmiş tecrübelerinden sonuç üretirler."
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Tıp ve Biyomedikal alanlarda nasıl kullanılır?",
-      "correctAnswer": "Hastalık belirtilerini veri üzerinden tanımak için kullanılır. Örnekler: Kanser hücrelerinin görüntü analizi, EEG/ECG sinyali örüntü tanıma, genetik örüntü analizi, tıbbi görüntü segmentasyonu."
+      "question": "ÖRÜNTÜ TANIMA UYGULAMALARI Grup 1: Temel Teknolojiler (Dijital Dünya)",
+      "correctAnswer": "1. Yapay Zeka ve Makine Öğrenmesi\n•\tAmaç: Veriden otomatik bilgi çıkarımı, sınıflandırma, tahmin.\n•\tUygulamalar:\n\tGörüntü sınıflandırma (kedi, köpek tanıma)\n\tSesli asistanlar (Alexa, Siri)\n\tAnomali tespiti (veride olağandışı örüntüler)\n\tTavsiye sistemleri (Netflix, YouTube)\n2. Görüntü İşleme ve Bilgisayarla Görme\n•\tAmaç: Görsellerden anlamlı örüntüler çıkarmak.\n•\tUygulamalar:\n\tYüz tanıma sistemleri (Face ID)\n\tNesne tanıma (kamera tabanlı sistemlerde)\n\tPlaka tanıma (trafik sistemlerinde)\n\tTıbbi görüntü analizi (MR, röntgen taraması)\n\tUydu görüntüsü analizi (tarım, şehir planlama)\n3. Konuşma ve Ses Tanıma\n•\tAmaç: Ses sinyallerindeki örüntüleri tespit etmek.\n•\tUygulamalar:\n\tSesli komut sistemleri (Google Assistant)\n\tKonuşmacı tanıma\n\tOtomatik altyazı üretimi\n\tDuygu analizi (ses tonundan)\n\tMüzik türü veya nota tanıma\n4. Yazı ve El Yazısı Tanıma\n•\tAmaç: Yazı karakterlerini tanımlamak ve dijital ortama aktarmak.\n•\tUygulamalar:\n\tOCR (Optical Character Recognition)\n\tEl yazısı imza doğrulama\n\tBanka çeklerinin okunması\n\tTabletlerde el yazısı ile not alma\n5. Doğal Dil İşleme (NLP)\n•\tAmaç: Metin veya konuşmadaki dil örüntülerini analiz etmek.\n•\tUygulamalar:\n\tDuygu analizi (yorum, tweet)\n\tOtomatik metin sınıflandırma\n\tSpam e-posta tespiti\n\tDil çevirisi (Google Translate)"
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Finans ve Bankacılık alanlarında nasıl kullanılır?",
-      "correctAnswer": "Anormal işlemleri tespit etmek ve müşteri davranışlarını analiz etmek için kullanılır. Örnekler: Dolandırıcılık tespiti (fraud detection), kredi skorlama, piyasa örüntü analizi."
+      "question": "ÖRÜNTÜ TANIMA UYGULAMALARI Grup 2: Güvenlik ve İnsan Tanıma (Koruma)",
+      "correctAnswer": "6. Biyometrik Tanıma\n•\tAmaç: İnsanlara özgü biyolojik örüntüleri tanımak.\n•\tUygulamalar:\n\tParmak izi tanıma\n\tYüz, iris, retina tarama\n\tSes tanıma\n\tYürüyüş (gait) analizi\n7. Savunma ve Güvenlik\n•\tAmaç: Hedef tanıma, tehdit analizi, istihbarat desteği.\n•\tUygulamalar:\n\tRadar/sensör verisinden hedef tanıma\n\tAskerî uydu görüntü analizi\n\tSınır güvenliği yüz tanıma sistemleri\n\tSiber tehdit örüntüsü tespiti\n8. Adli Bilişim ve Suç Analizi\n•\tAmaç: Suç örüntülerini ve dijital kanıt ilişkilerini bulmak.\n•\tUygulamalar:\n\tDijital iz analizi\n\tSosyal ağ ilişkilerinden suç örgütü tespiti\n\tSuç yeri fotoğrafı örüntü eşleştirmesi\n9. Kriptoloji ve Siber Güvenlik\n•\tAmaç: Saldırı ve tehdit örüntülerini tespit etmek.\n•\tUygulamalar:\n\tAğ trafiği örüntüsü analizi (IDS sistemleri)\n\tZararlı yazılım tespiti\n\tŞifre çözme (örüntüsel kripto analiz)\n\tKimlik doğrulama sistemleri"
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Savunma ve Güvenlik alanlarında nasıl kullanılır?",
-      "correctAnswer": "Hedef tanıma, tehdit analizi ve istihbarat desteği için kullanılır. Örnekler: Radar/sensör verisinden hedef tanıma, askerî uydu görüntü analizi, siber tehdit örüntüsü tespiti."
+      "question": "ÖRÜNTÜ TANIMA UYGULAMALARI Grup 3: Büyük Sektörler (Endüstri)",
+      "correctAnswer": "10. Finans ve Bankacılık\n•\tAmaç: Anormal işlemleri tespit etmek, müşteri davranışlarını analiz etmek.\n•\tUygulamalar:\n\tDolandırıcılık tespiti (fraud detection)\n\tKredi skorlama\n\tPiyasa örüntü analizi (borsa hareketleri)\n\tMüşteri segmentasyonu\n11. Tıp ve Biyomedikal Alanlar\n•\tAmaç: Hastalık belirtilerini veri üzerinden tanımak.\n•\tUygulamalar:\n\tKanser hücrelerinin görüntü analizi\n\tEEG/ECG sinyali örüntü tanıma (kalp, beyin aktiviteleri)\n\tGenetik örüntü analizi\n\tTıbbi görüntü segmentasyonu\n12. Tarım ve Çevre Analizi\n•\tAmaç: Doğal kaynakların durumunu örüntüler üzerinden izlemek.\n•\tUygulamalar:\n\tBitki hastalık tanıma\n\tToprak nem örüntüsü takibi\n\tUydu görüntülerinden ürün tespiti\n\tİklim değişikliği izleme\n13. Endüstri 4.0 ve Üretim Sistemleri\n•\tAmaç: Süreçlerdeki hata ve kalite örüntülerini yakalamak.\n•\tUygulamalar:\n\tArıza tahmini (predictive maintenance)\n\tKalite kontrol (görüntü tabanlı)\n\tSensör verilerinden durum analizi\n14. Enerji ve Akıllı Şebekeler\n•\tAmaç: Enerji tüketim örüntülerini izlemek ve optimize etmek.\n•\tUygulamalar:\n\tAkıllı sayaç verisi analizi\n\tAnormal tüketim tespiti\n\tYenilenebilir enerji üretim tahmini"
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Görüntü İşleme ve Bilgisayarla Görme alanında nasıl kullanılır?",
-      "correctAnswer": "Görsellerden anlamlı örüntüler çıkarmak için kullanılır. Örnekler: Yüz tanıma sistemleri (Face ID), nesne tanıma, plaka tanıma, tıbbi görüntü analizi."
+      "question": "ÖRÜNTÜ TANIMA UYGULAMALARI Grup 4: Çevre ve Sistemler (Etkileşim)",
+      "correctAnswer": "15. Otonom Sistemler ve Robotik\n•\tAmaç: Çevreyi algılamak ve uygun tepki üretmek.\n•\tUygulamalar:\n\tOtonom araçlarda nesne tanıma (yaya, tabela)\n\tEndüstriyel robotlarda nesne algılama\n\tDroneların rota tanıma ve izleme sistemleri\n16. Veri Madenciliği ve Büyük Veri Analizi\n•\tAmaç: Büyük veri kümelerinde örüntüler keşfetmek.\n•\tUygulamalar:\n\tMüşteri davranış analizi\n\tSosyal medya örüntüleri\n\tSatış tahminleri\n\tAnomali tespiti\n17. Eğlence, Oyun ve Sanat\n•\tAmaç: Görsel, müzikal veya davranışsal örüntüleri analiz etmek.\n•\tUygulamalar:\n\tOyunlarda hareket veya yüz tanıma\n\tMüzik üretimi (örüntü tabanlı kompozisyon)\n\tSanat eserlerinin stil analizi\n18. Eğitim ve Öğrenme Analitiği\n•\tAmaç: Öğrenci davranışlarındaki örüntüleri belirlemek.\n•\tUygulamalar:\n\tÖğrenci performans tahmini\n\tKatılım analizi\n\tUyarlanabilir öğrenme sistemleri (kişiye özel içerik)"
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Otonom Sistemler ve Robotik alanında nasıl kullanılır?",
-      "correctAnswer": "Çevreyi algılamak ve uygun tepki üretmek için kullanılır. Örnekler: Otonom araçlarda nesne tanıma (yaya, tabela), endüstriyel robotlarda nesne algılama."
+      "question": "VERİ ÖN İŞLEME süreci ve Eşikleme (Thresholding) nedir?",
+      "correctAnswer": "VERİ ÖN İŞLEME: Algılayıcılar vasıtasıyla, bilgisayara sayısal olarak alınmış olan örüntüyü, daha basit bir şekle getirmek için bir dizi önişlem sürecinden geçirilir. Örneğin; alınan örüntü bir nesne görüntüsü ise; sırasıyla, görüntü eşikleme, kenar çıkarma gibi aşamalardan geçirilir.\nEşikleme (Thresholding)\n•\tAmacı: Eşikleme işleminin amacı, nesne örüntüsünün özelliklerini belirlemede kolaylık sağlamaktır.\n•\tYöntem: Görüntü, bu işlemle iki renkle ifade edilebilir bir biçime getirilir.\n•\tNasıl Çalışır:\n1.\tİlk olarak bir eşik değeri saptanır.\n2.\tBu eşik değerinden daha yüksek gri seviye değerine sahip piksellere \"1\" değeri atanır.\n3.\tEşik değerinden daha küçük değerlere sahip olan piksellere ise \"0\" değeri atanır.\n•\tSonuç: Görüntü bu şekilde daha basit bir biçime (siyah-beyaz) getirilmiş olur."
     },
     {
       "type": "short-answer",
-      "question": "Örüntü tanıma, Doğal Dil İşleme (NLP) alanında nasıl kullanılır?",
-      "correctAnswer": "Metin veya konuşmadaki dil örüntülerini analiz etmek için kullanılır. Örnekler: Duygu analizi (yorum, tweet), otomatik metin sınıflandırma, spam e-posta tespiti."
+      "question": "Kenar Çıkarma (Edge Detection) nedir?",
+      "correctAnswer": "•\tAmacı: Görüntünün içerdiği bilgiyi değerlendirip, gereksiz ve tanıma işlemlerinde zaman kaybettiren bilgiyi eleyerek yeterli düzeye indirgemektir.\n•\tÖnemi:\no\tGörüntü analizinde ve sınıflandırılmasında çok değerli bilgiler taşır.\no\tRobotik nesne örüntüsü tanımada çok önemli bir rol oynar.\no\tNesne tanıma işleminin hızlı ve yüksek performanslı olması sağlanır.\n•\tKenar Nedir? Kenar, farklı aydınlık değerlerindeki iki homojen alan arasındaki sınır olarak tanımlanabilir.\n•\tArzulanan (İdeal) Sonuç: Hiçbir bilgi kaybına olanak tanımadan, hafızada en az yer tutan, tek piksel genişliğindeki en ince kenar izinin bulunmasıdır.\n•\tÖrnek Algoritmalar: Prewitt, Sobel."
+    },
+    {
+      "type": "short-answer",
+      "question": "Özellik Çıkarmanın Tanımı ve Önemi nedir?",
+      "correctAnswer": "•\tTanım: Özellik çıkarma, örüntü tanımanın en önemli kısmıdır ve sistemin başarısında anahtar rolü oynar. Örüntü sınıfları arasındaki ayrımı gerçekleştirmek için örüntü özelliklerinin çıkarılması gerekir.\n•\tOdak Noktası: Sınıflandırıcının başarımını doğrudan etkileyen özellik çıkarımı üzerine çalışmalara odaklanılmıştır.\n•\tÖzellik Çıkarmanın 4 Ana Sebebi\n1.\tBoyut İndirgeme: Ölçüm veya örüntü uzayından daha küçük boyutlu bir uzaya dönüşmeyi sağlamaktır. Bu, sınıflandırıcının daha az hata ile ve daha kısa sürede eğitilmesini sağlar.\n2.\tAz Parametre: Düşük boyutlu özellik uzayı, sınıflandırıcının daha az parametre ile öğrenmesini mümkün kılar.\n3.\tKarmaşık Karakteristikler: Karmaşık örüntülerin (örn. durağan olmayan zaman serileri) tanımlayıcı karakteristiklerini bulabilmek için özellik çıkarımı şarttır. Bu, karar aşamasının güvenilirliğini artırır.\n4.\tKararlı Yapı: Sistemin kontrolsüz girişimlerden etkilenmemesini sağlayacak kararlı özellikler, sınıflandırıcının genelleme ve ayrışım yeteneğinin yüksek olmasında önemlidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Özellik Türleri nelerdir?",
+      "correctAnswer": "Nesne örüntülerinde özellikler, kullanılan veritabanı ve uygulamaya göre değişir. Temel özellikler; kenar, köşe, doğru ve eğri çizgiler, delik ve sınır eğriselliğidir.\nBu özellikler üç ana gruba ayrılır:\n•\tGenel Özellikler: Tüm nesneye ait bilgilerdir. Örnek: Çevre, ağırlık merkezi, alan, eylemsizlik momenti.\n•\tYerel Özellikler: Nesnenin küçük bir kısmına ait bilgilerdir. Örnek: Doğru parçaları, çember parçaları.\n•\tİlişkisel Özellikler: Nesnenin alt parçalarının birbirlerine göre olan ilişkileridir. Örnek: Parçaların birbirine uzaklıkları ve açıları."
+    },
+    {
+      "type": "short-answer",
+      "question": "Öznitelik Vektörleri ve başlıca yöntemler nelerdir?",
+      "correctAnswer": "Öznitelik vektörü, nesnenin sınırları üzerinde yapılan nitelemeler (ölçümler) sonucunda elde edilir. Sadece nesne sınırlarının kullanılması, işlenecek bilginin azalması açısından önemlidir.\nBaşlıca Yöntemler:\n•\tGenel Öznitelik Yöntemleri: Fourier tanımlayıcısı, otoregresif model, zerrike momentleri, yapısal örüntü tanıma.\n•\tYerel Öznitelik Yöntemleri: Zincir kodları, poligonal yaklaşım."
+    },
+    {
+      "type": "short-answer",
+      "question": "Otoregresif model, Poligonal yaklaşım, Zincir kodları ve Yapısal modelleri açıklayın.",
+      "correctAnswer": "1.1. Otoregresif model\nModelin esası, nesne sınırının merkezsel uzaklığa dayalı olarak bir boyutlu simgelenmesidir. Algoritma önce nesnenin merkez noktasını hesaplar, ardından kenar noktalarının bu merkeze olan Öklit uzaklığını bulur. Bu uzaklık değerleri bir vektör formunda yazılarak öznitelik vektörü elde edilir.\n1.2. Poligonal yaklaşım\nBu yaklaşımın temelinde, nesneye ait kritik noktaların (köşelerin) hesaplanması yatar. Yöntem, iki nokta arasına çizilen düz bir çizgiye, nesne kenarının olan maksimum uzaklığını bulur. Bu uzaklık belirli bir eşikleme değerinin üstündeyse, o nokta yeni bir kritik nokta olarak tespit edilir ve vektör oluşturulur.\n1.3. Zincir kodları\nBu yöntem, kenar çıkarma işleminden sonra kalan nesnenin dış çizgilerinin kodlanması için kullanılır. Her bir pikselden bir sonrakine hangi yönde gidildiğini gösteren dörtlü ve sekizli zincir kod olmak üzere iki tipi mevcuttur. Bu kodların sıralı bir şekilde yazılmasıyla nesnenin öznitelik vektörü oluşur.\n1.4. Yapısal örüntü tanıma modelleri\nBu modeller nesneyi yapısal olarak tanımlar; açı/uzunluk yöntemi buna bir örnektir. Bu yöntemde T harfi gibi bir örüntü, onu oluşturan parçaların birim uzunlukları ve açıları kullanılarak tanıtılır. Bir kısım referans açı olarak alınır ve diğerleri ona bağlı belirtilerek öznitelik vektörü kurulur."
+    },
+    {
+      "type": "short-answer",
+      "question": "Öznitelik Seçimi (Feature Selection) nedir?",
+      "correctAnswer": "•\tTanım: Mevcut öznitelik kümesinden, modelin performansını artıracak, en alakalı, en bilgilendirici ve en az yedekli olan alt kümeyi belirleme sürecidir.\n•\tTemel Amaçları:\n→\tVeri Kalitesini Artırma: Alakasız veya gereksiz öznitelikleri (gürültüyü) çıkararak algoritmanın önemli bilgilere odaklanmasını sağlar2.\n→\tModel Karmaşıklığını Azaltma: Daha az öznitelik ile daha basit ve hızlı modeller oluşturulur3.\n→\tEzberlemeyi (Overfitting) Önleme: Çok fazla öznitelik kullanmak modelin eğitim verisini ezberlemesine yol açabilir; öznitelik seçimi bu riski azaltır4.\n→\tYorumlanabilirliği İyileştirme: Modelin hangi özelliklere dayanarak karar verdiğini anlamak kolaylaşır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Öznitelik Seçimi Yöntemleri nelerdir?",
+      "correctAnswer": "Öznitelik seçimi üç ana stratejiye ayrılır:\n1. Filtre Yöntemleri (Model Bağımsız):\n•\tModeli eğitmeden, verinin istatistiksel özelliklerine bakarak öznitelikleri eler7.\n•\tVaryans Eşiği: Çok az değişkenliği olan (neredeyse sabit) öznitelikleri çıkarır8.\n•\tKorelasyon: Çıktı etiketiyle yüksek korelasyonu olanları tercih eder; birbirleriyle yüksek korelasyonu olanlardan (yedekli) birini eler9.\n•\tKi-Kare Testi ($\\\\chi^2$): Öznitelik ile sınıf etiketi arasındaki istatistiksel bağımlılığı ölçer10.\n2. Sarmalayıcı Yöntemler (Model Odaklı):\n•\tBir makine öğrenimi modeli, farklı öznitelik alt kümeleriyle tekrar tekrar eğitilir ve modelin performansı (doğruluk) değerlendirme ölçütü olarak kullanılır.\n•\tİleriye Doğru Seçim: Boş kümeden başlar, her adımda en çok katkı sağlayan özniteliği ekler.\n•\tGeriye Doğru Eleme: Tüm özniteliklerle başlar, her adımda en az katkı sağlayan özniteliği çıkarır.\n3. Gömülü Yöntemler (Eğitime Entegre):\n•\tÖznitelik seçimi, modelin eğitim algoritmasının içine yerleştirilmiştir.\n•\tLasso Regresyonu (L1): Alakasız özniteliklerin katsayılarını otomatik olarak sıfırlayan bir ceza terimi kullanır.\n•\tAğaç Tabanlı Önem: Random Forest gibi algoritmalar, her özniteliğin karar sürecindeki bilgi kazancını hesaplar."
+    },
+    {
+      "type": "short-answer",
+      "question": "Öznitelik Seçimi vs. Öznitelik Çıkarımı farkı nedir?",
+      "correctAnswer": "•\tÖznitelik Seçimi: Ham veride bulunan özniteliklerden sadece anlamlı olanları seçmeyi amaçlar. Gereksiz olanlar çıkarılır.\n•\tÖznitelik Çıkarımı: Veriyi özetleyerek yeni öznitelikler oluşturur. Ham veriden daha fazla bilgi çıkarmaya odaklanır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Boyut İndirgeme (Dimension Reduction) ve yöntemleri nelerdir?",
+      "correctAnswer": "•\tÇok sayıda özelliği (boyutu) temsil edecek daha az sayıda yeni özellik elde etmek için kullanılır. Çok sayıda özellik, veri işleme ve model oluşturmada zaman/kaynak kullanımını artırır. Hedef: En az bilgi kaybıyla en az sayıda özelliği seçmektir.\n5. Boyut İndirgeme Yöntemleri\nA. Temel Bileşenler Analizi (PCA)\n•\tTanım: Örneklerin en fazla değişim (varyans) gösterdiği boyutları (yeni eksenleri) bulur.\n•\tYöntem: Verinin özellik vektörleri arasındaki ilişkiyi temsil eden kovaryans matrisinin özvektörlerini (eigen-vectors) ve özdeğerlerini (eigen-values) bulur\nB. Doğrusal Ayırma Analizi (LDA)\n•\tTanım: PCA'den farklı olarak varyansa değil, sınıf ayrılabilirliğine odaklanır.\n•\tAmacı: Farklı sınıflara ait grupların doğrusal ayrılabilirliğini maksimize ederek boyut azaltması yapar.\n•\tNasıl Çalışır: Her grup içindeki varyansı minimum tutmaya, grupların ortalamalarını ise birbirlerinden maksimum düzeyde uzak tutmaya çalışır.\nC. SVD (Tekil Değer Ayrışımı)\n•\tTanım: Lineer cebirin en güçlü araçlarından biridir. Herhangi bir veri matrisini (örn. bir görüntü) temel yapı taşlarına ayrıştırarak, veri içindeki bilginin hiyerarşik düzenini ortaya çıkarır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Veri türüne göre ön işleme teknikleri.",
+      "correctAnswer": "Veri Türü | Amaç | Örnek Teknikler\nA. Görüntü Verileri | Görüntüyü netleştirip, tanınacak objeyi ön plana çıkarmak. |  Gürültü temizleme (Median filtre)  Kontrast artırma (Histogram eşitleme)  Kenar tespiti (Sobel, Canny) Görüntü segmentasyonu\nB. Ses Verileri | Ses sinyalindeki anlamlı kısımları temiz ve dengeli hale getirmek. |  Gürültü azaltma (Low-pass filtre)  Sessizlik (silence) kısımlarının çıkarılması  Zaman-frekans dönüşümleri (Fourier)\nC. Metin Verileri | Metni kelime düzeyinde sadeleştirip anlam analizine uygun hale getirmek. |  Küçük harfe dönüştürme  Gereksiz kelimeleri (stop-words) çıkarma  Kök bulma (Stemming / Lemmatization)\nD. Sensör / Zaman Serisi | Sensör hatalarını ve ölçüm sapmalarını azaltmak. |  Eksik veri doldurma  Gürültü filtreleme (Moving average)  Outlier (aykırı değer) tespiti"
     }
   ]
 }

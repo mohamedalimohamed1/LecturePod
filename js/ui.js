@@ -1,4 +1,3 @@
-//js/ui.js
 import { state } from './state.js';
 import { translations } from './translations.js';
 
@@ -14,8 +13,85 @@ const views = {
 };
 
 /**
- * Belirtilen görünümü aktif eder, diğerlerini gizler.
+ * Metin içindeki tablo, liste ve yeni satırları algılayıp zengin HTML formatına çevirir.
+ * Hücre içindeki liste elemanlarını alt alta gelecek şekilde düzenler.
  */
+const formatAnswerText = (text) => {
+    if (!text) return '';
+
+    // Eğer metin zaten karmaşık HTML içeriyorsa dokunma
+    if (/<[a-z][\s\S]*>/i.test(text)) return text;
+
+    const lines = text.split('\n');
+    let formattedHtml = '';
+    let tableRows = [];
+    let listItems = [];
+
+    const flushTable = () => {
+        if (tableRows.length === 0) return '';
+        let html = '<div style="overflow-x:auto; margin: 1rem 0;"><table style="width:100%; border-collapse: collapse; border: 1px solid var(--border-color); font-size: 0.9rem;">';
+        tableRows.forEach((row, i) => {
+            html += `<tr style="${i === 0 ? 'background: rgba(13, 148, 235, 0.1); font-weight: bold;' : 'border-top: 1px solid var(--border-color);'}">`;
+            row.forEach(cell => {
+                // Hücre içindeki özel işaretleri (, •, *) bulup alt alta (br) ve mermi işaretli hale getiriyoruz
+                let cellContent = cell.replace(/[•\*]/g, '<br>• ').trim();
+                // Eğer başta gereksiz br oluştuysa temizle
+                if (cellContent.startsWith('<br>')) cellContent = cellContent.substring(4);
+                
+                html += `<td style="padding: 0.6rem; border: 1px solid var(--border-color); vertical-align: top;">${cellContent}</td>`;
+            });
+            html += '</tr>';
+        });
+        html += '</table></div>';
+        tableRows = [];
+        return html;
+    };
+
+    const flushList = () => {
+        if (listItems.length === 0) return '';
+        let html = '<ul style="margin: 0.5rem 0 1rem 1.2rem; list-style-type: disc;">';
+        listItems.forEach(item => { html += `<li style="margin-bottom: 0.3rem;">${item}</li>`; });
+        html += '</ul>';
+        listItems = [];
+        return html;
+    };
+
+    lines.forEach(line => {
+        const trimmed = line.trim();
+
+        // 1. Tablo Satırı Algılama
+        if (trimmed.includes('|')) {
+            formattedHtml += flushList();
+            const cells = trimmed.split('|').map(c => c.trim()).filter(c => c !== '');
+            if (cells.length > 1) {
+                tableRows.push(cells);
+                return;
+            }
+        }
+
+        // 2. Liste Öğesi Algılama (Dış liste)
+        if (/^[•\*\-]\s*/.test(trimmed)) {
+            formattedHtml += flushTable();
+            listItems.push(trimmed.replace(/^[•\*\-]\s*/, ''));
+            return;
+        }
+
+        // 3. Normal Satır
+        formattedHtml += flushTable();
+        formattedHtml += flushList();
+        if (trimmed === '') {
+            formattedHtml += '<br>';
+        } else {
+            formattedHtml += `<div>${trimmed.replace(/\t/g, '<span style="display:inline-block; width:20px;"></span>')}</div>`;
+        }
+    });
+
+    formattedHtml += flushTable();
+    formattedHtml += flushList();
+
+    return formattedHtml;
+};
+
 export function switchView(id) {
     Object.values(views).forEach(v => v?.classList.remove('active'));
     if (views[id]) {
@@ -27,9 +103,6 @@ export function switchView(id) {
     if (logoutBtn) logoutBtn.classList.toggle('hidden', id === 'login');
 }
 
-/**
- * Sayfadaki data-key değerine sahip tüm metinleri dile göre günceller.
- */
 export function updateUIText() {
     const lang = state.language;
     document.querySelectorAll('[data-key]').forEach(el => {
@@ -38,9 +111,6 @@ export function updateUIText() {
     });
 }
 
-/**
- * Ders seçim ekranındaki buton listesini oluşturur.
- */
 export function renderLectureList(onSelectCallback) {
     const container = document.getElementById('lecture-list-container');
     if (!container) return;
@@ -58,14 +128,10 @@ export function renderLectureList(onSelectCallback) {
     });
 }
 
-/**
- * Test ve Pratik modları: Renkli geri bildirim eklendi (Madde 4)
- */
 export function renderQuestionUI(onChoiceCallback) {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
 
-    // Sayaç güncelleme (Madde 1: Header stack yapısına uygun)
     const counter = document.getElementById('question-counter');
     if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
     
@@ -81,32 +147,22 @@ export function renderQuestionUI(onChoiceCallback) {
         div.className = `option-label ${answered ? 'answered' : ''}`;
         div.textContent = opt;
 
-        // Yanlış/Doğru Renklendirme (Madde 4)
         if (answered) {
-            if (opt === q.correctAnswer) {
-                div.classList.add('correct-highlight'); // Doğru şık her zaman yeşil
-            }
-            if (opt === userAns && opt !== q.correctAnswer) {
-                div.classList.add('wrong-highlight'); // Yanlış seçilen şık kırmızı
-            }
+            if (opt === q.correctAnswer) div.classList.add('correct-highlight');
+            if (opt === userAns && opt !== q.correctAnswer) div.classList.add('wrong-highlight');
         } else {
             div.onclick = () => onChoiceCallback(opt);
         }
         container.appendChild(div);
     });
 
-    // Navigasyon Kontrolleri (Madde 2)
     document.getElementById('prev-question-btn')?.classList.toggle('hidden', state.currentQuestionIndex === 0);
     const isLast = state.currentQuestionIndex === state.activeQuestions.length - 1;
     
-    // Test modunda otomatik geçiş olsa da butonların görünürlüğünü yönetiyoruz
     document.getElementById('next-question-btn')?.classList.toggle('hidden', !answered || isLast);
     document.getElementById('finish-btn')?.classList.toggle('hidden', !answered || !isLast);
 }
 
-/**
- * Ezber Modu: Okuma modu gibi kutulu render (Madde 5)
- */
 export function renderLearnUI() {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
@@ -114,13 +170,11 @@ export function renderLearnUI() {
     const container = document.getElementById('learn-boxed-container');
     if (!container) return;
 
-    // Sayaç güncelleme
     const counter = document.getElementById('learn-counter');
     if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
 
     container.innerHTML = '';
     
-    // Okuma modu stili kutu oluştur (Madde 5)
     const card = document.createElement('div');
     card.className = 'result-card';
     card.style.borderLeft = "4px solid var(--primary-color)";
@@ -128,20 +182,16 @@ export function renderLearnUI() {
     card.innerHTML = `
         <span class="box-question">${state.currentQuestionIndex + 1}. ${q.question}</span>
         <div class="box-answer learn-box-answer hidden">
-            ${q.correctAnswer}
+            ${formatAnswerText(q.correctAnswer)}
         </div>
     `;
     
     container.appendChild(card);
     
-    // Alt butonları sıfırla
     document.getElementById('show-answer-btn')?.classList.remove('hidden');
     document.getElementById('learn-feedback-btns')?.classList.add('hidden');
 }
 
-/**
- * Okuma Modu
- */
 export function renderReadList() {
     const container = document.getElementById('read-mode-list');
     if (!container) return;
@@ -155,16 +205,13 @@ export function renderReadList() {
         card.innerHTML = `
             <span class="box-question">${i + 1}. ${q.question}</span>
             <div class="box-answer">
-                ${q.correctAnswer}
+                ${formatAnswerText(q.correctAnswer)}
             </div>
         `;
         container.appendChild(card);
     });
 }
 
-/**
- * Sonuç Ekranı
- */
 export function renderResultsUI() {
     let score = 0;
     const listContainer = document.getElementById('result-details-container');
@@ -190,11 +237,11 @@ export function renderResultsUI() {
         card.innerHTML = `
             <span class="box-question">${i + 1}. ${q.question}</span>
             <div class="box-answer" style="background: ${isCorrect ? 'rgba(16, 185, 129, 0.05)' : 'rgba(239, 68, 68, 0.05)'}; color: ${isCorrect ? 'var(--green-color)' : 'var(--red-color)'}; border-color: ${isCorrect ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)'}">
-                <strong>${translations[state.language].yourAnswerLabel}:</strong> ${displayUserAns}
+                <strong>${translations[state.language].yourAnswerLabel}:</strong> ${formatAnswerText(displayUserAns)}
             </div>
             ${!isCorrect ? `
                 <div class="box-answer" style="margin-top: 0.5rem;">
-                    <strong>${translations[state.language].correctAnswerLabel}:</strong> ${q.correctAnswer}
+                    <strong>${translations[state.language].correctAnswerLabel}:</strong> ${formatAnswerText(q.correctAnswer)}
                 </div>
             ` : ''}
         `;
