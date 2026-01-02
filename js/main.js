@@ -43,13 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btn) {
             btn.onclick = () => {
                 state.currentMode = mode;
-                
+                state.rangeType = 'all';
                 if (mode === 'quiz') {
-                    state.rangeType = 'all';
                     renderSetupArea();
                     switchView('sessionSetup');
                 } else {
-                    state.rangeType = 'all';
                     startSession();
                 }
             };
@@ -102,27 +100,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Madde 4: Yanlışsa Kırmızı, Doğruysa Yeşil ve Otomatik Geçiş
     function handleAnswer(choice) {
-        state.userAnswers[state.currentQuestionIndex] = choice;
-        renderQuestionUI(handleAnswer);
+        if (state.userAnswers[state.currentQuestionIndex] !== null) return;
         
-        if (state.currentMode === 'practice' && state.currentQuestionIndex < state.activeQuestions.length - 1) {
+        state.userAnswers[state.currentQuestionIndex] = choice;
+        const correctChoice = state.activeQuestions[state.currentQuestionIndex].correctAnswer;
+        const isCorrect = choice === correctChoice;
+
+        // Renkleri ui.js üzerinden gösterir
+        renderQuestionUI(handleAnswer);
+
+        // Madde 3: Streak Popup Tetikle
+        handleStreak(isCorrect);
+
+        // Otomatik Geçiş (1 saniye bekler)
+        if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             setTimeout(() => {
                 state.currentQuestionIndex++;
                 renderQuestionUI(handleAnswer);
-            }, 800);
+            }, 1000);
         }
+    }
+
+    function handleStreak(isCorrect) {
+        if (isCorrect) {
+            state.successStreak = (state.successStreak || 0) + 1;
+            state.failureStreak = 0;
+            if (state.successStreak >= 3) triggerStreakPopup("🔥", state.successStreak + " SERİ!");
+        } else {
+            state.failureStreak = (state.failureStreak || 0) + 1;
+            state.successStreak = 0;
+            if (state.failureStreak >= 2) triggerStreakPopup("🧊", "ODAKLAN!", true);
+        }
+    }
+
+    function triggerStreakPopup(emoji, message, isFailure = false) {
+        const popup = document.getElementById('streak-popup');
+        const emojiEl = document.getElementById('streak-emoji');
+        const msgEl = document.getElementById('streak-message');
+        if (!popup || !emojiEl || !msgEl) return;
+
+        emojiEl.textContent = emoji;
+        msgEl.textContent = message;
+        popup.classList.toggle('failure', isFailure);
+        popup.classList.add('active');
+        setTimeout(() => popup.classList.remove('active'), 2500);
     }
 
     // --- 4. NAVİGASYON VE DİĞERLERİ ---
     document.getElementById('next-question-btn').onclick = () => {
-        state.currentQuestionIndex++;
-        renderQuestionUI(handleAnswer);
+        if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
+            state.currentQuestionIndex++;
+            renderQuestionUI(handleAnswer);
+        }
     };
 
     document.getElementById('prev-question-btn').onclick = () => {
-        state.currentQuestionIndex--;
-        renderQuestionUI(handleAnswer);
+        if (state.currentQuestionIndex > 0) {
+            state.currentQuestionIndex--;
+            renderQuestionUI(handleAnswer);
+        }
     };
 
     const finishBtn = document.getElementById('finish-btn');
@@ -135,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.finish-early-trigger').forEach(btn => {
         btn.onclick = () => {
-            const msg = state.language === 'tr' ? "Oturumu bitirip sonuçları görmek istiyor musunuz?" : "Do you want to finish and see results?";
+            const msg = state.language === 'tr' ? "Oturumu bitirip sonuçları görmek istiyor musunuz?" : "Finish and see results?";
             if(confirm(msg)) {
                 renderResultsUI();
                 switchView('results');
@@ -151,32 +189,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('theme-icon').textContent = state.theme === 'dark' ? 'light_mode' : 'dark_mode';
     };
 
-    // DİL DEĞİŞTİRME BUTONU (DÜZELTİLDİ)
     const langBtn = document.getElementById('lang-toggle-btn');
     if (langBtn) {
         langBtn.onclick = () => {
             state.language = state.language === 'tr' ? 'en' : 'tr';
             langBtn.textContent = state.language.toUpperCase();
             updateUIText();
-            
-            // Eğer ders seçim ekranındaysak listeyi de yeniden çevirerek çiz
-            if (state.currentView === 'lectureSelection') {
-                renderLectureList(initDashboard);
-            }
-            // Eğer ayar ekranındaysak ayarları yeniden çevir
-            if (state.currentView === 'sessionSetup') {
-                renderSetupArea();
-            }
+            if (state.currentView === 'lectureSelection') renderLectureList(initDashboard);
+            if (state.currentView === 'sessionSetup') renderSetupArea();
         };
     }
 
+    // Madde 5: Ezber Modu Cevap Göster Fix
     const showAnsBtn = document.getElementById('show-answer-btn');
     if (showAnsBtn) {
         showAnsBtn.onclick = () => {
-            const ans = document.getElementById('learn-answer');
+            const box = document.querySelector('.learn-box-answer'); // Yeni boxed yapı hedef alındı
             const feedback = document.getElementById('learn-feedback-btns');
-            if(ans) ans.classList.remove('hidden');
-            if(showAnsBtn) showAnsBtn.classList.add('hidden');
+            if(box) box.classList.remove('hidden');
+            showAnsBtn.classList.add('hidden');
             if(feedback) feedback.classList.remove('hidden');
         };
     }
@@ -189,6 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleLearnNext(status) {
         state.userAnswers[state.currentQuestionIndex] = status;
+        handleStreak(status === 'knew'); // Ezber modunda da streak say
+
         if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             state.currentQuestionIndex++;
             renderLearnUI();

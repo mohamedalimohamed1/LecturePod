@@ -3,7 +3,7 @@ export const state = {
     language: 'tr',
     theme: 'dark',
     lectures: [
-        { id: 'lecture-1', title: 'Sistem Analizi - Vize Sınavı', file: 'data/lecture_one.json' },
+        { id: 'lecture-1', title: 'Sistem Analizi - Vize Ve Final', file: 'data/lecture_one.json' },
         { id: 'lecture-2', title: 'Dijital Okuryazarlık - Vize Sınavı', file: 'data/lecture_six.json' },
         { id: 'lecture-3', title: 'Görüntü İşleme - Vize Sınavı', file: 'data/lecture_four.json' },
         { id: 'lecture-4', title: 'Kriptoloji ve Bilgi Güvenliği - Vize Sınavı', file: 'data/lecture_seven.json' },

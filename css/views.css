@@ -20,7 +20,13 @@
 /* --- GİRİŞ --- */
 .login-card { text-align: center; padding: 1rem 0; }
 
-/* --- DERS SEÇİM KARTLARI (KÜÇÜLTÜLDÜ) --- */
+/* --- DERS SEÇİMİ (Yeni Boşluk Eklendi) --- */
+#lecture-selection-view h2 {
+    margin-bottom: 1.5rem;
+    margin-left: 5px; /* Başlık ile dersler arasına boşluk ekler */
+}
+
+/* --- DERS SEÇİM KARTLARI --- */
 .lecture-btn { 
     width: 100%; 
     text-align: left; 
@@ -33,6 +39,7 @@
     transition: 0.2s;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.2rem;
 }
 .lecture-btn h3 { color: #0d94eb; font-size: 1.15rem; font-weight: 700; }
@@ -103,7 +110,43 @@
 }
 .option-label:hover:not(.answered) { border-color: #0d94eb; transform: translateX(3px); }
 
-/* --- ESKİ STİL KUTULU SONUÇ/OKUMA KARTLARI VE LİSTE DÜZENİ --- */
+/* Renkli Vurgular */
+.correct-highlight { 
+    background: #064e3b !important; 
+    border-color: #10b981 !important; 
+    color: white !important; 
+}
+.wrong-highlight { 
+    background: #451a1a !important; 
+    border-color: #ef4444 !important; 
+    color: white !important; 
+    animation: shake 0.4s ease-in-out; 
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+}
+
+/* --- Soru Başlığı --- */
+.question-header-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.counter-badge-flat {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+/* --- Kutulu Tasarım --- */
 .result-card { 
     padding: 1.2rem; 
     border-radius: 0.85rem; 
@@ -119,7 +162,7 @@
 
 .box-answer { 
     background: rgba(13, 148, 235, 0.08); 
-    padding: 1rem; /* Padding biraz artırıldı */
+    padding: 1rem; 
     border-radius: 0.5rem; 
     font-weight: 600; 
     color: #0d94eb; 
@@ -128,18 +171,65 @@
     line-height: 1.5;
 }
 
-/* Cevap içindeki liste (ul, ol, li) düzenlemeleri - GÖRSEL SORUN BURADA ÇÖZÜLDÜ */
+.learn-box-answer.hidden {
+    display: none;
+}
+
 .box-answer ul, .box-answer ol {
-    margin: 0.5rem 0 0.5rem 1.5rem; /* Listeleri içeriden başlatır */
+    margin: 0.5rem 0 0.5rem 1.5rem; 
     padding: 0;
 }
 
 .box-answer li {
-    margin-bottom: 0.3rem; /* Maddeler arası boşluk */
-    list-style-position: outside; /* Noktaların/sayıların kutu içinde kalmasını sağlar */
+    margin-bottom: 0.3rem; 
+    list-style-position: outside; 
 }
 
-/* --- EZBER MODU (FLASHCARDS) --- */
+/* --- Navigasyon Oranları --- */
+.navigation-controls-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-prev-ratio {
+    flex: 0 0 30%;
+}
+
+.nav-spacer {
+    flex: 0 0 5%;
+}
+
+.btn-next-ratio {
+    flex: 0 0 65%;
+}
+
+/* İlk soruda (Geri butonu hidden iken) "Sonraki" butonu tam alanı kaplar */
+.btn-prev-ratio.hidden ~ .btn-next-ratio {
+    flex: 0 0 100% !important;
+}
+
+/* İlk soruda boşluk alanını da kaldır */
+.btn-prev-ratio.hidden ~ .nav-spacer {
+    display: none !important;
+}
+
+/* Bildim/Bilemedim butonları 50% / 50% */
+.feedback-grid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+}
+
+.feedback-grid button {
+    flex: 1 !important;
+}
+
+/* --- EZBER MODU --- */
 .flashcard-box { 
     background: var(--bg-app); 
     border: 1px solid var(--border-color); 
@@ -159,11 +249,14 @@
 #result-score { font-size: 3.5rem; font-weight: 900; color: #0d94eb; }
 #result-percentage { font-size: 1.2rem; font-weight: 700; opacity: 0.6; }
 
-/* --- NAVİGASYON --- */
-.navigation-controls { 
-    margin-top: 2rem; 
-    padding-top: 1rem;
+.learn-actions-sticky {
+    position: sticky;
+    bottom: 0;
+    background: var(--bg-container);
+    padding: 1rem 0;
     border-top: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+    z-index: 10;
 }
 
 .scrollable-list { max-height: 55vh; overflow-y: auto; padding-right: 0.5rem; }

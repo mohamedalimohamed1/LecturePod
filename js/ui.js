@@ -17,7 +17,6 @@ const views = {
  * Belirtilen görünümü aktif eder, diğerlerini gizler.
  */
 export function switchView(id) {
-    console.log(`[View Switch] Hedef: ${id}`);
     Object.values(views).forEach(v => v?.classList.remove('active'));
     if (views[id]) {
         views[id].classList.add('active');
@@ -60,13 +59,16 @@ export function renderLectureList(onSelectCallback) {
 }
 
 /**
- * Test ve Pratik modları için soru ve şıkları ekrana basar.
+ * Test ve Pratik modları: Renkli geri bildirim eklendi (Madde 4)
  */
 export function renderQuestionUI(onChoiceCallback) {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
 
-    document.getElementById('question-counter').textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
+    // Sayaç güncelleme (Madde 1: Header stack yapısına uygun)
+    const counter = document.getElementById('question-counter');
+    if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
+    
     document.getElementById('question-text').textContent = q.question;
 
     const container = document.getElementById('question-options-container');
@@ -79,41 +81,66 @@ export function renderQuestionUI(onChoiceCallback) {
         div.className = `option-label ${answered ? 'answered' : ''}`;
         div.textContent = opt;
 
+        // Yanlış/Doğru Renklendirme (Madde 4)
         if (answered) {
-            if (opt === q.correctAnswer) div.classList.add('correct-highlight');
-            if (opt === userAns && opt !== q.correctAnswer) div.classList.add('wrong-highlight');
+            if (opt === q.correctAnswer) {
+                div.classList.add('correct-highlight'); // Doğru şık her zaman yeşil
+            }
+            if (opt === userAns && opt !== q.correctAnswer) {
+                div.classList.add('wrong-highlight'); // Yanlış seçilen şık kırmızı
+            }
         } else {
             div.onclick = () => onChoiceCallback(opt);
         }
         container.appendChild(div);
     });
 
+    // Navigasyon Kontrolleri (Madde 2)
     document.getElementById('prev-question-btn')?.classList.toggle('hidden', state.currentQuestionIndex === 0);
     const isLast = state.currentQuestionIndex === state.activeQuestions.length - 1;
+    
+    // Test modunda otomatik geçiş olsa da butonların görünürlüğünü yönetiyoruz
     document.getElementById('next-question-btn')?.classList.toggle('hidden', !answered || isLast);
     document.getElementById('finish-btn')?.classList.toggle('hidden', !answered || !isLast);
 }
 
 /**
- * Ezber modu (Flashcard) içeriğini günceller.
+ * Ezber Modu: Okuma modu gibi kutulu render (Madde 5)
  */
 export function renderLearnUI() {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
 
-    document.getElementById('learn-counter').textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
-    document.getElementById('learn-question').textContent = q.question;
+    const container = document.getElementById('learn-boxed-container');
+    if (!container) return;
+
+    // Sayaç güncelleme
+    const counter = document.getElementById('learn-counter');
+    if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
+
+    container.innerHTML = '';
     
-    const ansEl = document.getElementById('learn-answer');
-    ansEl.innerHTML = q.correctAnswer;
-    ansEl.classList.add('hidden');
+    // Okuma modu stili kutu oluştur (Madde 5)
+    const card = document.createElement('div');
+    card.className = 'result-card';
+    card.style.borderLeft = "4px solid var(--primary-color)";
     
+    card.innerHTML = `
+        <span class="box-question">${state.currentQuestionIndex + 1}. ${q.question}</span>
+        <div class="box-answer learn-box-answer hidden">
+            ${q.correctAnswer}
+        </div>
+    `;
+    
+    container.appendChild(card);
+    
+    // Alt butonları sıfırla
     document.getElementById('show-answer-btn')?.classList.remove('hidden');
     document.getElementById('learn-feedback-btns')?.classList.add('hidden');
 }
 
 /**
- * Okuma Modu: Soruları ve cevapları kutulu bir liste halinde sunar.
+ * Okuma Modu
  */
 export function renderReadList() {
     const container = document.getElementById('read-mode-list');
@@ -136,7 +163,7 @@ export function renderReadList() {
 }
 
 /**
- * Sonuç Ekranı: Kullanıcı cevaplarını, doğruları ve puanı kutulu tasarımda gösterir.
+ * Sonuç Ekranı
  */
 export function renderResultsUI() {
     let score = 0;
@@ -153,7 +180,6 @@ export function renderResultsUI() {
         const card = document.createElement('div');
         card.className = `result-card ${isCorrect ? 'correct' : 'incorrect'}`;
         
-        // Kullanıcı cevabı metni (Ezber modu vs Test modu)
         let displayUserAns = userAns;
         if (state.currentMode === 'learn') {
             displayUserAns = (userAns === 'knew') ? translations[state.language].knewItLabel : translations[state.language].didntKnowLabel;
@@ -175,7 +201,6 @@ export function renderResultsUI() {
         listContainer.appendChild(card);
     });
 
-    // Nihai Puan Tablosu
     const scoreEl = document.getElementById('result-score');
     const percentEl = document.getElementById('result-percentage');
     
