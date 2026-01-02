@@ -20,10 +20,10 @@
 /* --- GİRİŞ --- */
 .login-card { text-align: center; padding: 1rem 0; }
 
-/* --- DERS SEÇİMİ (Yeni Boşluk Eklendi) --- */
+/* --- DERS SEÇİMİ --- */
 #lecture-selection-view h2 {
     margin-bottom: 1.5rem;
-    margin-left: 5px; /* Başlık ile dersler arasına boşluk ekler */
+    margin-left: 5px; 
 }
 
 /* --- DERS SEÇİM KARTLARI --- */
@@ -110,7 +110,6 @@
 }
 .option-label:hover:not(.answered) { border-color: #0d94eb; transform: translateX(3px); }
 
-/* Renkli Vurgular */
 .correct-highlight { 
     background: #064e3b !important; 
     border-color: #10b981 !important; 
@@ -185,6 +184,56 @@
     list-style-position: outside; 
 }
 
+/* --- STREAK POPUP (Akışkan Boyut - Madde Güncellemesi) --- */
+.streak-popup-top {
+    position: fixed;
+    top: -200px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    transition: top 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.streak-popup-top.active {
+    top: 25px; 
+}
+
+.streak-box-square {
+    background: var(--primary-gradient);
+    color: white;
+    width: auto;             /* Sabit genişlik kaldırıldı */
+    height: auto;            /* Sabit yükseklik kaldırıldı */
+    min-width: 140px;        /* Minimum genişlik korundu */
+    max-width: 90vw;         /* Ekrandan taşmaması için limit */
+    padding: 1rem 1.5rem;    /* İç boşluk eklendi */
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    border: 2px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.streak-emoji-large {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.streak-text-bold {
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.streak-popup-top.failure .streak-box-square {
+    background: linear-gradient(135deg, #475569, #1e293b);
+}
+
 /* --- Navigasyon Oranları --- */
 .navigation-controls-flex {
     display: flex;
@@ -207,17 +256,14 @@
     flex: 0 0 65%;
 }
 
-/* İlk soruda (Geri butonu hidden iken) "Sonraki" butonu tam alanı kaplar */
 .btn-prev-ratio.hidden ~ .btn-next-ratio {
     flex: 0 0 100% !important;
 }
 
-/* İlk soruda boşluk alanını da kaldır */
 .btn-prev-ratio.hidden ~ .nav-spacer {
     display: none !important;
 }
 
-/* Bildim/Bilemedim butonları 50% / 50% */
 .feedback-grid {
     display: flex;
     align-items: center;

@@ -5,6 +5,9 @@ import { switchView, updateUIText, renderLectureList, renderReadList, renderQues
 import { fetchLectureData, prepareActiveQuestions } from './engine.js';
 import { showNotification } from './utils/ui-helpers.js';
 
+// Yeni oluşturduğumuz mesajları içe aktarıyoruz
+import { POSITIVE_STREAK_MESSAGES, NEGATIVE_STREAK_MESSAGES } from './messages.js';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. GİRİŞ ---
@@ -63,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             area.innerHTML = `<label style="display:block; margin-bottom:8px; font-size:0.9rem; font-weight:700;">${state.language === 'tr' ? 'Soru Sayısı Seçin:' : 'Select Question Count:'}</label>
                               <input type="number" id="setup-count" value="10" min="1" max="${total}">`;
         } else if (state.rangeType === 'range') {
-            area.innerHTML = `<div style="display:flex; gap:10px;">
+            area.innerHTML = `<div style="display:flex; gap:10px; justify-content:center;">
                                 <div><label style="font-size:0.85rem;">${state.language === 'tr' ? 'Başlangıç:' : 'Start:'}</label><input type="number" id="range-start" value="1"></div>
                                 <div><label style="font-size:0.85rem;">${state.language === 'tr' ? 'Bitiş:' : 'End:'}</label><input type="number" id="range-end" value="${total}"></div>
                               </div>`;
@@ -87,6 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startSession() {
         if (prepareActiveQuestions()) {
+            state.currentQuestionIndex = 0;
+            state.userAnswers = new Array(state.activeQuestions.length).fill(null);
+            
             if (state.currentMode === 'read') {
                 renderReadList();
                 switchView('readMode');
@@ -100,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Madde 4: Yanlışsa Kırmızı, Doğruysa Yeşil ve Otomatik Geçiş
     function handleAnswer(choice) {
         if (state.userAnswers[state.currentQuestionIndex] !== null) return;
         
@@ -108,13 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctChoice = state.activeQuestions[state.currentQuestionIndex].correctAnswer;
         const isCorrect = choice === correctChoice;
 
-        // Renkleri ui.js üzerinden gösterir
         renderQuestionUI(handleAnswer);
-
-        // Madde 3: Streak Popup Tetikle
         handleStreak(isCorrect);
 
-        // Otomatik Geçiş (1 saniye bekler)
         if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             setTimeout(() => {
                 state.currentQuestionIndex++;
@@ -123,15 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Mesaj Yönetim Mantığı ---
     function handleStreak(isCorrect) {
         if (isCorrect) {
             state.successStreak = (state.successStreak || 0) + 1;
             state.failureStreak = 0;
-            if (state.successStreak >= 3) triggerStreakPopup("🔥", state.successStreak + " SERİ!");
+            if (state.successStreak >= 3) {
+                // Rastgele mesaj seçimi
+                const randomMsg = POSITIVE_STREAK_MESSAGES[Math.floor(Math.random() * POSITIVE_STREAK_MESSAGES.length)];
+                triggerStreakPopup("🔥", `${state.successStreak} Seri: ${randomMsg}`);
+            }
         } else {
             state.failureStreak = (state.failureStreak || 0) + 1;
             state.successStreak = 0;
-            if (state.failureStreak >= 2) triggerStreakPopup("🧊", "ODAKLAN!", true);
+            if (state.failureStreak >= 2) {
+                // Rastgele hata mesajı seçimi
+                const randomMsg = NEGATIVE_STREAK_MESSAGES[Math.floor(Math.random() * NEGATIVE_STREAK_MESSAGES.length)];
+                triggerStreakPopup("🧊", randomMsg, true);
+            }
         }
     }
 
@@ -148,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => popup.classList.remove('active'), 2500);
     }
 
-    // --- 4. NAVİGASYON VE DİĞERLERİ ---
+    // --- 4. NAVİGASYON ---
     document.getElementById('next-question-btn').onclick = () => {
         if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             state.currentQuestionIndex++;
@@ -200,11 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Madde 5: Ezber Modu Cevap Göster Fix
     const showAnsBtn = document.getElementById('show-answer-btn');
     if (showAnsBtn) {
         showAnsBtn.onclick = () => {
-            const box = document.querySelector('.learn-box-answer'); // Yeni boxed yapı hedef alındı
+            const box = document.querySelector('.learn-box-answer');
             const feedback = document.getElementById('learn-feedback-btns');
             if(box) box.classList.remove('hidden');
             showAnsBtn.classList.add('hidden');
@@ -220,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleLearnNext(status) {
         state.userAnswers[state.currentQuestionIndex] = status;
-        handleStreak(status === 'knew'); // Ezber modunda da streak say
+        handleStreak(status === 'knew');
 
         if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             state.currentQuestionIndex++;
