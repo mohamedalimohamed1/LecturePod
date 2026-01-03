@@ -9,7 +9,7 @@ export const state = {
         { id: 'lecture-4', title: 'Kriptoloji ve Bilgi Güvenliği - Vize Sınavı', file: 'data/lecture_seven.json' },
         { id: 'lecture-5', title: 'Uzaktan Algılama - Vize Sınavı', file: 'data/lecture_three.json' },
         { id: 'lecture-6', title: 'İşletim Sistemleri - Vize Sınavı', file: 'data/lecture_five.json' },
-        { id: 'lecture-7', title: 'Örüntü Tanıma - Vize Sınavı', file: 'data/lecture_two.json' }
+        { id: 'lecture-7', title: 'Örüntü Tanıma - Vize Ve Final', file: 'data/lecture_two.json' }
     ],
     successMessages: [
         { emoji: '🔥', text: { tr: 'Harikasın! 3 Doğru Üst Üste!', en: 'Great! 3 in a row!' } },

@@ -1705,7 +1705,7 @@
         "C) İlişkisel varlık",
         "D) Soyut varlık"
       ],
-      "correctAnswer": "B) Başka bir varlığa bağımlı olduğunda"
+      "correctAnswer": "C) İlişkisel varlık"
     },
     {
       "type": "multiple-choice",

@@ -1,6 +1,6 @@
 {
   "courseTitle": "Örüntü Tanıma",
-  "lectureTitle": "Temel Kavramlar ve Uygulamalar",
+  "lectureTitle": "Tüm Bölumler",
   "questions": [
     {
       "type": "short-answer",
@@ -134,8 +134,28 @@
     },
     {
       "type": "short-answer",
-      "question": "Veri türüne göre ön işleme teknikleri.",
+      "question": "Veri türüne göre ön işleme teknikleri nelerdir?",
       "correctAnswer": "Veri Türü | Amaç | Örnek Teknikler\nA. Görüntü Verileri | Görüntüyü netleştirip, tanınacak objeyi ön plana çıkarmak. |  Gürültü temizleme (Median filtre)  Kontrast artırma (Histogram eşitleme)  Kenar tespiti (Sobel, Canny) Görüntü segmentasyonu\nB. Ses Verileri | Ses sinyalindeki anlamlı kısımları temiz ve dengeli hale getirmek. |  Gürültü azaltma (Low-pass filtre)  Sessizlik (silence) kısımlarının çıkarılması  Zaman-frekans dönüşümleri (Fourier)\nC. Metin Verileri | Metni kelime düzeyinde sadeleştirip anlam analizine uygun hale getirmek. |  Küçük harfe dönüştürme  Gereksiz kelimeleri (stop-words) çıkarma  Kök bulma (Stemming / Lemmatization)\nD. Sensör / Zaman Serisi | Sensör hatalarını ve ölçüm sapmalarını azaltmak. |  Eksik veri doldurma  Gürültü filtreleme (Moving average)  Outlier (aykırı değer) tespiti"
+    },
+    {
+      "type": "short-answer",
+      "question": "SINIFLANDIRMA (Karar Verme Süreci)",
+      "correctAnswer": "Sınıflandırmanın Amacı: Örüntüleri, sahip oldukları özellik uzaylarına göre kendilerine en yakın sınıflara minimum hata ile eşlemektir.\n\nÖzelliklerin Rolü: Sınıflandırıcının başarımında, önceden belirlenmiş olan iyi nitelikli özellikler kilit bir rol oynar.\n\nİstatistiksel Yapı: Sınıflandırma, giriş veri uzayının olasılık yoğunluk fonksiyonlarının tahmini üzerine kurulu bir istatistiksel yapıdır.\n\nBayes Karar Teorisi: İstatistiksel örüntü tanıma yöntemleri genel olarak Bayes Karar Teorisi üzerine kurulmuştur ve bu yöntemler uzun bir geçmişe sahiptir.\nŞablon Eşleme (Template Matching):\nBilinmeyen bir örüntü, veri tabanında daha önceden belirlenmiş olan şablonlarla (prototiplerle) karşılaştırılır.\nGiriş örüntüsü ile her bir şablon arasındaki benzerlik derecesi tespit edilerek sınıflandırma yapılır.\nk-En Yakın Komşu (k-NN) Yaklaşımı:\nBilinmeyen bir örneğin sınıfını belirlemek için, özellik uzayındaki en yakın komşularının hangi sınıfa ait olduğuna bakılır.\nBelirlenen komşular arasında en fazla temsil edilen (en çok oyu alan) sınıf, bilinmeyen örneğin sınıfı olarak atanır."
+    },
+    {
+      "type": "short-answer",
+      "question": "YAPAY SİNİR AĞLARI (Akıllı Örüntü Tanıma)",
+      "correctAnswer": "Öğrenme Tabanlı Sistemler: Akıllı örüntü tanıma yaklaşımları öğrenme tabanlıdır ve karar aşamasında geçmiş tecrübelerinden sonuç üretirler.\nGenelleme Yeteneği: Örüntü tanıma sisteminin; çıkarım, genelleme ve belirli bir hata toleransı ile karar verebilme yeteneklerini içermesi gerekir.\nYSA ve İstatistik İlişkisi:\nYSA yaklaşımları, öğrenme algoritmaları aracılığıyla örüntü sınıflarının istatistiksel özellikleri hakkında bilgi kullanmadan doğrudan veriden öğrenir.\nYapay sinir ağları, geleneksel istatistiksel örüntü tanımanın bir uzantısı veya alternatif tekniği olarak düşünülebilir.\n\nHiyerarşik Tanımlama: Yapısal yöntemde daha basit alt örüntüler, karışık örüntülerin hiyerarşik tanımlamalarını formüle etmek için kullanılır."
+    },
+    {
+      "type": "short-answer",
+      "question": "KÜMELEME (Öğreticisiz Tanıma)",
+      "correctAnswer": "Öğreticisiz Öğrenme: Veri setinde sınıf etiketlerinin bulunmadığı durumlarda kullanılan bir yaklaşımdır.\n\nBenzerlik Ölçütleri: Veriler, kendi içlerindeki benzerlik veya uzaklık karakteristiklerine göre doğal gruplara (kümelere) ayrılır.\n\nGizli Yapıların Keşfi: Amacı, veri kümesi içindeki bilinmeyen düzenlilikleri ve hiyerarşik yapıları otomatik olarak keşfetmektir."
+    },
+    {
+      "type": "short-answer",
+      "question": "BAŞARIM ANALİZİ VE DEĞERLENDİRME",
+      "correctAnswer": "Hata Matrisi (Confusion Matrix): Sistemin gerçek sınıflar ile tahmin edilen sınıflar arasındaki başarısını ölçmek için kullanılan temel değerlendirme aracıdır.\nPerformans Metrikleri:\n\nDoğruluk (Accuracy): Toplam doğru yapılan sınıflandırmaların tüm örneklere oranıdır.\n\nAnomali Tespiti: Verideki olağandışı örüntülerin ve hataların belirlenmesi sürecidir.\n\nKararlı Yapı: Örüntü sınıflandırma sisteminin, sistem içi veya dışındaki kontrolsüz girişimlerden etkilenmemesi ve kararlı bir yapı oluşturması beklenir."
     }
   ]
 }
