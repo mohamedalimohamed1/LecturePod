@@ -509,7 +509,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "45. Günümüzde yaşamboyu öğrenmenin zorunlu hale gelmesinin temel nedeni aşağıdakilerden hangisidir?",
+      "question": "46. Günümüzde yaşamboyu öğrenmenin zorunlu hale gelmesinin temel nedeni aşağıdakilerden hangisidir?",
       "options": [
         "A) Üniversite eğitiminin yetersiz kalması",
         "B) Bilginin üretim ve dolaşım hızının artması",
@@ -520,7 +520,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "46. Bilgi ve İletişim Teknolojilerinin (BİT) yaşamboyu öğrenmeye etkisi aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
+      "question": "47. Bilgi ve İletişim Teknolojilerinin (BİT) yaşamboyu öğrenmeye etkisi aşağıdakilerden hangisiyle doğrudan ilişkilidir?",
       "options": [
         "A) Bilginin yalnızca akademik çevrelerde üretilmesi",
         "B) Bilgiye erişimin zorlaşması",
@@ -531,7 +531,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "47. Yaşamboyu öğrenmenin devamlılık ilkesi neyi ifade eder?",
+      "question": "48. Yaşamboyu öğrenmenin devamlılık ilkesi neyi ifade eder?",
       "options": [
         "A) Öğrenmenin belirli bir yaşta sona ermesini",
         "B) Öğrenmenin yalnızca mesleki alanla sınırlı olmasını",
@@ -542,7 +542,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "48. Aşağıdakilerden hangisi yaşamboyu öğrenen bireyin özelliklerinden biri değildir?",
+      "question": "49. Aşağıdakilerden hangisi yaşamboyu öğrenen bireyin özelliklerinden biri değildir?",
       "options": [
         "A) Öğrenme ihtiyacını fark edebilme",
         "B) İçsel motivasyona sahip olma",
@@ -553,7 +553,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "49. Yaşamboyu öğrenmenin bireysel faydalarından biri hangisidir?",
+      "question": "50. Yaşamboyu öğrenmenin bireysel faydalarından biri hangisidir?",
       "options": [
         "A) Sabit meslek yapısının korunması",
         "B) Toplumsal değişimin yavaşlaması",
@@ -564,7 +564,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "50. Kurumsal açıdan yaşamboyu öğrenmenin en önemli katkısı nedir?",
+      "question": "51. Kurumsal açıdan yaşamboyu öğrenmenin en önemli katkısı nedir?",
       "options": [
         "A) Çalışan sayısının azaltılması",
         "B) İnovasyon kapasitesinin artması",
@@ -575,7 +575,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "51. DPT'ye göre yaşamboyu öğrenmenin temel amaçlarından biri hangisidir?",
+      "question": "52. DPT'ye göre yaşamboyu öğrenmenin temel amaçlarından biri hangisidir?",
       "options": [
         "A) Akademik rekabeti azaltmak",
         "B) Kişisel gelişime katkı sağlamak",
@@ -586,7 +586,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "52. Doyle'a göre bilgi okuryazarı bireyin sahip olması gereken özellik hangisidir?",
+      "question": "53. Doyle'a göre bilgi okuryazarı bireyin sahip olması gereken özellik hangisidir?",
       "options": [
         "A) Bilgiyi ezberleme",
         "B) Bilgiyi sorgulamadan kabul etme",
@@ -597,7 +597,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "53. Androgoji kavramı neyi ifade eder?",
+      "question": "54. Androgoji kavramı neyi ifade eder?",
       "options": [
         "A) Çocuk eğitimi",
         "B) Öğretmen merkezli eğitim",
@@ -608,7 +608,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "54. KAÇD (MOOC) sistemlerinin geleneksel eğitimden temel farkı nedir?",
+      "question": "55. KAÇD (MOOC) sistemlerinin geleneksel eğitimden temel farkı nedir?",
       "options": [
         "A) Öğrenmenin sınıfla sınırlı olması",
         "B) Öğrenenin kendi hızında ilerleyebilmesi",
@@ -619,7 +619,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "55. Etik ile ahlak arasındaki fark düşünülürse, bir kişinin 'neden böyle davrandığını' sorgulamak hangi alana girer?",
+      "question": "56. Etik ile ahlak arasındaki fark düşünülürse, bir kişinin 'neden böyle davrandığını' sorgulamak hangi alana girer?",
       "options": [
         "A) Hukuk",
         "B) Sosyoloji",
@@ -631,7 +631,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "56. Etik kuralların amacı aşağıdakilerden hangisini sağlamaktır?",
+      "question": "57. Etik kuralların amacı aşağıdakilerden hangisini sağlamaktır?",
       "options": [
         "A) İnsanların özgürce davranabilmesi",
         "B) Herkesin aynı fikirde olması",
@@ -643,7 +643,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "57. Meta-etikte sorulan sorular göz önüne alındığında, aşağıdaki durumlardan hangisi meta-etikle ilişkilidir?",
+      "question": "58. Meta-etikte sorulan sorular göz önüne alındığında, aşağıdaki durumlardan hangisi meta-etikle ilişkilidir?",
       "options": [
         "A) 'Bu durumda nasıl davranmalıyız?'",
         "B) 'İyi dediğimiz şey ne demektir?'",
@@ -655,7 +655,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "58. Normatif etik hangi tür sorulara odaklandığı için aşağıdakilerden hangisine daha yakındır?",
+      "question": "59. Normatif etik hangi tür sorulara odaklandığı için aşağıdakilerden hangisine daha yakındır?",
       "options": [
         "A) 'Duygularımız nasıl oluşur?'",
         "B) 'Bir davranış doğru mudur?'",
@@ -667,7 +667,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "59. Uygulamalı etiğin konusu düşünüldüğünde, aşağıdaki örneklerden hangisi bu alanla ilgilidir?",
+      "question": "60. Uygulamalı etiğin konusu düşünüldüğünde, aşağıdaki örneklerden hangisi bu alanla ilgilidir?",
       "options": [
         "A) 'Etik kelimesinin kökeni nedir?'",
         "B) 'Tıpta organ nakli etik midir?'",
@@ -679,7 +679,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "60. Teolojik (sonuçsalcı) etik anlayışı dikkate alındığında aşağıdakilerden hangisi uygun bir değerlendirmedir?",
+      "question": "61. Teolojik (sonuçsalcı) etik anlayışı dikkate alındığında aşağıdakilerden hangisi uygun bir değerlendirmedir?",
       "options": [
         "A) Önemli olan niyettir",
         "B) Sonuçlar önemsizdir",
@@ -691,7 +691,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "61. Deontolojik yaklaşıma göre, bir davranış neden 'yanlış' kabul edilebilir?",
+      "question": "62. Deontolojik yaklaşıma göre, bir davranış neden 'yanlış' kabul edilebilir?",
       "options": [
         "A) Sonucu kötü olduğu için",
         "B) Kurala aykırı olduğu için",
@@ -703,7 +703,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "62. Kant'ın 'kesin buyruk' (kategorik imperatif) anlayışına göre bir eylemin etik olması için hangi ölçüt esastır?",
+      "question": "63. Kant'ın 'kesin buyruk' (kategorik imperatif) anlayışına göre bir eylemin etik olması için hangi ölçüt esastır?",
       "options": [
         "A) Eylem herkes için geçerli bir ilkeye dönüşebiliyorsa",
         "B) Eylem kişinin duygularına uyuyorsa",
@@ -715,7 +715,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "63. Bilişim etiğinde, bilgisayar kullanıcılarının dikkat etmesi gereken temel noktalardan biri aşağıdakilerden hangisidir?",
+      "question": "64. Bilişim etiğinde, bilgisayar kullanıcılarının dikkat etmesi gereken temel noktalardan biri aşağıdakilerden hangisidir?",
       "options": [
         "A) Başkalarının hak ve mahremiyetine saygı göstermek",
         "B) Mümkün olduğunca çok veri toplamak",
@@ -727,7 +727,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "64. Bilgisayar etik ilkeleri düşünüldüğünde, hangi durum etik dışıdır?",
+      "question": "65. Bilgisayar etik ilkeleri düşünüldüğünde, hangi durum etik dışıdır?",
       "options": [
         "A) Başkasının dosyalarını izinsiz görüntülemek",
         "B) Kendi verilerini yedeklemek",
@@ -739,7 +739,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "65. Sosyal ağlarda yapılan paylaşımlarda etik sorunları dikkate alındığında, hangi davranış olumsuz bir örnektir?",
+      "question": "66. Sosyal ağlarda yapılan paylaşımlarda etik sorunları dikkate alındığında, hangi davranış olumsuz bir örnektir?",
       "options": [
         "A) Kaynak göstermek",
         "B) Doğruluğundan emin olmadan bilgi yaymak",
@@ -751,7 +751,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "66. 'İnternet ortamında davranışların gerçek hayattaki davranışlardan bağımsız olamayacağı' düşüncesi hangi etik değerlere dayanır?",
+      "question": "67. 'İnternet ortamında davranışların gerçek hayattaki davranışlardan bağımsız olamayacağı' düşüncesi hangi etik değerlere dayanır?",
       "options": [
         "A) Tutarlılık ve sorumluluk",
         "B) Sürpriz ve rastgelelik",
@@ -763,7 +763,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "67. Bilişim hukuku ile ilgili hangi durum hukuki bir problem oluşturur?",
+      "question": "68. Bilişim hukuku ile ilgili hangi durum hukuki bir problem oluşturur?",
       "options": [
         "A) Bilgisayarı sessiz kullanmak",
         "B) İzinsiz kişisel veri toplamak",
@@ -775,7 +775,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "68. İnternet hukukunun kapsamı düşünüldüğünde aşağıdakilerden hangisi bu alanın bir örneğidir?",
+      "question": "69. İnternet hukukunun kapsamı düşünüldüğünde aşağıdakilerden hangisi bu alanın bir örneğidir?",
       "options": [
         "A) Telif ihlali",
         "B) Ekran çözünürlüğü ayarı",
@@ -787,7 +787,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "69. Bilişim etiğine uygun davranmak neden önemlidir?",
+      "question": "70. Bilişim etiğine uygun davranmak neden önemlidir?",
       "options": [
         "A) İnternet hızını artırdığı için",
         "B) Daha fazla takipçi kazandırdığı için",
@@ -799,7 +799,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "70. Bulut bilişim kavramı aşağıdakilerden hangisini ifade eder?",
+      "question": "71. Bulut bilişim kavramı aşağıdakilerden hangisini ifade eder?",
       "options": [
         "A) Yerel ağlar üzerinden çalışan yazılımlar",
         "B) Fiziksel donanım satın almayı zorunlu kılan sistemler",
@@ -810,7 +810,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "71. Bulut bilişimin en önemli avantajlarından biri aşağıdakilerden hangisidir?",
+      "question": "72. Bulut bilişimin en önemli avantajlarından biri aşağıdakilerden hangisidir?",
       "options": [
         "A) Donanım bağımlılığını artırması",
         "B) Yüksek ilk yatırım maliyeti gerektirmesi",
@@ -821,7 +821,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "72. Kullanıcıların insan müdahalesi olmadan kaynaklara erişebilmesini sağlayan bulut özelliği hangisidir?",
+      "question": "73. Kullanıcıların insan müdahalesi olmadan kaynaklara erişebilmesini sağlayan bulut özelliği hangisidir?",
       "options": [
         "A) Geniş ağ erişimi",
         "B) Ölçülen hizmet",
@@ -832,7 +832,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "73. Bulut hizmetlerine akıllı telefon, tablet ve dizüstü bilgisayarlardan erişilebilmesini sağlayan özellik hangisidir?",
+      "question": "74. Bulut hizmetlerine akıllı telefon, tablet ve dizüstü bilgisayarlardan erişilebilmesini sağlayan özellik hangisidir?",
       "options": [
         "A) Hızlı elastikiyet",
         "B) Geniş ağ erişimi",
@@ -843,7 +843,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "74. Birden fazla kullanıcının aynı altyapı kaynaklarını paylaşmasını sağlayan yapı aşağıdakilerden hangisidir?",
+      "question": "75. Birden fazla kullanıcının aynı altyapı kaynaklarını paylaşmasını sağlayan yapı aşağıdakilerden hangisidir?",
       "options": [
         "A) Özel bulut",
         "B) Kaynak havuzu oluşturma",
@@ -854,7 +854,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "75. Talebe göre kaynakların artırılıp azaltılabilmesi hangi bulut özelliği ile ilgilidir?",
+      "question": "76. Talebe göre kaynakların artırılıp azaltılabilmesi hangi bulut özelliği ile ilgilidir?",
       "options": [
         "A) Ölçülen hizmet",
         "B) Hızlı elastikiyet",
@@ -865,7 +865,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "76. Bulut bilişimde kullanılan ve dünya genelinde dağıtılmış yüksek kapasiteli sunucu çiftliklerine ne ad verilir?",
+      "question": "77. Bulut bilişimde kullanılan ve dünya genelinde dağıtılmış yüksek kapasiteli sunucu çiftliklerine ne ad verilir?",
       "options": [
         "A) Sanal makineler",
         "B) Ağ altyapısı",
@@ -876,7 +876,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "77. Fiziksel donanım üzerinde birden fazla sanal ortam çalıştırılmasını sağlayan teknoloji hangisidir?",
+      "question": "78. Fiziksel donanım üzerinde birden fazla sanal ortam çalıştırılmasını sağlayan teknoloji hangisidir?",
       "options": [
         "A) Ağ yönlendirme",
         "B) Sanallaştırma",
@@ -887,7 +887,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "78. Aşağıdakilerden hangisi bulut hizmet sağlayıcılarına örnektir?",
+      "question": "79. Aşağıdakilerden hangisi bulut hizmet sağlayıcılarına örnektir?",
       "options": [
         "A) Oracle",
         "B) Amazon Web Services (AWS)",
@@ -898,7 +898,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "79. Kullanıcının işletim sistemi ve uygulamaları kendisinin yönettiği hizmet modeli hangisidir?",
+      "question": "80. Kullanıcının işletim sistemi ve uygulamaları kendisinin yönettiği hizmet modeli hangisidir?",
       "options": [
         "A) SaaS",
         "B) PaaS",
@@ -909,7 +909,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "80. Uygulama geliştirme ve dağıtımı için altyapıdan soyutlanmış platform sunan model hangisidir?",
+      "question": "81. Uygulama geliştirme ve dağıtımı için altyapıdan soyutlanmış platform sunan model hangisidir?",
       "options": [
         "A) IaaS",
         "B) SaaS",
@@ -920,7 +920,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "81. Son kullanıcıya doğrudan web tabanlı yazılım sunan hizmet modeli hangisidir?",
+      "question": "82. Son kullanıcıya doğrudan web tabanlı yazılım sunan hizmet modeli hangisidir?",
       "options": [
         "A) IaaS",
         "B) PaaS",
@@ -931,7 +931,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "82. Google Drive ve Dropbox hangi bulut yayılım türüne örnektir?",
+      "question": "83. Google Drive ve Dropbox hangi bulut yayılım türüne örnektir?",
       "options": [
         "A) Özel bulut",
         "B) Genel bulut",
@@ -942,7 +942,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "83. Sadece tek bir kuruma özel olarak tahsis edilen bulut altyapısı hangisidir?",
+      "question": "84. Sadece tek bir kuruma özel olarak tahsis edilen bulut altyapısı hangisidir?",
       "options": [
         "A) Genel bulut",
         "B) Hibrit bulut",
@@ -953,7 +953,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "84. Genel ve özel bulutun birlikte kullanıldığı model aşağıdakilerden hangisidir?",
+      "question": "85. Genel ve özel bulutun birlikte kullanıldığı model aşağıdakilerden hangisidir?",
       "options": [
         "A) Topluluk bulutu",
         "B) Hibrit bulut",
@@ -964,7 +964,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "85. Aşağıdakilerden hangisi bulut bilişimin üstünlüklerinden biridir?",
+      "question": "86. Aşağıdakilerden hangisi bulut bilişimin üstünlüklerinden biridir?",
       "options": [
         "A) İnternet bağımlılığı",
         "B) Veri güvenliği riskleri",
@@ -975,7 +975,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "86. Bulut bilişimde 'vendor lock-in' kavramı neyi ifade eder?",
+      "question": "87. Bulut bilişimde 'vendor lock-in' kavramı neyi ifade eder?",
       "options": [
         "A) İnternet hızının düşmesini",
         "B) Bir sağlayıcıya bağımlı kalmayı",
@@ -986,7 +986,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "87. Aşağıdakilerden hangisi bulut bilişimin sınırlılıklarından biridir?",
+      "question": "88. Aşağıdakilerden hangisi bulut bilişimin sınırlılıklarından biridir?",
       "options": [
         "A) Küresel erişim",
         "B) Ölçeklenebilirlik",
@@ -997,7 +997,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "88. Microsoft 365 ve Google Workspace hangi kategoriye girer?",
+      "question": "89. Microsoft 365 ve Google Workspace hangi kategoriye girer?",
       "options": [
         "A) Bulut tabanlı depolama",
         "B) Verimlilik yazılımları",
@@ -1008,7 +1008,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "89. Gmail, Google Takvim ve Google Meet hangi başlık altında değerlendirilir?",
+      "question": "90. Gmail, Google Takvim ve Google Meet hangi başlık altında değerlendirilir?",
       "options": [
         "A) Bulut altyapısı",
         "B) Google verimlilik araçları",
