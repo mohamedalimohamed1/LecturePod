@@ -14,12 +14,10 @@ const views = {
 
 /**
  * Metin içindeki tablo, liste ve yeni satırları algılayıp zengin HTML formatına çevirir.
- * Hücre içindeki liste elemanlarını alt alta gelecek şekilde düzenler.
  */
 const formatAnswerText = (text) => {
     if (!text) return '';
 
-    // Eğer metin zaten karmaşık HTML içeriyorsa dokunma
     if (/<[a-z][\s\S]*>/i.test(text)) return text;
 
     const lines = text.split('\n');
@@ -33,11 +31,8 @@ const formatAnswerText = (text) => {
         tableRows.forEach((row, i) => {
             html += `<tr style="${i === 0 ? 'background: rgba(13, 148, 235, 0.1); font-weight: bold;' : 'border-top: 1px solid var(--border-color);'}">`;
             row.forEach(cell => {
-                // Hücre içindeki özel işaretleri (, •, *) bulup alt alta (br) ve mermi işaretli hale getiriyoruz
                 let cellContent = cell.replace(/[•\*]/g, '<br>• ').trim();
-                // Eğer başta gereksiz br oluştuysa temizle
                 if (cellContent.startsWith('<br>')) cellContent = cellContent.substring(4);
-                
                 html += `<td style="padding: 0.6rem; border: 1px solid var(--border-color); vertical-align: top;">${cellContent}</td>`;
             });
             html += '</tr>';
@@ -58,8 +53,6 @@ const formatAnswerText = (text) => {
 
     lines.forEach(line => {
         const trimmed = line.trim();
-
-        // 1. Tablo Satırı Algılama
         if (trimmed.includes('|')) {
             formattedHtml += flushList();
             const cells = trimmed.split('|').map(c => c.trim()).filter(c => c !== '');
@@ -68,15 +61,11 @@ const formatAnswerText = (text) => {
                 return;
             }
         }
-
-        // 2. Liste Öğesi Algılama (Dış liste)
         if (/^[•\*\-]\s*/.test(trimmed)) {
             formattedHtml += flushTable();
             listItems.push(trimmed.replace(/^[•\*\-]\s*/, ''));
             return;
         }
-
-        // 3. Normal Satır
         formattedHtml += flushTable();
         formattedHtml += flushList();
         if (trimmed === '') {
@@ -88,7 +77,6 @@ const formatAnswerText = (text) => {
 
     formattedHtml += flushTable();
     formattedHtml += flushList();
-
     return formattedHtml;
 };
 
@@ -98,7 +86,6 @@ export function switchView(id) {
         views[id].classList.add('active');
         state.currentView = id;
     }
-    
     const logoutBtn = document.getElementById('logout-btn');
     if (logoutBtn) logoutBtn.classList.toggle('hidden', id === 'login');
 }
@@ -114,7 +101,6 @@ export function updateUIText() {
 export function renderLectureList(onSelectCallback) {
     const container = document.getElementById('lecture-list-container');
     if (!container) return;
-    
     container.innerHTML = '';
     state.lectures.forEach(l => {
         const btn = document.createElement('button');
@@ -128,9 +114,18 @@ export function renderLectureList(onSelectCallback) {
     });
 }
 
+/**
+ * Test ve Pratik modları: Sadece multiple-choice sorularını render eder.
+ */
 export function renderQuestionUI(onChoiceCallback) {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
+
+    // Kritik Kısıtlama: Eğer soru short-answer ise bu modda gösterilmez
+    if (q.type === 'short-answer') {
+        console.warn("Short-answer question skipped in Quiz/Practice mode.");
+        return;
+    }
 
     const counter = document.getElementById('question-counter');
     if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
@@ -158,11 +153,13 @@ export function renderQuestionUI(onChoiceCallback) {
 
     document.getElementById('prev-question-btn')?.classList.toggle('hidden', state.currentQuestionIndex === 0);
     const isLast = state.currentQuestionIndex === state.activeQuestions.length - 1;
-    
     document.getElementById('next-question-btn')?.classList.toggle('hidden', !answered || isLast);
     document.getElementById('finish-btn')?.classList.toggle('hidden', !answered || !isLast);
 }
 
+/**
+ * Ezber Modu: Hem short-answer hem multiple-choice gösterir.
+ */
 export function renderLearnUI() {
     const q = state.activeQuestions[state.currentQuestionIndex];
     if (!q) return;
@@ -174,24 +171,28 @@ export function renderLearnUI() {
     if (counter) counter.textContent = `${state.currentQuestionIndex + 1} / ${state.activeQuestions.length}`;
 
     container.innerHTML = '';
-    
     const card = document.createElement('div');
     card.className = 'result-card';
     card.style.borderLeft = "4px solid var(--primary-color)";
     
+    // Cevap alanı: Çoktan seçmeli ise şıkkı, kısa cevap ise metni gösterir
+    const answerContent = q.type === 'multiple-choice' ? q.correctAnswer : q.correctAnswer;
+
     card.innerHTML = `
         <span class="box-question">${state.currentQuestionIndex + 1}. ${q.question}</span>
         <div class="box-answer learn-box-answer hidden">
-            ${formatAnswerText(q.correctAnswer)}
+            ${formatAnswerText(answerContent)}
         </div>
     `;
     
     container.appendChild(card);
-    
     document.getElementById('show-answer-btn')?.classList.remove('hidden');
     document.getElementById('learn-feedback-btns')?.classList.add('hidden');
 }
 
+/**
+ * Okuma Modu: Hem short-answer hem multiple-choice sorularını listeler.
+ */
 export function renderReadList() {
     const container = document.getElementById('read-mode-list');
     if (!container) return;
@@ -212,6 +213,9 @@ export function renderReadList() {
     });
 }
 
+/**
+ * Sonuç Ekranı: Farklı soru tiplerine göre puanlama yapar.
+ */
 export function renderResultsUI() {
     let score = 0;
     const listContainer = document.getElementById('result-details-container');
@@ -220,7 +224,11 @@ export function renderResultsUI() {
     listContainer.innerHTML = '';
     state.activeQuestions.forEach((q, i) => {
         const userAns = state.userAnswers[i];
-        const isCorrect = (state.currentMode === 'learn') ? userAns === 'knew' : userAns === q.correctAnswer;
+        
+        // Başarı Kontrolü: Tip bazlı mantık
+        const isCorrect = (q.type === 'short-answer') 
+            ? userAns === 'knew' 
+            : userAns === q.correctAnswer;
         
         if (isCorrect) score++;
 
@@ -228,7 +236,7 @@ export function renderResultsUI() {
         card.className = `result-card ${isCorrect ? 'correct' : 'incorrect'}`;
         
         let displayUserAns = userAns;
-        if (state.currentMode === 'learn') {
+        if (q.type === 'short-answer') {
             displayUserAns = (userAns === 'knew') ? translations[state.language].knewItLabel : translations[state.language].didntKnowLabel;
         } else if (!userAns) {
             displayUserAns = translations[state.language].notAnsweredLabel;

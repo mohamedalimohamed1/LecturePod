@@ -4,8 +4,6 @@ import { performLogin, performLogout } from './auth.js';
 import { switchView, updateUIText, renderLectureList, renderReadList, renderQuestionUI, renderLearnUI, renderResultsUI } from './ui.js';
 import { fetchLectureData, prepareActiveQuestions } from './engine.js';
 import { showNotification } from './utils/ui-helpers.js';
-
-// Yeni oluşturduğumuz mesajları içe aktarıyoruz
 import { POSITIVE_STREAK_MESSAGES, NEGATIVE_STREAK_MESSAGES } from './messages.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,8 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.onclick = () => {
                 state.currentMode = mode;
                 state.rangeType = 'all';
-                if (mode === 'quiz') {
+                
+                // Kurulum ekranına gitmeden önce mod bazlı limitleri ayarla
+                if (mode === 'quiz' || mode === 'practice') {
                     renderSetupArea();
+                    switchView('sessionSetup');
+                } else if (mode === 'learn') {
+                    renderSetupArea(); // Ezber modu için de aralık seçilebilmeli
                     switchView('sessionSetup');
                 } else {
                     startSession();
@@ -60,18 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderSetupArea() {
         const area = document.getElementById('setup-config-area');
         if(!area || !state.selectedLectureData) return;
-        const total = state.selectedLectureData.questions.length;
+        
+        // Filtrelenmiş toplam soru sayısını hesapla
+        let total = 0;
+        const qList = state.selectedLectureData.questions;
+        if (state.currentMode === 'quiz' || state.currentMode === 'practice') {
+            total = qList.filter(q => q.type === 'multiple-choice').length;
+        } else if (state.currentMode === 'learn') {
+            total = qList.filter(q => q.type === 'short-answer' || q.type === 'multiple-choice').length;
+        } else {
+            total = qList.length;
+        }
         
         if (state.rangeType === 'random') {
             area.innerHTML = `<label style="display:block; margin-bottom:8px; font-size:0.9rem; font-weight:700;">${state.language === 'tr' ? 'Soru Sayısı Seçin:' : 'Select Question Count:'}</label>
-                              <input type="number" id="setup-count" value="10" min="1" max="${total}">`;
+                              <input type="number" id="setup-count" value="${Math.min(10, total)}" min="1" max="${total}">`;
         } else if (state.rangeType === 'range') {
             area.innerHTML = `<div style="display:flex; gap:10px; justify-content:center;">
                                 <div><label style="font-size:0.85rem;">${state.language === 'tr' ? 'Başlangıç:' : 'Start:'}</label><input type="number" id="range-start" value="1"></div>
                                 <div><label style="font-size:0.85rem;">${state.language === 'tr' ? 'Bitiş:' : 'End:'}</label><input type="number" id="range-end" value="${total}"></div>
                               </div>`;
         } else {
-            area.innerHTML = `<p style="text-align:center; font-size:0.9rem; font-weight:700; color:var(--primary-color);">${total} ${state.language === 'tr' ? 'sorunun tamamı yüklenecek.' : 'questions will be loaded.'}</p>`;
+            area.innerHTML = `<p style="text-align:center; font-size:0.9rem; font-weight:700; color:var(--primary-color);">${total} ${state.language === 'tr' ? 'uygun soru yüklenecek.' : 'eligible questions will be loaded.'}</p>`;
         }
     }
 
@@ -90,9 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startSession() {
         if (prepareActiveQuestions()) {
-            state.currentQuestionIndex = 0;
-            state.userAnswers = new Array(state.activeQuestions.length).fill(null);
-            
             if (state.currentMode === 'read') {
                 renderReadList();
                 switchView('readMode');
@@ -103,6 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderQuestionUI(handleAnswer);
                 switchView('question');
             }
+        } else {
+            showNotification(state.language === 'tr' ? "Bu mod için uygun soru bulunamadı!" : "No eligible questions found for this mode!", "error");
         }
     }
 
@@ -110,13 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state.userAnswers[state.currentQuestionIndex] !== null) return;
         
         state.userAnswers[state.currentQuestionIndex] = choice;
-        const correctChoice = state.activeQuestions[state.currentQuestionIndex].correctAnswer;
-        const isCorrect = choice === correctChoice;
+        const currentQ = state.activeQuestions[state.currentQuestionIndex];
+        const isCorrect = choice === currentQ.correctAnswer;
 
         renderQuestionUI(handleAnswer);
         handleStreak(isCorrect);
 
-        if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
+        // Pratik modunda otomatik geçiş yapalım, Test modunda kullanıcı 'Sonraki'ye basar
+        if (state.currentMode === 'practice' && state.currentQuestionIndex < state.activeQuestions.length - 1) {
             setTimeout(() => {
                 state.currentQuestionIndex++;
                 renderQuestionUI(handleAnswer);
@@ -124,13 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Mesaj Yönetim Mantığı ---
     function handleStreak(isCorrect) {
         if (isCorrect) {
             state.successStreak = (state.successStreak || 0) + 1;
             state.failureStreak = 0;
             if (state.successStreak >= 3) {
-                // Rastgele mesaj seçimi
                 const randomMsg = POSITIVE_STREAK_MESSAGES[Math.floor(Math.random() * POSITIVE_STREAK_MESSAGES.length)];
                 triggerStreakPopup("🔥", `${state.successStreak} Seri: ${randomMsg}`);
             }
@@ -138,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
             state.failureStreak = (state.failureStreak || 0) + 1;
             state.successStreak = 0;
             if (state.failureStreak >= 2) {
-                // Rastgele hata mesajı seçimi
                 const randomMsg = NEGATIVE_STREAK_MESSAGES[Math.floor(Math.random() * NEGATIVE_STREAK_MESSAGES.length)];
                 triggerStreakPopup("🧊", randomMsg, true);
             }
@@ -224,12 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const learnKnew = document.getElementById('learn-knew');
     const learnDidnt = document.getElementById('learn-didnt-know');
 
-    if (learnKnew) learnKnew.onclick = () => handleLearnNext('knew');
-    if (learnDidnt) learnDidnt.onclick = () => handleLearnNext('didnt-know');
+    if (learnKnew) learnKnew.onclick = () => handleLearnNext(true);
+    if (learnDidnt) learnDidnt.onclick = () => handleLearnNext(false);
 
-    function handleLearnNext(status) {
-        state.userAnswers[state.currentQuestionIndex] = status;
-        handleStreak(status === 'knew');
+    function handleLearnNext(knewIt) {
+        state.userAnswers[state.currentQuestionIndex] = knewIt ? 'knew' : 'didnt-know';
+        handleStreak(knewIt);
 
         if (state.currentQuestionIndex < state.activeQuestions.length - 1) {
             state.currentQuestionIndex++;
