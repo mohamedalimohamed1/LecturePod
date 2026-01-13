@@ -1059,6 +1059,161 @@
       "type": "short-answer",
       "question": "44. Adres Uzayı (Address Space) nedir ve bölümleri nelerdir?",
       "correctAnswer": "<p>Bir sürecin erişebileceği sanal bellek alanıdır.</p><ul><li><strong>Text:</strong> Program kodu.</li><li><strong>Data/BSS:</strong> Global değişkenler.</li><li><strong>Heap:</strong> Dinamik bellek (malloc).</li><li><strong>Stack:</strong> Fonksiyon çağrıları ve yerel değişkenler.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "45. I/O yönetiminde \"Performans Darboğazı\" nedir ve işletim sistemi bunu nasıl yönetir?",
+      "correctAnswer": "CPU saniyede milyarlarca işlem yaparken, disk erişimi milisaniyeler (ms) mertebesindedir. Bu hız farkı, sistemin toplam performansının en yavaş bileşen olan I/O cihazına takılmasına (darboğaz) neden olur.\n\nYönetim Mekanizması: İşletim sistemi; Buffering (hız dengeleme), Caching (tekrar erişimi hızlandırma) ve Asenkron I/O (beklemeden işe devam etme) tekniklerini kullanarak CPU'nun boşta kalmasını engeller.\n\nÖlçek: NVMe SSD'ler HDD'den 100 kat, RAM ise SSD'den 1000 kat daha hızlıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "46. Polling, Kesme (Interrupt) ve DMA yöntemlerini CPU kullanımı açısından karşılaştırınız.",
+      "correctAnswer": "CPU'nun donanımdan veri alması için kullanılan üç temel tekniktir:\n\nPolling (Sorgulama): CPU sürekli donanıma \"hazır mısın?\" diye sorar. Gecikme düşüktür ama CPU %100 meşgul olduğu için verimsizdir.\n\nKesme (Interrupt): Donanım hazır olduğunda CPU'ya sinyal gönderir. CPU bu sırada başka işler yapabilir (verimli) ancak her kesme sinyali bir işlem yükü (overhead) yaratır.\n\nDMA (Direct Memory Access): Veri transferini CPU yerine özel bir denetleyici yapar. Veri doğrudan RAM'e yazılır. CPU sadece işlem başında ve sonunda devreye girer (en verimli yöntem)."
+    },
+    {
+      "type": "short-answer",
+      "question": "47. VFS (Virtual File System) nedir ve dosya sistemi soyutlamasındaki rolü nedir?",
+      "correctAnswer": "VFS, farklı dosya sistemlerini (ext4, NTFS, NFS vb.) tek bir evrensel arayüz altında toplayan çekirdek katmanıdır.\n\nSoyutlama: Programcı \"dosya oku\" dediğinde arkada SSD mi, USB mi yoksa ağ paylaşımı mı olduğunu bilmez.\n\nAPI Birliği: Farklı dosya sistemleri için tek bir standart read() / write() sistemi çağrısı (syscall) kullanılmasını sağlar."
+    },
+    {
+      "type": "short-answer",
+      "question": "48. Zero-Copy (Sıfır Kopyalama) teknolojisi nedir ve neden modern web sunucularında tercih edilir?",
+      "correctAnswer": "Normalde bir dosya ağ üzerinden gönderilirken veri; diskten çekirdek tamponuna, oradan uygulama tamponuna ve tekrar soket tamponuna kopyalanır. Zero-Copy (sendfile()), bu gereksiz kopyalamaları atlayarak veriyi doğrudan çekirdek içinden ağ kartına aktarır.\n\nEtkisi: CPU kullanımını %50-70 azaltır ve veri transfer hızını (throughput) 2-3 kat artırır.\n\nKullanım: Netflix gibi video akış servisleri ve Nginx gibi yüksek performanslı web sunucuları."
+    },
+    {
+      "type": "short-answer",
+      "question": "49. I/O Zamanlayıcı (I/O Scheduler) algoritmaları (Deadline, BFQ, NOOP) hangi senaryolarda kullanılır?",
+      "correctAnswer": "Disk isteklerini kuyruğa alan ve en verimli sırayla işleyen yazılımsal mekanizmadır.\n\nDeadline: Okuma/yazma işlemleri için zaman sınırı koyar. Etkileşimli sistemlerde düşük gecikme için idealdir.\n\nBFQ (Budget Fair Queuing): Bant genişliğini uygulamalar arasında adil paylaştırır. Masaüstü kullanımda akıcılık sağlar.\n\nNOOP/None: Herhangi bir sıralama yapmaz. Zaten kendi içinde zeki bir denetleyicisi olan NVMe SSD'ler için uygundur."
+    },
+    {
+      "type": "short-answer",
+      "question": "50. Journaling (Günlükleme) yaklaşımları (Metadata-only vs Full) arasındaki fark nedir?",
+      "correctAnswer": "Dosya sistemi tutarlılığını sağlamak için işlemlerin önce bir günlüğe kaydedilmesidir.\n\nMetadata-only: Sadece dosya yapıları (dizin, isim, izinler) günlüğe yazılır. Hızlıdır ama elektrik kesintisinde dosya içeriği bozulabilir.\n\nFull Journaling: Hem metadata hem de gerçek veri günlüğe yazılır. Çok güvenlidir ancak her veriyi iki kez yazdığı için performansı düşürür."
+    },
+    {
+      "type": "short-answer",
+      "question": "51. O_DIRECT ve fsync() kavramlarının veritabanı sistemleri (PostgreSQL, MySQL) için önemi nedir?",
+      "correctAnswer": "O_DIRECT: İşletim sisteminin kendi önbelleğini (cache) atlayarak doğrudan diske erişmeyi sağlar. Veritabanları kendi cache yönetimlerini yaptıkları için OS'in çiftleme yapmasını engeller.\n\nfsync(): Verinin RAM'de (Write-back) bekletilmeyip, fiziksel olarak diske kalıcı olarak yazıldığından emin olana kadar sistem çağrısını bekletir. Veri bütünlüğü için kritiktir."
+    },
+    {
+      "type": "short-answer",
+      "question": "52. Mantıksal Hacim Yönetimi (LVM) ve RAID katmanları depolama yönetimini nasıl etkiler?",
+      "correctAnswer": "Fiziksel disklerin üzerine eklenen sanallaştırma katmanlarıdır:\n\nRAID: Birden fazla diski birleştirerek performans (RAID 0), aynalama/yedekleme (RAID 1) veya hata toleransı (RAID 5/6) sağlar.\n\nLVM: Fiziksel diskleri sanal havuzlara dönüştürür. Sistem çalışırken disk boyutunu artırmaya, anlık görüntüler (snapshot) almaya ve esnek bölümlendirmeye olanak tanır."
+    },
+    {
+      "type": "short-answer",
+      "question": "53. I/O performansını ölçerken kullanılan IOPS, Latency ve Throughput terimlerini açıklayınız.",
+      "correctAnswer": "IOPS: Saniyede yapılan toplam giriş/çıkış işlemi sayısıdır (Rastgele erişim hızı).\n\nLatency (Gecikme): Bir işlemin tamamlanması için geçen süredir. P99 (isteklerin %99'unun tamamlanma süresi) sistemin \"takılma\" hissini ölçer.\n\nThroughput: Saniyede taşınan toplam veri miktarıdır (Sıralı okuma/yazma hızı, MB/s)."
+    },
+    {
+      "type": "short-answer",
+      "question": "54. Sanallaştırma Nedir?",
+      "correctAnswer": "Sanallaştırma, fiziksel donanım kaynaklarının (CPU, RAM, Disk, Ağ) yazılım aracılığıyla soyutlanarak, bu kaynaklar üzerinde birbirinden bağımsız ve izole birden fazla Sanal Makine (VM) oluşturulmasıdır.\n\nTemel Amaç: Tek bir fiziksel makineden maksimum verim almak ve kaynakları mantıksal olarak bölmektir.\n\nİşletim Sistemi Açısından: OS artık donanımın tek sahibi değil, Hypervisor tarafından yönetilen bir \"misafir\" (Guest OS) konumundadır.\n\nHAL Soyutlama: İşletim sistemi gerçek donanımı değil, Hypervisor'ın sunduğu sanal aygıtları (vCPU, vRAM) görür."
+    },
+    {
+      "type": "short-answer",
+      "question": "55. Tip 1 ve Tip 2 Hipervizörler arasındaki farklar nelerdir?",
+      "correctAnswer": "Hypervisor (Sanal Makine Yöneticisi), kaynakları VM'ler arasında paylaştıran katmandır.\n\nTip 1: Bare-Metal (Doğrudan Donanım)\nDoğrudan fiziksel donanım üzerine kurulur; arada bir ana işletim sistemi yoktur. Performans: En yüksek (donanıma en yakın). Güvenlik: Yüksek izolasyon. Örnekler: VMware ESXi, MS Hyper-V, KVM, Xen.\n\nTip 2: Hosted (İşletim Sistemi Üstü)\nMevcut bir işletim sisteminin (Windows, macOS) üzerinde bir uygulama gibi çalışır. Performans: Daha düşük (çift katmanlı geçiş). Kurulum: Çok kolay. Örnekler: Oracle VirtualBox, VMware Workstation."
+    },
+    {
+      "type": "short-answer",
+      "question": "56. Verimli Sanallaştırma Teknikleri nelerdir?",
+      "correctAnswer": "Performans kaybını (overhead) en aza indirmek için kullanılan yöntemlerdir:\n\nDonanım Destekli Sanallaştırma: Intel VT-x ve AMD-V özellikleri ile komutlar emülasyon gerektirmeden doğrudan donanımda işlenir.\n\nPara-Sanallaştırma: İşletim sisteminin sanal ortamda olduğunu bilerek doğrudan Hypervisor'a \"Hypercall\" yapmasıdır.\n\nVirtIO: Standart yavaş aygıtlar yerine kullanılan, hypervisor ile VM arasındaki I/O trafiğini hızlandıran sürücü protokolüdür.\n\nOvercommitment (Aşırı Tahsis): Fiziksel kapasiteden daha fazla sanal kaynak (vCPU/vRAM) atanmasıdır.\n\nLive Migration (Canlı Taşıma): Bir VM'i kapatmadan bir fiziksel sunucudan diğerine taşımaktır.\n\nThin Provisioning: Diskin sadece kullanılan kadar fiziksel alan kaplamasıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "57. Konteyner (Container) ve VM Karşılaştırması tablosunu açıklayınız.",
+      "correctAnswer": "| Özellik | Sanal Makine (VM) | Konteyner (Docker vb.) |\n| İzolasyon | Donanım seviyesi (Yüksek) | İşletim sistemi/Süreç seviyesi |\n| Hız | Dakikalar içinde açılır | Saniyeler içinde açılır |\n| Boyut | GB mertebesinde (Tam OS) | MB mertebesinde (Sadece kütüphaneler) |\n| Kaynak | Tam donanım emülasyonu | Host OS çekirdeğini (kernel) paylaşır |"
+    },
+    {
+      "type": "short-answer",
+      "question": "58. Bulut Bilişim Hizmet Modelleri nelerdir?",
+      "correctAnswer": "Bulut bilişim, kaynakların internet üzerinden \"kiralama\" mantığıyla sunulmasıdır. Üç ana modelde incelenir:\n\nIaaS (Infrastructure as a Service): Altyapı sunulur. Sunucu, disk ve ağ sizindir; OS ve yazılımı siz yönetirsiniz. (Örn: AWS EC2).\n\nPaaS (Platform as a Service): Geliştirme ortamı sunulur. OS ve runtime ile ilgilenmezsiniz, sadece kodunuzu yüklersiniz. (Örn: Heroku, Google App Engine).\n\nSaaS (Software as a Service): Yazılım sunulur. Doğrudan son kullanıcı uygulamasıdır. (Örn: Gmail, Netflix, Zoom)."
+    },
+    {
+      "type": "short-answer",
+      "question": "59. Uygulama Örneği: AWS Etkinlik Yönetimi Projesi mimari katmanları nelerdir?",
+      "correctAnswer": "Ağ Katmanı (VPC): Sanal veri merkezi sınırları. İnternete açık (Public) ve kapalı (Private) alt ağlar.\n\nUygulama Katmanı:\nALB: Gelen trafiği sağlıklı sunuculara dağıtır.\nEC2: Tip 1 hypervisor üzerinde çalışan sanal sunucular.\n\nVeri Katmanı:\nRDS: Yönetilen veritabanı servisi (PaaS).\nS3: Statik dosyalar için nesne depolama.\n\nGüvenlik: IAM ile yetkilendirme ve Secure Boot/TPM kontrolleri."
+    },
+    {
+      "type": "short-answer",
+      "question": "60. İşletim Sistemi Güvenliği: Çok Katmanlı Güvenlik (Defense in Depth) nedir?",
+      "correctAnswer": "İşletim sistemi güvenliği, donanımdan uygulama katmanına kadar uzanan Çok Katmanlı Savunma (Defense in Depth) stratejisine dayanır. Amaç; yetkisiz erişimi engellemek, veri bütünlüğünü korumak ve sistem sürekliliğini sağlamaktır.\n\nGüvenlik Katmanları:\nDonanım: TPM (Güvenilir Platform Modülü), Secure Boot.\nKernel: Ring Koruması, Bellek Yönetimi (Memory Management).\nSistem: Erişim Kontrolü (ACL), SELinux, Güvenlik Duvarı.\nUygulama: Sandboxing, Konteynır İzolasyonu."
+    },
+    {
+      "type": "short-answer",
+      "question": "61. Güvenlik Tehditleri (Malware, Rootkit, Buffer Overflow, Privilege Escalation) nelerdir?",
+      "correctAnswer": "İşletim sistemleri için en kritik tehditler genellikle sistemin en alt katmanlarını hedef alır:\n\nMalware: Virüs, trojan ve worm gibi kaynakları ele geçiren yazılımlar.\n\nRootkit: Kernel seviyesinde (Ring 0) çalışarak kendini gizleyen ve tüm güvenlik mekanizmalarını devre dışı bırakabilen en tehlikeli zararlı türüdür.\n\nBuffer Overflow (Tampon Bellek Taşması): Bir programın kendisine ayrılan bellek sınırını aşarak yanındaki bellek alanına veri yazmasıdır. Bu durum, saldırganın kendi kodunu (shellcode) çalıştırmasına yol açabilir.\n\nPrivilege Escalation (Yetki Yükseltme): Standart bir kullanıcının (User), sistemdeki bir açıktan yararlanarak yönetici (Root/Admin) yetkileri elde etmesidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "62. Tarihe Geçen Zararlı Yazılımlar tablosunu açıklayınız.",
+      "correctAnswer": "| Zararlı Yazılım | Kullanılan Açık | OS Zafiyeti | Sonuç |\n| Morris Worm (1988) | fingerd overflow | Process Isolation yok | İnternetin %10'u çöktü. |\n| Stuxnet (2010) | 4x Zero-Day | Zayıf Güven Modeli | Fiziksel santrifüj sabotajı. |\n| WannaCry (2017) | SMBv1 (EternalBlue) | Yama (Patch) eksikliği | Küresel veri şifreleme/fidye. |\n| NotPetya (2017) | MBR Overwrite | Boot Chain korunmuyor | Kalıcı veri imhası ve sabotaj. |"
+    },
+    {
+      "type": "short-answer",
+      "question": "63. Koruma Mekanizmaları: Ring Modeli nedir?",
+      "correctAnswer": "İşletim sistemleri, işlemci tarafından sunulan Hiyerarşik Koruma Halkalarını (Protection Rings) kullanır.\n\nRing 0 (Kernel Mode): En yüksek yetki seviyesidir. Donanıma tam erişim sağlar.\n\nRing 3 (User Mode): Uygulamaların çalıştığı kısıtlı alandır. Donanıma erişim için System Call (Syscall) yapılması zorunludur."
+    },
+    {
+      "type": "short-answer",
+      "question": "64. Bellek Güvenliği ve Modern Savunmalar (DEP, ASLR, Stack Canary) nelerdir?",
+      "correctAnswer": "Saldırganların bellek üzerinden kod çalıştırmasını engellemek için üç ana teknoloji kullanılır:\n\nDEP/NX (Data Execution Prevention): Belleğin veri bölgelerini (Stack/Heap) \"çalıştırılamaz\" olarak işaretler. Böylece veriye yazılan zararlı kodlar yürütülemez.\n\nASLR (Address Space Layout Randomization): Program her çalıştığında bellek adreslerini (Stack, Heap, Kütüphaneler) rastgele yerleştirir. Saldırganın hedef alacağı sabit bir adres bulmasını imkansız hale getirir.\n\nStack Canary: Fonksiyon dönüş adresinden hemen önce belleğe yerleştirilen rastgele bir değerdir. Eğer bu değer değişmişse, bir taşma (overflow) olduğu anlaşılır ve sistem süreci sonlandırır."
+    },
+    {
+      "type": "short-answer",
+      "question": "65. Kimlik Doğrulama ve Erişim Kontrol Modelleri (DAC, MAC, RBAC) nelerdir?",
+      "correctAnswer": "Erişim Kontrol Modelleri:\n\nDAC (Discretionary Access Control): Kaynak sahibi erişim haklarını kendisi belirler (Örn: Linux dosya izinleri).\n\nMAC (Mandatory Access Control): Erişim kuralları merkezi bir politika tarafından belirlenir ve kullanıcı tarafından değiştirilemez (Örn: SELinux).\n\nRBAC (Role-Based Access Control): Yetkiler bireylere değil, rollere atanır (Örn: Şirket hiyerarşisi)."
+    },
+    {
+      "type": "short-answer",
+      "question": "66. Linux Dosya İzinleri (chmod) nasıl hesaplanır?",
+      "correctAnswer": "Unix sistemlerde izinler üç haneli sayısal bir mantıkla hesaplanır:\nr (Read/Okuma): 4, w (Write/Yazma): 2, x (Execute/Çalıştırma): 1.\n\nÖrnek: chmod 754\nOwner: 7 (4+2+1 -> rwx)\nGroup: 5 (4+0+1 -> r-x)\nOthers: 4 (4+0+0 -> r--)"
+    },
+    {
+      "type": "short-answer",
+      "question": "67. Kriptografi Temelleri (AES, RSA, Hash) nelerdir?",
+      "correctAnswer": "İşletim sistemleri veriyi korumak için iki ana şifreleme türünü kullanır:\n\nSimetrik Şifreleme (AES): Şifreleme ve çözme için aynı anahtar kullanılır. Hızlıdır ancak anahtar paylaşımı zordur.\n\nAsimetrik Şifreleme (RSA, ECC): Public Key (şifreleme) ve Private Key (çözme) çifti kullanılır. Daha yavaş ama daha güvenlidir.\n\nHash Fonksiyonları (SHA-256): Verinin dijital parmak izini çıkarır. Geri dönüşü yoktur; veri bütünlüğünü kontrol etmek için kullanılır."
+    },
+    {
+      "type": "short-answer",
+      "question": "68. Güvenlik Teknik Terimler Sözlüğü (TPM, Zero-Day, CVE, Secure Boot) nedir?",
+      "correctAnswer": "TPM: Kriptografik anahtarları saklayan donanım çipi.\nZero-Day: Üreticisi tarafından henüz bilinmeyen veya yaması çıkmamış açıklar.\nCVE: Güvenlik açıklarının standart kimlik numarası (Örn: CVE-2024-XXXX).\nSecure Boot: Bilgisayarın sadece güvenilir (imzalı) yazılımlarla açılmasını sağlayan mekanizma."
+    },
+    {
+      "type": "short-answer",
+      "question": "69. Saldırı Yüzeyi (Attack Surface) nedir ve \"Hardening\" işlemi bu yüzeyi nasıl etkiler?",
+      "correctAnswer": "Saldırı yüzeyi, bir işletim sisteminin dış dünya ile temas kurduğu tüm noktaların (açık portlar, çalışan servisler, protokoller) toplamıdır. Her açık kapı, potansiyel bir siber saldırı noktasıdır.\n\nHardening (Sıkılaştırma): Gereksiz tüm servislerin kapatılması, portların filtrelenmesi ve kural listesinin minimize edilmesi işlemidir.\n\nTemel İlke: \"Ne kadar az açık kapı, o kadar az risk.\" Gereksiz servislerin (örn. Xbox, Remote Registry) kapatılması hem güvenliği artırır hem de sistem kaynaklarını rahatlatır."
+    },
+    {
+      "type": "short-answer",
+      "question": "70. Host-Based Firewall yapısında \"Inbound\" ve \"Outbound\" trafik arasındaki temel fark nedir?",
+      "correctAnswer": "İşletim sistemi seviyesindeki güvenlik duvarı, paketleri yönlerine göre filtreler.\n\nInbound (Gelen): Dış dünyadan sizin bilgisayarınıza gelen bağlantı istekleridir. Güvenliğin en kritik alanıdır; zira açık bir gelen kuralı, saldırgan için sisteme giriş kapısıdır.\n\nOutbound (Giden): Sizin bilgisayarınızdan dışarıya (sunuculara, web sitelerine) giden isteklerdir. Genellikle daha güvenli kabul edilir ancak zararlı yazılımların \"komuta kontrol\" merkezine veri sızdırmasını engellemek için denetlenmelidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "71. İşletim sisteminde kritik kabul edilen portlar (445, 3389, 22) neden yüksek risk taşır?",
+      "correctAnswer": "Belirli servisler, yapısal özellikleri nedeniyle saldırganların birincil hedefidir:\n\nPort 445 (SMB): Dosya paylaşımı için kullanılır. WannaCry ve EternalBlue gibi tarihin en büyük saldırılarının hedefi olmuştur.\n\nPort 3389 (RDP): Uzak masaüstü bağlantısıdır. Brute-force (kaba kuvvet) saldırılarına en açık noktadır.\n\nPort 22 (SSH): Uzaktan yönetim sağlar. Şifre tabanlı giriş yapılıyorsa yüksek risk taşır; anahtar tabanlı kimlik doğrulama ile sıkılaştırılmalıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "72. PowerShell ile WMI/CIM üzerinden veri çekmenin \"OS Dersindeki\" karşılığı nedir?",
+      "correctAnswer": "PowerShell, işletim sistemi çekirdeğine (kernel) ve yönetim enstrümanlarına (WMI) erişmek için kullanılan güçlü bir araçtır. Ham veriler, teorik kavramların kanıtıdır:\n\nThreads Sayısı: Sistemde 2000-3000 thread görülmesi, OS'in Multitasking (Çoklu Görev) yeteneğinin kanıtıdır.\n\nVirtual Max (Sanal Bellek): Bu değerin fiziksel RAM'den büyük olması, Paging (Sayfalama) ve sanal bellek illüzyonunun çalıştığını gösterir.\n\nL2/L3 Cache: İşlemcinin RAM'e gitmeden baktığı alanları analiz ederek veri okuma performansını ölçer."
+    },
+    {
+      "type": "short-answer",
+      "question": "73. Yama Yönetimi (Patch Management) ve \"Update Hijyen Skoru\" neden önemlidir?",
+      "correctAnswer": "İşletim sistemleri, keşfedilen güvenlik açıklarını kapatmak için düzenli yamalar yayınlar. Güncellenmeyen bir sistem, \"zaman ayarlı bomba\" olarak nitelendirilir.\n\nAnaliz: PowerShell ile son 30 günlük WindowsUpdateClient logları taranarak sistemin \"güncellik sağlığı\" ölçülür.\n\nReboot İhtiyacı: Bazı kritik güncellemeler çekirdek (kernel) seviyesinde değişiklik yaptığı için sistemin yeniden başlatılması zorunludur; aksi halde yama aktif olmaz."
+    },
+    {
+      "type": "short-answer",
+      "question": "74. Güvenlik Olay Günlükleri (Event ID 4624 ve 4625) neyi ifade eder?",
+      "correctAnswer": "Windows Security logları, kimlik doğrulama telemetrisini tutar:\n\nEvent ID 4624: Başarılı bir oturum açma işlemini temsil eder.\n\nEvent ID 4625: Başarısız bir oturum açma denemesidir.\n\nBrute-Force Tespiti: Kısa sürede yüzlerce 4625 olayı üretilmesi, sisteme yönelik bir parola deneme saldırısının (Brute-force) göstergesidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "75. Güvenlik Dashboardları oluşturmanın (Chart.js vb.) sistem yönetimi için önemi nedir?",
+      "correctAnswer": "Ham veriler (JSON formatında) binlerce satır sürebilir. Görselleştirme; sistem yöneticisinin saniyeler içinde anormallikleri (anormal trafik, kapanmayan portlar, eksik yamalar) tespit etmesini sağlar.\n\nVeri Akışı: Windows OS -> PowerShell (Get-CimInstance) -> JSON -> Web Dashboard (Görsel Analiz)."
     }
   ]
 }
