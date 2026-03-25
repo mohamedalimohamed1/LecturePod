@@ -1,0 +1,446 @@
+{
+  "courseTitle": "Dijital Okuryazarlık",
+  "lectureTitle": "Sınav Soruları",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "İnternet üzerinde web sayfası oluşturmak için kullanılan betik dil aşağıdakilerden hangisidir?",
+      "options": [
+        "ftp",
+        "http",
+        "URL",
+        "html"
+      ],
+      "correctAnswer": "html"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi Internet veri transferi protokollerinden biri değildir?",
+      "options": [
+        "ftp",
+        "http",
+        "Web",
+        "https"
+      ],
+      "correctAnswer": "Web"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "\"https://giris.turkiye.gov.tr/Giris/e-Devlet-Sifresi\" URL adresinin alan ad? a?a??dakilerden hangisidir?",
+      "options": [
+        "https://",
+        "turkiye.gov.tr",
+        "giris.turkiye.gov.tr",
+        "https://giris.turkiye.gov.tr/Giris"
+      ],
+      "correctAnswer": "turkiye.gov.tr"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "İçerisinde Açıköğretim Fakültesi ifadesinin aynen geçtiği Web sayfalarını bulmak için arama motorunda kullanılması gereken sorgulama ifadesi aşağıdakilerden hangisidir?",
+      "options": [
+        "Açıköğretim*Fakültesi",
+        "Açıköğretim+Fakültesi",
+        "Açıköğretim Fakültesi",
+        "Açıköğretim AND Fakültesi"
+      ],
+      "correctAnswer": "Açıköğretim Fakültesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdaki web tarayıcılarından hangisi açık kaynak kodludur?",
+      "options": [
+        "Mozilla Firefox",
+        "Google Chrome",
+        "Safari",
+        "Yandex"
+      ],
+      "correctAnswer": "Mozilla Firefox"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "TR-NET'in 1992 yılında gerçekleştirdiği ilk deneysel çalışmalar hangi ülkeye yapılmıştır?",
+      "options": [
+        "Fransa",
+        "Hollanda",
+        "İngiltere",
+        "Almanya"
+      ],
+      "correctAnswer": "Hollanda"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Türkiye'de ilk İnternet bağlantısı ne zaman gerçekleştirilmiştir?",
+      "options": [
+        "1987",
+        "1990",
+        "1991",
+        "1993"
+      ],
+      "correctAnswer": "1993"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Küresel ve yerel özellikleri birleştirerek coğrafi konum bazlı ve kişiselleştirilebilen uygulamalar konusunda öne çıkan arama motoru aşağıdakilerden hangisidir?",
+      "options": [
+        "Google",
+        "Bing",
+        "Yahoo",
+        "Yandex"
+      ],
+      "correctAnswer": "Yandex"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi Google Akademik arama motoru özelliklerinden biri değildir?",
+      "options": [
+        "Farklı kaynaklara arama",
+        "Bilimsel yazıları, özetleri ve alıntıları bulma",
+        "En çok beğenilen görselleri arama",
+        "Kütüphane yardımı yoluyla yazıların tamamına erişme"
+      ],
+      "correctAnswer": "En çok beğenilen görselleri arama"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi dünyada e-Devlet uygulamalarının kullanım amaçları arasında yer almaz?",
+      "options": [
+        "Statüye göre kaynak kullanımını denetleme",
+        "Demokrasi bilincinin kazandırılması",
+        "Şeffaflığın sağlanması",
+        "Maliyetlerin düşürülmesi"
+      ],
+      "correctAnswer": "Statüye göre kaynak kullanımını denetleme"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi taşınabilir teknolojiler için hem avantaj hem de dezavantaj olarak görülebilir?",
+      "options": [
+        "Her yerde kullanabilme esnekliği",
+        "Çokluortam kullanımı",
+        "Şarj edilebilir bataryalar",
+        "Uzun süre kullanmaya bağlı sorunlar"
+      ],
+      "correctAnswer": "Şarj edilebilir bataryalar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi giyilebilir teknoloji olarak değerlendirilebilir?",
+      "options": [
+        "Tablet bilgisayarlar",
+        "Akıllı gözlükler",
+        "Akıllı telefonlar",
+        "Dizüstü bilgisayarlar"
+      ],
+      "correctAnswer": "Akıllı gözlükler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi taşınabilir teknolojilerden biri değildir?",
+      "options": [
+        "Masaüstü bilgisayar",
+        "Akıllı telefon",
+        "Dizüstü bilgisayar",
+        "Akıllı saat"
+      ],
+      "correctAnswer": "Masaüstü bilgisayar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Birçok kullanıcı tarafından dizüstü bilgisayar yerine kullanılan isim aşağıdakilerden hangisidir?",
+      "options": [
+        "Netbook",
+        "Tablet",
+        "Notebook",
+        "Slate"
+      ],
+      "correctAnswer": "Notebook"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi taşınabilir teknolojilerin günümüzde en son geldiği noktayı temsil eder?",
+      "options": [
+        "Her ortamda kullanılabilme",
+        "Kablosuz internet erişimi",
+        "Şarj edilebilir batarya",
+        "Giyilebilir teknolojiler"
+      ],
+      "correctAnswer": "Giyilebilir teknolojiler"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "A?a??dakilerden hangisi \"nomofobi\"yi en iyi tan?mlar?",
+      "options": [
+        "Telefonum yanımda değil ve ben huzursuzum",
+        "Telefonda diğer insanlarla rahat konuşamıyorum",
+        "Tablet bilgisayarımı kullanırken rahat değilim",
+        "Akıllı saatimi tüm özellikleri ile kullanamıyorum"
+      ],
+      "correctAnswer": "Telefonum yanımda değil ve ben huzursuzum"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Taşınabilir teknolojinin gelişimini en iyi ifade eden sıralama aşağıdakilerden hangisidir?",
+      "options": [
+        "Masaüstü PC-Dizüstü PC-Akıllı Telefon-Şarj edilebilir batarya-Kamera",
+        "Akıllı saat-Tablet-Mobil Telefon-Dizüstü PC-Masaüstü PC",
+        "3D yazıcı-E-Posta-Sosyal ağlar-SMS ve MMS-Video görüşme",
+        "Masaüstü PC-Mobil Telefon-Dizüstü PC-Tablet-Akıllı saat"
+      ],
+      "correctAnswer": "Masaüstü PC-Dizüstü PC-Akıllı Telefon-Şarj edilebilir batarya-Kamera"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Araştırmalara göre ülkemizde akıllı telefonların en yoğun kullanıldığı alan aşağıdakilerden hangisidir?",
+      "options": [
+        "Haber okumak",
+        "Arama yapmak",
+        "Oyun oynamak",
+        "Sosyal ağlara girmek"
+      ],
+      "correctAnswer": "Sosyal ağlara girmek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Taşınabilir teknolojilerin aynı anda ses, grafik ve video paylaşabilmesini sağlayan teknoloji aşağıdakilerden hangisidir?",
+      "options": [
+        "GPRS",
+        "EDGE",
+        "3G",
+        "GPS"
+      ],
+      "correctAnswer": "3G"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi tam ekran tablet bilgisayarlarda görmeye alışık olmadığımız özelliklerden biridir?",
+      "options": [
+        "İnternet erişimi",
+        "Fiziksel klavye",
+        "Çokluortam uygulamaları",
+        "Ekran etkileşimi"
+      ],
+      "correctAnswer": "Fiziksel klavye"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Ağ toplumu yaklaşımına göre, toplumları dönüştüren temel belirleyiciler aşağıdakilerden hangileridir?",
+      "options": [
+        "Bilgisayar teknolojileri ve enformasyon akışı",
+        "Ekonomi ve üretim",
+        "Askeri teknolojiler",
+        "Sosyokültürel değerler"
+      ],
+      "correctAnswer": "Bilgisayar teknolojileri ve enformasyon akışı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "İnternetin sosyal etkileşim olanaklarının kullanıldığı Web 2.0 araçlarının genel adı aşağıdakilerden hangisidir?",
+      "options": [
+        "Sosyal paylaşım",
+        "Sosyal medya",
+        "Sosyal ağlar",
+        "Bloglar"
+      ],
+      "correctAnswer": "Sosyal medya"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi, sosyal ağ sitelerinin genel özelliklerinden biri değildir?",
+      "options": [
+        "Kullanıcıların profil yaratmaları",
+        "Diğer kullanıcılar ile bağlantı kurulması",
+        "Etiketler ile yorum yapılması",
+        "Üyelik için diğer kullanıcılardan davet gerekmesi"
+      ],
+      "correctAnswer": "Üyelik için diğer kullanıcılardan davet gerekmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi, sosyal ağ sitelerinin elektronik ticarete yönelik kullanımına örnektir?",
+      "options": [
+        "Ders etkinlikleri için grup oluşturma",
+        "Sosyal organizasyonları takip etme",
+        "İş ilanına başvurma",
+        "Tanıdıklara ürün tavsiye etme"
+      ],
+      "correctAnswer": "Tanıdıklara ürün tavsiye etme"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Sosyal ağların kullanım alanlarının çeşitlenmesinin temel nedeni aşağıdakilerden hangisidir?",
+      "options": [
+        "Elektronik ticaretin yaygınlaşması",
+        "Ağlardaki kullanıcı sayısının artma eğilimi",
+        "Bilgi iletişim teknolojilerinin gelişmesi",
+        "Sanal toplulukların oluşması"
+      ],
+      "correctAnswer": "Bilgi iletişim teknolojilerinin gelişmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi sosyal ağ sitelerini kullanmak için mutlaka gereklidir?",
+      "options": [
+        "İnternet erişimine sahip olmak",
+        "Ücret ödemek",
+        "Siteden davet gelmesi",
+        "Medya okuryazarlığı becerilerine sahip olmak"
+      ],
+      "correctAnswer": "İnternet erişimine sahip olmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Facebook'ta faaliyet alanı ile ilgili tanıtım yapmak isteyen bir şirket için en uygun eylem aşağıdakilerden hangisidir?",
+      "options": [
+        "Bireysel hesap açmak",
+        "Herkese açık grup açarak etkinlik düzenlemek",
+        "Kapalı grup açmak",
+        "Şirkete ait bir sayfa oluşturmak"
+      ],
+      "correctAnswer": "Şirkete ait bir sayfa oluşturmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "LinkedIn'deki onaylama sistemi nedir?",
+      "options": [
+        "Kullanıcının iş başvurusunun olumlu sonuçlanması",
+        "Kullanıcının yetenek, beceri ve deneyimlerinin bağlantıda olduğu kişilerce geçerlenmesi",
+        "Kullanıcı hakkında olumlu tavsiye mektubu yazılması",
+        "Kullanıcının paylaşımlarının başkaları tarafından da paylaşılması"
+      ],
+      "correctAnswer": "Kullanıcının yetenek, beceri ve deneyimlerinin bağlantıda olduğu kişilerce geçerlenmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "YouTube'da aşağıdakilerden hangisini yapmak için siteye üye olmak gerekmez?",
+      "options": [
+        "Video oluşturmak",
+        "Video yüklemek",
+        "Video izlemek",
+        "Kendine ait kanal oluşturmak"
+      ],
+      "correctAnswer": "Video izlemek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Medya okuryazarlığına ilişkin iki temel unsur hangileridir?",
+      "options": [
+        "İçerik üretme yeterliliği – Veri madenciliği",
+        "Bağlantı kurma yeteneği – Paylaşım sayısının miktarı",
+        "Teknolojiyi kullanma becerisi – İnterneti kullanma deneyimi",
+        "Teknolojiyi kullanma becerisi – İçeriği değerlendirebilme yeteneği"
+      ],
+      "correctAnswer": "Teknolojiyi kullanma becerisi – İçeriği değerlendirebilme yeteneği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "İnsanlığın teknolojik evrimi göz önüne alındığında kullandıkları ilk alet aşağıdakilerden hangisini sağlamaya yöneliktir?",
+      "options": [
+        "Diğer insanlardan korunmak",
+        "Barınak inşa etmek",
+        "Yiyecek aramak ve yırtıcı hayvanlardan korunmak",
+        "Tarımsal üretime geçmek"
+      ],
+      "correctAnswer": "Yiyecek aramak ve yırtıcı hayvanlardan korunmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi tarihsel süreç içerisinde varolan toplum türlerinden biri değildir?",
+      "options": [
+        "Avcı-toplayıcı toplum",
+        "Ekonomik toplum",
+        "Tarım toplumu",
+        "Bilgi toplumu"
+      ],
+      "correctAnswer": "Ekonomik toplum"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Çömlekçilik temel olarak aşağıdaki gereksinimlerden hangisini karşılamaya yönelik ortaya çıkmıştır?",
+      "options": [
+        "Yapıların süslenmesi",
+        "Tahılların sınıflanması",
+        "Tahılların harmanlanması",
+        "Ürünlerin saklanması ve taşınması"
+      ],
+      "correctAnswer": "Ürünlerin saklanması ve taşınması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi sanayi devriminin sonuçlarından biri değildir?",
+      "options": [
+        "İşbölümünün yaygınlaşması",
+        "Üretimde standartlaşma olması",
+        "Sınıf kavgalarının azalması",
+        "Kentlere göçün artması"
+      ],
+      "correctAnswer": "Sınıf kavgalarının azalması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Bilgi toplumuna geçişte en önemli etken aşağıdakilerden hangisidir?",
+      "options": [
+        "Üretimde ve tüketimde kitlesellik",
+        "Eğitimde standartlaşma",
+        "Elektronik teknolojisindeki büyük atılımlar",
+        "Sağlık hizmetlerinin yaygınlaşması"
+      ],
+      "correctAnswer": "Elektronik teknolojisindeki büyük atılımlar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi teknolojik gelişmelerin olumsuz etkilerinden biri değildir?",
+      "options": [
+        "Sosyal ilişkilerin artması",
+        "Çevre kirliliğinin artması",
+        "İnsan sağlığının olumsuz etkilenmesi",
+        "Makineleşmeyle birlikte işsizliğin artması"
+      ],
+      "correctAnswer": "Sosyal ilişkilerin artması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Teknolojinin toplum veya birey üzerinde etkisi olmadığı ve teknolojinin etkisinin kullanıcılar tarafından belirlendiği görüşünü içeren yaklaşım aşağıdakilerden hangisidir?",
+      "options": [
+        "Ağ toplumu",
+        "Sosyal belirlenimcilik",
+        "Teknolojik belirlenimcilik",
+        "Kullanıma odaklanan belirlenimcilik"
+      ],
+      "correctAnswer": "Kullanıma odaklanan belirlenimcilik"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi teknolojik gelişmelerin toplumu olumsuz etkilediğini savunan düşünürlerin bakış açısını ifade eder?",
+      "options": [
+        "Ütopyan",
+        "Distopyan",
+        "Postmodern",
+        "Dijital yerli"
+      ],
+      "correctAnswer": "Distopyan"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Yeterli sayıda insanın, insani duygularla siber alanda kişiler arası ağ kurmak üzere kamusal tartışmalara yeterince uzun bir süre katılmasıyla ağ içerisinde oluşturdukları toplumsal kümelenmelere ne ad verilir?",
+      "options": [
+        "Sanal topluluk",
+        "Bilgi toplumu",
+        "Ağ toplumu",
+        "Dijital topluluk"
+      ],
+      "correctAnswer": "Sanal topluluk"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi çevrimiçi ortamlarda bireylerin kendini sunma yöntemlerinden biridir?",
+      "options": [
+        "Ağlarda gezinme",
+        "Video çekimi",
+        "Sanal iletişim",
+        "Özçekim"
+      ],
+      "correctAnswer": "Özçekim"
+    }
+  ]
+}
