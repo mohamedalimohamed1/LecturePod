@@ -5,23 +5,13 @@
     {
       "type": "multiple-choice",
       "question": "İnternet üzerinde web sayfası oluşturmak için kullanılan betik dil aşağıdakilerden hangisidir?",
-      "options": [
-        "ftp",
-        "http",
-        "URL",
-        "html"
-      ],
+      "options": ["ftp", "http", "URL", "html"],
       "correctAnswer": "html"
     },
     {
       "type": "multiple-choice",
       "question": "Aşağıdakilerden hangisi Internet veri transferi protokollerinden biri değildir?",
-      "options": [
-        "ftp",
-        "http",
-        "Web",
-        "https"
-      ],
+      "options": ["ftp", "http", "Web", "https"],
       "correctAnswer": "Web"
     },
     {
@@ -49,45 +39,25 @@
     {
       "type": "multiple-choice",
       "question": "Aşağıdaki web tarayıcılarından hangisi açık kaynak kodludur?",
-      "options": [
-        "Mozilla Firefox",
-        "Google Chrome",
-        "Safari",
-        "Yandex"
-      ],
+      "options": ["Mozilla Firefox", "Google Chrome", "Safari", "Yandex"],
       "correctAnswer": "Mozilla Firefox"
     },
     {
       "type": "multiple-choice",
       "question": "TR-NET'in 1992 yılında gerçekleştirdiği ilk deneysel çalışmalar hangi ülkeye yapılmıştır?",
-      "options": [
-        "Fransa",
-        "Hollanda",
-        "İngiltere",
-        "Almanya"
-      ],
+      "options": ["Fransa", "Hollanda", "İngiltere", "Almanya"],
       "correctAnswer": "Hollanda"
     },
     {
       "type": "multiple-choice",
       "question": "Türkiye'de ilk İnternet bağlantısı ne zaman gerçekleştirilmiştir?",
-      "options": [
-        "1987",
-        "1990",
-        "1991",
-        "1993"
-      ],
+      "options": ["1987", "1990", "1991", "1993"],
       "correctAnswer": "1993"
     },
     {
       "type": "multiple-choice",
       "question": "Küresel ve yerel özellikleri birleştirerek coğrafi konum bazlı ve kişiselleştirilebilen uygulamalar konusunda öne çıkan arama motoru aşağıdakilerden hangisidir?",
-      "options": [
-        "Google",
-        "Bing",
-        "Yahoo",
-        "Yandex"
-      ],
+      "options": ["Google", "Bing", "Yahoo", "Yandex"],
       "correctAnswer": "Yandex"
     },
     {
@@ -148,12 +118,7 @@
     {
       "type": "multiple-choice",
       "question": "Birçok kullanıcı tarafından dizüstü bilgisayar yerine kullanılan isim aşağıdakilerden hangisidir?",
-      "options": [
-        "Netbook",
-        "Tablet",
-        "Notebook",
-        "Slate"
-      ],
+      "options": ["Netbook", "Tablet", "Notebook", "Slate"],
       "correctAnswer": "Notebook"
     },
     {
@@ -203,12 +168,7 @@
     {
       "type": "multiple-choice",
       "question": "Taşınabilir teknolojilerin aynı anda ses, grafik ve video paylaşabilmesini sağlayan teknoloji aşağıdakilerden hangisidir?",
-      "options": [
-        "GPRS",
-        "EDGE",
-        "3G",
-        "GPS"
-      ],
+      "options": ["GPRS", "EDGE", "3G", "GPS"],
       "correctAnswer": "3G"
     },
     {
@@ -236,12 +196,7 @@
     {
       "type": "multiple-choice",
       "question": "İnternetin sosyal etkileşim olanaklarının kullanıldığı Web 2.0 araçlarının genel adı aşağıdakilerden hangisidir?",
-      "options": [
-        "Sosyal paylaşım",
-        "Sosyal medya",
-        "Sosyal ağlar",
-        "Bloglar"
-      ],
+      "options": ["Sosyal paylaşım", "Sosyal medya", "Sosyal ağlar", "Bloglar"],
       "correctAnswer": "Sosyal medya"
     },
     {
@@ -412,12 +367,7 @@
     {
       "type": "multiple-choice",
       "question": "Aşağıdakilerden hangisi teknolojik gelişmelerin toplumu olumsuz etkilediğini savunan düşünürlerin bakış açısını ifade eder?",
-      "options": [
-        "Ütopyan",
-        "Distopyan",
-        "Postmodern",
-        "Dijital yerli"
-      ],
+      "options": ["Ütopyan", "Distopyan", "Postmodern", "Dijital yerli"],
       "correctAnswer": "Distopyan"
     },
     {
@@ -441,6 +391,432 @@
         "Özçekim"
       ],
       "correctAnswer": "Özçekim"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi Bilgisayar Etik Enstitüsü tarafından geliştirilen ve bilgisayar kullanım konusunda etik ilkelerinin temelini oluşturan ilkelerden biri değildir? [cite: 1033]",
+      "options": [
+        "Bilgisayar hırsızlık yapmak için kullanılamaz. [cite: 1034]",
+        "Kişi yazdığı programın sosyal hayata etkilerini dikkate almalıdır. [cite: 1034]",
+        "Başka insanların bilgisayar çalışmaları karıştırılamaz. [cite: 1035]",
+        "Bilgisayar yalan bilgiyi yaymak için kullanılamaz. [cite: 1036]",
+        "Bilgisayar insanlara kar getirecek işlerde kullanılamaz. [cite: 1036]"
+      ],
+      "correctAnswer": "Bilgisayar insanlara kar getirecek işlerde kullanılamaz. [cite: 1036, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdaki CC lisanslarından hangisi eserin ilk sahibinin belirtilmesi ve özgün halinin korunması gerektiği anlamına gelir? [cite: 1037]",
+      "options": [
+        "CC BY ND [cite: 1041]",
+        "CC BY NC [cite: 1044]",
+        "BY NC ND [cite: 1046]",
+        "CC BY [cite: 1048]",
+        "PUBLIC DOMAIN [cite: 1052]"
+      ],
+      "correctAnswer": "CC BY ND [cite: 1041, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi İnternette kaynak göstermeden yapılan intihal türüne bir örnektir? [cite: 1053, 1054]",
+      "options": [
+        "Mükemmel suç [cite: 1055]",
+        "Hayalet yazar [cite: 1056]",
+        "Yanlış Bilgilendirme [cite: 1057]",
+        "Fazla Mükemmel Alıntı [cite: 1058]",
+        "Becerikli Atıf Yapma [cite: 1059]"
+      ],
+      "correctAnswer": "Hayalet yazar [cite: 1056, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Bilişim alanındaki suçlarla ilgili olarak Avrupa birliği uyum yasaları çerçevesinde hazırlanan 5237 sayılı Türk Ceza Kanun hangi tarihte yürürlüğe girmiştir? [cite: 1060]",
+      "options": [
+        "1 Ocak 2004 [cite: 1061]",
+        "31 Aralık 2014 [cite: 1062]",
+        "1 Haziran 2005 [cite: 1063]",
+        "15 Ocak 2015 [cite: 1064]",
+        "10 Şubat 2012 [cite: 1065]"
+      ],
+      "correctAnswer": "1 Haziran 2005 [cite: 1063, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Ulusal Açık Ders Malzemeleri (UADM) adıyla başlatılan proje hangi kurum tarafından başlatılmıştır? [cite: 1066]",
+      "options": [
+        "Türk Sanayicileri ve İşadamları Derneği (TÜSİAD) [cite: 1067]",
+        "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu (TÜBİTAK) [cite: 1068, 1069]",
+        "Yükseköğretim Kurulu (YÖK) [cite: 1070]",
+        "Türkiye Bilimler Akademisi (TÜBA) [cite: 1071]",
+        "Massachusetts Institute of Technology'de (MIT) [cite: 1072, 1073]"
+      ],
+      "correctAnswer": "Türkiye Bilimler Akademisi (TÜBA) [cite: 1071, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi İnternette etik dışı davranışların / intihallerin nedenleri arasında değildir? [cite: 1074, 1075]",
+      "options": [
+        "Sosyal hayatın yoğunluğu [cite: 1076]",
+        "Etik dışı davranışlarla ilgili bilgisizlik [cite: 1077]",
+        "Bilgi hırsı [cite: 1078]",
+        "Yetersiz ceza [cite: 1079]",
+        "Zamansızlık [cite: 1080]"
+      ],
+      "correctAnswer": "Bilgi hırsı [cite: 1078, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi İnternette kaynak göstererek yapılan intihal türüne bir örnektir? [cite: 1081, 1082]",
+      "options": [
+        "Mükemmel Suç [cite: 1083]",
+        "Kendinden Aşırma [cite: 1084]",
+        "Fotokopi [cite: 1085]",
+        "Emek Tembelliği [cite: 1086]",
+        "Mevcut yazı [cite: 1087]"
+      ],
+      "correctAnswer": "Mükemmel Suç [cite: 1083, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "\"Bir eylemi iyi ya da kötü kılan şey eylemin sonucu veya sonuçlarıdır.\" Bu ifadedeki anlayış hangi etik kurama aittir? [cite: 1093]",
+      "options": [
+        "Deontoloji [cite: 1094]",
+        "Kantçılık [cite: 1095]",
+        "Sonuçsal olmayan [cite: 1096, 1097]",
+        "Teoloji [cite: 1098]",
+        "Yeni Kantçılık [cite: 1099]"
+      ],
+      "correctAnswer": "Teoloji [cite: 1098, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Bilişim dünyasında eylemlerin standartlarını ve çerçevelerini inceleyen etik yaklaşımı hangisidir? [cite: 1100, 1101]",
+      "options": [
+        "Uygulamalı [cite: 1102]",
+        "Meta-etik [cite: 1103]",
+        "Deontoloji [cite: 1104]",
+        "Faydacılık [cite: 1105]",
+        "Normatif [cite: 1106]"
+      ],
+      "correctAnswer": "Normatif [cite: 1106, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Başkalarına karşı saygı, altyapı ve zamanı verimli kullanma, biçimsel ve içerik ile ilgili özen ve diğer konular başlıkları altında İnternette iletişim ve etik kurallarını hangi kurum ortaya koymuştur? [cite: 1107]",
+      "options": [
+        "Türkiye Bilişim Vakfı [cite: 1108]",
+        "Türkiye Bilimler Akademisi [cite: 1109]",
+        "Türkiye Bilişim Enstitüsü [cite: 1110]",
+        "Türkiye Bilişim Derneği [cite: 1111]",
+        "Yükseköğretim Kurulu [cite: 1112]"
+      ],
+      "correctAnswer": "Türkiye Bilişim Vakfı [cite: 1108, 1115]"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Yaşamboyu öğrenme ile ilgili aşağıdakilerden hangisi söylenemez?",
+      "options": [
+        "Yaşamboyu öğrenme, kontrolün kurum değil bireyin elinde olduğu bir öğrenme anlayışıdır.",
+        "Yaşamboyu öğrenme, işbaşında eğitimi ifade eder.",
+        "Yaşamboyu öğrenme, bireyin yaşamı boyunca kazandığı tüm öğrenmelerini içeren bir süreçtir.",
+        "Yaşamboyu öğrenme, öğrenme olanaklarını yaşamın tümüne yayılmasına vurgu yapar.",
+        "Yaşamboyu öğrenme, öğrenme sürecinde bireylerin bilinçli, gönüllü ve kendini güdülemesi temeli üzerine kuruludur."
+      ],
+      "correctAnswer": "Yaşamboyu öğrenme, işbaşında eğitimi ifade eder."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi yaşamboyu öğrenme konusunda gerçekleştirilen uygulama şekillerinden biri değildir?",
+      "options": [
+        "Kişisel gelişim",
+        "Planlı gelişim",
+        "Raslantıya bağlı gelişim",
+        "Akademik gelişim",
+        "Deneyime dayalı gelişim"
+      ],
+      "correctAnswer": "Akademik gelişim"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi yaşam boyu öğrenme sürecini, geleneksel öğrenme sürecinden ayıran özelliklerden biri değildir?",
+      "options": [
+        "Öğrenenin merkezde olması",
+        "Bireylerin sahip olduğu yetenekleri geliştirerek en üst düzeye çıkarmayı hedeflemesi",
+        "Yapılandırılmıştan yapılandırılmışa bütün öğrenme biçimlerini kapsaması",
+        "Okulun öğrenme için bir zorunluluk olması",
+        "Eğitim politikasını kişisel, sosyal, kültürel ve mesleki kazanımlar yanında ülkesine kazanımlar sağlayacak şekilde oluşturması"
+      ],
+      "correctAnswer": "Okulun öğrenme için bir zorunluluk olması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi Uluslararası Eğitimi Geliştirme Komisyonu tarafından yaşamboyu öğrenmenin gerekliliğine işaret eden önerilerden biri değildir?",
+      "options": [
+        "Eğitimi okul yaşı ve binaları ile sınırlamak yanlıştır.",
+        "Eğitim, hem okul içinde hem de okul dışında gerçekleşen etkinlikler bütünü olarak düşünülmelidir.",
+        "Eğitsel etkinlikler daha esnek olmalıdır.",
+        "Eğitim, yaşam kadar uzun bir varoluşsal süreklilik olarak tasarlanmalıdır.",
+        "Eğitimin etkililiği öğretici rehberliğinde, yapılandırılmış bir yapıda sunulmasını gerektirir."
+      ],
+      "correctAnswer": "Eğitimin etkililiği öğretici rehberliğinde, yapılandırılmış bir yapıda sunulmasını gerektirir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Yetişkin eğitiminden söz edebilmek için yetişkin olarak adlandırılan bireylerin sahip olması gereken bazı özellikler vardır. Aşağıdakilerden hangisi bu özelliklerden biri değildir?",
+      "options": [
+        "Psikolojik desteğe ihtiyaç duyması",
+        "Kendini doğru olarak algılaması",
+        "Öğrenme yöneliminin olması",
+        "Deneyimlerinin olması",
+        "Öğrenmeye hazır olması"
+      ],
+      "correctAnswer": "Psikolojik desteğe ihtiyaç duyması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "KAÇD uygulamalarında, bilgiyi talep eden bireyler ve bilgi kaynakları arasında sınırların ortadan kalktığı öğrenme yapısını ifade eden kavram aşağıdakilerden hangisidir?",
+      "options": [
+        "Çevrimiçi",
+        "Kitlesellik",
+        "Açıklık",
+        "Ders",
+        "Geleneksellik"
+      ],
+      "correctAnswer": "Açıklık"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi KAÇD uygulamalarının amaçlarından biri değildir?",
+      "options": [
+        "Daha fazla kişiye ulaşmak ve kullanımını yaygınlaştırmak",
+        "Marka oluşturup devamlılığı sağlamak",
+        "Eğitim çıktılarını artırmak",
+        "Eğitim ve öğretime yenilik getirmek",
+        "Geleneksel eğitimi ortadan kaldırmak"
+      ],
+      "correctAnswer": "Geleneksel eğitimi ortadan kaldırmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi kitlesel çevrimiçi dersleri geleneksel sistemdeki derslerden ayıran özelliklerden biri değildir?",
+      "options": [
+        "Davranışçı öğrenmeye dayalı uygulamalar",
+        "Akran ve kendi kendini değerlendirme uygulamaları",
+        "Çevrimiçi forumlar ve tartışma grupları",
+        "Tam öğrenmeye dayalı uygulamalar",
+        "Çevrimiçi öğrenme etkinlikleri"
+      ],
+      "correctAnswer": "Davranışçı öğrenmeye dayalı uygulamalar"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "George Siemens ve Stephen Downes'ın KAÇD uygulaması aşağıdaki kuramlardan hangisi üzerine kurulmuştur?",
+      "options": ["Bilişsel", "Duyuşsal", "Davranışçı", "Bağlantıcı", "Yapıcı"],
+      "correctAnswer": "Bağlantıcı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi 21. yy. yaşamboyu öğrenme çerçevesinde yer alan temel stratejilerden biri değildir?",
+      "options": [
+        "Herkes için temel beceriler",
+        "İnsan kaynaklarına daha fazla yatırım",
+        "Eğitimin öğrenenlere yakınlaştırılması",
+        "Eğitime geleneksel yöntemlerle devam edilmesi",
+        "Her türlü eğitime değer verilmesi"
+      ],
+      "correctAnswer": "Eğitime geleneksel yöntemlerle devam edilmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi kullanıcıların daha basit donanıma sahip bilgisayarlarla çalışmasının avantajlarından birisi değildir?",
+      "options": [
+        "Gürültü",
+        "Bakım ve onarım maliyeti",
+        "Enerji tüketimi",
+        "Donanım maliyeti",
+        "İnternet bağlantısı"
+      ],
+      "correctAnswer": "İnternet bağlantısı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Bir bilgi sisteminin % 99,995 kullanılabilirlik oranını sağlaması için bir yılda en fazla toplam kaç dakika çalışmaması kabul edilebilir?",
+      "options": ["5", "26", "99", "365", "1729"],
+      "correctAnswer": "26"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi dağıtık bilişim sistemlerinin üstünlüklerinden biri değildir?",
+      "options": [
+        "Hızlı çalışmaları",
+        "Verimli olmaları",
+        "Diğer sistemlerle işbirliği",
+        "Hatasız çalışmaları",
+        "Ölçeklenebilir olmaları"
+      ],
+      "correctAnswer": "Hatasız çalışmaları"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Hizmet odaklı mimari (SOA) aşağıdaki hangi bulut bilişim mimarisi ile ilgilidir?",
+      "options": [
+        "İnternet teknolojisi",
+        "Dağıtık sistem",
+        "Donanım",
+        "Veri merkezi",
+        "Sistem yönetimi"
+      ],
+      "correctAnswer": "İnternet teknolojisi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Hipervizör kavramı aşağıdakiler hangisi ile ilişkilidir?",
+      "options": [
+        "İzleme sistemi",
+        "Sanallaştırma yazılımı",
+        "Veritabanı türü",
+        "Hizmet sunum modeli",
+        "Bulut türü"
+      ],
+      "correctAnswer": "Sanallaştırma yazılımı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Kullanıcının sanal bir işletim sistemini kullanmak üzere yetkilendirildiği bulut bilişim hizmet modelinin kısaltması aşağıdakilerden hangisinde doğru verilmiştir?",
+      "options": ["PaaS", "SaaS", "SECaaS", "TaaS", "IaaS"],
+      "correctAnswer": "IaaS"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi bulut bilişimin yayılma türlerinden birisi değildir?",
+      "options": [
+        "Özel bulut",
+        "Melez bulut",
+        "İş bulutu",
+        "Kamu bulutu",
+        "Topluluk bulut"
+      ],
+      "correctAnswer": "İş bulutu"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi bulut bilişimin üstünlüklerinden biri değildir?",
+      "options": [
+        "Birlikte çalışma",
+        "Ölçeklenebilirlik",
+        "Çevre birimlerin etkin kullanılması",
+        "İş uygulamalarında esneklik",
+        "Devamlılık"
+      ],
+      "correctAnswer": "Çevre birimlerin etkin kullanılması"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi bir bulut depolama hizmeti değildir?",
+      "options": ["Hangouts", "Dropbox", "OneDrive", "Yandex.Disk", "iCloud"],
+      "correctAnswer": "Hangouts"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdaki hizmetlerden hangisi bireylerin duygu ve düşüncelerini internet ortamında yayınladıkları bir hizmettir?",
+      "options": ["E-Belgeler", "Web Sayfası", "Sunu", "Blog", "Drive"],
+      "correctAnswer": "Blog"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil cihazlarda kullanılan işletim sistemlerinden birisi değildir?",
+      "options": ["iOS", "Android", "Windows Phone", "Symbian", "MacOS"],
+      "correctAnswer": "MacOS"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Mobil uygulamaların dağıtıldığı ve indirildiği merkezî platformlara ne ad verilir?",
+      "options": [
+        "Uygulama Mağazası (App Store / Play Store)",
+        "Veri Merkezi",
+        "Bulut Depolama",
+        "Web Sitesi",
+        "Arama Motoru"
+      ],
+      "correctAnswer": "Uygulama Mağazası (App Store / Play Store)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil cihazların masaüstü bilgisayarlara göre en belirgin üstünlüklerinden biridir?",
+      "options": [
+        "Daha yüksek işlemci gücü",
+        "Taşınabilirlik ve mekân bağımsız kullanım",
+        "Daha büyük ekran boyutu",
+        "Sınırsız depolama alanı",
+        "Kablolu ağ bağlantısı zorunluluğu"
+      ],
+      "correctAnswer": "Taşınabilirlik ve mekân bağımsız kullanım"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil teknolojilerin eğitimdeki avantajlarından biri değildir?",
+      "options": [
+        "Fırsat eşitliği sağlaması",
+        "Mekândan bağımsız öğrenme imkânı sunması",
+        "Öğrenmeyi bireyselleştirmesi",
+        "Geleneksel sınıf ortamını tamamen ortadan kaldırma zorunluluğu",
+        "Eğitsel içeriklere hızlı erişim sağlaması"
+      ],
+      "correctAnswer": "Geleneksel sınıf ortamını tamamen ortadan kaldırma zorunluluğu"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Mobil cihazların ekranında anlık olarak beliren ve kullanıcıyı bilgilendiren kısa mesajlara ne ad verilir?",
+      "options": [
+        "E-Posta",
+        "SMS",
+        "Anlık Bildirim (Push Notification)",
+        "Spam",
+        "Pop-up"
+      ],
+      "correctAnswer": "Anlık Bildirim (Push Notification)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil cihazların donanımsal bileşenleri arasında yer alan ve konum belirlemeye yarayan servistir?",
+      "options": ["RAM", "GPS", "CPU", "Bluetooth", "Wi-Fi"],
+      "correctAnswer": "GPS"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil internet teknolojilerinin gelişim sürecindeki aşamalardan biri değildir?",
+      "options": ["2G", "3G", "4G / LTE", "5G", "Dial-up (Çevirmeli Bağlantı)"],
+      "correctAnswer": "Dial-up (Çevirmeli Bağlantı)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Kullanıcıların mobil cihazlar üzerinden finansal işlemlerini (havale, EFT, fatura ödeme vb.) gerçekleştirmesini sağlayan sistemlere ne ad verilir?",
+      "options": [
+        "Mobil Bankacılık",
+        "Mobil Sağlık",
+        "Mobil Ticaret",
+        "Mobil Öğrenme",
+        "Mobil Devlet"
+      ],
+      "correctAnswer": "Mobil Bankacılık"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Aşağıdakilerden hangisi mobil cihaz kullanımında dikkat edilmesi gereken güvenlik önlemlerinden biri değildir?",
+      "options": [
+        "Güçlü ekran kilidi ve şifre kullanmak",
+        "Kaynağı belirsiz uygulamaları cihazlara yüklemek",
+        "Uygulama izinlerini kontrol etmek",
+        "İşletim sistemi güncellemelerini zamanında yapmak",
+        "Güvenilir antivirüs yazılımları kullanmak"
+      ],
+      "correctAnswer": "Kaynağı belirsiz uygulamaları cihazlara yüklemek"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Artırılmış Gerçeklik (AR) teknolojisinin mobil cihazlarda kullanılabilmesini sağlayan en temel donanım birimi hangisidir?",
+      "options": ["Hoparlör", "Kamera", "Batarya", "Mikrofon", "Şarj Soketi"],
+      "correctAnswer": "Kamera"
     }
   ]
 }
