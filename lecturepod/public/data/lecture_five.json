@@ -1,0 +1,1219 @@
+{
+  "courseTitle": "İşletim Sistemleri",
+  "lectureTitle": "Sınav Soruları",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "1. Aşağıdakilerden hangisi modern bir işletim sisteminin temel görevlerinden biri değildir?",
+      "options": [
+        "A) Donanım kaynaklarını yönetmek ve planlamak",
+        "B) Kullanıcılara sistem çağrıları üzerinden kontrollü erişim sunmak",
+        "C) Uygulamalar arasında kaynak paylaşımını ve izolasyonu sağlamak",
+        "D) Donanım devrelerinin fiziksel tasarımını yapmak"
+      ],
+      "correctAnswer": "D) Donanım devrelerinin fiziksel tasarımını yapmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "2. Kullanıcı modunda çalışan bir program, çekirdek modundaki tüm talimatlara doğrudan erişebilir.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "correctAnswer": "Yanlış"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "3. Senaryo: Bir kullanıcı uygulaması diskten veri okumak için read() sistem çağrısını çağırıyor. [...] Bu isteğin çekirdek modunda karşılanabilmesi için hangi mekanizma devreye girerek kontrolü işletim sistemine devreder?",
+      "options": [
+        "A) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)",
+        "B) Zamanlayıcı (scheduler) tarafından yapılan bağlam değişimi",
+        "C) Dosya sistemi önbelleği (buffer cache) yöneticisi",
+        "D) Kabuk (shell) yorumlayıcısı"
+      ],
+      "correctAnswer": "A) Sistem çağrısı arabirimi tarafından tetiklenen yazılım kesmesi (trap)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "4. Mikro çekirdek (microkernel) mimarisinin monolitik çekirdeğe göre sağladığı temel avantajlardan biri aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Çekirdek boyutunu artırarak disk kullanımını azaltması",
+        "B) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi",
+        "C) Tüm sürücüleri çekirdek modunda tutarak performansı garanti etmesi",
+        "D) Sistem çağrılarına olan ihtiyacı ortadan kaldırması"
+      ],
+      "correctAnswer": "B) Hizmetleri kullanıcı moduna taşıyarak hata izolasyonunu güçlendirmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "5. Çekirdek mimarisi türlerini özellikleriyle eşleştiriniz: 1. Monolitik Çekirdek, 2. Mikro Çekirdek, 3. Hibrit Çekirdek, 4. Modüler Çekirdek",
+      "options": [
+        "A. Doğrudan çekirdeğe yüklenebilen ayrı modüller ile gerektiğinde genişletilebilir.",
+        "B. Minimum çekirdek, sürücüler ve servisler kullanıcı modunda çalışır.",
+        "C. Monolitik yapı ile kullanıcı moduna taşınan servislerin birleşimiyle esneklik sağlar.",
+        "D. Tüm temel servisler tek adres alanında; yüksek performans fakat düşük hata izolasyonu."
+      ],
+      "correctAnswer": "1→D, 2→B, 3→C, 4→A"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "6. Bir süreç (process), 'running' durumundan 'waiting' durumuna hangi durumda geçiş yapar?",
+      "options": [
+        "A) Zaman dilimi (CPU quantum) dolduğunda",
+        "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında",
+        "C) Sistem çağrısı (system call) tamamlandığında",
+        "D) Zamanlayıcı (scheduler) süreci durdurduğunda"
+      ],
+      "correctAnswer": "B) Girdi/Çıktı işlemi (Input/Output - I/O operation) başlatıldığında"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "7. Senaryo: İki süreç (process) aynı anda global bir sayaç değişkenini (counter variable) artırıyor. [...] Süreçler arası veri bütünlüğünü korumak için kritik bölgeler (critical sections) korunmazsa ne olur?",
+      "options": [
+        "A) Hiçbir fark olmaz, işlem tamamlanır.",
+        "B) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir.",
+        "C) Kilitlenme (deadlock) oluşur ve sistem donar.",
+        "D) Zamanlayıcı (scheduler) hata verir ve süreç sonlanır."
+      ],
+      "correctAnswer": "B) Yarış durumu (race condition) oluşur ve sayaç değeri beklenenden küçük olabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "8. Yandaki program çalıştırıldığında (başlangıçtaki ana süreç dahil) toplam kaç süreç oluşur? Kod: #include <unistd.h> int main(void) { fork(); fork(); return 0; }",
+      "options": [
+        "A) 2",
+        "B) 3",
+        "C) 4",
+        "D) 5"
+      ],
+      "correctAnswer": "C) 4"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "9. Bağlam değişimi (context switch) sırasında aşağıdaki bilgilerden hangisi saklanmak zorunda değildir?",
+      "options": [
+        "A) Program sayacı (program counter) değeri",
+        "B) CPU yazmaç (register) içerikleri",
+        "C) Ön bellek (cache) bloklarının tamamının içeriği",
+        "D) Yığın işaretçisi (stack pointer)"
+      ],
+      "correctAnswer": "C) Ön bellek (cache) bloklarının tamamının içeriği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "10. Zombie süreç, çocuk süreç sonlandıktan sonra ebeveyn süreç wait() çağrısı yapmadığında oluşur.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "correctAnswer": "Doğru"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "11. Aşağıdakilerden hangisi iş parçacıklarının (threads) süreçlere göre sağladığı bir avantajdır?",
+      "options": [
+        "A) Her iş parçacığı ayrı adres alanı kullanır.",
+        "B) Daha düşük bağlam değiştirme maliyeti ile daha hızlı yanıt verebilirler.",
+        "C) Her iş parçacığı kendi kod segmentine sahiptir.",
+        "D) Süreçlere göre daha fazla çekirdek kaynağı tüketirler."
+      ],
+      "correctAnswer": "B) Daha düşük bağlam değiştirme maliyeti ile daha hızlı yanıt verebilirler."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "12. İş parçacığı modellerini (thread models) özellikleriyle eşleştiriniz: 1. Many-to-One, 2. One-to-One, 3. Many-to-Many, 4. Two-Level",
+      "options": [
+        "A. Kullanıcı iş parçacıkları çekirdek iş parçacıklarına esnek biçimde bağlanır.",
+        "B. Tüm kullanıcı iş parçacıkları tek bir çekirdek iş parçacığı üzerinden yürütülür.",
+        "C. Her kullanıcı iş parçacığı için ayrı bir çekirdek iş parçacığı atanır.",
+        "D. Many-to-Many modelinin özelleştirilmiş bir versiyonudur."
+      ],
+      "correctAnswer": "1→B, 2→C, 3→A, 4→D"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "13. Bir iş parçacığı (thread) bloklandığında (blocked), aynı süreçteki diğer iş parçacıkları da bloklanır.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "correctAnswer": "Yanlış"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "14. Senaryo: Çok iş parçacıklı bir web sunucusu... 'aktif_istek' sayacını artırıp azaltıyor. Verinin tutarlı kalması için hangi mekanizma kullanılmalıdır?",
+      "options": [
+        "A) Muteks (mutex) kilidi kullanmak",
+        "B) İş parçacıklarını ayrı süreçlerde çalıştırmak",
+        "C) Non-blocking I/O kullanmak",
+        "D) İş parçacıklarını tek çekirdekli sisteme sınırlandırmak"
+      ],
+      "correctAnswer": "A) Muteks (mutex) kilidi kullanmak"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "15. Bir uygulamanın işlemlerinin %40'ı paralelleştirilebilir, geri kalanı seridir. Dört çekirdekte iş parçacıkları kullanıldığında teorik hızlanma (Amdahl Yasası) yaklaşık kaç olur?",
+      "options": [
+        "A) 1.25",
+        "B) 1.43",
+        "C) 1.67",
+        "D) 2.00"
+      ],
+      "correctAnswer": "B) 1.43"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "16. CPU zamanlama (CPU scheduling) algoritmalarında aç kalma (starvation) hangi durumda kaçınılmaz hale gelir?",
+      "options": [
+        "A) Round Robin algoritmasında zaman dilimi (quantum) küçük seçildiğinde",
+        "B) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse",
+        "C) En kısa iş (Shortest Job First - SJF) algoritmasında burst time yanlış hesaplandığında",
+        "D) İlk gelen ilk çıkar (First-Come First-Served FCFS) algoritmasında süreçler aynı anda gelirse"
+      ],
+      "correctAnswer": "B) Öncelik tabanlı (priority-based) zamanlamada düşük öncelikli süreçler sürekli ötelenirse"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "17. Senaryo: P1 (varış=0, burst=5), P2 (varış=1, burst=3) ve P3 (varış=2, burst=2) süreçleri FCFS algoritması ile planlanıyor. Bu durumda süreçlerin ortalama bekleme süresi yaklaşık kaç zaman birimidir?",
+      "options": [
+        "A) 2.00",
+        "B) 3.33",
+        "C) 4.00",
+        "D) 5.50"
+      ],
+      "correctAnswer": "B) 3.33"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "18. Senaryo: Round Robin zamanlayıcıda zaman dilimi (quantum) 30 ms olarak ayarlandı... Zaman dilimi çok büyük seçildiğinde hangi sonuç ortaya çıkar?",
+      "options": [
+        "A) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar.",
+        "B) Bağlam değiştirme sayısı artar ve CPU verimliliği düşer.",
+        "C) Preemptive planlama tamamen devre dışı kalır ve sistem deadlock'a girer.",
+        "D) Sadece I/O-bound süreçler seçilir, CPU-bound süreçler bekler."
+      ],
+      "correctAnswer": "A) Algoritma FCFS davranışına yaklaşır ve etkileşimli süreçlerin yanıt süresi artar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "19. Aşağıdaki süreçler arası iletişim (IPC) mekanizmalarından hangisi büyük veri bloklarını aktarırken çekirdek üzerinden kopyalama maliyeti nedeniyle daha fazla ek yük oluşturur?",
+      "options": [
+        "A) Paylaşımlı bellek (shared memory)",
+        "B) Mesaj kuyruğu (message queue)",
+        "C) Bellek eşlenmiş dosyalar (memory-mapped files)",
+        "D) Sinyaller (signals)"
+      ],
+      "correctAnswer": "B) Mesaj kuyruğu (message queue)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "20. Semaphore wait (P) ve signal (V) işlemleri atomik değilse yarış durumları ortaya çıkabilir.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "correctAnswer": "Doğru"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "21. Kullanıcı Modu (User Mode) ile ilgili aşağıdakilerden hangileri doğrudur? I. Donanım kaynaklarına doğrudan erişebilir. II. Hatalı bir işlem tüm sistemi çökertmez... III. Uygulama programları bu modda çalışır. IV. Bu modda çalışan işlemler tam yetkilidir...",
+      "options": [
+        "A) Yalnız I",
+        "B) I ve IV",
+        "C) II ve III",
+        "D) II, III ve IV",
+        "E) Yalnız IV"
+      ],
+      "correctAnswer": "C) II ve III"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "22. Çekirdek Modu (Kernel Mode) hakkında aşağıdakilerden hangileri doğrudur? I. İşletim sistemi çekirdeği ve sürücüler bu modda çalışır. II. Donanıma doğrudan erişim mümkündür. III. Kullanıcı programları bu modda çalışır. IV. Bu modda yapılan hatalar tüm sistemi etkileyebilir.",
+      "options": [
+        "A) I ve II",
+        "B) I, II ve IV",
+        "C) II ve III",
+        "D) Yalnız III",
+        "E) I, III ve IV"
+      ],
+      "correctAnswer": "B) I, II ve IV"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "23. Bir süreçteki Program Sayacı (Program Counter - PC) neyi belirtir?",
+      "options": [
+        "A) Sürecin çalışma kipini (User Mode / Kernel Mode)",
+        "B) CPU'nun bir sonraki çalıştıracağı komutun adresini",
+        "C) Sürecin açık dosyalarının listesini",
+        "D) Sürecin kullandığı toplam bellek miktarını",
+        "E) Sürecin öncelik derecesini (Priority Level)"
+      ],
+      "correctAnswer": "B) CPU'nun bir sonraki çalıştıracağı komutun adresini"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "24. Aşağıdakilerden hangisi bir sürecin bellek alanı (Memory Space) içinde yer almaz?",
+      "options": [
+        "A) Kod (Text) segmenti",
+        "B) Veri (Data) segmenti",
+        "C) Yığın (Stack) segmenti",
+        "D) Dosya Tanımlayıcı Tablosu (File Descriptor Table)",
+        "E) Öbek (Heap) segmenti"
+      ],
+      "correctAnswer": "D) Dosya Tanımlayıcı Tablosu (File Descriptor Table)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "25. Bir süreç, I/O işleminin tamamlanmasını beklediği durumda hangi süreç durumunda (process state) bulunur?",
+      "options": [
+        "A) New",
+        "B) Ready",
+        "C) Running",
+        "D) Waiting (Blocked)",
+        "E) Terminated"
+      ],
+      "correctAnswer": "D) Waiting (Blocked)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "26. Aşağıdakilerden hangisi \"süreç (process)\" kavramını en doğru biçimde açıklar?",
+      "options": [
+        "A) Yalnızca derlenmiş bir program dosyasıdır",
+        "B) Belleğe yüklenmemiş pasif kod kümesidir",
+        "C) İşletim sistemi tarafından yürütülen aktif bir program örneğidir",
+        "D) CPU tarafından çalıştırılan donanım kesmesidir",
+        "E) Sistemdeki tüm thread'lerin toplamıdır"
+      ],
+      "correctAnswer": "C) İşletim sistemi tarafından yürütülen aktif bir program örneğidir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "27. İşletim sisteminde PID (Process ID) neyi temsil eder?",
+      "options": [
+        "A) Sürecin öncelik seviyesini",
+        "B) Sürecin kullandığı bellek adresini",
+        "C) Süreci benzersiz biçimde tanımlayan kimliği",
+        "D) Sürecin CPU zamanı yüzdesini",
+        "E) Sürecin dosya erişim izinlerini"
+      ],
+      "correctAnswer": "C) Süreci benzersiz biçimde tanımlayan kimliği"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "28. Process Control Block (PCB) aşağıdaki bilgilerden hangisini içermez?",
+      "options": [
+        "A) Süreç durumu (Process State)",
+        "B) CPU yazmaçlarının değerleri (Register Values)",
+        "C) Program sayacı (Program Counter)",
+        "D) Kullanıcı arayüzü tasarımı",
+        "E) I/O durum bilgisi (I/O Status Info)"
+      ],
+      "correctAnswer": "D) Kullanıcı arayüzü tasarımı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "29. Aşağıdaki ifadelerden hangisi bağlam değiştirme (context switch) işlemini en iyi tanımlar?",
+      "options": [
+        "A) İşletim sisteminin sürücüleri yüklemesi",
+        "B) Bir sürecin bellekten diske kaydedilmesi",
+        "C) CPU'nun yürütmeyi bir süreçten diğerine devretmesi",
+        "D) Sürecin I/O işlemini tamamlaması",
+        "E) Dosya sisteminin bir dosyayı açması"
+      ],
+      "correctAnswer": "C) CPU'nun yürütmeyi bir süreçten diğerine devretmesi"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "30. Aşağıdakilerden hangisi geçerli bir süreç durumu (process state) değildir?",
+      "options": [
+        "A) New",
+        "B) Waiting",
+        "C) Executing (doğru terim Running olmalı)",
+        "D) Ready",
+        "E) Terminated"
+      ],
+      "correctAnswer": "C) Executing (doğru terim Running olmalı)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "31. UNIX benzeri sistemlerde yeni süreçler hangi sistem çağrısıyla oluşturulur?",
+      "options": [
+        "A) exec()",
+        "B) fork()",
+        "C) spawn()",
+        "D) init()",
+        "E) create_process()"
+      ],
+      "correctAnswer": "B) fork()"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "32. Aşağıdakilerden hangisi süreçler arası iletişim (IPC) mekanizması değildir?",
+      "options": [
+        "A) Pipes",
+        "B) Message Queues",
+        "C) Shared Memory",
+        "D) Semaphores",
+        "E) Virtual Memory"
+      ],
+      "correctAnswer": "E) Virtual Memory"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "33. Aşağıdakilerden hangisi program ve süreç (process) arasındaki farkı en doğru biçimde açıklar?",
+      "options": [
+        "A) Program, aktif; süreç ise pasif bir varlıktır.",
+        "B) Program, CPU'da yürütülür; süreç diskte saklanır.",
+        "C) Program, pasif bir komut yığınıdır; süreç o programın bellekte çalışan aktif hâlidir.",
+        "D) Program, RAM'de geçici olarak tutulur; süreç kalıcıdır.",
+        "E) Program, sadece kernel modda; süreç kullanıcı modda çalışır."
+      ],
+      "correctAnswer": "C) Program, pasif bir komut yığınıdır; süreç o programın bellekte çalışan aktif hâlidir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "34. Bir program ve bir süreç sistemde nerede bulunur?",
+      "options": [
+        "A) Program bellekte, süreç diskte bulunur.",
+        "B) Program CPU yazmaçlarında, süreç sanal bellektedir.",
+        "C) Program diskte (storage), süreç bellekte (RAM)'de bulunur.",
+        "D) Her ikisi de sadece çekirdek belleğinde tutulur.",
+        "E) Her ikisi de donanım ROM alanında saklanır."
+      ],
+      "correctAnswer": "C) Program diskte (storage), süreç bellekte (RAM)'de bulunur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "35. Aşağıdakilerden hangisi program ve süreç ömrü arasındaki farkı doğru şekilde ifade eder?",
+      "options": [
+        "A) Programlar geçicidir, süreçler kalıcıdır.",
+        "B) Programlar oluşturulup sonlandırılır; süreçler kalıcıdır.",
+        "C) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır).",
+        "D) Her ikisi de sistem kapanınca kalıcı hâle gelir.",
+        "E) Program, sadece kullanıcı oturumunda geçicidir."
+      ],
+      "correctAnswer": "C) Programlar kalıcıdır (diskte durur); süreçler geçicidir (oluşturulur ve sonlanır)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "36. Aşağıdakilerden hangisi program ile süreç farkını \"Spotify örneği\" üzerinden doğru biçimde açıklar?",
+      "options": [
+        "A) spotify.exe dosyası bellekteyken program, diskteyken süreçtir.",
+        "B) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur.",
+        "C) Spotify uygulaması hem program hem süreçtir, fark yoktur.",
+        "D) Spotify simgesine tıklamak süreci sonlandırır.",
+        "E) Spotify süreci diskte kalır, program RAM'de çalışır."
+      ],
+      "correctAnswer": "B) spotify.exe dosyası diskte programdır; çalıştırıldığında bellekte bir süreç oluşturur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "37. Aşağıdakilerden hangisi Süreç Kontrol Bloğu (Process Control Block PCB) içinde yer almaz?",
+      "options": [
+        "A) Program Sayacı (Program Counter)",
+        "B) Yazmaç değerleri (Register Values)",
+        "C) Sayfa tablosu işaretçisi (Page Table Pointer)",
+        "D) Kullanıcı arayüzü bileşenleri (User Interface Components)",
+        "E) Süreç önceliği (Process Priority)"
+      ],
+      "correctAnswer": "D) Kullanıcı arayüzü bileşenleri (User Interface Components)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "38. Unix sistemlerde yeni bir süreç (process) oluşturmak için kullanılan fork() sistem çağrısının temel özelliği aşağıdakilerden hangisidir?",
+      "options": [
+        "A) Mevcut sürecin yürütülmesini durdurur ve belleği temizler.",
+        "B) Üst sürecin bellek alanını tamamen siler.",
+        "C) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur.",
+        "D) Yeni sürece aynı PID'yi atar.",
+        "E) Dosya sistemi üzerinde yeni bir işlem başlatır."
+      ],
+      "correctAnswer": "C) Üst sürecin (parent process) sanal belleğini \"Copy-on-Write (Yazma-üzerine-kopyalama)\" yöntemiyle klonlayarak yeni bir süreç oluşturur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "39. Aşağıdakilerden hangisi zombi süreç (zombie process) için doğrudur?",
+      "options": [
+        "A) CPU ve bellek kaynaklarını aktif biçimde kullanır.",
+        "B) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur.",
+        "C) Çalışmaya devam eden, henüz bitmemiş süreçtir.",
+        "D) Process table'dan hemen silinir.",
+        "E) Kernel tarafından otomatik olarak yeniden başlatılır."
+      ],
+      "correctAnswer": "B) Parent process, child süreci wait() sistemi çağrısıyla toplamadığı için oluşur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "40. Aşağıdakilerden hangisi thread (iş parçacığı) ile process (süreç) arasındaki farklardan biri değildir?",
+      "options": [
+        "A) Thread'ler aynı bellek alanını paylaşabilirken, process'ler ayrı bellek alanlarına sahiptir.",
+        "B) Bir process çökerse diğer process'ler etkilenmez, ancak bir thread çökerse aynı süreçteki diğer thread'ler etkilenebilir.",
+        "C) Thread oluşturmak, process oluşturmaktan daha düşük maliyetlidir.",
+        "D) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir.",
+        "E) Thread'ler aynı süreçteki diğer thread'lerle aynı kod ve veri alanını kullanabilir."
+      ],
+      "correctAnswer": "D) Thread'ler farklı süreçler arasında doğrudan veri paylaşabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "41. Aşağıdakilerden hangisi User-Level Threads (ULT) ve Kernel-Level Threads (KLT) arasındaki farklardan biri değildir?",
+      "options": [
+        "A) ULT'lerde thread yönetimi kullanıcı alanında, KLT'lerde çekirdek alanında yapılır.",
+        "B) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır.",
+        "C) KLT'lerde her thread ayrı CPU çekirdeğinde gerçek paralel çalışabilir.",
+        "D) ULT'lerde bir thread bloklanırsa tüm süreç etkilenir.",
+        "E) KLT'lerde scheduler her thread'i ayrı yürütme birimi olarak planlar."
+      ],
+      "correctAnswer": "B) ULT'ler, context switch sırasında çekirdeğe geçiş yaptığı için daha yavaştır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "42. Aşağıdakilerden hangisi SMT (Simultaneous Multithreading) veya Hyper-Threading teknolojisinin temel amacını en doğru açıklar?",
+      "options": [
+        "A) Bir CPU çekirdeğinin saat hızını (clock speed) iki katına çıkarmaktır.",
+        "B) İşletim sistemine fiziksel çekirdek sayısını gizlemektir.",
+        "C) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır.",
+        "D) İşletim sisteminde her thread'e ayrı bellek alanı tahsis etmektir.",
+        "E) CPU üzerindeki tüm cache seviyelerini devre dışı bırakmaktır."
+      ],
+      "correctAnswer": "C) Boşta kalan çekirdek kaynaklarını başka bir thread'e tahsis ederek çekirdeği tam kapasite kullanmaktır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "43. Aşağıdaki ifadelerden hangisi deadlock (kilitlenme) durumunu en doğru biçimde açıklar?",
+      "options": [
+        "A) İki thread'in aynı anda paylaşılan veriye erişmesi sonucu belirsizlik oluşmasıdır.",
+        "B) Bir thread'in öncelik düşük olduğu için CPU zamanı alamamasıdır.",
+        "C) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir.",
+        "D) Thread'in bekleme koşulu sağlanmadığı için uyku modunda kalmasıdır.",
+        "E) Thread'lerin planlayıcı tarafından sıralı biçimde yürütülmesidir."
+      ],
+      "correctAnswer": "C) Thread'lerin birbirinden kaynak beklemesi nedeniyle sonsuza kadar ilerleyememesidir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "44. Aşağıdakilerden hangisi Thread Pool (İş Parçacığı Havuzu) kavramının temel amacını en doğru açıklar?",
+      "options": [
+        "A) Her işlem (process) için ayrı çekirdek (core) tahsis edilmesini sağlamak.",
+        "B) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak.",
+        "C) Tüm thread'lerin aynı anda CPU kullanmasını engellemek.",
+        "D) Thread'ler arası veri paylaşımını devre dışı bırakmak.",
+        "E) Sinyal işleme mekanizmasını thread düzeyine taşımak."
+      ],
+      "correctAnswer": "B) Görev başına yeni thread oluşturmak yerine önceden oluşturulmuş thread'leri tekrar kullanarak maliyeti azaltmak."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "45. Aşağıdakilerden hangisi CPU Scheduler (Zamanlayıcı) bileşeninin doğrudan görevi değildir?",
+      "options": [
+        "A) Hangi sürecin CPU'yu kullanacağına karar vermek.",
+        "B) Seçilen süreci CPU'ya yüklemek (dispatch etmek).",
+        "C) CPU kullanımını artırmak için hazır kuyruktaki süreçleri değerlendirmek.",
+        "D) Zaman paylaşımını sağlamak için timer interrupt'ları kullanmak.",
+        "E) Çoklu programlama sırasında süreç geçişini yönetmek."
+      ],
+      "correctAnswer": "B) Seçilen süreci CPU'ya yüklemek (dispatch etmek)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "46. Bir işletim sisteminde timer interrupt (zamanlayıcı kesmesi) gerçekleştiğinde, CPU zamanlayıcı (scheduler) tarafından hangi olay sırası doğru biçimde gerçekleşir?",
+      "options": [
+        "A) Dispatcher seçimi yapar → Scheduler süreci çalıştırır → Context switch tamamlanır",
+        "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir",
+        "C) Scheduler yeni süreci seçer → Timer interrupt tetiklenir → Dispatcher süreci çalıştırır",
+        "D) Dispatcher süreci seçer → Scheduler context switch yapar → Timer interrupt sonlanır",
+        "E) Timer interrupt gerçekleşir → Dispatcher doğrudan CPU'yu atar Scheduler devre dışı kalır"
+      ],
+      "correctAnswer": "B) CPU mevcut süreci durdurur → Scheduler yeni süreci seçer → Dispatcher context switch gerçekleştirir"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "47. Aşağıdakilerden hangisi Convoy Effect kavramını en doğru açıklar?",
+      "options": [
+        "A) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi.",
+        "B) Birden fazla thread'in aynı veriye erişmeye çalışması.",
+        "C) Uzun süre bekleyen süreçlerin önceliğinin artması.",
+        "D) CPU'nun birden fazla çekirdeğe sahip olması.",
+        "E) Preemptive scheduling'in devre dışı bırakılması."
+      ],
+      "correctAnswer": "A) Çok sayıda kısa sürecin uzun bir süreç tarafından geciktirilmesi."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "48. Aşağıdakilerden hangisi Round Robin (RR) algoritmasının temel özelliğidir?",
+      "options": [
+        "A) En kısa işi önce seçer.",
+        "B) CPU'yu alan süreç bitene kadar çalışır.",
+        "C) Her sürece eşit zaman dilimi (quantum) verir.",
+        "D) Öncelik değerine göre sıralama yapar.",
+        "E) Ortalama bekleme süresi her zaman en düşüktür."
+      ],
+      "correctAnswer": "C) Her sürece eşit zaman dilimi (quantum) verir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "49. Aşağıdakilerden hangisi SJF (Shortest Job First) ve HRRN (Highest Response Ratio Next) algoritmaları arasındaki farkı doğru açıklar?",
+      "options": [
+        "A) SJF kesintilidir, HRRN kesintisizdir.",
+        "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar.",
+        "C) HRRN, konvoy etkisi oluşturur, SJF oluşturmaz.",
+        "D) SJF'de starvation önlenir, HRRN'de ortaya çıkar.",
+        "E) HRRN, Round Robin'e benzer zaman dilimi mantığı kullanır."
+      ],
+      "correctAnswer": "B) HRRN, bekleme süresini önceliğe dâhil ederken SJF yalnızca burst time'a bakar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "50. Aşağıdakilerden hangisi MLFQ (Multi-Level Feedback Queue) algoritmasının karakteristik özelliğidir?",
+      "options": [
+        "A) Sabit öncelikli, değişmez kuyruk yapısı vardır.",
+        "B) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir.",
+        "C) Tüm süreçler aynı quantum süresini kullanır.",
+        "D) Starvation riskini önlemek için aging uygulanmaz.",
+        "E) Sadece batch sistemlerde kullanılır."
+      ],
+      "correctAnswer": "B) CPU kullanımına göre süreçlerin seviyesini dinamik olarak değiştirir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "51. Aşağıdakilerden hangisi Priority Scheduling (Öncelikli Zamanlama) algoritmasının dezavantajıdır?",
+      "options": [
+        "A) Convoy effect oluşturur.",
+        "B) Starvation (açlık) problemi yaşanabilir.",
+        "C) Tüm süreçlere eşit CPU zamanı verilir.",
+        "D) Öncelikler dinamik olarak belirlenir.",
+        "E) Interactive sistemlerde uygun değildir."
+      ],
+      "correctAnswer": "B) Starvation (açlık) problemi yaşanabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "52. Aşağıdakilerden hangisi Arrival Time (Varış Zamanı) kavramını en doğru şekilde açıklar?",
+      "options": [
+        "A) Sürecin CPU'yu ilk kez kullanmaya başladığı an.",
+        "B) Sürecin tamamlandığı zaman noktası.",
+        "C) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman.",
+        "D) Sürecin I/O işlemi için beklemeye alındığı an.",
+        "E) Sürecin planlayıcı (scheduler) tarafından seçildiği an."
+      ],
+      "correctAnswer": "C) Sürecin hazır kuyruğuna (ready queue) ilk girdiği zaman."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "53. Aşağıdakilerden hangisi Burst Time (CPU Patlama Süresi) terimini doğru tanımlar?",
+      "options": [
+        "A) Sürecin CPU ve I/O arasında geçirdiği toplam süre.",
+        "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre.",
+        "C) Sürecin bekleme süresi ile dönüş süresi farkı.",
+        "D) Sürecin hazır kuyruğunda kaldığı süre.",
+        "E) Sürecin ilk CPU erişimiyle bitişi arasındaki süre."
+      ],
+      "correctAnswer": "B) Sürecin CPU üzerinde kesintisiz çalıştığı süre."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "54. Aşağıdakilerden hangisi Response Time (Yanıt Süresi) kavramını doğru açıklar?",
+      "options": [
+        "A) Sürecin CPU'yu kullanmaya başladığı andan itibaren geçen toplam süredir.",
+        "B) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir.",
+        "C) Sürecin CPU'dan tamamen ayrıldığı zamandır.",
+        "D) Sürecin bekleme süresiyle burst time farkıdır.",
+        "E) Turnaround time'a eşittir."
+      ],
+      "correctAnswer": "B) Sürecin sisteme girişinden CPU'yu ilk kez kullanmasına kadar geçen süredir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "55. Aşağıdaki durumlardan hangisinde sistemin CPU Utilization (CPU Kullanımı) düşüktür?",
+      "options": [
+        "A) CPU sürekli hazır kuyruktaki süreçleri çalıştırıyor.",
+        "B) CPU %80 oranında aktif, %20 idle durumda.",
+        "C) CPU çoğu zaman idle (boşta) bekliyor.",
+        "D) CPU %90 üzerinde sürekli dolu çalışıyor.",
+        "E) CPU'yu kullanan süreçler kısa burst'lara sahip."
+      ],
+      "correctAnswer": "C) CPU çoğu zaman idle (boşta) bekliyor."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "56. Aşağıdakilerden hangisi anonymous pipe için doğrudur?",
+      "options": [
+        "A) Farklı makinelere ağ üzerinden veri aktarır.",
+        "B) Dosya sisteminde kalıcı adla görünür.",
+        "C) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur.",
+        "D) Mesaj tipine göre filtreleme yapar.",
+        "E) Kalıcıdır, reboot sonrasında da var olur."
+      ],
+      "correctAnswer": "C) Tek yönlü iletişim için tipiktir ve genellikle parent-child süreçleri arasında kurulur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "57. Aşağıdakilerden hangisi System V/POSIX message queue için doğru bir ifadedir?",
+      "options": [
+        "A) Gönderici ve alıcı aynı anda hazır değilse iletişim kurulamaz.",
+        "B) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir.",
+        "C) En hızlı IPC'dir çünkü kopyasız (zero-copy) çalışır.",
+        "D) Sadece tek yönlüdür.",
+        "E) Yalnızca parent-child arasında kullanılabilir."
+      ],
+      "correctAnswer": "B) Mesajlar kuyrukta saklanabilir ve tip alanına göre seçici alım yapılabilir."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "58. Shared memory ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": [
+        "A) En hızlı IPC'lerden biridir çünkü kopyalama gerektirmez.",
+        "B) Senkronizasyon mekanizmaları olmadan race condition riski vardır.",
+        "C) Birden çok süreç aynı fiziksel belleği eşleyebilir.",
+        "D) Kernel, mesaj başlıklarını otomatik sıraya dizer.",
+        "E) POSIX'te shm_open ve mmap ile kullanılabilir."
+      ],
+      "correctAnswer": "D) Kernel, mesaj başlıklarını otomatik sıraya dizer."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "59. Aşağıdakilerden hangisi UNIX domain socket ile TCP socket arasındaki farkı doğru açıklar?",
+      "options": [
+        "A) UNIX domain socket farklı makineler arasında kullanılır.",
+        "B) TCP socket dosya yolu ile adreslenir.",
+        "C) UNIX domain socket aynı makinede daha düşük overhead'le çalışır.",
+        "D) TCP socket her zaman daha hızlıdır.",
+        "E) UNIX domain socket yalnızca UDP türünde olabilir."
+      ],
+      "correctAnswer": "C) UNIX domain socket aynı makinede daha düşük overhead'le çalışır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "60. Aşağıdakilerden hangisi signal mekanizması için doğrudur?",
+      "options": [
+        "A) SIGKILL kullanıcı handler'ı ile yakalanabilir ve ertelenebilir.",
+        "B) Sinyaller her zaman tüm süreçteki tüm thread'lere aynı anda teslim edilir.",
+        "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar.",
+        "D) Signal eşzamansız değildir.",
+        "E) Signal, IPC değildir."
+      ],
+      "correctAnswer": "C) SIGCHLD, child süreç sonlanınca parent'a bildirim sağlar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "61. Aşağıdaki IPC mekanizması tipik en uygun kullanım eşleştirmelerinden hangisi yanlıştır?",
+      "options": [
+        "A) Shared memory → Büyük hacimli ve yüksek performanslı veri paylaşımı",
+        "B) Message queue → Asenkron, tip bazlı kuyruklu mesajlaşma",
+        "C) UNIX domain socket → Aynı makinede client-server iletişimi",
+        "D) Signal → Yüksek hacimli ikili veri akışı",
+        "E) Anonymous pipe → Shell hattı (producer consumer) akışları"
+      ],
+      "correctAnswer": "D) Signal → Yüksek hacimli ikili veri akışı"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "62. Aşağıdakilerden hangisi spinlock (döngü kilidi) için doğru bir tanımdır?",
+      "options": [
+        "A) Thread, kilidi beklerken uyur ve CPU başka işlere geçer.",
+        "B) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder.",
+        "C) Spinlock, yalnızca tek çekirdekli sistemlerde kullanılmalıdır.",
+        "D) Spinlock, context switch gerektirir.",
+        "E) Spinlock, I/O işlemleri sırasında idealdir."
+      ],
+      "correctAnswer": "B) Thread, kilidi beklerken aktif olarak döner ve kilidin açılmasını sürekli kontrol eder."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "63. Aşağıdakilerden hangisi spinlock kullanımına en uygun senaryodur?",
+      "options": [
+        "A) Uzun süren disk I/O işlemleri.",
+        "B) Thread'lerin saniyeler süren beklemeleri.",
+        "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar.",
+        "D) Tek çekirdekli gömülü sistemler.",
+        "E) Kullanıcı arayüzü işlemleri."
+      ],
+      "correctAnswer": "C) Çok kısa (<100 ns) kritik bölgeler ve interrupt handler'lar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "64. Aşağıdakilerden hangisi mutex ile spinlock arasındaki farklardan biri değildir?",
+      "options": [
+        "A) Mutex beklerken thread uyuyabilir, spinlock döngüde aktif bekler.",
+        "B) Mutex context switch gerektirebilir, spinlock gerektirmez.",
+        "C) Spinlock CPU'yu meşgul eder, mutex etmez.",
+        "D) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz.",
+        "E) Spinlock kısa kilitler için daha hızlı olabilir."
+      ],
+      "correctAnswer": "D) Mutex interrupt handler içinde kullanılabilir, spinlock kullanılamaz."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "65. Aşağıdakilerden hangisi wait(P) işleminin doğru davranışını tanımlar?",
+      "options": [
+        "A) Semafor değerini artırır; bekleyen varsa uyandırır.",
+        "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır.",
+        "C) Semafor değerini okur ama değiştirmez.",
+        "D) Her zaman sinyal gönderir.",
+        "E) Yalnızca binary semaforlarda çalışır."
+      ],
+      "correctAnswer": "B) Semafor değerini azaltır; değer 0 ise process'i beklemeye alır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "66. ...Aşağıdakilerden hangisi counting semafor ile binary semafor arasındaki farkı doğru şekilde açıklar?",
+      "options": [
+        "A) Counting semafor yalnızca 0 veya 1 değerini alabilir.",
+        "B) Binary semafor birden fazla thread'in aynı anda girmesine izin verir.",
+        "C) Counting semafor, birden fazla kaynağın yönetiminde kullanılır.",
+        "D) Binary semafor yalnızca kernel seviyesinde çalışır.",
+        "E) Counting semafor race condition oluşmasını garanti eder."
+      ],
+      "correctAnswer": "C) Counting semafor, birden fazla kaynağın yönetiminde kullanılır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "67. Atomik işlemler hakkında aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": [
+        "A) Atomik işlemler birden fazla CPU döngüsünde tamamlanabilir.",
+        "B) Atomik işlemler yalnızca kullanıcı seviyesi (user-space) kodda geçerlidir.",
+        "C) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür.",
+        "D) Atomik işlemler sadece bir process tarafından kullanılabilir.",
+        "E) Atomik işlemler mutex'lerden daha yavaş çalışır."
+      ],
+      "correctAnswer": "C) Atomik işlemler kesintiye uğrayamaz ve bölünemez şekilde yürütülür."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "68. Aşağıdakilerden hangisi Compare-and-Swap (CAS) işleminin doğru tanımıdır?",
+      "options": [
+        "A) Bellekteki değeri kontrol etmeden doğrudan değiştirir.",
+        "B) İki değişkenin değerini her durumda birbirine eşitler.",
+        "C) Değer beklenenle aynıysa değiştirir, değilse değiştirmez.",
+        "D) Bellek erişiminde semafor kullanarak bekler.",
+        "E) CPU context switch işlemiyle gerçekleştirilir."
+      ],
+      "correctAnswer": "C) Değer beklenenle aynıysa değiştirir, değilse değiştirmez."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "69. İşletim sistemlerinde read-write lock (okuma-yazma kilidi) kullanımıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": [
+        "A) Hem okuma hem yazma işlemleri aynı anda yapılabilir.",
+        "B) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır.",
+        "C) RWLock, yazma işlemlerinde okuma kilidini otomatik olarak devralır.",
+        "D) RWLock yalnızca tek çekirdekli sistemlerde etkilidir.",
+        "E) RWLock, semaforlarla birlikte kullanılamaz."
+      ],
+      "correctAnswer": "B) Birden fazla okuyucu aynı anda okuma yapabilir, ancak yazıcı yalnız çalışır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "70. Aşağıdakilerden hangisi RWLock'un mutex'e göre avantajını doğru açıklar?",
+      "options": [
+        "A) RWLock her zaman mutex'ten daha hızlıdır.",
+        "B) RWLock yalnızca yazma işlemleri için optimize edilmiştir.",
+        "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar.",
+        "D) RWLock, tek bir thread'in okuma yapmasına izin verir.",
+        "E) RWLock, writer starvation problemini tamamen ortadan kaldırır."
+      ],
+      "correctAnswer": "C) RWLock, okuma yoğun senaryolarda daha yüksek paralellik sağlar."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "71. Aşağıdakilerden hangisi Üretici-Tüketici Problemini en doğru şekilde açıklar?",
+      "options": [
+        "A) Üretici, tüketiciye doğrudan veri gönderir, tampon kullanılmaz.",
+        "B) Üretici ve tüketici aynı anda aynı tamponu günceller.",
+        "C) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır.",
+        "D) Üretici ve tüketici farklı sistemlerde çalıştığından senkronizasyon gerekmez.",
+        "E) Tüketici veriyi üretir, üretici bunu işler."
+      ],
+      "correctAnswer": "C) Üretici veriyi üretip sınırlı tamponda depolar, tüketici bu tampondan alır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "72. Producer-Consumer probleminde kullanılan semaforlardan full, empty ve mutex için doğru ilişki aşağıdakilerden hangisidir?",
+      "options": [
+        "A) empty → dolu slot sayısı, full → boş slot sayısı",
+        "B) mutex → veri üretimi, empty → mutual exclusion",
+        "C) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur",
+        "D) Üçü de yalnızca üretici tarafından kullanılır",
+        "E) Tüketici sadece mutex semaforunu kullanır"
+      ],
+      "correctAnswer": "C) full dolu slotları sayar, empty boş slotları sayar, mutex kritik bölgeyi korur"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "73. Aşağıdaki durumlardan hangisi Producer-Consumer modelinde Underflow (Yetersiz Veri) durumuna örnektir?",
+      "options": [
+        "A) Üretici dolu tampona yazmaya çalışıyor",
+        "B) Tüketici boş tampondan veri almaya çalışıyor",
+        "C) Üretici veriyi iki kez aynı slota yazıyor",
+        "D) Tüketici veriyi işleyip geri yazıyor",
+        "E) Üretici mutex'i bırakmadan devam ediyor"
+      ],
+      "correctAnswer": "B) Tüketici boş tampondan veri almaya çalışıyor"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "74. Aşağıdakilerden hangisi deadlock kavramını en doğru şekilde tanımlar?",
+      "options": [
+        "A) Tüm process'lerin aynı anda CPU'ya erişmeye çalıştığı durumdur.",
+        "B) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur.",
+        "C) Process'lerin tamamlanma süresinin beklenenden uzun olduğu durumdur.",
+        "D) Yalnızca thread'ler arasında oluşabilen bir yarış koşuludur.",
+        "E) İşletim sisteminin donanım arızası nedeniyle durmasıdır."
+      ],
+      "correctAnswer": "B) Birden fazla process'in birbirini beklemesi sonucu hiçbirinin ilerleyemediği durumdur."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "75. Aşağıdaki durumlardan hangisi deadlock (kilitlenme) durumuna en uygun örnektir?",
+      "options": [
+        "A) İki thread aynı global değişkene aynı anda yazma işlemi yapıyor.",
+        "B) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor.",
+        "C) Bir thread, CPU zamanlayıcısı tarafından sürekli erteleniyor (starvation).",
+        "D) Bir process'in I/O işlemi sırasında kernel tarafından askıya alınması.",
+        "E) Bir thread'in kilidi bırakmadan sleep() fonksiyonuna girmesi."
+      ],
+      "correctAnswer": "B) Bir process, bir kaynağı serbest bırakmadan başka bir kaynağı istemeye devam ediyor ve diğer process de benzer şekilde davranıyor."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "76. Aşağıdakilerden hangisi Coffman koşullarından biri değildir?",
+      "options": [
+        "A) Karşılıklı dışlama (Mutual Exclusion)",
+        "B) Tut ve bekle (Hold and Wait)",
+        "C) Geri alma yok (No Preemption)",
+        "D) Dairesel bekleme (Circular Wait)",
+        "E) Öncelikli planlama (Priority Scheduling)"
+      ],
+      "correctAnswer": "E) Öncelikli planlama (Priority Scheduling)"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "77. Aşağıdakilerden hangisi deadlock önleme (prevention) yaklaşımına örnektir?",
+      "options": [
+        "A) Sistem, yalnızca güvenli durumlarda kaynak tahsisine izin verir.",
+        "B) Deadlock oluşmasına izin verir, sonra tespit algoritmasıyla süreçleri analiz eder.",
+        "C) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır.",
+        "D) Kaynaklar zorla geri alınamaz.",
+        "E) Banker's Algorithm kullanılarak güvenli durum kontrol edilir."
+      ],
+      "correctAnswer": "C) Süreçler, çalışmaya başlamadan önce tüm kaynakları istemek zorundadır."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "78. Deadlock tespiti sonrası recovery (kurtarma) aşamasında işletim sistemi aşağıdaki işlemlerden hangisini uygulayabilir?",
+      "options": [
+        "A) Süreçlerin tümüne kaynaklarını yeniden tahsis etmek.",
+        "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak.",
+        "C) Tüm kaynakları paylaşımlı hale getirmek.",
+        "D) Banker's Algorithm'i yeniden çalıştırmak.",
+        "E) Deadlock oluşmadan önce tüm süreçleri bekletmek."
+      ],
+      "correctAnswer": "B) Deadlock içindeki süreçleri sonlandırmak veya bazılarını geri almak."
+    },
+    {
+      "type": "short-answer",
+      "question": "1. (⭐) İşletim Sistemi nedir? \"Çekirdek Modu\" ve \"Kullanıcı Modu\" nedir?",
+      "correctAnswer": "<ul><li><strong>İşletim Sistemi (OS):</strong> Donanım ile kullanıcı uygulamaları arasında köprü görevi gören, kaynakları (CPU, bellek) yöneten temel sistem yazılımıdır.</li><li><strong>Çekirdek Modu (Kernel Mode):</strong> İşlemcinin sınırsız yetkiye sahip olduğu moddur. Sadece OS çekirdeği burada çalışır, tüm donanıma erişebilir.</li><li><strong>Kullanıcı Modu (User Mode):</strong> Standart uygulamaların (tarayıcı, oyun) çalıştığı kısıtlı moddur. Donanıma doğrudan erişemez, işletim sisteminden istekte bulunur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "2. Monolitik ve Mikroçekirdek mimarilerini karşılaştırınız. Hibrit yaklaşım neden tercih edilir?",
+      "correctAnswer": "<ul><li><strong>Monolitik Çekirdek:</strong> Tüm servisler (sürücüler, dosya sistemi) tek bir büyük çekirdek programı içindedir. <em>Avantajı:</em> Yüksek performans. <em>Dezavantajı:</em> Düşük hata dayanıklılığı (bir sürücü hatası sistemi çökertebilir).</li><li><strong>Mikroçekirdek:</strong> Çekirdek sadece en temel işlevleri yapar, diğer servisler kullanıcı modunda çalışır. <em>Avantajı:</em> Yüksek güvenlik ve hata dayanıklılığı. <em>Dezavantajı:</em> Performans düşüklüğü (çok fazla mod geçişi).</li><li><strong>Hibrit Yaklaşım:</strong> Modern sistemler (Windows, macOS), monolitik yapının performansını mikroçekirdeğin güvenliğiyle birleştirmek için bu yaklaşımı tercih eder.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "3. (⭐) İşletim sistemlerinde süreç (process) nedir? Aşağıda süreçlerin yapısal bileşenleri verilmiştir. Her bir bileşenin işletim sistemi açısından ne işe yaradığını kısaca açıklayınız.",
+      "correctAnswer": "<p><strong>Süreç (process):</strong> İşletim sistemi tarafından yönetilen, \"çalıştırılmakta olan\" bir program örneğidir. Daha basit bir ifadeyle: Diskinizde duran pasif bir programın (örneğin spotify.exe) belleğe (RAM) yüklenerek \"canlanmış\", aktif hale gelmesine süreç denir.</p><p><strong>Bileşenler ve Görevleri:</strong></p><ul><li><strong>Süreç Kimliği (Process ID - PID):</strong> Sürecin benzersiz kimlik numarasıdır.</li><li><strong>Süreç Durumu (Process State):</strong> Sürecin mevcut durumunu belirtir (Hazır-Ready, Çalışıyor-Running vb.).</li><li><strong>Program Sayacı (Program Counter):</strong> Çalıştırılacak sıradaki komutun bellek adresini tutar.</li><li><strong>CPU Yazmaçları (CPU Registers):</strong> Akümülatör, indeks yazmaçları gibi o anki işlemci verilerini tutar.</li><li><strong>Bellek Limitleri (Memory Limits):</strong> Sürecin işletim sistemi tarafından atanan ve erişebileceği bellek sınırlarını belirtir.</li><li><strong>Açık Dosyalar Listesi (Open Files List):</strong> Süreç tarafından o anda açılmış olan dosyaların bir listesidir.</li><li><strong>G/Ç Durumu (I/O Status):</strong> Sürece atanmış olan G/Ç cihazları (örn: yazıcı, disk) hakkındaki bilgileri içerir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "4. Context Switch (Bağlam Değişimi) nedir? Nasıl gerçekleşir?",
+      "correctAnswer": "<p><strong>Context Switch:</strong> İşletim sisteminin, CPU'yu bir süreçten alıp diğerine vermesi işlemidir.</p><p><strong>Nasıl Gerçekleşir:</strong> <em>Dağıtıcı (Dispatcher)</em> modülü, mevcut sürecin o anki durumunu (Program Sayacı, Yazmaçlar) sürecin <strong>PCB</strong>'sine (Süreç Kontrol Bloğu) kaydeder. Ardından, yeni seçilen sürecin PCB'sindeki durumu CPU'ya yükler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "5. (⭐) Bir sürecin diskteki pasif halinden sonlanmasına kadar geçen aşamalar nelerdir?",
+      "correctAnswer": "<ol><li><strong>Program (Disk):</strong> Pasif haldeki dosya (örn: .exe).</li><li><strong>Yeni (New):</strong> <em>Loader</em> programı RAM'e yükler, OS bir PCB oluşturur.</li><li><strong>Hazır (Ready):</strong> Süreç CPU'yu beklemek üzere hazır kuyruğuna alınır.</li><li><strong>Çalışıyor (Running):</strong> <em>Scheduler</em> seçer, <em>Dispatcher</em> CPU'yu verir, süreç çalışır.</li><li><strong>Bekliyor (Waiting):</strong> G/Ç gerekirse beklemeye geçer.</li><li><strong>Sonlanmış (Terminated):</strong> İş biter, kaynaklar serbest bırakılır, PCB silinir.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "6. Süreç oluşturmada fork(), exec() ve Copy-on-Write (COW) kavramlarını açıklayınız.",
+      "correctAnswer": "<ul><li><strong>fork():</strong> Ebeveyn sürecin neredeyse birebir kopyası olan bir \"çocuk\" süreç oluşturur (Yeni PID, yeni PCB).</li><li><strong>exec():</strong> Mevcut sürecin bellek alanını yeni bir program koduyla değiştirir (Farklı bir iş yapmak için).</li><li><strong>Copy-on-Write (COW):</strong> <code>fork()</code> sonrası belleğin hemen kopyalanması yerine, ebeveyn veya çocuktan biri belleğe \"yazmaya\" çalışana kadar paylaşılması optimizasyonudur.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "7. Zombi Süreç (Zombie Process) nedir, neden tehlikelidir?",
+      "correctAnswer": "<p><strong>Zombi Süreç:</strong> Çalışması bitmiş ancak ebeveyni tarafından çıkış durumu henüz okunmamış (toplanmamış) süreçtir.</p><p><strong>Tehlikesi:</strong> CPU/RAM kullanmaz ancak süreç tablosunda yer işgal eder. Çok fazla zombi, tablonun dolmasına ve yeni süreç oluşturulamamasına yol açabilir. Ebeveynin <code>wait()</code> çağrısı yapmasıyla temizlenir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "8. Yetim Süreç (Orphan Process) nedir? Sistem nasıl yönetir?",
+      "correctAnswer": "<p><strong>Yetim Süreç:</strong> Ebeveyni ölmüş (sonlanmış) ancak kendisi hala çalışan süreçtir.</p><p><strong>Yönetimi:</strong> İşletim sistemi (init veya systemd) bu süreçleri otomatik olarak \"evlat edinir\" ve sonlandıklarında onları toplayarak zombiye dönüşmelerini engeller.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "9. Thread (İş Parçacığı) nedir? Process ile farkları nelerdir?",
+      "correctAnswer": "<p><strong>Thread:</strong> Bir süreç içinde çalışan en küçük yürütme birimidir.</p><p><strong>Process ile Farkları:</strong></p><ul><li><strong>Kaynak:</strong> Thread'ler aynı sürecin belleğini paylaşır (hafif siklet), süreçler izoledir (ağır siklet).</li><li><strong>İletişim:</strong> Thread'ler arası iletişim kolaydır (ortak bellek), süreçler arası zordur (IPC gerekir).</li><li><strong>Hata Etkisi:</strong> Bir thread çökerse tüm süreç çöker, bir süreç çökerse diğerlerini etkilemez.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "10. Thread Yaşam Döngüsündeki temel durumlar nelerdir?",
+      "correctAnswer": "<ol><li><strong>New:</strong> Oluşturuldu, henüz hazır değil.</li><li><strong>Runnable (Hazır):</strong> Çalışmaya hazır, CPU bekliyor.</li><li><strong>Running (Çalışıyor):</strong> CPU üzerinde aktif olarak komut işliyor.</li><li><strong>Blocked/Waiting:</strong> Bir olay (G/Ç, kilit) bekliyor, CPU kullanmıyor.</li><li><strong>Terminated:</strong> İşi bitti.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "11. Thread Türleri (User-Level, Kernel-Level) arasındaki farklar nelerdir?",
+      "correctAnswer": "<ul><li><strong>User-Level Threads (ULT):</strong> Kullanıcı uzayında yönetilir. Çekirdeğin haberi yoktur. Hızlıdır ancak biri bloklanırsa tüm süreç bloklanır.</li><li><strong>Kernel-Level Threads (KLT):</strong> Çekirdek tarafından yönetilir. Gerçek paralellik sağlar (biri bloklansa diğeri çalışır) ancak yönetimi daha maliyetlidir.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "12. SMT (Hyper-Threading) nedir ve planlamaya etkisi nasıldır?",
+      "correctAnswer": "<p><strong>SMT / Hyper-Threading:</strong> Tek bir fiziksel çekirdeğin, kaynaklarını paylaştırarak işletim sistemine kendini birden fazla (genellikle 2) \"mantıksal çekirdek\" gibi göstermesidir.</p><p><strong>Etkisi:</strong> OS planlayıcısı daha fazla çekirdek görür ve aynı anda daha fazla thread yürütebilir (%15-30 performans artışı).</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "13. Race Condition, Deadlock ve Starvation nedir?",
+      "correctAnswer": "<ul><li><strong>Race Condition (Yarış Durumu):</strong> Birden fazla thread'in paylaşılan veriye aynı anda erişip değiştirmeye çalışması sonucu oluşan belirsiz/hatalı durum.</li><li><strong>Deadlock (Kilitlenme):</strong> Thread'lerin birbirlerinin elindeki kaynakları sonsuza kadar beklemesi durumu.</li><li><strong>Starvation (Açlık):</strong> Düşük öncelikli thread'lerin, yüksek öncelikliler yüzünden asla kaynak (CPU) alamaması.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "14. Modern işletim sistemlerinde ileri düzey thread yönetimi kavramlarını (Thread Pool, Thread Cancellation, TLS, Signal Handling) açıklayınız ve modern sistemlerdeki (Windows, Linux, macOS, Android) farklarını belirtiniz.",
+      "correctAnswer": "<ul><li><strong>Thread Pool (İş Parçacığı Havuzu):</strong><ul><li><strong>Tanım/İşlev:</strong> Her görev için yeni bir thread oluşturmak/yok etmek maliyetli olduğu için, başlangıçta belirli sayıda thread oluşturup bir \"havuzda\" bekletme yöntemidir. Görev geldiğinde, havuzdaki boş bir thread görevi alır, bitirince havuza geri döner ve yeni görev bekler.</li><li><strong>Avantajı:</strong> Sürekli thread oluşturma/yok etme maliyetini (performans) önler ve maksimum thread sayısını sınırlar (kaynak kontrolü).</li></ul></li><li><strong>Thread Cancellation (Thread İptali):</strong><ul><li><strong>Tanım:</strong> Bir thread'in görevi bitmeden onu sonlandırma işlemidir.</li><li><strong>İşlev (Türleri):</strong><ul><li><strong>Asenkron İptal:</strong> Thread'i anında ve zorla sonlandırır (tehlikelidir, kaynak sızıntısına yol açabilir).</li><li><strong>Gecikmeli İptal (Tercih Edilen):</strong> Thread düzenli aralıklarla \"iptal isteği var mı?\" diye kontrol eder ve güvenli bir noktada kendini sonlandırır.</li></ul></li></ul></li><li><strong>Thread-Local Storage (TLS – Thread'e Özgü Veri):</strong><ul><li><strong>Tanım:</strong> Thread'ler normalde sürece ait belleği paylaşsa da, TLS her thread'in sadece kendisine ait, diğer thread'lerden izole bir veri alanı tutmasını sağlar.</li><li><strong>İşlev (Örnek):</strong> Bir web sunucusunda her thread'in, o an hizmet verdiği kullanıcıya ait oturum ID'sini TLS'de saklaması.</li></ul></li><li><strong>Signal Handling (Çoklu Thread Ortamında Sinyal Yönetimi):</strong><ul><li><strong>Tanım/İşlev:</strong> UNIX benzeri sistemlerde bir sürece gelen sinyallerin (örn: Ctrl+C) çoklu thread ortamında nasıl yönetileceğidir. Gelen sinyalin tüm sürece mi, sadece belirli bir thread'e mi, yoksa o an uygun olan herhangi bir thread'e mi iletileceğine karar verilmesi gerekir.</li></ul></li><li><strong>Modern Sistemlerde Thread Yönetimi (Farklar):</strong><ul><li><strong>Windows:</strong> Her süreç kendi thread'lerini yönetir (Görev Yöneticisi'nde görülebilir).</li><li><strong>Linux:</strong> Thread'ler aslında \"hafif süreç (lightweight process)\" olarak yönetilir.</li><li><strong>macOS/iOS:</strong> Thread havuzu yönetimi büyük ölçüde \"Grand Central Dispatch (GCD)\" ile otomatik olarak yapılır.</li><li><strong>Android:</strong> Her uygulama için bir ana (UI) thread vardır; ağır arka plan işleri (ağ, veri) mutlaka ayrı bir \"Background Thread\" (örn: Kotlin Coroutines) üzerinde yapılır.</li></ul></li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "15. CPU Scheduler, Dispatcher ve Timer Interrupt nedir?",
+      "correctAnswer": "<ul><li><strong>CPU Scheduler (Zamanlayıcı):</strong> Hazır kuyruğundan hangi sürecin çalışacağına karar veren \"karar mekanizması\".</li><li><strong>Dispatcher (Dağıtıcı):</strong> Seçilen süreci CPU'ya yükleyen (context switch yapan) \"uygulayıcı mekanizma\".</li><li><strong>Timer Interrupt:</strong> Bir sürecin CPU'yu tekeline almasını önlemek için belirli süre sonunda çalan \"donanım saati\".</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "16. Preemptive ve Non-Preemptive Zamanlama farkı nedir?",
+      "correctAnswer": "<ul><li><strong>Non-Preemptive (Kesintisiz):</strong> Süreç CPU'yu kendi isteğiyle bırakana kadar (işi bitince veya G/Ç beklerken) çalışır. (Örn: FCFS).</li><li><strong>Preemptive (Kesintili):</strong> İşletim sistemi, çalışan süreci zorla durdurup CPU'yu başkasına verebilir. (Örn: Round Robin).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "18. FCFS, SJF, RR ve MLFQ algoritmalarının temel özellikleri nelerdir?",
+      "correctAnswer": "<ul><li><strong>FCFS (İlk Gelen İlk Çıkar):</strong> Basit ama \"Konvoy Etkisi\" yaratır (uzun iş kısa işi bekletir).</li><li><strong>SJF (En Kısa İş Önce):</strong> Ortalama bekleme süresi en iyidir ama uzun işler \"aç kalabilir\" (starvation).</li><li><strong>RR (Round Robin):</strong> Her sürece eşit zaman dilimi (quantum) verir. Adil ve hızlı yanıt süresi sağlar (etkileşimli sistemler için ideal).</li><li><strong>MLFQ (Çok Seviyeli Kuyruk):</strong> Dinamiktir. İşleri davranışlarına (CPU veya G/Ç yoğun) göre farklı öncelikli kuyruklara ayırır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "23. IPC (Süreçler Arası İletişim) nedir ve neden gereklidir?",
+      "correctAnswer": "<p><strong>IPC:</strong> İzole bellek alanlarında çalışan bağımsız süreçlerin veri paylaşmasını ve koordinasyonunu sağlayan mekanizmalardır.</p><p><strong>Gereklilik:</strong> Modern OS'lerde süreçler güvenlik için birbirinden yalıtılmıştır, doğrudan birbirlerinin belleğine erişemezler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "25. Paylaşılan Bellek (Shared Memory) kullanırken neden senkronizasyon gerekir?",
+      "correctAnswer": "<p>Shared Memory en hızlı IPC yöntemidir çünkü çekirdek aradan çekilir ve süreçler doğrudan belleğe erişir. Ancak bu, <strong>Race Condition</strong> (veri bozulması) riski yaratır. Bu yüzden erişimler mutlaka <strong>Mutex</strong> veya <strong>Semafor</strong> gibi araçlarla koordine edilmelidir.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "28. Yarış Koşulu (Race Condition) neden tehlikelidir? (Örnekle)",
+      "correctAnswer": "<p>İşlemlerin sonucunun, thread'lerin çalışma sırasına bağlı olarak değişmesine (ve hatalı olmasına) yol açar.</p><p><strong>Örnek (counter++):</strong> İki thread aynı anda `counter` değerini 10 olarak okur, ikisi de 11 yapar ve yazar. Sonuç 12 olması gerekirken 11 olur (bir artırma işlemi kaybolur).</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "29. Spinlock nedir, Mutex'ten farkı nedir?",
+      "correctAnswer": "<p><strong>Spinlock:</strong> Kilit meşgulse uyumayan, bunun yerine \"kilit açıldı mı?\" diye sürekli aktif bir döngüde (busy-waiting) CPU'yu meşgul ederek bekleyen kilittir.</p><p><strong>Farkı:</strong> Mutex beklerken uyur (CPU kullanmaz), Spinlock beklerken CPU'yu %100 kullanır. Spinlock sadece çok kısa beklemeler için (örn: çekirdek içinde) uygundur.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "31. Semafor nedir? wait() ve signal() ne yapar?",
+      "correctAnswer": "<p><strong>Semafor:</strong> Senkronizasyon için kullanılan bir tamsayı sayaçtır.</p><ul><li><strong>wait() (P):</strong> Sayacı 1 azaltır. Sayaç 0 ise, pozitif olana kadar bekler (uyur).</li><li><strong>signal() (V):</strong> Sayacı 1 artırır. Bekleyen bir süreç varsa onu uyandırır.</li></ul><p><em>(Bu işlemler atomik olmak zorundadır.)</em></p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "32. Binary ve Counting Semafor farkı nedir?",
+      "correctAnswer": "<ul><li><strong>Binary Semafor:</strong> Sadece 0 veya 1 değerini alır. Mutex gibi çalışır (karşılıklı dışlama).</li><li><strong>Counting Semafor:</strong> 0'dan N'e kadar değer alabilir. Belirli sayıdaki bir kaynak havuzunu (örn: 10 bağlantı) yönetmek için kullanılır.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "33. Atomik İşlem ne demektir?",
+      "correctAnswer": "Bölünemez, kesintisiz işlemdir. Başladığı an ya tamamen biter ya da hiç başlamamış sayılır. Araya başka bir işlem giremez. (Race condition'ı önlemek için temel şarttır)."
+    },
+    {
+      "type": "short-answer",
+      "question": "35. Read-Write Lock (RWLock) nedir ve avantajı nedir?",
+      "correctAnswer": "<p><strong>RWLock:</strong> Okuma ve yazma için farklı kilit modları sunar. Birden fazla \"okuyucu\"nun aynı anda erişmesine izin verirken, \"yazıcı\"ya özel (tek) erişim verir.</p><p><strong>Avantajı:</strong> Okuma işlemlerinin çok yoğun olduğu sistemlerde Mutex'e göre çok daha yüksek performans sağlar.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "37. Üretici-Tüketici Problemi ve Sınırlı Tampon (Bounded Buffer) kritiği nedir?",
+      "correctAnswer": "<p>Üretici veri üretir tampona koyar, tüketici alır. Tampon sınırlı olduğu için:</p><ul><li>Üretici, tampon doluysa beklemelidir (Overflow önleme).</li><li>Tüketici, tampon boşsa beklemelidir (Underflow önleme).</li><li>Tampon erişimi Race Condition'dan korunmalıdır (Mutex ile).</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "40. Deadlock (Kilitlenme) nedir? Örnek veriniz.",
+      "correctAnswer": "<p>Süreçlerin, birbirlerinin elindeki kaynakları beklemesi sonucu sistemin durmasıdır.</p><p><strong>Örnek:</strong> Süreç A yazıcıyı tutuyor, tarayıcıyı bekliyor. Süreç B tarayıcıyı tutuyor, yazıcıyı bekliyor. İkisi de sonsuza kadar bekler.</p>"
+    },
+    {
+      "type": "short-answer",
+      "question": "41. Deadlock için gerekli 4 Coffman Koşulu nedir?",
+      "correctAnswer": "<ol><li><strong>Mutual Exclusion:</strong> Kaynak paylaşılamaz olmalı.</li><li><strong>Hold and Wait:</strong> Süreç, elinde kaynak varken yenisini istemeli.</li><li><strong>No Preemption:</strong> Kaynak zorla geri alınamamalı.</li><li><strong>Circular Wait:</strong> Dairesel bir bekleme zinciri olmalı.</li></ol>"
+    },
+    {
+      "type": "short-answer",
+      "question": "43. Banker's Algorithm (Bankacı Algoritması) ne yapar?",
+      "correctAnswer": "Bir <strong>Deadlock Kaçınma</strong> algoritmasıdır. Bir süreç kaynak istediğinde, sistem \"Eğer bu kaynağı verirsem 'Güvenli Durum'da kalır mıyım?\" diye simülasyon yapar. Eğer güvensiz duruma düşecekse, talebi reddeder ve süreci bekletir."
+    },
+    {
+      "type": "short-answer",
+      "question": "44. Adres Uzayı (Address Space) nedir ve bölümleri nelerdir?",
+      "correctAnswer": "<p>Bir sürecin erişebileceği sanal bellek alanıdır.</p><ul><li><strong>Text:</strong> Program kodu.</li><li><strong>Data/BSS:</strong> Global değişkenler.</li><li><strong>Heap:</strong> Dinamik bellek (malloc).</li><li><strong>Stack:</strong> Fonksiyon çağrıları ve yerel değişkenler.</li></ul>"
+    },
+    {
+      "type": "short-answer",
+      "question": "45. I/O yönetiminde \"Performans Darboğazı\" nedir ve işletim sistemi bunu nasıl yönetir?",
+      "correctAnswer": "CPU saniyede milyarlarca işlem yaparken, disk erişimi milisaniyeler (ms) mertebesindedir. Bu hız farkı, sistemin toplam performansının en yavaş bileşen olan I/O cihazına takılmasına (darboğaz) neden olur.\n\nYönetim Mekanizması: İşletim sistemi; Buffering (hız dengeleme), Caching (tekrar erişimi hızlandırma) ve Asenkron I/O (beklemeden işe devam etme) tekniklerini kullanarak CPU'nun boşta kalmasını engeller.\n\nÖlçek: NVMe SSD'ler HDD'den 100 kat, RAM ise SSD'den 1000 kat daha hızlıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "46. Polling, Kesme (Interrupt) ve DMA yöntemlerini CPU kullanımı açısından karşılaştırınız.",
+      "correctAnswer": "CPU'nun donanımdan veri alması için kullanılan üç temel tekniktir:\n\nPolling (Sorgulama): CPU sürekli donanıma \"hazır mısın?\" diye sorar. Gecikme düşüktür ama CPU %100 meşgul olduğu için verimsizdir.\n\nKesme (Interrupt): Donanım hazır olduğunda CPU'ya sinyal gönderir. CPU bu sırada başka işler yapabilir (verimli) ancak her kesme sinyali bir işlem yükü (overhead) yaratır.\n\nDMA (Direct Memory Access): Veri transferini CPU yerine özel bir denetleyici yapar. Veri doğrudan RAM'e yazılır. CPU sadece işlem başında ve sonunda devreye girer (en verimli yöntem)."
+    },
+    {
+      "type": "short-answer",
+      "question": "47. VFS (Virtual File System) nedir ve dosya sistemi soyutlamasındaki rolü nedir?",
+      "correctAnswer": "VFS, farklı dosya sistemlerini (ext4, NTFS, NFS vb.) tek bir evrensel arayüz altında toplayan çekirdek katmanıdır.\n\nSoyutlama: Programcı \"dosya oku\" dediğinde arkada SSD mi, USB mi yoksa ağ paylaşımı mı olduğunu bilmez.\n\nAPI Birliği: Farklı dosya sistemleri için tek bir standart read() / write() sistemi çağrısı (syscall) kullanılmasını sağlar."
+    },
+    {
+      "type": "short-answer",
+      "question": "48. Zero-Copy (Sıfır Kopyalama) teknolojisi nedir ve neden modern web sunucularında tercih edilir?",
+      "correctAnswer": "Normalde bir dosya ağ üzerinden gönderilirken veri; diskten çekirdek tamponuna, oradan uygulama tamponuna ve tekrar soket tamponuna kopyalanır. Zero-Copy (sendfile()), bu gereksiz kopyalamaları atlayarak veriyi doğrudan çekirdek içinden ağ kartına aktarır.\n\nEtkisi: CPU kullanımını %50-70 azaltır ve veri transfer hızını (throughput) 2-3 kat artırır.\n\nKullanım: Netflix gibi video akış servisleri ve Nginx gibi yüksek performanslı web sunucuları."
+    },
+    {
+      "type": "short-answer",
+      "question": "49. I/O Zamanlayıcı (I/O Scheduler) algoritmaları (Deadline, BFQ, NOOP) hangi senaryolarda kullanılır?",
+      "correctAnswer": "Disk isteklerini kuyruğa alan ve en verimli sırayla işleyen yazılımsal mekanizmadır.\n\nDeadline: Okuma/yazma işlemleri için zaman sınırı koyar. Etkileşimli sistemlerde düşük gecikme için idealdir.\n\nBFQ (Budget Fair Queuing): Bant genişliğini uygulamalar arasında adil paylaştırır. Masaüstü kullanımda akıcılık sağlar.\n\nNOOP/None: Herhangi bir sıralama yapmaz. Zaten kendi içinde zeki bir denetleyicisi olan NVMe SSD'ler için uygundur."
+    },
+    {
+      "type": "short-answer",
+      "question": "50. Journaling (Günlükleme) yaklaşımları (Metadata-only vs Full) arasındaki fark nedir?",
+      "correctAnswer": "Dosya sistemi tutarlılığını sağlamak için işlemlerin önce bir günlüğe kaydedilmesidir.\n\nMetadata-only: Sadece dosya yapıları (dizin, isim, izinler) günlüğe yazılır. Hızlıdır ama elektrik kesintisinde dosya içeriği bozulabilir.\n\nFull Journaling: Hem metadata hem de gerçek veri günlüğe yazılır. Çok güvenlidir ancak her veriyi iki kez yazdığı için performansı düşürür."
+    },
+    {
+      "type": "short-answer",
+      "question": "51. O_DIRECT ve fsync() kavramlarının veritabanı sistemleri (PostgreSQL, MySQL) için önemi nedir?",
+      "correctAnswer": "O_DIRECT: İşletim sisteminin kendi önbelleğini (cache) atlayarak doğrudan diske erişmeyi sağlar. Veritabanları kendi cache yönetimlerini yaptıkları için OS'in çiftleme yapmasını engeller.\n\nfsync(): Verinin RAM'de (Write-back) bekletilmeyip, fiziksel olarak diske kalıcı olarak yazıldığından emin olana kadar sistem çağrısını bekletir. Veri bütünlüğü için kritiktir."
+    },
+    {
+      "type": "short-answer",
+      "question": "52. Mantıksal Hacim Yönetimi (LVM) ve RAID katmanları depolama yönetimini nasıl etkiler?",
+      "correctAnswer": "Fiziksel disklerin üzerine eklenen sanallaştırma katmanlarıdır:\n\nRAID: Birden fazla diski birleştirerek performans (RAID 0), aynalama/yedekleme (RAID 1) veya hata toleransı (RAID 5/6) sağlar.\n\nLVM: Fiziksel diskleri sanal havuzlara dönüştürür. Sistem çalışırken disk boyutunu artırmaya, anlık görüntüler (snapshot) almaya ve esnek bölümlendirmeye olanak tanır."
+    },
+    {
+      "type": "short-answer",
+      "question": "53. I/O performansını ölçerken kullanılan IOPS, Latency ve Throughput terimlerini açıklayınız.",
+      "correctAnswer": "IOPS: Saniyede yapılan toplam giriş/çıkış işlemi sayısıdır (Rastgele erişim hızı).\n\nLatency (Gecikme): Bir işlemin tamamlanması için geçen süredir. P99 (isteklerin %99'unun tamamlanma süresi) sistemin \"takılma\" hissini ölçer.\n\nThroughput: Saniyede taşınan toplam veri miktarıdır (Sıralı okuma/yazma hızı, MB/s)."
+    },
+    {
+      "type": "short-answer",
+      "question": "54. Sanallaştırma Nedir?",
+      "correctAnswer": "Sanallaştırma, fiziksel donanım kaynaklarının (CPU, RAM, Disk, Ağ) yazılım aracılığıyla soyutlanarak, bu kaynaklar üzerinde birbirinden bağımsız ve izole birden fazla Sanal Makine (VM) oluşturulmasıdır.\n\nTemel Amaç: Tek bir fiziksel makineden maksimum verim almak ve kaynakları mantıksal olarak bölmektir.\n\nİşletim Sistemi Açısından: OS artık donanımın tek sahibi değil, Hypervisor tarafından yönetilen bir \"misafir\" (Guest OS) konumundadır.\n\nHAL Soyutlama: İşletim sistemi gerçek donanımı değil, Hypervisor'ın sunduğu sanal aygıtları (vCPU, vRAM) görür."
+    },
+    {
+      "type": "short-answer",
+      "question": "55. Tip 1 ve Tip 2 Hipervizörler arasındaki farklar nelerdir?",
+      "correctAnswer": "Hypervisor (Sanal Makine Yöneticisi), kaynakları VM'ler arasında paylaştıran katmandır.\n\nTip 1: Bare-Metal (Doğrudan Donanım)\nDoğrudan fiziksel donanım üzerine kurulur; arada bir ana işletim sistemi yoktur. Performans: En yüksek (donanıma en yakın). Güvenlik: Yüksek izolasyon. Örnekler: VMware ESXi, MS Hyper-V, KVM, Xen.\n\nTip 2: Hosted (İşletim Sistemi Üstü)\nMevcut bir işletim sisteminin (Windows, macOS) üzerinde bir uygulama gibi çalışır. Performans: Daha düşük (çift katmanlı geçiş). Kurulum: Çok kolay. Örnekler: Oracle VirtualBox, VMware Workstation."
+    },
+    {
+      "type": "short-answer",
+      "question": "56. Verimli Sanallaştırma Teknikleri nelerdir?",
+      "correctAnswer": "Performans kaybını (overhead) en aza indirmek için kullanılan yöntemlerdir:\n\nDonanım Destekli Sanallaştırma: Intel VT-x ve AMD-V özellikleri ile komutlar emülasyon gerektirmeden doğrudan donanımda işlenir.\n\nPara-Sanallaştırma: İşletim sisteminin sanal ortamda olduğunu bilerek doğrudan Hypervisor'a \"Hypercall\" yapmasıdır.\n\nVirtIO: Standart yavaş aygıtlar yerine kullanılan, hypervisor ile VM arasındaki I/O trafiğini hızlandıran sürücü protokolüdür.\n\nOvercommitment (Aşırı Tahsis): Fiziksel kapasiteden daha fazla sanal kaynak (vCPU/vRAM) atanmasıdır.\n\nLive Migration (Canlı Taşıma): Bir VM'i kapatmadan bir fiziksel sunucudan diğerine taşımaktır.\n\nThin Provisioning: Diskin sadece kullanılan kadar fiziksel alan kaplamasıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "57. Konteyner (Container) ve VM Karşılaştırması tablosunu açıklayınız.",
+      "correctAnswer": "| Özellik | Sanal Makine (VM) | Konteyner (Docker vb.) |\n| İzolasyon | Donanım seviyesi (Yüksek) | İşletim sistemi/Süreç seviyesi |\n| Hız | Dakikalar içinde açılır | Saniyeler içinde açılır |\n| Boyut | GB mertebesinde (Tam OS) | MB mertebesinde (Sadece kütüphaneler) |\n| Kaynak | Tam donanım emülasyonu | Host OS çekirdeğini (kernel) paylaşır |"
+    },
+    {
+      "type": "short-answer",
+      "question": "58. Bulut Bilişim Hizmet Modelleri nelerdir?",
+      "correctAnswer": "Bulut bilişim, kaynakların internet üzerinden \"kiralama\" mantığıyla sunulmasıdır. Üç ana modelde incelenir:\n\nIaaS (Infrastructure as a Service): Altyapı sunulur. Sunucu, disk ve ağ sizindir; OS ve yazılımı siz yönetirsiniz. (Örn: AWS EC2).\n\nPaaS (Platform as a Service): Geliştirme ortamı sunulur. OS ve runtime ile ilgilenmezsiniz, sadece kodunuzu yüklersiniz. (Örn: Heroku, Google App Engine).\n\nSaaS (Software as a Service): Yazılım sunulur. Doğrudan son kullanıcı uygulamasıdır. (Örn: Gmail, Netflix, Zoom)."
+    },
+    {
+      "type": "short-answer",
+      "question": "59. Uygulama Örneği: AWS Etkinlik Yönetimi Projesi mimari katmanları nelerdir?",
+      "correctAnswer": "Ağ Katmanı (VPC): Sanal veri merkezi sınırları. İnternete açık (Public) ve kapalı (Private) alt ağlar.\n\nUygulama Katmanı:\nALB: Gelen trafiği sağlıklı sunuculara dağıtır.\nEC2: Tip 1 hypervisor üzerinde çalışan sanal sunucular.\n\nVeri Katmanı:\nRDS: Yönetilen veritabanı servisi (PaaS).\nS3: Statik dosyalar için nesne depolama.\n\nGüvenlik: IAM ile yetkilendirme ve Secure Boot/TPM kontrolleri."
+    },
+    {
+      "type": "short-answer",
+      "question": "60. İşletim Sistemi Güvenliği: Çok Katmanlı Güvenlik (Defense in Depth) nedir?",
+      "correctAnswer": "İşletim sistemi güvenliği, donanımdan uygulama katmanına kadar uzanan Çok Katmanlı Savunma (Defense in Depth) stratejisine dayanır. Amaç; yetkisiz erişimi engellemek, veri bütünlüğünü korumak ve sistem sürekliliğini sağlamaktır.\n\nGüvenlik Katmanları:\nDonanım: TPM (Güvenilir Platform Modülü), Secure Boot.\nKernel: Ring Koruması, Bellek Yönetimi (Memory Management).\nSistem: Erişim Kontrolü (ACL), SELinux, Güvenlik Duvarı.\nUygulama: Sandboxing, Konteynır İzolasyonu."
+    },
+    {
+      "type": "short-answer",
+      "question": "61. Güvenlik Tehditleri (Malware, Rootkit, Buffer Overflow, Privilege Escalation) nelerdir?",
+      "correctAnswer": "İşletim sistemleri için en kritik tehditler genellikle sistemin en alt katmanlarını hedef alır:\n\nMalware: Virüs, trojan ve worm gibi kaynakları ele geçiren yazılımlar.\n\nRootkit: Kernel seviyesinde (Ring 0) çalışarak kendini gizleyen ve tüm güvenlik mekanizmalarını devre dışı bırakabilen en tehlikeli zararlı türüdür.\n\nBuffer Overflow (Tampon Bellek Taşması): Bir programın kendisine ayrılan bellek sınırını aşarak yanındaki bellek alanına veri yazmasıdır. Bu durum, saldırganın kendi kodunu (shellcode) çalıştırmasına yol açabilir.\n\nPrivilege Escalation (Yetki Yükseltme): Standart bir kullanıcının (User), sistemdeki bir açıktan yararlanarak yönetici (Root/Admin) yetkileri elde etmesidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "62. Tarihe Geçen Zararlı Yazılımlar tablosunu açıklayınız.",
+      "correctAnswer": "| Zararlı Yazılım | Kullanılan Açık | OS Zafiyeti | Sonuç |\n| Morris Worm (1988) | fingerd overflow | Process Isolation yok | İnternetin %10'u çöktü. |\n| Stuxnet (2010) | 4x Zero-Day | Zayıf Güven Modeli | Fiziksel santrifüj sabotajı. |\n| WannaCry (2017) | SMBv1 (EternalBlue) | Yama (Patch) eksikliği | Küresel veri şifreleme/fidye. |\n| NotPetya (2017) | MBR Overwrite | Boot Chain korunmuyor | Kalıcı veri imhası ve sabotaj. |"
+    },
+    {
+      "type": "short-answer",
+      "question": "63. Koruma Mekanizmaları: Ring Modeli nedir?",
+      "correctAnswer": "İşletim sistemleri, işlemci tarafından sunulan Hiyerarşik Koruma Halkalarını (Protection Rings) kullanır.\n\nRing 0 (Kernel Mode): En yüksek yetki seviyesidir. Donanıma tam erişim sağlar.\n\nRing 3 (User Mode): Uygulamaların çalıştığı kısıtlı alandır. Donanıma erişim için System Call (Syscall) yapılması zorunludur."
+    },
+    {
+      "type": "short-answer",
+      "question": "64. Bellek Güvenliği ve Modern Savunmalar (DEP, ASLR, Stack Canary) nelerdir?",
+      "correctAnswer": "Saldırganların bellek üzerinden kod çalıştırmasını engellemek için üç ana teknoloji kullanılır:\n\nDEP/NX (Data Execution Prevention): Belleğin veri bölgelerini (Stack/Heap) \"çalıştırılamaz\" olarak işaretler. Böylece veriye yazılan zararlı kodlar yürütülemez.\n\nASLR (Address Space Layout Randomization): Program her çalıştığında bellek adreslerini (Stack, Heap, Kütüphaneler) rastgele yerleştirir. Saldırganın hedef alacağı sabit bir adres bulmasını imkansız hale getirir.\n\nStack Canary: Fonksiyon dönüş adresinden hemen önce belleğe yerleştirilen rastgele bir değerdir. Eğer bu değer değişmişse, bir taşma (overflow) olduğu anlaşılır ve sistem süreci sonlandırır."
+    },
+    {
+      "type": "short-answer",
+      "question": "65. Kimlik Doğrulama ve Erişim Kontrol Modelleri (DAC, MAC, RBAC) nelerdir?",
+      "correctAnswer": "Erişim Kontrol Modelleri:\n\nDAC (Discretionary Access Control): Kaynak sahibi erişim haklarını kendisi belirler (Örn: Linux dosya izinleri).\n\nMAC (Mandatory Access Control): Erişim kuralları merkezi bir politika tarafından belirlenir ve kullanıcı tarafından değiştirilemez (Örn: SELinux).\n\nRBAC (Role-Based Access Control): Yetkiler bireylere değil, rollere atanır (Örn: Şirket hiyerarşisi)."
+    },
+    {
+      "type": "short-answer",
+      "question": "66. Linux Dosya İzinleri (chmod) nasıl hesaplanır?",
+      "correctAnswer": "Unix sistemlerde izinler üç haneli sayısal bir mantıkla hesaplanır:\nr (Read/Okuma): 4, w (Write/Yazma): 2, x (Execute/Çalıştırma): 1.\n\nÖrnek: chmod 754\nOwner: 7 (4+2+1 -> rwx)\nGroup: 5 (4+0+1 -> r-x)\nOthers: 4 (4+0+0 -> r--)"
+    },
+    {
+      "type": "short-answer",
+      "question": "67. Kriptografi Temelleri (AES, RSA, Hash) nelerdir?",
+      "correctAnswer": "İşletim sistemleri veriyi korumak için iki ana şifreleme türünü kullanır:\n\nSimetrik Şifreleme (AES): Şifreleme ve çözme için aynı anahtar kullanılır. Hızlıdır ancak anahtar paylaşımı zordur.\n\nAsimetrik Şifreleme (RSA, ECC): Public Key (şifreleme) ve Private Key (çözme) çifti kullanılır. Daha yavaş ama daha güvenlidir.\n\nHash Fonksiyonları (SHA-256): Verinin dijital parmak izini çıkarır. Geri dönüşü yoktur; veri bütünlüğünü kontrol etmek için kullanılır."
+    },
+    {
+      "type": "short-answer",
+      "question": "68. Güvenlik Teknik Terimler Sözlüğü (TPM, Zero-Day, CVE, Secure Boot) nedir?",
+      "correctAnswer": "TPM: Kriptografik anahtarları saklayan donanım çipi.\nZero-Day: Üreticisi tarafından henüz bilinmeyen veya yaması çıkmamış açıklar.\nCVE: Güvenlik açıklarının standart kimlik numarası (Örn: CVE-2024-XXXX).\nSecure Boot: Bilgisayarın sadece güvenilir (imzalı) yazılımlarla açılmasını sağlayan mekanizma."
+    },
+    {
+      "type": "short-answer",
+      "question": "69. Saldırı Yüzeyi (Attack Surface) nedir ve \"Hardening\" işlemi bu yüzeyi nasıl etkiler?",
+      "correctAnswer": "Saldırı yüzeyi, bir işletim sisteminin dış dünya ile temas kurduğu tüm noktaların (açık portlar, çalışan servisler, protokoller) toplamıdır. Her açık kapı, potansiyel bir siber saldırı noktasıdır.\n\nHardening (Sıkılaştırma): Gereksiz tüm servislerin kapatılması, portların filtrelenmesi ve kural listesinin minimize edilmesi işlemidir.\n\nTemel İlke: \"Ne kadar az açık kapı, o kadar az risk.\" Gereksiz servislerin (örn. Xbox, Remote Registry) kapatılması hem güvenliği artırır hem de sistem kaynaklarını rahatlatır."
+    },
+    {
+      "type": "short-answer",
+      "question": "70. Host-Based Firewall yapısında \"Inbound\" ve \"Outbound\" trafik arasındaki temel fark nedir?",
+      "correctAnswer": "İşletim sistemi seviyesindeki güvenlik duvarı, paketleri yönlerine göre filtreler.\n\nInbound (Gelen): Dış dünyadan sizin bilgisayarınıza gelen bağlantı istekleridir. Güvenliğin en kritik alanıdır; zira açık bir gelen kuralı, saldırgan için sisteme giriş kapısıdır.\n\nOutbound (Giden): Sizin bilgisayarınızdan dışarıya (sunuculara, web sitelerine) giden isteklerdir. Genellikle daha güvenli kabul edilir ancak zararlı yazılımların \"komuta kontrol\" merkezine veri sızdırmasını engellemek için denetlenmelidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "71. İşletim sisteminde kritik kabul edilen portlar (445, 3389, 22) neden yüksek risk taşır?",
+      "correctAnswer": "Belirli servisler, yapısal özellikleri nedeniyle saldırganların birincil hedefidir:\n\nPort 445 (SMB): Dosya paylaşımı için kullanılır. WannaCry ve EternalBlue gibi tarihin en büyük saldırılarının hedefi olmuştur.\n\nPort 3389 (RDP): Uzak masaüstü bağlantısıdır. Brute-force (kaba kuvvet) saldırılarına en açık noktadır.\n\nPort 22 (SSH): Uzaktan yönetim sağlar. Şifre tabanlı giriş yapılıyorsa yüksek risk taşır; anahtar tabanlı kimlik doğrulama ile sıkılaştırılmalıdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "72. PowerShell ile WMI/CIM üzerinden veri çekmenin \"OS Dersindeki\" karşılığı nedir?",
+      "correctAnswer": "PowerShell, işletim sistemi çekirdeğine (kernel) ve yönetim enstrümanlarına (WMI) erişmek için kullanılan güçlü bir araçtır. Ham veriler, teorik kavramların kanıtıdır:\n\nThreads Sayısı: Sistemde 2000-3000 thread görülmesi, OS'in Multitasking (Çoklu Görev) yeteneğinin kanıtıdır.\n\nVirtual Max (Sanal Bellek): Bu değerin fiziksel RAM'den büyük olması, Paging (Sayfalama) ve sanal bellek illüzyonunun çalıştığını gösterir.\n\nL2/L3 Cache: İşlemcinin RAM'e gitmeden baktığı alanları analiz ederek veri okuma performansını ölçer."
+    },
+    {
+      "type": "short-answer",
+      "question": "73. Yama Yönetimi (Patch Management) ve \"Update Hijyen Skoru\" neden önemlidir?",
+      "correctAnswer": "İşletim sistemleri, keşfedilen güvenlik açıklarını kapatmak için düzenli yamalar yayınlar. Güncellenmeyen bir sistem, \"zaman ayarlı bomba\" olarak nitelendirilir.\n\nAnaliz: PowerShell ile son 30 günlük WindowsUpdateClient logları taranarak sistemin \"güncellik sağlığı\" ölçülür.\n\nReboot İhtiyacı: Bazı kritik güncellemeler çekirdek (kernel) seviyesinde değişiklik yaptığı için sistemin yeniden başlatılması zorunludur; aksi halde yama aktif olmaz."
+    },
+    {
+      "type": "short-answer",
+      "question": "74. Güvenlik Olay Günlükleri (Event ID 4624 ve 4625) neyi ifade eder?",
+      "correctAnswer": "Windows Security logları, kimlik doğrulama telemetrisini tutar:\n\nEvent ID 4624: Başarılı bir oturum açma işlemini temsil eder.\n\nEvent ID 4625: Başarısız bir oturum açma denemesidir.\n\nBrute-Force Tespiti: Kısa sürede yüzlerce 4625 olayı üretilmesi, sisteme yönelik bir parola deneme saldırısının (Brute-force) göstergesidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "75. Güvenlik Dashboardları oluşturmanın (Chart.js vb.) sistem yönetimi için önemi nedir?",
+      "correctAnswer": "Ham veriler (JSON formatında) binlerce satır sürebilir. Görselleştirme; sistem yöneticisinin saniyeler içinde anormallikleri (anormal trafik, kapanmayan portlar, eksik yamalar) tespit etmesini sağlar.\n\nVeri Akışı: Windows OS -> PowerShell (Get-CimInstance) -> JSON -> Web Dashboard (Görsel Analiz)."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "courseTitle": "Bilgisayar Güvenliği",
+  "lectureTitle": "Sınav Soruları",
+  "questions": [
+    {
+      "type": "short-answer",
+      "question": "Bilgisayar Güvenliği Nedir?",
+      "correctAnswer": "Bilgisayar güvenliği, temel olarak bilgisayar sistemlerinin ve bilgilerin zarar, hırsızlık ve yetkisiz kullanımdan korunmasıdır. Bilgisayar sisteminin yetkisiz kullanımını önleme ve tespit etme işlemidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "CIA üçlüsü olan gizlilik, bütünlük ve erişilebilirlik nedir? Açıklayın.",
+      "correctAnswer": "Gizlilik (Confidentiality): Bilgiye erişimi kısıtlayan kurallar bütünüdür. Bilginin yetkisiz kişilere, kurumlara veya süreçlere açıklanmaması veya ifşa edilmemesidir. Sadece yetkisi olan kişilerin korunan bilgiye ulaşmasıdır.\nBütünlük (Integrity): Bilginin güvenilir ve doğru olduğu güvencesidir. Bilginin doğru ve eksiksiz olma özelliğidir; verilerin yetkisiz şekilde değiştirilmesinin önüne geçmeyi hedefler.\nErişilebilirlik (Availability): Yetkili kişilerce bilgiye güvenilir erişimin garantisidir. Bir bilgiye ihtiyaç duyulduğu zaman talep eden yetkili kullanıcı tarafından ulaşılarak kullanılabilmesidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Şifreleme yöntemleri nelerdir?",
+      "correctAnswer": "Şifreleme; simetrik, asimetrik, steganografi ve hashing olmak üzere 4 kategoriye ayrılır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Simetrik ve asimetrik şifreleme nedir? Arasındaki fark nedir? Her birinin algoritmalarını, avantajlarını ve dezavantajlarını açıklayınız.",
+      "correctAnswer": "Simetrik şifreleme, şifreleme ve şifre çözme süreçlerinde aynı anahtarın kullanılmasıdır.\nAsimetrik şifreleme, şifreleme anahtarı ile şifre çözme anahtarının birbirinden farklı olduğu sistemdir. Şifreleme yapan anahtara açık anahtar, şifreyi çözen anahtara özel anahtar denir.\n\nSimetrik şifreleme algoritmaları:\n• DES\n• AES\n• Blowfish\n• RC4\n• RC5\n\nAsimetrik şifreleme algoritmaları:\n• Diffie-Hellman\n• RSA\n• ElGamal\n• DSA\n• Merkle-Hellman\n\nSimetrik şifrelemenin avantajları:\n• İşlem süresi hızlıdır.\n\nSimetrik şifrelemenin dezavantajları:\n• Anahtar dağıtımı problemi vardır.\n• Aynı anahtarın kullanılması veri güvenliği ve gizlilik açısından risk oluşturabilir.\n\nAsimetrik şifrelemenin avantajları:\n• Kimlik doğrulama, gizlilik ve inkâr edilemezlik sağlar.\n• Anahtar dağıtımı kolaydır.\n• Simetrik anahtara göre daha güvenlidir.\n\nAsimetrik şifrelemenin dezavantajları:\n• Daha yavaştır.\n• Daha fazla işlem gücü gerektirir.\n• Anahtar uzunlukları zaman zaman sorun çıkarabilir."
+    },
+    {
+      "type": "short-answer",
+      "question": "Ağı güvenli hale getirmek için hangi önlemler alınır?",
+      "correctAnswer": "Ağ sistemini güvenli hale getirmeye yardımcı olacak önlemler:\n• Güvenli bağlantılar\n• Harici medya kontrolü\n• Dizüstü bilgisayarlar ve cep telefonlarına özel koruma tedbirleri\n• Güçlü parolalar ve güvenlik duvarı\n• Antivirüs koruması ve güncelleme\n• Zamanında yedeklemeler"
+    },
+    {
+      "type": "short-answer",
+      "question": "Ağ güvenliği nasıl sağlanır? Yazılım ve donanım açısından açıklayınız.",
+      "correctAnswer": "Ağ güvenliği hem yazılım hem donanım tarafında alınan önlemlerle sağlanır. Sistem yöneticilerinin kullandığı başlıca teknikler şunlardır:\n• Güvenlik Duvarı (Firewall)\n• Sanal Özel Ağ (VPN)\n• Antivirüs\n• Saldırı Tespit Sistemleri (IDS)\n• Web Filtreleme Çözümleri\n• Güçlü Kimlik Doğrulama\n• Jeton Tabanlı Uygulamalar ve Akıllı Kartlar"
+    },
+    {
+      "type": "short-answer",
+      "question": "Güvenlik duvarı (Firewall) ve VPN (Virtual Private Network) ne işe yarar?",
+      "correctAnswer": "Güvenlik Duvarı (Firewall): Kurumun iç ağı ile dış ağlar arasında geçit görevi yapan ve internet bağlantısında karşılaşılabilecek sorunları önlemek için kullanılan güvenlik çözümüdür. Yerel ağ ile dış ağ arasındaki güvenlik kontrol yazılımı/cihazıdır.\nVPN (Virtual Private Network): Yerel ağa gidip gelen bilgilerin şifrelenmesi ile uzak ofislerden ya da evden internet üzerinden güvenli bir şekilde şirket ağına ulaşmak ve ağ servislerini kullanmak için geliştirilmiş bir teknolojidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "IDS (Saldırı Tespit Sistemleri) ve IPS (Saldırı Önleme Sistemleri) arasındaki farkı açıklayınız.",
+      "correctAnswer": "IPS saldırılara karşı aksiyon almak üzere kurulmuştur; IDS ise yalnızca tespit etmek üzere çalışır.\nIPS kendi başına aksiyona geçer, IDS ise aksiyon alacak kişiye rapor verir. Bu nedenle IDS sistemini sürekli takip eden bir personele ihtiyaç duyulur.\nIPS, belirlenen kural setlerine göre saldırıları tespit ettiğinde veri paketlerini reddederek veri alışverişini durdurur.\nIDS ise saldırı tespiti ve izleme sistemi olarak çalışır, kendi başına aksiyon almaz."
+    },
+    {
+      "type": "short-answer",
+      "question": "Web filtreleme nedir? Virüs, trojan, solucan ve rootkit kavramlarını açıklayınız.",
+      "correctAnswer": "Web filtreleme, kullanıcıların erişebileceği web sitelerini belirli kurallara göre sınırlandıran ve zararlı içerikleri engellemeyi amaçlayan sistemlerdir. Bu yazılımlar kişi, grup veya IP aralıklarına göre kurallar tanımlamayı sağlar. Böylece kullanıcılara zaman aralığı, gezilebilecek siteler ve kategori bazlı kotalar uygulanabilir.\n\nVirüs: Kendini çoğaltarak sistemlere zarar veren kötü amaçlı yazılımdır.\nTrojan: Zararsız gibi görünen ancak arka planda kötü amaçlı işlemler yapan yazılımdır.\nSolucan: Ağ üzerinden kendini yayabilen zararlı yazılımdır.\nRootkit: Sistemde gizlenerek saldırgana yetkisiz erişim sağlayan yazılımdır."
+    },
+    {
+      "type": "short-answer",
+      "question": "Kötü amaçlı yazılımlar bulaştığında ne gibi belirtiler görülebilir?",
+      "correctAnswer": "Bilgisayar virüsü, solucan, truva atı, fidye virüsü ve casus yazılımlar bulaştığında görülebilecek belirtiler:\n• İşlemci kullanımında ani yükselme ve performans düşüşü\n• Sürücüdeki verilerin değiştirilmiş veya yok edilmiş olması\n• Tarayıcı başlangıç sayfası ve ayarlarının değişmesi ya da bilinmeyen araç çubuklarının eklenmesi\n• Antivirüs programlarına erişilememesi ya da devre dışı bırakılması\n• Kullanıcı hesapları veya e-posta hesaplarının ele geçirilmesi"
+    },
+    {
+      "type": "short-answer",
+      "question": "Saldırı türlerinden iki tanesini açıklayınız.",
+      "correctAnswer": "Hizmet Reddi Saldırısı (DoS): Bir saldırganın masum bir son kullanıcının bilgisayarını veya ağ kaynağını kullanamamasına sebep olan saldırıdır.\nDağıtık Hizmet Reddi Saldırısı (DDoS): Tek bir ağa karşı saldırının birden fazla bilgisayar veya sistem üzerinden başlatılmasıyla DoS saldırısının büyütülmüş hâlidir."
+    },
+    {
+      "type": "short-answer",
+      "question": "SQL Injection ve XSS saldırıları nedir?",
+      "correctAnswer": "XSS saldırısında saldırgan, yoğun kullanılan bir web sayfasına kötü amaçlı kod ekler ve kurbanın tarayıcısında farkında olmadan kötü amaçlı komut dosyalarının çalışmasına neden olur. Böylece web sayfası, kötü amaçlı komut dosyasını kullanıcının tarayıcısına iletmek için araç hâline gelir.\nSQL Injection, web uygulamalarındaki veritabanlarını hedefleyen saldırı türüdür. Zararlı SQL komutları kullanılarak gerçekleştirilir. Saldırganlar verileri değiştirebilir, silebilir veya uygulama davranışını kalıcı olarak bozabilir."
+    }
+  ]
+}

@@ -1,14 +1,13 @@
-//js/auth.js
+// FIXED: BUG-1
 import { state } from './state.js';
+import { AUTH_CONFIG } from './config.js';
 
-const User = 'admin'
-const password = 1234
-
-export function performLogin(username, password) {
-    if (username === User && password === password) {
+export function performLogin(inputUsername, inputPassword) {
+    if (inputUsername === AUTH_CONFIG.username && inputPassword === AUTH_CONFIG.password) {
         state.isLoggedIn = true;
         return true;
     }
+
     return false;
 }
 
