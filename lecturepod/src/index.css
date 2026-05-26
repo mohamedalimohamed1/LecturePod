@@ -586,6 +586,7 @@ header p {
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .options-list {
@@ -684,6 +685,7 @@ header p {
   font-size: 1rem;
   margin-bottom: 0.75rem;
   display: block;
+  text-align: left;
 }
 
 .box-answer {
