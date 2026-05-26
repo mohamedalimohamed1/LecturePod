@@ -394,123 +394,117 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Aşağıdakilerden hangisi Bilgisayar Etik Enstitüsü tarafından geliştirilen ve bilgisayar kullanım konusunda etik ilkelerinin temelini oluşturan ilkelerden biri değildir? [cite: 1033]",
+      "question": "Aşağıdakilerden hangisi Bilgisayar Etik Enstitüsü tarafından geliştirilen ve bilgisayar kullanım konusunda etik ilkelerinin temelini oluşturan ilkelerden biri değildir?",
       "options": [
-        "Bilgisayar hırsızlık yapmak için kullanılamaz. [cite: 1034]",
-        "Kişi yazdığı programın sosyal hayata etkilerini dikkate almalıdır. [cite: 1034]",
-        "Başka insanların bilgisayar çalışmaları karıştırılamaz. [cite: 1035]",
-        "Bilgisayar yalan bilgiyi yaymak için kullanılamaz. [cite: 1036]",
-        "Bilgisayar insanlara kar getirecek işlerde kullanılamaz. [cite: 1036]"
+        "Bilgisayar hırsızlık yapmak için kullanılamaz.",
+        "Kişi yazdığı programın sosyal hayata etkilerini dikkate almalıdır.",
+        "Başka insanların bilgisayar çalışmaları karıştırılamaz.",
+        "Bilgisayar yalan bilgiyi yaymak için kullanılamaz.",
+        "Bilgisayar insanlara kar getirecek işlerde kullanılamaz."
       ],
-      "correctAnswer": "Bilgisayar insanlara kar getirecek işlerde kullanılamaz. [cite: 1036, 1115]"
+      "correctAnswer": "Bilgisayar insanlara kar getirecek işlerde kullanılamaz."
     },
     {
       "type": "multiple-choice",
-      "question": "Aşağıdaki CC lisanslarından hangisi eserin ilk sahibinin belirtilmesi ve özgün halinin korunması gerektiği anlamına gelir? [cite: 1037]",
-      "options": [
-        "CC BY ND [cite: 1041]",
-        "CC BY NC [cite: 1044]",
-        "BY NC ND [cite: 1046]",
-        "CC BY [cite: 1048]",
-        "PUBLIC DOMAIN [cite: 1052]"
-      ],
-      "correctAnswer": "CC BY ND [cite: 1041, 1115]"
+      "question": "Aşağıdaki CC lisanslarından hangisi eserin ilk sahibinin belirtilmesi ve özgün halinin korunması gerektiği anlamına gelir?",
+      "options": ["CC BY ND", "CC BY NC", "BY NC ND", "CC BY", "PUBLIC DOMAIN"],
+      "correctAnswer": "CC BY ND"
     },
     {
       "type": "multiple-choice",
-      "question": "Aşağıdakilerden hangisi İnternette kaynak göstermeden yapılan intihal türüne bir örnektir? [cite: 1053, 1054]",
+      "question": "Aşağıdakilerden hangisi İnternette kaynak göstermeden yapılan intihal türüne bir örnektir?",
       "options": [
-        "Mükemmel suç [cite: 1055]",
-        "Hayalet yazar [cite: 1056]",
-        "Yanlış Bilgilendirme [cite: 1057]",
-        "Fazla Mükemmel Alıntı [cite: 1058]",
-        "Becerikli Atıf Yapma [cite: 1059]"
+        "Mükemmel suç",
+        "Hayalet yazar",
+        "Yanlış Bilgilendirme",
+        "Fazla Mükemmel Alıntı",
+        "Becerikli Atıf Yapma"
       ],
-      "correctAnswer": "Hayalet yazar [cite: 1056, 1115]"
+      "correctAnswer": "Hayalet yazar"
     },
     {
       "type": "multiple-choice",
-      "question": "Bilişim alanındaki suçlarla ilgili olarak Avrupa birliği uyum yasaları çerçevesinde hazırlanan 5237 sayılı Türk Ceza Kanun hangi tarihte yürürlüğe girmiştir? [cite: 1060]",
+      "question": "Bilişim alanındaki suçlarla ilgili olarak Avrupa birliği uyum yasaları çerçevesinde hazırlanan 5237 sayılı Türk Ceza Kanun hangi tarihte yürürlüğe girmiştir?",
       "options": [
-        "1 Ocak 2004 [cite: 1061]",
-        "31 Aralık 2014 [cite: 1062]",
-        "1 Haziran 2005 [cite: 1063]",
-        "15 Ocak 2015 [cite: 1064]",
-        "10 Şubat 2012 [cite: 1065]"
+        "1 Ocak 2004",
+        "31 Aralık 2014",
+        "1 Haziran 2005",
+        "15 Ocak 2015",
+        "10 Şubat 2012"
       ],
-      "correctAnswer": "1 Haziran 2005 [cite: 1063, 1115]"
+      "correctAnswer": "1 Haziran 2005"
     },
     {
       "type": "multiple-choice",
-      "question": "Ulusal Açık Ders Malzemeleri (UADM) adıyla başlatılan proje hangi kurum tarafından başlatılmıştır? [cite: 1066]",
+      "question": "Ulusal Açık Ders Malzemeleri (UADM) adıyla başlatılan proje hangi kurum tarafından başlatılmıştır?",
       "options": [
-        "Türk Sanayicileri ve İşadamları Derneği (TÜSİAD) [cite: 1067]",
-        "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu (TÜBİTAK) [cite: 1068, 1069]",
-        "Yükseköğretim Kurulu (YÖK) [cite: 1070]",
-        "Türkiye Bilimler Akademisi (TÜBA) [cite: 1071]",
-        "Massachusetts Institute of Technology'de (MIT) [cite: 1072, 1073]"
+        "Türk Sanayicileri ve İşadamları Derneği (TÜSİAD)",
+        "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu (TÜBİTAK)",
+        "Yükseköğretim Kurulu (YÖK)",
+        "Türkiye Bilimler Akademisi (TÜBA)",
+        "Massachusetts Institute of Technology'de (MIT)"
       ],
-      "correctAnswer": "Türkiye Bilimler Akademisi (TÜBA) [cite: 1071, 1115]"
+      "correctAnswer": "Türkiye Bilimler Akademisi (TÜBA)"
     },
     {
       "type": "multiple-choice",
-      "question": "Aşağıdakilerden hangisi İnternette etik dışı davranışların / intihallerin nedenleri arasında değildir? [cite: 1074, 1075]",
+      "question": "Aşağıdakilerden hangisi İnternette etik dışı davranışların / intihallerin nedenleri arasında değildir?",
       "options": [
-        "Sosyal hayatın yoğunluğu [cite: 1076]",
-        "Etik dışı davranışlarla ilgili bilgisizlik [cite: 1077]",
-        "Bilgi hırsı [cite: 1078]",
-        "Yetersiz ceza [cite: 1079]",
-        "Zamansızlık [cite: 1080]"
+        "Sosyal hayatın yoğunluğu",
+        "Etik dışı davranışlarla ilgili bilgisizlik",
+        "Bilgi hırsı",
+        "Yetersiz ceza",
+        "Zamansızlık"
       ],
-      "correctAnswer": "Bilgi hırsı [cite: 1078, 1115]"
+      "correctAnswer": "Bilgi hırsı"
     },
     {
       "type": "multiple-choice",
-      "question": "Aşağıdakilerden hangisi İnternette kaynak göstererek yapılan intihal türüne bir örnektir? [cite: 1081, 1082]",
+      "question": "Aşağıdakilerden hangisi İnternette kaynak göstererek yapılan intihal türüne bir örnektir?",
       "options": [
-        "Mükemmel Suç [cite: 1083]",
-        "Kendinden Aşırma [cite: 1084]",
-        "Fotokopi [cite: 1085]",
-        "Emek Tembelliği [cite: 1086]",
-        "Mevcut yazı [cite: 1087]"
+        "Mükemmel Suç",
+        "Kendinden Aşırma",
+        "Fotokopi",
+        "Emek Tembelliği",
+        "Mevcut yazı"
       ],
-      "correctAnswer": "Mükemmel Suç [cite: 1083, 1115]"
+      "correctAnswer": "Mükemmel Suç"
     },
     {
       "type": "multiple-choice",
-      "question": "\"Bir eylemi iyi ya da kötü kılan şey eylemin sonucu veya sonuçlarıdır.\" Bu ifadedeki anlayış hangi etik kurama aittir? [cite: 1093]",
+      "question": "\"Bir eylemi iyi ya da kötü kılan şey eylemin sonucu veya sonuçlarıdır.\" Bu ifadedeki anlayış hangi etik kurama aittir?",
       "options": [
-        "Deontoloji [cite: 1094]",
-        "Kantçılık [cite: 1095]",
-        "Sonuçsal olmayan [cite: 1096, 1097]",
-        "Teoloji [cite: 1098]",
-        "Yeni Kantçılık [cite: 1099]"
+        "Deontoloji",
+        "Kantçılık",
+        "Sonuçsal olmayan",
+        "Teoloji",
+        "Yeni Kantçılık"
       ],
-      "correctAnswer": "Teoloji [cite: 1098, 1115]"
+      "correctAnswer": "Teoloji"
     },
     {
       "type": "multiple-choice",
-      "question": "Bilişim dünyasında eylemlerin standartlarını ve çerçevelerini inceleyen etik yaklaşımı hangisidir? [cite: 1100, 1101]",
+      "question": "Bilişim dünyasında eylemlerin standartlarını ve çerçevelerini inceleyen etik yaklaşımı hangisidir?",
       "options": [
-        "Uygulamalı [cite: 1102]",
-        "Meta-etik [cite: 1103]",
-        "Deontoloji [cite: 1104]",
-        "Faydacılık [cite: 1105]",
-        "Normatif [cite: 1106]"
+        "Uygulamalı",
+        "Meta-etik",
+        "Deontoloji",
+        "Faydacılık",
+        "Normatif"
       ],
-      "correctAnswer": "Normatif [cite: 1106, 1115]"
+      "correctAnswer": "Normatif"
     },
     {
       "type": "multiple-choice",
-      "question": "Başkalarına karşı saygı, altyapı ve zamanı verimli kullanma, biçimsel ve içerik ile ilgili özen ve diğer konular başlıkları altında İnternette iletişim ve etik kurallarını hangi kurum ortaya koymuştur? [cite: 1107]",
+      "question": "Başkalarına karşı saygı, altyapı ve zamanı verimli kullanma, biçimsel ve içerik ile ilgili özen ve diğer konular başlıkları altında İnternette iletişim ve etik kurallarını hangi kurum ortaya koymuştur?",
       "options": [
-        "Türkiye Bilişim Vakfı [cite: 1108]",
-        "Türkiye Bilimler Akademisi [cite: 1109]",
-        "Türkiye Bilişim Enstitüsü [cite: 1110]",
-        "Türkiye Bilişim Derneği [cite: 1111]",
-        "Yükseköğretim Kurulu [cite: 1112]"
+        "Türkiye Bilişim Vakfı",
+        "Türkiye Bilimler Akademisi",
+        "Türkiye Bilişim Enstitüsü",
+        "Türkiye Bilişim Derneği",
+        "Yükseköğretim Kurulu"
       ],
-      "correctAnswer": "Türkiye Bilişim Vakfı [cite: 1108, 1115]"
+      "correctAnswer": "Türkiye Bilişim Vakfı"
     },
     {
       "type": "multiple-choice",
